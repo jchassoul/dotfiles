@@ -7,6 +7,8 @@
 from libqtile.manager import Key, Screen, Group
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
+import os
+
 
 keys = [
     
@@ -100,6 +102,8 @@ screens = [
                 ),
     ),
 ]
+
+os.system("feh --bg-scale ~/.config/qtile/desktop/fun-colors.png")
 
 # startup stuff
 
