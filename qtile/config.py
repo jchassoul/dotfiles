@@ -54,6 +54,7 @@ keys = [
     Key(["mod1", "control"], "r", lazy.restart()),
 ]
 
+# one group per Five Short Graybles fingers.
 groups = [
     Group("a"),
     Group("s"),
@@ -103,9 +104,11 @@ screens = [
     ),
 ]
 
+# feh need's moar testing, current release is without background.
+
 os.system("feh --bg-scale ~/.config/qtile/desktop/fun-colors.png")
 
-# startup stuff
+# hook startup stuff yo!
 
 @hook.subscribe.startup
 def dropbox():

@@ -5,3 +5,5 @@
     ui = auto
 [github]
     user = jchassoul
+[push]
+	default = simple
