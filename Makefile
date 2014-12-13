@@ -1,4 +1,4 @@
-install: install-git install-qtile install-i3 install-desktop install-zsh install-notes
+install: install-git install-i3 install-desktop install-zsh install-notes
 
 install-git:
 		rm -f ~/.gitconfig
