@@ -10,9 +10,9 @@ install-qtile:
 		ln -s `pwd`/qtile/config.py ~/.config/qtile/config.py
 
 install-i3:
-		mkdir -p ~/.config/i3
-		rm -f ~/.config/i3/config
-		ln -s `pwd`/i3/config ~/.config/i3/config
+		mkdir -p ~/.i3
+		rm -f ~/.i3/config
+		ln -s `pwd`/i3/config ~/.i3/config
 
 install-desktop:
 		mkdir -p ~/.config/desktop/
