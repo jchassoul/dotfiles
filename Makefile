@@ -4,11 +4,6 @@ install-git:
 		rm -f ~/.gitconfig
 		ln -s `pwd`/git/gitconfig ~/.gitconfig
 
-install-qtile:
-		mkdir -p ~/.config/qtile
-		rm -f ~/.config/qtile/config.py
-		ln -s `pwd`/qtile/config.py ~/.config/qtile/config.py
-
 install-i3:
 		mkdir -p ~/.i3
 		rm -f ~/.i3/config
@@ -24,4 +19,4 @@ install-zsh:
 		ln -s `pwd`/zsh/zshrc ~/.zshrc
 
 install-notes:
-		mkdir -p ~/Dropbox/notes
+		mkdir -p ~/Vault/notebook
