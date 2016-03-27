@@ -1,4 +1,4 @@
-install: install-git install-i3 install-desktop install-zsh install-notes
+install: install-git install-i3 install-desktop install-zsh install-notes install-keys
 
 install-git:
 		rm -f ~/.gitconfig
@@ -20,3 +20,6 @@ install-zsh:
 
 install-notes:
 		mkdir -p ~/Vault/notebook
+
+install-keys:
+		mkdir -p ~/Vault/keys
