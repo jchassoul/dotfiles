@@ -19,7 +19,7 @@ install-zsh:
 		ln -s `pwd`/zsh/zshrc ~/.zshrc
 
 install-notes:
-		mkdir -p ~/Vault/notebook
+		mkdir -p ~/vault/notebook
 
 install-keys:
-		mkdir -p ~/Vault/keys
+		mkdir -p ~/vault/keys
