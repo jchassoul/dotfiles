@@ -13,9 +13,9 @@ set $mod Mod1
 
 exec --no-startup-id feh --bg-scale ~/.config/desktop/fun-colors.png
 
+# this is our monkey assistant for the future and stuff (=
 exec --no-startup-id python ~/vault/squirrel/squirrel.py
 
-# exec --no-startup-id dropbox start
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
