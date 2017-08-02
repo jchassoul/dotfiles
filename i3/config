@@ -37,9 +37,9 @@ font pango:DejaVu Sans Mono 24
 font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 24
 font pango:Terminus 24px
 
-smart_gaps on
+#smart_gaps on
 
-smart_borders on
+#smart_borders on
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
