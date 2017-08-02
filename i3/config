@@ -27,15 +27,19 @@ exec_always --no-startup-id feh --bg-scale ~/.config/desktop/fun-colors.png
 exec --no-startup-id nm-applet
 
 # this is our monkey assistant for the future and stuff (=
-exec --no-startup-id python /opt/squirrel/squirrel.py
+exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel.py
 
 exec --no-startup-id compton -f
 
 # font for window titles. ISO 10646 = Unicode
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:P22 Bayer Universal 11.5
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:DejaVu Sans Mono 24
+font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 24
+font pango:Terminus 24px
 
-hide_edge_borders both
+smart_gaps on
+
+smart_borders on
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
