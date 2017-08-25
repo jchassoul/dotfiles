@@ -1,12 +1,9 @@
-dotfiles
-========
+Includes configuration files for i3, polybar, zsh, git and some experimental random stuff.
 
-Includes configuration files for zsh, git, i3 and some experimental random stuff.
-
-##Requirements
+### Requirements
 You need zsh, feh, git and i3 previously installed.
 
-##Installation
+### Installation
 In your home directory:
 
     git clone https://github.com/jchassoul/dotfiles.git
