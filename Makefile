@@ -1,4 +1,4 @@
-install: install-git install-i3 install-tmux install-desktop install-zsh install-notes install-keys install-fruits install-other install-planets install-structures install-units
+install: install-git install-i3 install-polybar install-tmux install-desktop install-zsh install-notes install-keys install-fruits install-other install-planets install-structures install-units
 
 install-git:
 		rm -f ~/.gitconfig
@@ -8,6 +8,13 @@ install-i3:
 		mkdir -p ~/.i3
 		rm -f ~/.i3/config
 		ln -s `pwd`/i3/config ~/.i3/config
+
+install-polybar:
+		mkdir -p ~/.config/polybar/
+		rm -f ~/.config/polybar/config
+		rm -f ~/.config/polybar/launch.sh
+		ln -s `pwd`/polybar/config ~/.config/polybar/config
+		ln -s `pwd`/polybar/launch.sh ~/.config/polybar/launch.sh
 
 install-tmux:
 		rm -f ~/.tmux.conf

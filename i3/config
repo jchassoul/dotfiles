@@ -24,6 +24,8 @@ set $base0F #fcc09e
 
 exec_always --no-startup-id feh --bg-scale ~/.config/desktop/fun-colors.png
 
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 exec --no-startup-id nm-applet
 
 # this is our monkey assistant for the future and stuff (=
@@ -36,10 +38,6 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:DejaVu Sans Mono 24
 font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 24
 font pango:Terminus 24px
-
-#smart_gaps on
-
-#smart_borders on
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
