@@ -1,4 +1,4 @@
-Includes configuration files for i3, zsh, git and some experimental random stuff.
+Includes configuration files for i3, i3pystatus, zsh, git and some experimental random stuff.
 
 ### Requirements
 You need zsh, feh, git and i3 previously installed.
