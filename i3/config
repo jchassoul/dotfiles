@@ -22,9 +22,8 @@ set $base0D #97bbf7
 set $base0E #c0b7f9
 set $base0F #fcc09e
 
-exec_always --no-startup-id feh --bg-scale ~/.config/desktop/fun-colors.png
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-scale ~/.config/desktop/fun-colors.png
 
 exec --no-startup-id nm-applet
 
