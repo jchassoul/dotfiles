@@ -8,6 +8,7 @@ install-i3:
 		mkdir -p ~/.i3
 		rm -f ~/.i3/config
 		ln -s `pwd`/i3/config ~/.i3/config
+		ln -s `pwd`/i3/i3status.conf ~/.i3/i3status.conf
 
 install-tmux:
 		rm -f ~/.tmux.conf
@@ -27,4 +28,3 @@ install-notes:
 
 install-keys:
 		mkdir -p ~/work/keys
-
