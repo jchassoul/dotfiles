@@ -28,7 +28,7 @@ exec_always --no-startup-id feh --bg-scale ~/.config/desktop/fun-colors.png
 exec --no-startup-id nm-applet
 
 # this is our monkey assistant for the future and stuff (=
-exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel.py
+exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel/squirrel.py
 
 exec --no-startup-id compton -f
 
