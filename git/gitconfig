@@ -1,9 +1,9 @@
 [user]
     name = Jean Chassoul
-    email = chassoul@gmail.com
+    email = jchassoul@gmail.com
 [color]
     ui = auto
 [github]
     user = jchassoul
 [push]
-	default = simple
+    default = simple
