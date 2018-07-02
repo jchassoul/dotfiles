@@ -1,4 +1,4 @@
-install: install-git install-i3 install-tmux install-desktop install-zsh install-notes install-keys
+install: install-git install-i3 install-tmux install-desktop install-zsh install-keys
 
 install-git:
 		rm -f ~/.gitconfig
@@ -7,6 +7,7 @@ install-git:
 install-i3:
 		mkdir -p ~/.i3
 		rm -f ~/.i3/config
+		rm -f ~/.i3/i3status.conf
 		ln -s `pwd`/i3/config ~/.i3/config
 		ln -s `pwd`/i3/i3status.conf ~/.i3/i3status.conf
 
@@ -22,9 +23,6 @@ install-desktop:
 install-zsh:
 		rm -f ~/.zshrc
 		ln -s `pwd`/zsh/zshrc ~/.zshrc
-
-install-notes:
-		mkdir -p ~/work/notebooks
 
 install-keys:
 		mkdir -p ~/work/keys
