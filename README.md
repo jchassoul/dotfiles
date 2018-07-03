@@ -1,7 +1,7 @@
-Includes configuration files for i3, i3pystatus, zsh, git and some experimental random stuff.
+Includes configuration files for i3, py3status, zsh, git and some experimental stuff.
 
 ### Requirements
-You need zsh, feh, git and i3 previously installed.
+You need zsh, feh, git, i3, py3status previously installed.
 
 ### Installation
 In your home directory:
