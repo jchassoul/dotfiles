@@ -2,7 +2,6 @@
 
 set $mod Mod1
 
-# hi so here is our list our base list of colors.
 # it appears that we need 10 plus ABC DEF.
 
 set $base00 #101218
@@ -22,14 +21,14 @@ set $base0D #97bbf7
 set $base0E #c0b7f9
 set $base0F #fcc09e
 
-
 exec_always --no-startup-id feh --bg-scale ~/.config/desktop/fun-colors.png
 
 exec --no-startup-id nm-applet
 
-# this is our monkey assistant for the future and stuff (=
+# squirrel monkey assistant 
 exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel/squirrel.py
 
+# x window composition 
 exec --no-startup-id compton -f
 
 # font for window titles. ISO 10646 = Unicode
@@ -133,41 +132,13 @@ bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-      # These bindings trigger as soon as you enter the resize mode
-
-      # Pressing left will shrink the window’s width.
-      # Pressing right will grow the window’s width.
-      # Pressing up will shrink the window’s height.
-      # Pressing down will grow the window’s height.
-      bindsym j resize shrink width 10 px or 10 ppt
-      bindsym k resize grow height 10 px or 10 ppt
-      bindsym l resize shrink height 10 px or 10 ppt
-      bindsym semicolon resize grow width 10 px or 10 ppt
-
-      # same bindings, but for the arrow keys
-      bindsym 113 resize shrink width 10 px or 10 ppt
-      bindsym 116 resize grow height 10 px or 10 ppt
-      bindsym 111 resize shrink height 10 px or 10 ppt
-      bindsym 114 resize grow width 10 px or 10 ppt
-
-      # back to normal: Enter or Escape
-      bindsym Return mode "default"
-      bindsym Escape mode "default"
-}
-
-bindsym $mod+r mode "resize"
-
 # Widow Colours         border  background text    indicator
-
 client.focused          $base01 $base01    $base07 $base0F
 client.focused_inactive $base02 $base02    $base03 $base0F
 client.unfocused        $base02 $base02    $base03 $base0F
 client.urgent           $base02 $base08    $base00 $base0F
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Start i3bar to display a workspace bar (plus py3status)
 bar {
       status_command py3status -c ~/.i3/i3status.conf
       colors {
