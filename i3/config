@@ -21,13 +21,12 @@ set $base0D #97bbf7
 set $base0E #c0b7f9
 set $base0F #fcc09e
 
+# custom wallpaper
 exec_always --no-startup-id feh --bg-scale ~/.config/desktop/fun-colors.png
-
+# network manager applet
 exec --no-startup-id nm-applet
-
 # squirrel monkey assistant 
 exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel/squirrel.py
-
 # x window composition 
 exec --no-startup-id compton -f
 
@@ -50,6 +49,12 @@ bindsym $mod+Shift+Q kill
 bindsym $mod+d exec dmenu_run
 
 bindsym $mod+Shift+x exec i3lock
+
+bindsym $mod+Shift+h exec pcmanfm ~
+
+bindsym $mod+Shift+a exec pcmanfm menu://applications/
+
+bindsym $mod+Shift+t exec pcmanfm trash:///
 
 # change focus
 bindsym $mod+j focus left
@@ -141,14 +146,16 @@ client.urgent           $base02 $base08    $base00 $base0F
 # Start i3bar to display a workspace bar (plus py3status)
 bar {
       status_command py3status -c ~/.i3/i3status.conf
-      colors {
-      separator $base03
-      background $base01
-      statusline $base05
-      # border  background text
-      focused_workspace  $base01 $base01    $base07
-      active_workspace   $base01 $base02    $base03
-      inactive_workspace $base01 $base01    $base03
-      urgent_workspace   $base01 $base01    $base08
+# Show your colours
+
+    colors {
+        separator $base03
+        background $base01
+        statusline $base05
+# border  background text
+        focused_workspace  $base01 $base01    $base07
+        active_workspace   $base01 $base02    $base03
+        inactive_workspace $base01 $base01    $base03
+        urgent_workspace   $base01 $base01    $base08
     }
 }
