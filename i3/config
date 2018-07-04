@@ -48,7 +48,10 @@ bindsym $mod+Shift+Q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
-bindsym $mod+Shift+x exec i3lock
+# lfe shell inside treehouse
+#bindsym $mod+Shift+f exec 
+
+bindsym $mod+Shift+o exec i3lock
 
 bindsym $mod+Shift+h exec pcmanfm ~
 
