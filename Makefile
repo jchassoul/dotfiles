@@ -1,4 +1,4 @@
-install: install-git install-i3 install-tmux install-desktop install-zsh install-keys
+install: install-git install-i3 install-tmux install-desktop install-zsh
 
 install-git:
 		rm -f ~/.gitconfig
@@ -17,12 +17,9 @@ install-tmux:
 
 install-desktop:
 		mkdir -p ~/.config/desktop/
-		rm -f ~/.config/desktop/fun-colors.png
-		ln -s `pwd`/desktop/fun-colors.png ~/.config/desktop/fun-colors.png
+		rm -f ~/.config/desktop/wallpaper.png
+		ln -s `pwd`/desktop/wallpaper.png ~/.config/desktop/wallpaper.png
 
 install-zsh:
 		rm -f ~/.zshrc
 		ln -s `pwd`/zsh/zshrc ~/.zshrc
-
-install-keys:
-		mkdir -p ~/work/keys
