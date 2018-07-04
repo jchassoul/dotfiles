@@ -22,7 +22,7 @@ set $base0E #c0b7f9
 set $base0F #fcc09e
 
 # custom wallpaper
-exec_always --no-startup-id feh --bg-scale ~/.config/desktop/fun-colors.png
+exec_always --no-startup-id feh --bg-scale ~/.config/desktop/wallpaper.png
 # network manager applet
 exec --no-startup-id nm-applet
 # squirrel monkey assistant 
