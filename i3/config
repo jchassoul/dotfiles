@@ -25,7 +25,7 @@ set $base0F #fcc09e
 exec_always --no-startup-id feh --bg-scale ~/.config/desktop/wallpaper.png
 # network manager applet
 exec --no-startup-id nm-applet
-# squirrel monkey assistant 
+# squirrel monkey 
 exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel/squirrel.py
 # x window composition 
 exec --no-startup-id compton -f
@@ -39,6 +39,12 @@ font pango:Terminus 16px
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# I'll later bind this to mod+Shift+f.
+for_window [instance="treehouse"] floating enable
+for_window [instance="treehouse"] resize set 625 400
+for_window [instance="treehouse"] move position center
+for_window [instance="treehouse"] move scratchpad
+exec --no-startup-id urxvt -name treehouse -e htop
 # start a terminal
 bindsym $mod+Return exec terminator
 
@@ -49,7 +55,7 @@ bindsym $mod+Shift+Q kill
 bindsym $mod+d exec dmenu_run
 
 # lfe shell inside treehouse
-#bindsym $mod+Shift+f exec 
+bindsym $mod+Shift+f [instance="treehouse"] scratchpad show; move position center 
 
 bindsym $mod+Shift+o exec i3lock
 
