@@ -44,7 +44,7 @@ for_window [instance="treehouse"] floating enable
 for_window [instance="treehouse"] resize set 625 400
 for_window [instance="treehouse"] move position center
 for_window [instance="treehouse"] move scratchpad
-exec --no-startup-id urxvt -name treehouse -e sh ~/work/treehouse/luerl/debug.sh 
+exec --no-startup-id urxvt -name treehouse -e tmux 
 # start a terminal
 bindsym $mod+Return exec terminator
 
