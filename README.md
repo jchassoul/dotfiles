@@ -1,7 +1,5 @@
-Includes configuration files for i3, py3status, zsh, git and some experimental stuff.
-
-### Requirements
-You need zsh, feh, git, i3, py3status previously installed.
+## Requirements
+You need squirrel installed.
 
 ### Installation
 In your home directory:
