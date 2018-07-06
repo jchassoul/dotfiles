@@ -40,11 +40,12 @@ font pango:Terminus 16px
 floating_modifier $mod
 
 # I'll later bind this to mod+Shift+f.
-for_window [instance="treehouse"] floating enable
-for_window [instance="treehouse"] resize set 625 400
-for_window [instance="treehouse"] move position center
-for_window [instance="treehouse"] move scratchpad
-exec --no-startup-id urxvt -name treehouse -e tmux 
+for_window [instance="tmux"] floating enable
+for_window [instance="tmux"] resize set 1280 720
+for_window [instance="tmux"] move position center
+for_window [instance="tmux"] move scratchpad
+exec --no-startup-id urxvt -name tmux -e tmux 
+
 # start a terminal
 bindsym $mod+Return exec terminator
 
@@ -54,8 +55,8 @@ bindsym $mod+Shift+Q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
-# lfe shell inside treehouse
-bindsym $mod+Shift+f [instance="treehouse"] scratchpad show; move position center 
+# lfe shell inside tmux
+bindsym $mod+Shift+f [instance="tmux"] scratchpad show; move position center 
 
 bindsym $mod+Shift+o exec i3lock
 
