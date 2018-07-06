@@ -1,5 +1,5 @@
 install: install-git install-i3 install-tmux install-desktop install-zsh\
- install-ranger
+ install-ranger install-vim
 
 install-git:
 		rm -f ~/.gitconfig
@@ -29,3 +29,6 @@ install-ranger:
 		ranger --copy-config=scope
 		rm -f ~/.config/ranger/rc.conf
 		ln -s `pwd`/ranger/rc.conf ~/.config/ranger/rc.conf
+
+install-vim:
+		pwd

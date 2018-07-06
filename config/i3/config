@@ -71,6 +71,10 @@ bindsym $mod+Shift+p [instance="ipython"] scratchpad show; move position center
 # missing love on i3lock
 bindsym $mod+Shift+o exec i3lock
 
+# Binding to make the webcam flot and sticky!
+for_window [title="video0 - mpv"] floating enable
+for_window [title="video0 - mpv"] sticky enable
+
 bindsym $mod+Shift+h exec pcmanfm ~
 
 bindsym $mod+Shift+a exec pcmanfm menu://applications/
