@@ -46,6 +46,13 @@ for_window [instance="tmux"] move position center
 for_window [instance="tmux"] move scratchpad
 exec --no-startup-id urxvt -name tmux -e tmux 
 
+# I'll later bind this to mod+Shift+p.
+for_window [instance="ipython"] floating enable
+for_window [instance="ipython"] resize set 1280 720
+for_window [instance="ipython"] move position center
+for_window [instance="ipython"] move scratchpad
+exec --no-startup-id urxvt -name ipython -e ipython
+
 # start a terminal
 bindsym $mod+Return exec terminator
 
@@ -55,9 +62,13 @@ bindsym $mod+Shift+Q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
-# lfe shell inside tmux
+# scratchpad tmux instance
 bindsym $mod+Shift+f [instance="tmux"] scratchpad show; move position center 
 
+# scratchpad ipython instance
+bindsym $mod+Shift+p [instance="ipython"] scratchpad show; move position center
+
+# missing love on i3lock
 bindsym $mod+Shift+o exec i3lock
 
 bindsym $mod+Shift+h exec pcmanfm ~
