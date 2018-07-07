@@ -19,7 +19,7 @@ install-tmux:
 install-desktop:
 		mkdir -p ~/.config/desktop/
 		rm -f ~/.config/desktop/wallpaper.png
-		ln -s `pwd`/config/desktop/wallpaper.png ~/.config/desktop/wallpaper.png
+		ln -s `pwd`/desktop/wallpaper.png ~/.config/desktop/wallpaper.png
 
 install-zsh:
 		rm -f ~/.zshrc
