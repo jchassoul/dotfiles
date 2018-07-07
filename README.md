@@ -1,11 +1,9 @@
-Includes configuration files for i3, py3status, zsh, git and some experimental stuff.
-
-### Requirements
-You need zsh, feh, git, i3, py3status previously installed.
+## Requirements
+You need [squirrel](https://github.com/nonsensews/squirrel) installed.
 
 ### Installation
 In your home directory:
 
     git clone https://github.com/jchassoul/dotfiles.git
 
-    cd dotfiles && make install
+    cd dotfiles && make
