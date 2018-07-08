@@ -31,4 +31,16 @@ install-ranger:
 		ln -s `pwd`/config/ranger/rc.conf ~/.config/ranger/rc.conf
 
 install-vim:
-		pwd
+		mkdir -p ~/.vim/autoload
+		mkdir -p ~/.vim/bundle
+		rm -f ~/.vimrc
+		ln -s `pwd`/config/vim/vimrc ~/.vimrc
+		curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+		git clone https://github.com/tpope/vim-sensible.git ~/.vim/bundle/vim-sensible
+		git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+		git clone https://github.com/w0rp/ale.git ~/.vim/bundle/ale
+		git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
+		git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/bundle/nerdtree-git-plugin
+		git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim-json
+		git clone https://github.com/tbastos/vim-lua.git ~/.vim/bundle/vim-lua
+		git clone https://github.com/lfe/vim-lfe.git ~/.vim/bundle/vim-lfe
