@@ -1,4 +1,4 @@
-URxvt.background: [75]#000000
+URxvt*background: [75]#000000
 URxvt.intensityStyles: false
 URxvt.font: xft:monospace:size=11
 URxvt.scrollBar: false
