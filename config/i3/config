@@ -25,6 +25,8 @@ set $base0F #fcc09e
 exec_always --no-startup-id feh --bg-scale ~/.config/desktop/wallpaper.png
 # network manager applet
 exec --no-startup-id nm-applet
+# Xresources db
+exec --no-startup-id xrdb ~/.Xresources
 # squirrel monkey 
 exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel/squirrel.py
 # x window composition 
@@ -54,7 +56,7 @@ for_window [instance="ipython"] move scratchpad
 exec --no-startup-id urxvt -name ipython -e ipython
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+Q kill

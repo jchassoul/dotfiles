@@ -1,5 +1,5 @@
 install: install-git install-i3 install-tmux install-desktop install-zsh\
- install-ranger install-vim
+ install-ranger install-vim install-xr
 
 install-git:
 		rm -f ~/.gitconfig
@@ -44,3 +44,7 @@ install-vim:
 		git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim-json
 		git clone https://github.com/tbastos/vim-lua.git ~/.vim/bundle/vim-lua
 		git clone https://github.com/lfe/vim-lfe.git ~/.vim/bundle/vim-lfe
+
+install-xr:
+	        rm -f ~/.Xresources
+		ln -s `pwd`/config/Xresources ~/.Xresources
