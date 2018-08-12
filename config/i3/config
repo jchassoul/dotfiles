@@ -62,7 +62,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -nb "$base00" -nf "$base0F" -sb "$base01" -sf "$base0F"
 
 # scratchpad tmux instance
 bindsym $mod+Shift+f [instance="tmux"] scratchpad show; move position center 
