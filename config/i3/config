@@ -4,22 +4,22 @@ set $mod Mod1
 
 # it appears that we need 10 plus ABC DEF.
 
-set $base00 #101218
-set $base01 #1f222d
-set $base02 #252936
-set $base03 #7780a1
-set $base04 #C0C5CE
-set $base05 #d1d4e0
-set $base06 #C9CCDB
-set $base07 #ffffff
-set $base08 #ee829f
-set $base09 #f99170
-set $base0A #ffefcc
-set $base0B #a5ffe1
-set $base0C #97e0ff
-set $base0D #97bbf7
-set $base0E #c0b7f9
-set $base0F #fcc09e
+set_from_resource $base00 color0 #101218
+set_from_resource $base01 color1 #1f222d
+set_from_resource $base02 color2 #252936
+set_from_resource $base03 color3 #7780a1
+set_from_resource $base04 color4 #C0C5CE
+set_from_resource $base05 color5 #d1d4e0
+set_from_resource $base06 color6 #C9CCDB
+set_from_resource $base07 color7 #ffffff
+set_from_resource $base08 color8 #ee829f
+set_from_resource $base09 color9 #f99170
+set_from_resource $base0A color10 #ffefcc
+set_from_resource $base0B color11 #a5ffe1
+set_from_resource $base0C color12 #97e0ff
+set_from_resource $base0D color13 #97bbf7
+set_from_resource $base0E color14 #c0b7f9
+set_from_resource $base0F color15 #fcc09e
 
 # custom wallpaper
 exec_always --no-startup-id feh --bg-scale ~/.config/desktop/wallpaper.png
