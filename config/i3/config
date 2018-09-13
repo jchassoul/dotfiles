@@ -2,8 +2,6 @@
 
 set $mod Mod1
 
-# it appears that we need 10 plus ABC DEF.
-
 set_from_resource $base00 color0 #101218
 set_from_resource $base01 color1 #1f222d
 set_from_resource $base02 color2 #252936
@@ -22,7 +20,7 @@ set_from_resource $base0E color14 #c0b7f9
 set_from_resource $base0F color15 #fcc09e
 
 # custom wallpaper
-exec_always --no-startup-id feh --bg-scale ~/.config/desktop/wallpaper.png
+exec_always --no-startup-id feh --bg-scale ~/.config/desktop/ophelia.jpg
 # network manager applet
 exec --no-startup-id nm-applet
 # Xresources db
