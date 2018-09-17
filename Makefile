@@ -19,8 +19,8 @@ install-tmux:
 install-desktop:
 		mkdir -p ~/.config/desktop/
 		rm -f ~/.config/desktop/wallpaper.png
-		ln -s `pwd`/desktop/wallpaper.png ~/.config/desktop/wallpaper.png
-		ln -s `pwd`/desktop/ophelia.jpg ~/.config/desktop/ophelia.jpg
+		ln -s `pwd`/images/wallpaper.png ~/.config/desktop/wallpaper.png
+		ln -s `pwd`/images/ophelia.jpg ~/.config/desktop/ophelia.jpg
 
 install-zsh:
 		rm -f ~/.zshrc

@@ -19,10 +19,15 @@ set_from_resource $base0D color13
 set_from_resource $base0E color14 
 set_from_resource $base0F color15 
 
-# custom wallpaper
+# TODO: custom wallpaper pywal & squirell integration
 exec_always --no-startup-id feh --bg-scale ~/.config/desktop/ophelia.jpg
 # network manager applet
 exec --no-startup-id nm-applet
+# disable caps lock switch
+exec xmodmap -e "clear lock"
+# set caps_lock as escape
+exec xmodmap -e "keysym Caps_Lock = Escape"
+
 # Xresources db
 exec --no-startup-id xrdb ~/.Xresources
 # squirrel monkey 
@@ -75,6 +80,7 @@ bindsym $mod+Shift+o exec i3lock
 for_window [title="video0 - mpv"] floating enable
 for_window [title="video0 - mpv"] sticky enable
 
+# Binding capuchino hold keys
 bindsym $mod+Shift+h exec pcmanfm ~
 
 bindsym $mod+Shift+a exec pcmanfm menu://applications/
