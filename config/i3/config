@@ -74,7 +74,7 @@ bindsym $mod+Shift+f [instance="tmux"] scratchpad show; move position center
 bindsym $mod+Shift+p [instance="ipython"] scratchpad show; move position center
 
 # missing love on i3lock
-bindsym $mod+Shift+o exec i3lock
+bindsym $mod+Shift+o exec ~/.i3/lock -p
 
 # Binding to make the webcam flot and sticky!
 for_window [title="video0 - mpv"] floating enable

@@ -11,6 +11,9 @@ install-i3:
 		rm -f ~/.i3/i3status.conf
 		ln -s `pwd`/config/i3/config ~/.i3/config
 		ln -s `pwd`/config/i3/i3status.conf ~/.i3/i3status.conf
+		ln -s `pwd`/config/i3/lock ~/.i3/lock 
+		ln -s `pwd`/config/i3/lock.png ~/.i3/lock.png
+		ln -s `pwd`/config/i3/text.png ~/.i3/text.png
 
 install-tmux:
 		rm -f ~/.tmux.conf
@@ -47,5 +50,5 @@ install-vim:
 		git clone https://github.com/lfe/vim-lfe.git ~/.vim/bundle/vim-lfe
 
 install-xr:
-	        rm -f ~/.Xresources
+		rm -f ~/.Xresources
 		ln -s `pwd`/config/Xresources ~/.Xresources
