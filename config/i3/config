@@ -20,7 +20,7 @@ set_from_resource $base0E color14
 set_from_resource $base0F color15 
 
 # TODO: custom wallpaper pywal & squirell integration
-exec_always --no-startup-id feh --bg-scale ~/.config/desktop/ophelia.jpg
+exec_always --no-startup-id feh --randomize --bg-scale ~/.config/desktop/
 # network manager applet
 exec --no-startup-id nm-applet
 # disable caps lock switch
