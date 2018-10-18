@@ -30,8 +30,8 @@ exec xmodmap -e "keysym Caps_Lock = Escape"
 
 # Xresources db
 exec --no-startup-id xrdb ~/.Xresources
-# squirrel monkey 
-exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel/squirrel.py
+# squirrel monkey terran adjutant 
+#exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel/squirrel.py
 # x window composition 
 exec --no-startup-id compton -f
 
