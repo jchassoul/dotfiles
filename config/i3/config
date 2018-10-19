@@ -120,7 +120,7 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
-# change container layout (stacked, tabbed, default)
+# i3 default config: change container layout (stacked, tabbed, default)
 #bindsym $mod+s layout stacking
 #bindsym $mod+w layout tabbed
 #bindsym $mod+e layout default
@@ -178,7 +178,6 @@ client.urgent           $base02 $base08    $base00 $base0F
 bar {
       status_command py3status -c ~/.i3/i3status.conf
 # Show your colours
-
     colors {
         separator $base03
         background $base01
