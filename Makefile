@@ -9,7 +9,10 @@ install-i3:
 		mkdir -p ~/.i3
 		rm -f ~/.i3/config
 		rm -f ~/.i3/i3status.conf
-		ln -s `pwd`/config/i3/config ~/.i3/config
+        rm -f ~/.i3/lock
+		rm -f ~/.i3/lock.png
+		rm -f ~/.i3/text.png 
+        ln -s `pwd`/config/i3/config ~/.i3/config
 		ln -s `pwd`/config/i3/i3status.conf ~/.i3/i3status.conf
 		ln -s `pwd`/config/i3/lock ~/.i3/lock 
 		ln -s `pwd`/config/i3/lock.png ~/.i3/lock.png
