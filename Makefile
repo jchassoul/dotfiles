@@ -1,5 +1,7 @@
-install: install-git install-i3 install-tmux install-desktop install-zsh\
+install: install-i3 install-tmux install-desktop install-zsh\
  install-ranger install-vim install-xr
+
+git: install-git
 
 install-git:
 		rm -f ~/.gitconfig
@@ -9,12 +11,12 @@ install-i3:
 		mkdir -p ~/.i3
 		rm -f ~/.i3/config
 		rm -f ~/.i3/i3status.conf
-        rm -f ~/.i3/lock
+		rm -f ~/.i3/lock
 		rm -f ~/.i3/lock.png
-		rm -f ~/.i3/text.png 
-        ln -s `pwd`/config/i3/config ~/.i3/config
+		rm -f ~/.i3/text.png
+		ln -s `pwd`/config/i3/config ~/.i3/config
 		ln -s `pwd`/config/i3/i3status.conf ~/.i3/i3status.conf
-		ln -s `pwd`/config/i3/lock ~/.i3/lock 
+		ln -s `pwd`/config/i3/lock ~/.i3/lock
 		ln -s `pwd`/config/i3/lock.png ~/.i3/lock.png
 		ln -s `pwd`/config/i3/text.png ~/.i3/text.png
 
@@ -24,9 +26,12 @@ install-tmux:
 
 install-desktop:
 		mkdir -p ~/.config/desktop/
-		rm -f ~/.config/desktop/wallpaper.png
-		ln -s `pwd`/images/wallpaper.png ~/.config/desktop/wallpaper.png
+		rm -f ~/.config/desktop/fun.png
+		rm -f ~/.config/desktop/ophelia.jpg
+		rm -f ~/.config/desktop/blades.jpg
+		ln -s `pwd`/images/fun.png ~/.config/desktop/fun.png
 		ln -s `pwd`/images/ophelia.jpg ~/.config/desktop/ophelia.jpg
+		ln -s `pwd`/images/blades.jpg ~/.config/desktop/blades.jpg
 
 install-zsh:
 		rm -f ~/.zshrc
@@ -38,6 +43,7 @@ install-ranger:
 		ln -s `pwd`/config/ranger/rc.conf ~/.config/ranger/rc.conf
 
 install-vim:
+		rm -Rf ~/.vim
 		mkdir -p ~/.vim/autoload
 		mkdir -p ~/.vim/bundle
 		rm -f ~/.vimrc
