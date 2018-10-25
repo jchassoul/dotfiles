@@ -1,11 +1,11 @@
-install: install-i3 install-tmux install-desktop install-zsh\
+install: install-oh-my-zsh install-i3 install-tmux install-desktop install-zsh\
  install-ranger install-vim install-xr
 
-deps: install-deps
+deps: install-oh-my-zsh
 
 git: install-git
 
-install-deps:
+install-oh-my-zsh:
 	curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -o install-oh-my-zsh.sh;
 	sh install-oh-my-zsh.sh
 	rm install-oh-my-zsh.sh
