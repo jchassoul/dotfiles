@@ -3,4 +3,4 @@ In your home directory:
 
     git clone https://github.com/jchassoul/dotfiles.git
 
-    cd dotfiles && make
+    cd dotfiles && make deps && make
