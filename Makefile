@@ -33,12 +33,8 @@ install-tmux:
 
 install-desktop:
 	mkdir -p ~/.config/desktop/
-	rm -f ~/.config/desktop/fun.png
 	rm -f ~/.config/desktop/ophelia.jpg
-	rm -f ~/.config/desktop/blades.jpg
-	ln -s `pwd`/images/fun.png ~/.config/desktop/fun.png
 	ln -s `pwd`/images/ophelia.jpg ~/.config/desktop/ophelia.jpg
-	ln -s `pwd`/images/blades.jpg ~/.config/desktop/blades.jpg
 
 install-zsh:
 	rm -f ~/.zshrc
