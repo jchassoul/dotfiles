@@ -1,9 +1,11 @@
-install: install-oh-my-zsh install-i3 install-tmux install-desktop install-zsh\
- install-ranger install-vim install-xr
+install: install-oh-my-zsh install-gtk3 install-i3 install-tmux install-desktop\
+	install-zsh install-ranger install-vim install-xr
 
 deps: install-oh-my-zsh
 
 git: install-git
+
+settings: install-gtk3
 
 install-oh-my-zsh:
 	curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -o install-oh-my-zsh.sh;
@@ -13,6 +15,10 @@ install-oh-my-zsh:
 install-git:
 	rm -f ~/.gitconfig
 	ln -s `pwd`/config/git/gitconfig ~/.gitconfig
+
+install-gtk3:
+	rm -f ~/.config/gtk-3.0/settings.ini
+	ln -s `pwd`/config/settings.init
 
 install-i3:
 	mkdir -p ~/.i3
