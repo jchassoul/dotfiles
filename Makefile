@@ -18,7 +18,7 @@ install-git:
 
 install-gtk3:
 	rm -f ~/.config/gtk-3.0/settings.ini
-	ln -s `pwd`/config/settings.init
+	ln -s `pwd`/config/settings.init ~/.config/gtk-3.0/settings.ini
 
 install-i3:
 	mkdir -p ~/.i3
@@ -67,6 +67,7 @@ install-vim:
 	git clone https://github.com/tbastos/vim-lua.git ~/.vim/bundle/vim-lua
 	git clone https://github.com/lfe/vim-lfe.git ~/.vim/bundle/vim-lfe
 	git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine
+	git clone https://github.com/nvie/vim-flake8 ~/.vim/bundle/vim-flake8
 
 install-xr:
 	rm -f ~/.Xresources
