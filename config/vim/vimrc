@@ -1,6 +1,11 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
+set encoding=utf-8
+set number relativenumber
+set wildmode=longest,list,full
+set splitbelow splitright
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
