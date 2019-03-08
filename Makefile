@@ -1,5 +1,5 @@
-install: install-oh-my-zsh install-gtk3 install-i3 install-tmux install-desktop\
-	install-zsh install-ranger install-vim install-xr
+install: install-oh-my-zsh install-i3 install-tmux install-desktop\
+	install-zsh install-vim install-xr
 
 deps: install-oh-my-zsh
 
