@@ -1,5 +1,5 @@
 install: install-gtk3 install-i3 install-tmux install-desktop\
-	install-zsh install-ranger install-vim install-xr
+	install-zsh install-vim install-xr
 
 git: install-git
 
@@ -38,11 +38,6 @@ install-desktop:
 install-zsh:
 	rm -f ~/.zshrc
 	ln -s `pwd`/config/zsh/zshrc ~/.zshrc
-
-install-ranger:
-	ranger --copy-config=scope
-	rm -f ~/.config/ranger/rc.conf
-	ln -s `pwd`/config/ranger/rc.conf ~/.config/ranger/rc.conf
 
 install-vim:
 	rm -Rf ~/.vim
