@@ -1,16 +1,9 @@
-install: install-oh-my-zsh install-gtk3 install-i3 install-tmux install-desktop\
+install: install-gtk3 install-i3 install-tmux install-desktop\
 	install-zsh install-ranger install-vim install-xr
-
-deps: install-oh-my-zsh
 
 git: install-git
 
 settings: install-gtk3
-
-install-oh-my-zsh:
-	curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -o install-oh-my-zsh.sh;
-	sh install-oh-my-zsh.sh
-	rm install-oh-my-zsh.sh
 
 install-git:
 	rm -f ~/.gitconfig
@@ -21,17 +14,17 @@ install-gtk3:
 	ln -s `pwd`/config/settings.init ~/.config/gtk-3.0/settings.ini
 
 install-i3:
-	mkdir -p ~/.i3
-	rm -f ~/.i3/config
-	rm -f ~/.i3/i3status.conf
-	rm -f ~/.i3/lock
-	rm -f ~/.i3/lock.png
-	rm -f ~/.i3/text.png
-	ln -s `pwd`/config/i3/config ~/.i3/config
-	ln -s `pwd`/config/i3/i3status.conf ~/.i3/i3status.conf
-	ln -s `pwd`/config/i3/lock ~/.i3/lock
-	ln -s `pwd`/config/i3/lock.png ~/.i3/lock.png
-	ln -s `pwd`/config/i3/text.png ~/.i3/text.png
+	mkdir -p ~/.config/i3
+	rm -f ~/.config/i3/config
+	rm -f ~/.config/i3/i3status.conf
+	rm -f ~/.config/i3/lock
+	rm -f ~/.config/i3/lock.png
+	rm -f ~/.config/i3/text.png
+	ln -s `pwd`/config/i3/config ~/.config/i3/config
+	ln -s `pwd`/config/i3/i3status.conf ~/.config/i3/i3status.conf
+	ln -s `pwd`/config/i3/lock ~/.config/i3/lock
+	ln -s `pwd`/config/i3/lock.png ~/.config/i3/lock.png
+	ln -s `pwd`/config/i3/text.png ~/.config/i3/text.png
 
 install-tmux:
 	rm -f ~/.tmux.conf
@@ -59,10 +52,8 @@ install-vim:
 	ln -s `pwd`/config/vim/vimrc ~/.vimrc
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	git clone https://github.com/tpope/vim-sensible.git ~/.vim/bundle/vim-sensible
-	git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 	git clone https://github.com/w0rp/ale.git ~/.vim/bundle/ale
 	git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
-	git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/bundle/nerdtree-git-plugin
 	git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim-json
 	git clone https://github.com/tbastos/vim-lua.git ~/.vim/bundle/vim-lua
 	git clone https://github.com/lfe/vim-lfe.git ~/.vim/bundle/vim-lfe

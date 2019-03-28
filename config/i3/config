@@ -49,17 +49,17 @@ for_window [instance="tmux"] floating enable
 for_window [instance="tmux"] resize set 1280 720
 for_window [instance="tmux"] move position center
 for_window [instance="tmux"] move scratchpad
-exec --no-startup-id urxvt -name tmux -e tmux 
+exec --no-startup-id st -n tmux -t tmux -e tmux 
 
 # We later bind this to mod+Shift+p.
 for_window [instance="ipython"] floating enable
 for_window [instance="ipython"] resize set 1280 720
 for_window [instance="ipython"] move position center
 for_window [instance="ipython"] move scratchpad
-exec --no-startup-id urxvt -name ipython -e ipython
+exec --no-startup-id st -n ipython -t ipython -e ipython
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec st 
 
 # kill focused window
 bindsym $mod+Shift+Q kill
