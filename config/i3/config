@@ -19,7 +19,7 @@ set_from_resource $base0D color13
 set_from_resource $base0E color14 
 set_from_resource $base0F color15 
 
-# TODO: custom wallpaper pywal & squirell integration
+# TODO: custom wallpaper with pywal 
 exec_always --no-startup-id feh --randomize --bg-scale ~/.config/desktop/
 # network manager applet
 exec --no-startup-id nm-applet
@@ -30,8 +30,6 @@ exec xmodmap -e "keysym Caps_Lock = Escape"
 
 # Xresources db
 exec --no-startup-id xrdb ~/.Xresources
-# squirrel monkey terran adjutant 
-#exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel/squirrel.py
 # x window composition 
 exec --no-startup-id compton -f
 
@@ -44,34 +42,14 @@ font pango:Terminus 16px
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# We later bind this to mod+Shift+f.
-for_window [instance="tmux"] floating enable
-for_window [instance="tmux"] resize set 1280 720
-for_window [instance="tmux"] move position center
-for_window [instance="tmux"] move scratchpad
-exec --no-startup-id urxvt -name tmux -e tmux 
-
-# We later bind this to mod+Shift+p.
-for_window [instance="ipython"] floating enable
-for_window [instance="ipython"] resize set 1280 720
-for_window [instance="ipython"] move position center
-for_window [instance="ipython"] move scratchpad
-exec --no-startup-id urxvt -name ipython -e ipython
-
 # start a terminal
-bindsym $mod+Return exec urxvt 
+bindsym $mod+Return exec termite 
 
 # kill focused window
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run -nb "$base00" -nf "$base0F" -sb "$base01" -sf "$base0F"
-
-# scratchpad tmux instance
-bindsym $mod+Shift+f [instance="tmux"] scratchpad show; move position center 
-
-# scratchpad ipython instance
-bindsym $mod+Shift+p [instance="ipython"] scratchpad show; move position center
 
 # missing love on i3lock
 bindsym $mod+Shift+o exec ~/.i3/lock -p
