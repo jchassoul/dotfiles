@@ -7,6 +7,8 @@ export LANG=en_US.utf8
 export PATH=$HOME/bin:/sbin:/usr/sbin:$PATH
 export MANPATH=$MANPATH:/usr/local/share/man
 
+export TERM=xterm-color
+
 PS1='#'                   # Root
 (( USER_ID )) && PS1='$'  # Regular user
 PS1=$'\001\r''${|
@@ -43,5 +45,7 @@ case "$-" in *i*)
 
 	;;
 esac
+
+. /opt/torch/install/bin/torch-activate
 
 # vim:ft=sh
