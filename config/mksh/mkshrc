@@ -1,0 +1,28 @@
+#!/bin/mksh
+
+# .mkshrc
+
+export LANG=en_US.utf8
+
+export PATH=$HOME/bin:/sbin:/usr/sbin:$PATH
+export MANPATH=$MANPATH:/usr/local/share/man
+
+case "$-" in *i*)
+	# interative mode settings
+
+	# switch console to utf8 mode
+	echo -ne '\033%G'
+
+	HISTFILE=$HOME/.mksh_history
+
+	export EDITOR=vim
+
+	PS1=$'\e[32m${PWD/#$HOME/~}\e[31m${?/#0/}\e[0m\n$ '
+
+	alias ls='ls --color'
+	alias t='tmux attach -t - || tmux new -s -'
+
+	;;
+esac
+
+# vim:ft=sh

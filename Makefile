@@ -1,5 +1,5 @@
 install: install-gtk3 install-i3 install-tmux install-desktop\
-	install-zsh install-vim install-xr
+	install-zsh install-mksh install-vim install-xr
 
 git: install-git
 
@@ -38,6 +38,10 @@ install-desktop:
 install-zsh:
 	rm -f ~/.zshrc
 	ln -s `pwd`/config/zsh/zshrc ~/.zshrc
+
+install-mksh:
+	rm -f ~/.mkshrc
+	ln -s `pwd`/config/mksh/mkshrc ~/.mkshrc
 
 install-vim:
 	rm -Rf ~/.vim
