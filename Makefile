@@ -1,4 +1,5 @@
-install: install-gtk3 install-termite install-i3 install-tmux install-desktop install-mksh install-vim install-xr
+install: install-gtk3 install-termite install-i3 install-tmux\
+	install-desktop install-mksh install-vim install-xr
 
 git: install-git
 
