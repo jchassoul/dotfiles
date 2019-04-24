@@ -1,5 +1,5 @@
 install: install-gtk3 install-i3 install-tmux install-desktop\
-	install-zsh install-mksh install-vim install-xr
+	install-mksh install-vim install-xr
 
 git: install-git
 
@@ -34,10 +34,6 @@ install-desktop:
 	mkdir -p ~/.config/desktop/
 	rm -f ~/.config/desktop/ophelia.jpg
 	ln -s `pwd`/images/ophelia.jpg ~/.config/desktop/ophelia.jpg
-
-install-zsh:
-	rm -f ~/.zshrc
-	ln -s `pwd`/config/zsh/zshrc ~/.zshrc
 
 install-mksh:
 	rm -f ~/.mkshrc
