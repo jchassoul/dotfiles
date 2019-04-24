@@ -1,5 +1,4 @@
-install: install-gtk3 install-i3 install-tmux install-desktop\
-	install-mksh install-vim install-xr
+install: install-gtk3 install-termite install-i3 install-tmux install-desktop install-mksh install-vim install-xr
 
 git: install-git
 
@@ -12,6 +11,11 @@ install-git:
 install-gtk3:
 	rm -f ~/.config/gtk-3.0/settings.ini
 	ln -s `pwd`/config/settings.init ~/.config/gtk-3.0/settings.ini
+
+install-termite:
+	mkdir -p ~/.config/termite
+	rm -f ~/.config/termite/config
+	ln -s `pwd`/config/termite/config ~/.config/termite/config
 
 install-i3:
 	mkdir -p ~/.config/i3
