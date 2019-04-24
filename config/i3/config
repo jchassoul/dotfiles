@@ -19,8 +19,13 @@ set_from_resource $base0D color13
 set_from_resource $base0E color14 
 set_from_resource $base0F color15 
 
-# TODO: custom wallpaper with pywal 
-exec_always --no-startup-id feh --randomize --bg-scale ~/.config/desktop/
+# You can also use any non-zero value if you'd like to have a border
+for_window [class=".*"] border pixel 2 
+
+# We grab the wallpaper location from wal's cache
+exec_always --no-startup-id feh --bg-scale ~/.cache/wal/wal/
+# restores the last colorscheme that was in use.
+exec --no-startup-id wal -R
 # network manager applet
 exec --no-startup-id nm-applet
 # disable caps lock switch
