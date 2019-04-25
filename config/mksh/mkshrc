@@ -9,6 +9,9 @@ export MANPATH=$MANPATH:/usr/local/share/man
 
 export TERM=xterm-color
 
+# Import colorscheme from 'wal'
+(cat ~/.cache/wal/sequences &)
+
 PS1='#'                   # Root
 (( USER_ID )) && PS1='$'  # Regular user
 PS1=$'\001\r''${|
@@ -46,6 +49,10 @@ case "$-" in *i*)
 	;;
 esac
 
+# add support for ttys
+source ~/.cache/wal/colors-tty.sh
+
+# activate torch
 . /opt/torch/install/bin/torch-activate
 
 # vim:ft=sh
