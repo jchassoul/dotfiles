@@ -1,5 +1,6 @@
 install: install-gtk3 install-termite install-i3 install-tmux\
-	install-desktop install-mksh install-vim install-xr
+	install-desktop install-mksh install-vim install-xr\
+	install-vifm
 
 git: install-git
 
@@ -63,3 +64,8 @@ install-vim:
 install-xr:
 	rm -f ~/.Xresources
 	ln -s `pwd`/config/Xresources ~/.Xresources
+
+install-vifm:
+	rm -f ~/.config/vifm/vifmrc
+	ln -s `pwd`/config/vifm/vifmrc ~/.config/vifm/vifmrc
+
