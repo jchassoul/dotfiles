@@ -67,5 +67,8 @@ install-xr:
 
 install-vifm:
 	rm -f ~/.config/vifm/vifmrc
+	rm -f ~/.config/vifm/scripts/vifmrun
+	rm -f ~/.config/vifm/scripts/vifmimg
 	ln -s `pwd`/config/vifm/vifmrc ~/.config/vifm/vifmrc
-
+	ln -s `pwd`/config/vifm/vifmrun ~/.config/vifm/scripts/vifmrun
+	ln -s `pwd`/config/vifm/vifmimg ~/.config/vifm/scripts/vifmimg
