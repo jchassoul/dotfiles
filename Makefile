@@ -1,6 +1,6 @@
 install: install-gtk3 install-termite install-i3 install-tmux\
 	install-desktop install-mksh install-vim install-xr\
-	install-vifm
+	install-vifm install-fonts
 
 git: install-git
 
@@ -72,3 +72,8 @@ install-vifm:
 	ln -s `pwd`/config/vifm/vifmrc ~/.config/vifm/vifmrc
 	ln -s `pwd`/config/vifm/vifmrun ~/.config/vifm/scripts/vifmrun
 	ln -s `pwd`/config/vifm/vifmimg ~/.config/vifm/scripts/vifmimg
+
+install-fonts:
+	mkdir -p ~/.fonts
+	rm -f ~/.fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf
+	ln -s `pwd`/fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf ~/.fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf
