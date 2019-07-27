@@ -38,7 +38,7 @@ exec --no-startup-id xrdb ~/.Xresources
 # x window composition 
 exec --no-startup-id compton -f
 # squirrel monkey terran adjutant 
-exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel/squirrel.py
+#exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel/squirrel.py
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:DejaVu Sans Mono 16
@@ -161,7 +161,7 @@ client.urgent           $base02 $base08    $base00 $base0F
 # Start i3bar to display a workspace bar (plus py3status)
 bar {
     position top
-    status_command py3status -c ~/.i3/i3status.conf
+    status_command py3status -c ~/.config/i3/i3status.conf
 # Show your colours
     colors {
         separator $base03

@@ -38,8 +38,9 @@ install-tmux:
 
 install-desktop:
 	mkdir -p ~/.config/desktop/
-	rm -f ~/.config/desktop/ophelia.jpg
-	ln -s `pwd`/images/ophelia.jpg ~/.config/desktop/ophelia.jpg
+	rm -f ~/.config/desktop/background.jpg
+	ln -s `pwd`/images/background.jpg ~/.config/desktop/background.jpg
+	wal -i ~/.config/desktop/background.jpg
 
 install-mksh:
 	rm -f ~/.mkshrc
@@ -69,6 +70,7 @@ install-vifm:
 	rm -f ~/.config/vifm/vifmrc
 	rm -f ~/.config/vifm/scripts/vifmrun
 	rm -f ~/.config/vifm/scripts/vifmimg
+	mkdir -p ~/.config/vifm/scripts
 	ln -s `pwd`/config/vifm/vifmrc ~/.config/vifm/vifmrc
 	ln -s `pwd`/config/vifm/vifmrun ~/.config/vifm/scripts/vifmrun
 	ln -s `pwd`/config/vifm/vifmimg ~/.config/vifm/scripts/vifmimg
