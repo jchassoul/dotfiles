@@ -1,10 +1,14 @@
 # .mkshrc
 export LANG=en_US.utf8
 
-export PATH=$HOME/bin:/sbin:/usr/sbin:$PATH
+export GOPATH=$HOME/go
+export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:/sbin:/usr/sbin:$PATH
 export MANPATH=$MANPATH:/usr/local/share/man
 
 export TERM=xterm-color
+
+# switch console to utf8 mode
+echo -ne '\033%G'
 
 # Import colorscheme from 'wal'
 (cat ~/.cache/wal/sequences &)
@@ -31,12 +35,10 @@ PS1=$'\001\r''${|
 case "$-" in *i*)
 	# interative mode settings
 
-	# switch console to utf8 mode
-	echo -ne '\033%G'
-
 	HISTFILE=$HOME/.mksh_history
     HISTSIZE=10000
     LESSSECURE=1
+    
     export HISTFILE HISTSIZE LESSSECURE
 	export EDITOR=vim
 
