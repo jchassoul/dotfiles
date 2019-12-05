@@ -109,4 +109,16 @@ This is called running the command in the background, and a command that runs in
 #### Background I/O
 Jobs you put in the background should not do I/O in your terminal. Just think about it for a moment and you'll understand why.
 
+By definition, a background job doesn't have control over your terminal. Among other things, this means that only the foreground process (or, if none, the shell itself) is "listening" for input from your keyboard. If a background job needs keyboard input, it will often just sit there doing nothing until you do something about it.
+
+If a background job produces screen output, the output will just appear on your screen. If you are running a job in the foreground that also produces output, the output from the two jobs will be randomly (and oftern annoyingly) interspersed.
+
+If you want to run a job in the background that expects standard input or produces standard output, the obvious solution is to redicred it so that it comes from or goes to a file. The only excpetion is that some programs produce small, one-line messages (warnings, "done" messages, etc); you may not mind if these are interspersed with whatverout other output you are seeing at a given time.
+
+## Command-Line Editing
+It's always possible to make mistakes when you type at a computer keyboard, but perhaps even more so when you are using a shell. Unix shell syntax is powerful, yet terse, full of odd characters, and not particularly mnemonic, making it possible to construct command lines that are as cryptic as they are complex.
+
+But there are more than a few people who have wondered, "Why can't I edit my Unix command lines in the same way I can edit text with an editor?"
+
+This is exactly what the Korn shell allows you to do. 
 
