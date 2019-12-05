@@ -98,4 +98,6 @@ The pipe concept elimintes the need for messy temporary files to store output of
 After sufficient practice, you will find yourself routinely typing in powerful command pipelines and one liners
 
 ### Background Jobs
+Pipes are actually a special case of a more general feature: doing more than one thing at a time. Unix was developed in a research lab and meant for internal use, so it does relatively litte to impose limits on the resorces available to users on a computer -- as usual, learning towards uncluttered simplicity rather than overcomplexity.
 
+"Doing more than one thing at a time" means running more than one program at the same time.
