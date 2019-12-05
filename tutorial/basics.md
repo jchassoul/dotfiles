@@ -100,4 +100,13 @@ After sufficient practice, you will find yourself routinely typing in powerful c
 ### Background Jobs
 Pipes are actually a special case of a more general feature: doing more than one thing at a time. Unix was developed in a research lab and meant for internal use, so it does relatively litte to impose limits on the resorces available to users on a computer -- as usual, learning towards uncluttered simplicity rather than overcomplexity.
 
-"Doing more than one thing at a time" means running more than one program at the same time.
+"Doing more than one thing at a time" means running more than one program at the same time. You do this when you invoke a pipeline.
+
+The shell also lets you run more than one command at a time during a single login session. Norally, when you type a command and hit ENTER, the shell lets the command have control of your terminal until it is done; you can't run futher commands until the first one finishes. But if you want to run a command that does not require user input and you want to do other things while the command is running, put an ampersand (&) after the command.
+
+This is called running the command in the background, and a command that runs in this way is called a background job; for contras, a jon run the normal way is called a foreground job. When you start a background job, you get your shell prompt back immmediately, enabling you to enter other commands.
+
+#### Background I/O
+Jobs you put in the background should not do I/O in your terminal. Just think about it for a moment and you'll understand why.
+
+
