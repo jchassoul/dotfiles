@@ -4,7 +4,7 @@ export LANG=en_US.utf8
 export GOPATH=$HOME/go
 export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:/sbin:/usr/sbin:$PATH
 export MANPATH=$MANPATH:/usr/local/share/man
-
+export WINEDEBUG=-all
 export TERM=xterm-color
 
 # switch console to utf8 mode
@@ -41,7 +41,9 @@ case "$-" in *i*)
     
     export HISTFILE HISTSIZE LESSSECURE
 	export EDITOR=vim
-
+    
+    alias o='cd ~/work/ophelia/src/'
+    alias b='cd ~/work/bw/src/'
 	alias ls='ls --color'
 	alias t='tmux attach -t - || tmux new -s -'
     alias vifm='~/.config/vifm/scripts/vifmrun'

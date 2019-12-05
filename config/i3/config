@@ -37,8 +37,8 @@ exec xmodmap -e "keysym Caps_Lock = Escape"
 exec --no-startup-id xrdb ~/.Xresources
 # x window composition 
 exec --no-startup-id compton -f
-# squirrel monkey terran adjutant 
-#exec --no-startup-id /usr/bin/python /opt/squirrel/squirrel/squirrel.py
+# Flying Saucer Experience 
+exec --no-startup-id /usr/bin/python /opt/saucer/saucer.py
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:DejaVu Sans Mono 16
