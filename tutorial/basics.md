@@ -1,4 +1,4 @@
-## Shell Basics
+## Korn in the Shell
 You've used your computer for simple tasks, such as involing your application programs, reading your email, and perhaps watch a stream or play some games. You know that your machine runs a bastard child of the Unix operating system, or maybe you know it under some other name, like GNU/Linux or one of the BSD-derived systems that is not based on the original Unix source code. But apart from that, you may not have given too much thought to what goes on inside the machine when you type in a command and hit ENTER.
 
 It is true that several layers of events take place whenever you enter a command, but we're going to consider only the top layer, known as the shell. Generally speaking, a shell is any user interface to the operating system, i.e., any program that takes input from the user, translates it into instructions that the operating system can understand, and conveys the operating system's output back to the user.
