@@ -16,20 +16,20 @@ echo -ne '\033%G'
 PS1='#'                   # Root
 (( USER_ID )) && PS1='$'  # Regular user
 PS1=$'\001\r''${|
-	# Store exit code for later
-	\typeset e=$?
-	\typeset d=${PWD:-?}/
-	\typeset p=~
-	# Replace $HOME with ~
-	[[ $p = ?(*/) ]] || d=${d/#$p\//\~/}
-	d=${d%/}
-	\typeset m=${%d} n p=…
-	(( m > 0 )) || m=${#d}
-	(( m > (n = (COLUMNS/3 < 7 ? 7 : COLUMNS/3)) )) && d=${d:(-n)} || p=
-	REPLY+="[$p$d]"
-	# Add exit code
-	(( e )) && REPLY+=" $e "
-	\return $e
+    # Store exit code for later
+    \typeset e=$?
+    \typeset d=${PWD:-?}/
+    \typeset p=~
+    # Replace $HOME with ~
+    [[ $p = ?(*/) ]] || d=${d/#$p\//\~/}
+    d=${d%/}
+    \typeset m=${%d} n p=…
+    (( m > 0 )) || m=${#d}
+    (( m > (n = (COLUMNS/3 < 7 ? 7 : COLUMNS/3)) )) && d=${d:(-n)} || p=
+    REPLY+="[$p$d]"
+    # Add exit code
+    (( e )) && REPLY+=" $e "
+    \return $e
 }'"$PS1 "
 
 # enable vi mode
@@ -39,7 +39,7 @@ set -o vi
 set -o monitor
 
 case "$-" in *i*)
-	# interative mode settings
+    # interative mode settings
     HISTFILE=$HOME/.mksh_history
     HISTSIZE=10000
     LESSSECURE=1
@@ -52,7 +52,7 @@ case "$-" in *i*)
     alias ls='ls --color'
     alias t='tmux attach -t - || tmux new -s -'
     alias vifm='~/.config/vifm/scripts/vifmrun'
-	;;
+    ;;
 esac
 
 # add support for ttys
