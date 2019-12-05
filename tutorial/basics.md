@@ -74,4 +74,28 @@ The standard input and output scheme of Unix has to be on the short list of idea
 The Unix I/O scheme is based on two dazzlingly simple ideas. First, Unix file I/O takes the form of arbitrarily long sequences of characters (bytes). In contrast, file systems of older vintage have more complicated schemes (e.g "block", "record", "card image", etc) Second, everything on the system that produces or accepts data is treated as a file; this includes hardware devices like disk drivers and terminals. Order systems treated every device differetly. Both of these ideas have made systems programmers' lives much more pleasant.
 
 #### Standard I/O
+By convention, each Unix program has a single way of accepting input caled standad input, a single way of producing output called standard output, and a single way of producing error messages called standard error output, usually shortened to standard error.Of course, a program can have other input and output sources as well.
+
+Standard I/O was the first scheme of its kind that was designed specifically for interactive users, rather than the older batch style of use that usually involves decs of punch-cards. Since the Unix shell provides the user interface, it should come as no surprise that standard I/O was designed to fit in very neatly with the shell.
+
+All shells handle standard I/O in basically the same way. Each program that you invoke has all three standard I/O channels set to your terminal or workstation window, so that standard input is your keyboard, and standard output and error are your screen or window. 
+
+When necessary, you can redirect input and output to come from or go to a file insted. You can also hoop up programs into a pipeline, in which the standard output of one program feeds directly into the standard input of another; this makes it possible to use Unix utilities as building blocks for bigger programs. Many Unix utility programs are meant to be used in this way.
+
+##### I/O Redirection
+
+`cat` is actually short for "catenate" (link together). It accepts multiple filename arguments and copies them to the standard output.
+
+Similarly, command > filename caused command's standard output to be redirected to the named file. The classic "canonical" example of this is date > now: the date command prints the current date and time on the standard output; the above command saves it in a file called now.
+
+As a mnemic device, think of < and > as "data funnels." Data goes into the big end and comes out the small end.
+
+#### Pipelines
+It is also possible to redirect the output of one command into the standard input of another running command insted of a file. The construct that does this is called the pipe, notated as |. A command line that includes two or more commands connected with pipes is called a pipeline.
+
+The pipe concept elimintes the need for messy temporary files to store output of commands before it is fed into other commands.
+
+After sufficient practice, you will find yourself routinely typing in powerful command pipelines and one liners
+
+### Background Jobs
 
