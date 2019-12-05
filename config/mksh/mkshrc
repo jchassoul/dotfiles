@@ -32,20 +32,25 @@ PS1=$'\001\r''${|
 	\return $e
 }'"$PS1 "
 
+# enable vi mode
+set -o vi
+
+# job control fully enabled
+set -o monitor
+
 case "$-" in *i*)
 	# interative mode settings
-
-	HISTFILE=$HOME/.mksh_history
+    HISTFILE=$HOME/.mksh_history
     HISTSIZE=10000
     LESSSECURE=1
     
     export HISTFILE HISTSIZE LESSSECURE
-	export EDITOR=vim
+    export EDITOR=vim
     
     alias o='cd ~/work/ophelia/src/'
     alias b='cd ~/work/bw/src/'
-	alias ls='ls --color'
-	alias t='tmux attach -t - || tmux new -s -'
+    alias ls='ls --color'
+    alias t='tmux attach -t - || tmux new -s -'
     alias vifm='~/.config/vifm/scripts/vifmrun'
 	;;
 esac
