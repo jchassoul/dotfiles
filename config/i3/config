@@ -25,7 +25,7 @@ for_window [class=".*"] border pixel 2
 # We grab the wallpaper location from wal's cache
 exec_always --no-startup-id feh --bg-scale ~/.cache/wal/wal/
 # restores the last colorscheme that was in use.
-exec --no-startup-id wal -R
+exec --no-startup-id wal -R --vte
 # network manager applet
 exec --no-startup-id nm-applet
 # disable caps lock switch

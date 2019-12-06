@@ -1,17 +1,12 @@
-# .mkshrc
 export LANG=en_US.utf8
 
 export GOPATH=$HOME/go
 export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:/sbin:/usr/sbin:$PATH
 export MANPATH=$MANPATH:/usr/local/share/man
+
 export WINEDEBUG=-all
+
 export TERM=xterm-color
-
-# switch console to utf8 mode
-echo -ne '\033%G'
-
-# Import colorscheme from 'wal'
-(cat ~/.cache/wal/sequences &)
 
 PS1='#'                   # Root
 (( USER_ID )) && PS1='$'  # Regular user
@@ -38,6 +33,11 @@ set -o vi
 # job control fully enabled
 set -o monitor
 
+# switch console to utf8 mode
+echo -ne '\033%G'
+
+set -o utf8-mode
+
 case "$-" in *i*)
     # interative mode settings
     HISTFILE=$HOME/.mksh_history
@@ -55,10 +55,11 @@ case "$-" in *i*)
     ;;
 esac
 
+# Import colorscheme from 'wal'
+(cat ~/.cache/wal/sequences &)
+
 # add support for ttys
 source ~/.cache/wal/colors-tty.sh
 
 # activate torch
 . /opt/torch/install/bin/torch-activate
-
-# vim:ft=sh
