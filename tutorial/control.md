@@ -1,7 +1,7 @@
 ## Process Handling
 The Unix operating system built its reputation on a small number of concepts, all of which are simple yet powerful.
 
-We've seen most of them by now: standard input/output, pipes, text-filtering utilities, the tree-structured filesystem, and so on. Unix also gained notoriety as the first small-computer operating system to give each user control over more than one process. We call this capability user-controlled multitasking.
+We've seen most of them by now: standard input/output, pipes, text-filtering utilities, the tree-structured file system, and so on. Unix also gained notoriety as the first small-computer operating system to give each user control over more than one process. We call this capability user-controlled multitasking.
 
 ### Jobs; Background, Foreground, Suspended
 When one or more commands are typed together as a pipeline or as a sequence separated by semicolons, a single job is created by the shell consisting of these commands together as a unit.
