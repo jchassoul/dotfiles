@@ -10,7 +10,7 @@ Single commands without pipes or semicolons create the simplest jobs.
 
 Usually, every line typed to the shell creates a job. If the metacharacter `&` is typed at the end of the commands, then the job is started as a background job. This means that the shell does not wait for it to complete but immediately prompts and is ready for another command. The job runs in the background at the same time that normal jobs, called foreground jobs, continue to be read and executed by the shell one at a time.
 
-When a background job terminates, a message is typed by the shell just before the next prompt telling you that the job has completed.
+When a background job terminates, a message is typed by the shell telling you that the job has completed.
 
 ### Process IDS and Job Numbers
 Job numbers refer to background processes that are currently running under your shell, while process IDs refer to all processes currently running on the entire system, for all users. The term job basically refers to a command line that was invoked from your login shell.
