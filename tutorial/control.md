@@ -22,7 +22,8 @@ Why should you care about process IDs or job numbers? Actually, you could probab
 
 You already know the most obvious way to control a job: you can create one in the background with `&`. 
 
-Once a job is running in the background, you can let it run to completion, bring it into the foreground, or send it a message called a signal.
+Once a job is running in the background, you can let it run to completion, bring it into the foreground, or 
+send it a message called a signal.
 
 #### Foreground and background
 
