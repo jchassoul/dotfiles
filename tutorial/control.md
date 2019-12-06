@@ -20,10 +20,7 @@ The term job basically refers to a command line that was invoked from the shell.
 ### Job Control
 Why should you care about process IDs or job numbers? Actually, you could probably get along fine in your life without ever referring to process IDs. Job numbers are more important, however: you can use them with the shell commands for job control.
 
-You already know the most obvious way to control a job: you can create one in the background with `&`. 
-
-Once a job is running in the background, you can let it run to completion, bring it into the foreground, or 
-send it a message called a signal.
+You already know the most obvious way to control a job: you can create one in the background with `&`. Once a job is running in the background, you can let it run to completion, bring it into the foreground, or send it a message called a signal.
 
 #### Foreground and background
 
