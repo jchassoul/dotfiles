@@ -12,6 +12,8 @@ Usually, every line typed to the shell creates a job. If the metacharacter `&` i
 
 When a background job terminates, a message is typed by the shell just before the next prompt telling you that the job has completed.
 
+Jobs are recorded in a table inside the shell until they terminate. In this table, the shell remembers the command names, arguments and the process numbers of all commands in the job as well as the working directory where the job was started. Each job in the table is either running in the foreground with the shell waiting for it to terminate, running in the background, or suspended. Only one job can be running in the foreground at one time, but several jobs can be suspended or running in the background at once.
+
 ### Process IDS and Job Numbers
 Job numbers refer to background processes that are currently running under your shell, while process IDs refer to all processes currently running on the entire system, for all users. The term job basically refers to a command line that was invoked from your login shell.
 
