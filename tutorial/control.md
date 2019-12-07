@@ -25,4 +25,10 @@ You can use Job numbers with the shell commands for job control.
 You already know the way to control a job: you can create one in the background with `&`. Once a job is running in the background, you can let it run to completion, bring it into the foreground, or send it a message called a signal.
 
 #### Foreground and background
+The built-in command `fg` brings a background job into the foreground. Normally this means that the job has control of your terminal or window and therefore is able to accept your input. In other words, the job begins to act as if you typed its command without the &.
 
+If you have only one background job running, you can use `fg` without arguments, and the shell brings that job into the foreground. But if you have several jobs running in the background, the shell picjs the one that you put into the background most recently.
+
+If you want a different job put into the foreround, you need to use the job's command name, preceded y  percent sing (`%`), or you can use its job number, also preceded by % or its process ID without a percent sign. If you don't remember which jobs are running, you can use the jobs command to list them.
+
+How does all this work? Every time you run a job, the process(es) in the job are put into a new process group. Each process in a process group, besides its unique process ID number, also has a process group ID. The process group ID is the same as the process ID of the process group leader, which is one of the processes invoked as part of the job. (The last one in the pipeline, in fact.)
