@@ -32,3 +32,12 @@ do
 done
 ```
 
+The script starts at the first line and ends euther when it encouters and `exit` or the last line. All `#` lines are ignored.
+
+A command starts with the first word on a line or if its the second command on a line with the first word after a `;`. A command ends either at the end of the line or whith a `;`. So one can put several commands onto one line.
+
+```
+print -n "Name "; read name; print "$name"
+```
+
+
