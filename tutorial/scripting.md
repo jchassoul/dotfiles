@@ -3,7 +3,7 @@ The Spacebeam **Char** distro a custom Debian (x86_64) stretch system and other 
 
 The great thing about shell commands is that you can combine them in a file called a script that allows you to run multiple commands one after another. This is great when you have to repeat the same tasks over and over again. Instead of repeatedly typing these commands, you can put them in a script, a Korn shell script.
 
-## Writing your first Korn shell script
+## Writing your first .ksh script
 The first line in a Korn shell script is the shell itself. It is denoted as follow:
 
 ```
