@@ -12,6 +12,7 @@ install-git:
 
 install-gtk3:
 	rm -f ~/.config/gtk-3.0/settings.ini
+	mkdir -p ~/.config/gtk-3.0
 	ln -s `pwd`/config/settings.init ~/.config/gtk-3.0/settings.ini
 
 install-termite:
