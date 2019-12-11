@@ -32,6 +32,12 @@ do
 done
 ```
 
+When filling into a variable then one uses its name: `state="CR"` and no blanks. There is no difference between strings and numbers: `price=500`.
+
+When using a variable you need to put a `$` sign in front of it: `print $state $price`,
+
+There are happily no declarations of variables needed in ksh. We don't have decimals only integers.
+
 The script starts at the first line and ends euther when it encouters and `exit` or the last line. All `#` lines are ignored.
 
 A command starts with the first word on a line or if its the second command on a line with the first word after a `;`. A command ends either at the end of the line or whith a `;`. So one can put several commands onto one line.
@@ -56,3 +62,35 @@ fi
 ```
 
 Conditional `if` statements start with if and end with the letters reversed (`fi`).
+
+
+### if then elif then else fi
+
+```
+
+
+
+```
+
+### case esac
+
+```
+```
+
+### while do done
+```
+```
+
+### until do done
+```
+```
+
+### for var in list do done
+```
+```
+
+### continue...break
+```
+```
+
+### Positional parameters
