@@ -1,4 +1,7 @@
 # What's tmux?
+
+Acknowledgement: https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/
+
 Within one terminal window you can open multiple windows and split-views (called “panes” in tmux lingo). Each pane will contain its own, independently running terminal instance. This allows you to have multiple terminal commands and applications running visually next to each other without the need to open multiple terminal emulator windows.
 
 On top of that tmux keeps these windows and panes in a session. You can exit a session at any point. This is called “detaching”. tmux will keep this session alive until you kill the tmux server.
@@ -11,4 +14,6 @@ You see that tmux basically offers two big features: Window management in your t
 
 tmux is based on a client-server architecture. While this is rarely relevant, it’s helpful to understand how stuff works. The tmux server keeps track of all the running sessions. You will only ever work with the tmux client and create new sessions or connect to existing ones.
 
+
 Acknowledgement: https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/
+
