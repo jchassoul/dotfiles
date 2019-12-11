@@ -65,16 +65,23 @@ Conditional `if` statements start with if and end with the letters reversed (`fi
 
 
 ### if then elif then else fi
-
 ```
-
-
-
+if [[ $name = "John" ]]; then
+    print "Your welcome, ${name}."
+elif [[ $name = "Hanna" ]]; then
+    print "Hello, ${name}, are you ok?"
+else
+    print "Good bye, ${name}!"
+fi
 ```
 
 ### case esac
-
 ```
+case $var in
+    john|jean)  print $invitation;;
+    sloth)      print $declination;;
+    *)          print "Wrong name...";;
+esac
 ```
 
 ### while do done
@@ -89,7 +96,7 @@ Conditional `if` statements start with if and end with the letters reversed (`fi
 ```
 ```
 
-### continue...break
+### continue break
 ```
 ```
 
