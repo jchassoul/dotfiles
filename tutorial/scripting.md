@@ -40,4 +40,21 @@ A command starts with the first word on a line or if its the second command on a
 print -n "Name "; read name; print "$name"
 ```
 
+### Error checking
 
+What happens if the /etc/passwd file didn't exist? The script would fail.
+
+```
+# Check to see if the file exists and if so then continue
+if [[ -e $PASSWORD_FILE ]]; then
+    for username in $(cat $PASSWORD_FILE | cut -f1 -d:)
+    do
+        print $username
+    done
+else
+    print "$PASSWORD_FILE was not found"
+    exit
+fi
+```
+
+Conditional if statements start with if and end with the letters reversed (fi).
