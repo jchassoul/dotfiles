@@ -13,7 +13,3 @@ But tmux is not only helpful when working on a remote machine. Not only for its 
 You see that tmux basically offers two big features: Window management in your terminal and session management. If you are familiar with GNU Screen this is nothing new. Think of tmux as an easier-to-use and a little more powerful alternative to Screen (obviously I’m being opinionated here).
 
 tmux is based on a client-server architecture. While this is rarely relevant, it’s helpful to understand how stuff works. The tmux server keeps track of all the running sessions. You will only ever work with the tmux client and create new sessions or connect to existing ones.
-
-
-Acknowledgement: https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/
-
