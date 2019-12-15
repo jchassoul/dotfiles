@@ -86,10 +86,19 @@ esac
 
 ### while do done
 ```
+while [[ $count -gt 0 ]]; do
+    print "\$count is $count"
+    (( count -= 1))
+done
 ```
 
 ### until do done
 ```
+until [[ $answer = "yes" ]]; do
+    print "Please enter \"yes\": "
+    read answer
+    print ""
+done
 ```
 
 ### for var in list do done
