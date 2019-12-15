@@ -103,10 +103,57 @@ done
 
 ### for var in list do done
 ```
+for foo in $(ls); do
+    if [[ -d $foo ]]; then
+        print "$foo is a directory"
+    else
+        print "$foo is not a directory"
+    fi
+done
 ```
 
-### continue break
+### continue
 ```
+while read line
+do
+    if [[ $line = *.gz ]]; then
+        continue
+    else
+        print $line
+    fi
+done
+```
+
+### break
+```
+while read line; do
+    if [[ $line = *!(.c) ]]; then
+        break
+    else
+        print $line
+    fi
+done
 ```
 
 ### Positional parameters
+The number of command line arguments is stored in `$#` so one can check for arguments with:
+```
+if [[ $# -eq 0 ]]; then
+    print "No Arguments"
+    exit
+fi
+```
+Single arguments are stored in `$1,...$n` and all are in `$*` as one string.
+
+The program name is stored in `$0` but it contains the path also! (`?`)
+
+### Comparisons
+To compare strings one uses `=` for equal and `!=` for not equal.
+
+To compare numbers one uses `-eq` for equal `-ne` for not equal as well as `-gt` for greater than and `-lt` for less than.
+
+With `&&` for **AND** and `||` for **OR** one can combine statements.
+
+```
+
+```
