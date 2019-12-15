@@ -152,8 +152,39 @@ To compare strings one uses `=` for equal and `!=` for not equal.
 
 To compare numbers one uses `-eq` for equal `-ne` for not equal as well as `-gt` for greater than and `-lt` for less than.
 
-With `&&` for **AND** and `||` for **OR** one can combine statements.
+With `&&` for **and** and `||` for **or** one can combine statements.
 
 ```
 
 ```
+
+### Variable manipulations
+Just check for the variable
+`${foo:+1}` gives one if $foo is set, otherwise nothing.
+
+#### Removing something from a variable
+Variables that contain a path can very easily be strippe of it ${name##*/} gives you just the file name.
+
+Or if one want the path: ${name%/*}. `%` takes it away from the left and # from the right.
+
+`%%` and `##` take the longest possibility while `%` and `#` just take the shortest one.
+
+#### Replacing a variable if it does not yet exists
+If we wanted $foo or if not set 4 then: `${foo:=4}`
+
+#### Exiting and stating something if variable is not set
+If we wanted $foo or if not set 4 then: ${foo:?"foo not set!"}
+
+
+### Pattern matching
+Use an `*` for any string. So to get all the filed ending it .c use *.c.
+
+A single character is represented wih a ?. So all the files starting with any sign followed by 44.f can be fetcjed by: ?44.f.
+
+There are qualifiers for whole patterns:
+
+?(pattern) matches zero or one times the pattern.
+
+### Functions
+
+
