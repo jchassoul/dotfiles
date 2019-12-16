@@ -227,7 +227,39 @@ function(){
 #### Calling the Function
 To call it just put it's name in the script: foo. To give it arguments do: `foo arg1 arg2 ...`
 The arguments are there in the form of `$1...$n` and `$*` for all at once in the main code.
-And the main `$1 is not influenced by the `$1` of a particular function.
+And the main `$1` is not influenced by the `$1` of a particular function.
 
 #### Return
 The `return` statement exists the function imediately with the specified return value as an exit status.
+
+### Data Redirection
+Data redirection is done with the following signs: `> >> < <<`. Every program has at least a standardinput, standardoutput and standarderroroutput. all of these can be redirected.
+
+#### Command Output to File
+For writting into a new file or for everwritting a file do; `command > file`
+
+For appending to a file do: `command 2> file`
+
+#### Standard Error Redirection
+To redirect the error output of a command do: `command 2> file`
+
+To discard the error alltogether do: `command 2>/dev/null`
+
+To put the error to the same location as the normal output do: `command 2>&1`
+
+#### File into Command
+If a program needs a file for input over standard input do: `command < file`
+
+#### Combine Input and Output Redirection
+```
+command < infile > outfile
+command < infile > outfile 2>/dev/null
+```
+
+### Read Input from User and from Files
+
+From a user we read with: `read var`. Then the users can type something in. One should first print something like:
+
+`print -n "Enter your favorite color: "; read var; print ""`. Then -n supresses the newline sign.
+
+#### Read into File Line for Line
