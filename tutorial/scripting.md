@@ -209,4 +209,25 @@ In ksh there are qualifiers for whole patterns:
 
 ### Functions
 A function (= procedure) must be defined before it is called, because ksh is interpreted at run time.
+It has an exist status but cannot return a value like a c function can.
 
+#### Making a Function
+One can make one in either of the following two ways:
+
+```
+function foo {
+    # commands ...
+}
+
+function(){
+    # commands ...
+}
+```
+
+#### Calling the Function
+To call it just put it's name in the script: foo. To give it arguments do: `foo arg1 arg2 ...`
+The arguments are there in the form of `$1...$n` and `$*` for all at once in the main code.
+And the main `$1 is not influenced by the `$1` of a particular function.
+
+#### Return
+The `return` statement exists the function imediately with the specified return value as an exit status.
