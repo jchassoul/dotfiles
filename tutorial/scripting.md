@@ -193,12 +193,16 @@ If we wanted $foo or if not set 4 then: ${foo:?"foo not set!"}
 ### Pattern matching
 Use an `*` for any string. So to get all the filed ending it .c use *.c.
 
-A single character is represented wih a ?. So all the files starting with any sign followed by 44.f can be fetcjed by: ?44.f.
+A single character is represented wih a ?. So all the files starting with any sign followed by 44.f can be fetched by: **?44.f**.
 
-There are qualifiers for whole patterns:
+In ksh there are qualifiers for whole patterns:
 
 ?(pattern) matches zero or one times the pattern.
+*(pattern) matches any time the pattern.
++(pattern) matches one or more time the pattern.
+@(pattern) matches one time the pattern.
+!(pattern) matches string without the pattern.
 
 ### Functions
-
+A function (= procedure) must be defined before it is called, because ksh is interpreted at run time.
 
