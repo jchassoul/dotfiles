@@ -263,3 +263,18 @@ From a user we read with: `read var`. Then the users can type something in. One 
 `print -n "Enter your favorite color: "; read var; print ""`. Then -n supresses the newline sign.
 
 #### Read into File Line for Line
+To get each line of a file into a variable iteratively do:
+```
+{ while read myline; do
+    # process $myline
+done } < filename
+```
+
+To catch the output of a pipeline each line at a time in a variable use:
+```
+last | sort | {
+while read myline; do
+    # commands ...
+done }
+```
+
