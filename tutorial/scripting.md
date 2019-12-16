@@ -197,11 +197,11 @@ A single character is represented wih a ?. So all the files starting with any si
 
 In ksh there are qualifiers for whole patterns:
 
-?(pattern) matches zero or one times the pattern.
-*(pattern) matches any time the pattern.
-+(pattern) matches one or more time the pattern.
-@(pattern) matches one time the pattern.
-!(pattern) matches string without the pattern.
+**?(pattern)** matches zero or one times the pattern.
+***(pattern)** matches any time the pattern.
+**+(pattern)** matches one or more time the pattern.
+**@(pattern)** matches one time the pattern.
+**!(pattern)** matches string without the pattern.
 
 ### Functions
 A function (= procedure) must be defined before it is called, because ksh is interpreted at run time.
