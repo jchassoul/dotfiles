@@ -155,7 +155,21 @@ To compare numbers one uses `-eq` for equal `-ne` for not equal as well as `-gt`
 With `&&` for **and** and `||` for **or** one can combine statements.
 
 ```
+if [[ $name = "John" ]]; then
+    # commands ...
+fi
 
+if [[ $size -eq 1000 ]]; then
+    # commands ...
+fi
+
+if [[ $price -lt 1000 || $name = "Hanna" ]]; then
+    # commands ...
+fi
+
+if [[ $name = "Fred" && $city = "Denver" ]]; then
+    # commands ...
+fi
 ```
 
 ### Variable manipulations
