@@ -1,5 +1,5 @@
-# Headless software
-Capable of working on a device without a graphical user interface. Such software receives inputs and provide output through over interfaces like the network common on servers and embedded devices.
+# Running without a Display 
+Headless software capable of working on a device without a graphical user interface. Such software receives inputs and provide output through over interfaces like the network common on servers and embedded devices.
 
 A headless computer (a server) may be missing many of the system libraries that support the display of graphical interfaces. Software that expects these libraries may fail to start or even compile if such libraries are not present.
 
