@@ -1,5 +1,5 @@
 # Korn shell scripting
-The Spacebeam custom Debian (x86_64) system and other UNIX-Like operating systems need a way to communicate with the kernel. This is done through the use of a shell. There are a few different shells that you can use, but we focus on the Korn shell.
+The Spacebeam custom Debian (x86_64) system and other UNIX-Like operating systems need a way to communicate with the kernel. There are a few different shells that you can use, but we focus on the Korn shell.
 
 The great thing about shell commands is that you can combine them in a file called a script that allows you to run multiple commands one after another. This is great when you have to repeat the same tasks over and over again. Instead of repeatedly typing these commands, you can put them in a script, a Korn shell script.
 
