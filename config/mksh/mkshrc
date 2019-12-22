@@ -1,7 +1,7 @@
 export LANG=en_US.utf8
 
 export GOPATH=$HOME/go
-export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:/sbin:/usr/sbin:$PATH
+export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH
 export MANPATH=$MANPATH:/usr/local/share/man
 
 export WINEDEBUG=-all
@@ -46,7 +46,7 @@ case "$-" in *i*)
     
     export HISTFILE HISTSIZE LESSSECURE
     export EDITOR=vim
-    
+   
     alias o='cd ~/work/ophelia/src/'
     alias b='cd ~/work/bw/src/'
     alias c='clear'
