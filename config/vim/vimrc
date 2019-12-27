@@ -14,3 +14,6 @@ set shiftwidth=4
 set expandtab
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:indentLine_setColors = 0
+
+autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
+au BufNewFile,BufRead *.erl,*.es,*.hrl,*.xrl,*.config setf erlang

@@ -64,7 +64,7 @@ bindsym $mod+Shift+o exec ~/.i3/lock -p
 for_window [title="video0 - mpv"] floating enable
 for_window [title="video0 - mpv"] sticky enable
 
-# Binding capuchino hold keys
+# Binding custom hold keys
 bindsym $mod+Shift+h exec pcmanfm ~
 
 bindsym $mod+Shift+a exec pcmanfm menu://applications/
