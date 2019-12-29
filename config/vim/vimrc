@@ -15,5 +15,18 @@ set expandtab
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:indentLine_setColors = 0
 
+" Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
 au BufNewFile,BufRead *.erl,*.es,*.hrl,*.xrl,*.config setf erlang
+
+" VimCompletesMe
+autocmd FileType vim let b:vcm_tab_complete = 'vim'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0

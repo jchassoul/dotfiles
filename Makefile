@@ -54,10 +54,12 @@ install-vim:
 	rm -f ~/.vimrc
 	ln -s `pwd`/config/vim/vimrc ~/.vimrc
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+	git clone https://github.com/ajh17/VimCompletesMe.git ~/.vim/pack/vendor/start/VimCompletesMe
 	git clone https://github.com/tpope/vim-sensible.git ~/.vim/bundle/vim-sensible
 	git clone https://github.com/w0rp/ale.git ~/.vim/bundle/ale
 	git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
+	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
 	git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim-json
 	git clone https://github.com/tbastos/vim-lua.git ~/.vim/bundle/vim-lua
 	git clone https://github.com/lfe/vim-lfe.git ~/.vim/bundle/vim-lfe
