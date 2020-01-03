@@ -34,8 +34,7 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_lua_checkers = ["luacheck"]
 let g:syntastic_lua_luacheck_args = "--no-unused-args"
-
-" Put these lines at the very end of your vimrc file.
+let g:syntastic_erlang_checkers=['syntaxerl']
 
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
