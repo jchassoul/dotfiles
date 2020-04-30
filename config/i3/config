@@ -37,8 +37,6 @@ exec xmodmap -e "keysym Caps_Lock = Escape"
 exec --no-startup-id xrdb ~/.Xresources
 # x window composition 
 exec --no-startup-id compton -f
-# Flying Saucer Experience 
-exec --no-startup-id /usr/bin/python /opt/saucer/saucer.py
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:DejaVu Sans Mono 16
@@ -57,7 +55,6 @@ bindsym $mod+Shift+Q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run -nb "$base00" -nf "$base0F" -sb "$base01" -sf "$base0F"
 
-
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1% #decrease sound volume
@@ -68,12 +65,8 @@ bindsym XF86AudioPlay exec cmus-remote --pause
 bindsym XF86AudioNext exec cmus-remote --next
 bindsym XF86AudioPrev exec cmus-remote --prev
 
-# missing love on i3lock
+# Missing love on i3lock
 bindsym $mod+Shift+o exec ~/.i3/lock -p
-
-# Binding to make the webcam flot and sticky!
-for_window [title="video0 - mpv"] floating enable
-for_window [title="video0 - mpv"] sticky enable
 
 # Binding custom hold keys
 bindsym $mod+Shift+h exec pcmanfm ~
