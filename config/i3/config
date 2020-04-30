@@ -57,6 +57,17 @@ bindsym $mod+Shift+Q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run -nb "$base00" -nf "$base0F" -sb "$base01" -sf "$base0F"
 
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Media player controls
+bindsym XF86AudioPlay exec cmus-remote --pause
+bindsym XF86AudioNext exec cmus-remote --next
+bindsym XF86AudioPrev exec cmus-remote --prev
+
 # missing love on i3lock
 bindsym $mod+Shift+o exec ~/.i3/lock -p
 
