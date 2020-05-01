@@ -10,6 +10,8 @@ map <leader>f :Goyo \| set linebreak<CR>
 
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 
+set t_Co=256
+
 set splitbelow splitright
 " show existing tab with 4 spaces width
 set tabstop=4
