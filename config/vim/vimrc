@@ -5,6 +5,11 @@ filetype plugin indent on
 set encoding=utf-8
 set number relativenumber
 set wildmode=longest,list,full
+
+map <leader>f :Goyo \| set linebreak<CR>
+
+map <leader>o :setlocal spell! spelllang=en_us<CR>
+
 set splitbelow splitright
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -16,6 +21,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:indentLine_setColors = 0
 
 let g:airline_theme='simple'
+
+let g:minimap_highlight='Comment'
 
 set noshowmode
 
