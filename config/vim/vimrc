@@ -1,20 +1,18 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
 set mouse=a
+set noerrorbells
 set encoding=utf-8
 set number relativenumber
 set wildmode=longest,list,full
-
-map <leader>f :Goyo \| set linebreak<CR>
-
-map <leader>o :setlocal spell! spelllang=en_us<CR>
 
 set t_Co=256
 
 set splitbelow splitright
 " show existing tab with 4 spaces width
-set tabstop=4
+set tabstop=4 softtabstop=4
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
@@ -26,7 +24,21 @@ let g:airline_theme='simple'
 
 let g:minimap_highlight='Comment'
 
+set smartindent
+
+set nowrap
+
+set smartcase
+
+set noswapfile
+
+set incsearch
+
 set noshowmode
+
+map <leader>f :Goyo \| set linebreak<CR>
+
+map <leader>o :setlocal spell! spelllang=en_us<CR>
 
 " Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
