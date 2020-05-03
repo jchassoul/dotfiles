@@ -1,18 +1,8 @@
-install: install-gtk3 install-termite install-i3 install-tmux\
+install: install-termite install-i3 install-tmux\
 	install-desktop install-mksh install-vim install-xr\
 	install-vifm install-fonts install-mimeinfo
 
 git: install-git
-
-install-geany:
-	rm -rf ~/.config/geany
-	mkdir -p ~/.config/geany
-	ln -s `pwd`/config/geany/colorschemes ~/.config/geany/colorschemes
-	ln -s `pwd`/config/geany/filedefs ~/.config/geany/filedefs
-	ln -s `pwd`/config/geany/geany.conf ~/.config/geany/geany.conf
-	ln -s `pwd`/config/keybindings.conf ~/.config/geany/keybindings.conf
-	ln -s `pwd`/config/tags ~/.config/geany/tags
-	ln -s `pwd`/config/templates ~/.config/geany/templates
 
 install-git:
 	rm -f ~/.gitconfig
