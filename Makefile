@@ -4,16 +4,19 @@ install: install-gtk3 install-termite install-i3 install-tmux\
 
 git: install-git
 
-settings: install-gtk3
+install-geany:
+	rm -rf ~/.config/geany
+	mkdir -p ~/.config/geany
+	ln -s `pwd`/config/geany/colorschemes ~/.config/geany/colorschemes
+	ln -s `pwd`/config/geany/filedefs ~/.config/geany/filedefs
+	ln -s `pwd`/config/geany/geany.conf ~/.config/geany/geany.conf
+	ln -s `pwd`/config/keybindings.conf ~/.config/geany/keybindings.conf
+	ln -s `pwd`/config/tags ~/.config/geany/tags
+	ln -s `pwd`/config/templates ~/.config/geany/templates
 
 install-git:
 	rm -f ~/.gitconfig
 	ln -s `pwd`/config/git/gitconfig ~/.gitconfig
-
-install-gtk3:
-	rm -f ~/.config/gtk-3.0/settings.ini
-	mkdir -p ~/.config/gtk-3.0
-	ln -s `pwd`/config/settings.init ~/.config/gtk-3.0/settings.ini
 
 install-termite:
 	mkdir -p ~/.config/termite
