@@ -55,6 +55,9 @@ bindsym $mod+Shift+Q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run -nb "$base00" -nf "$base0F" -sb "$base01" -sf "$base0F"
 
+# OBS Studio
+bindsym Print exec --no-startup-id obs
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1% #decrease sound volume
@@ -68,18 +71,17 @@ bindsym XF86AudioPrev exec cmus-remote --prev
 # Missing love on i3lock
 bindsym $mod+Shift+o exec ~/.i3/lock -p
 
-# Binding custom hold keys
-bindsym $mod+Shift+h exec pcmanfm ~
+bindsym $mod+Shift+w exec pcmanfm ~ 
 
 bindsym $mod+Shift+a exec pcmanfm menu://applications/
 
 bindsym $mod+Shift+t exec pcmanfm trash:///
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -88,30 +90,19 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+J move left
-bindsym $mod+Shift+K move down
-bindsym $mod+Shift+L move up
-bindsym $mod+Shift+colon move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+H move left
+bindsym $mod+Shift+J move down
+bindsym $mod+Shift+K move up
+bindsym $mod+Shift+L move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+backslash split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+minus split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
-
-# i3 default config: change container layout (stacked, tabbed, default)
-#bindsym $mod+s layout stacking
-#bindsym $mod+w layout tabbed
-#bindsym $mod+e layout default
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
