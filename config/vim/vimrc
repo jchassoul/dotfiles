@@ -2,8 +2,6 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-"set omnifunc=syntaxcomplete#Complete
-
 set mouse=a
 set noerrorbells
 set encoding=utf-8
