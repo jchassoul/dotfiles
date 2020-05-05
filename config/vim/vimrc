@@ -1,15 +1,13 @@
 execute pathogen#infect()
+set nocompatible
 syntax on
 filetype plugin indent on
-
 set mouse=a
 set noerrorbells
 set encoding=utf-8
 set number relativenumber
 set wildmode=longest,list,full
-
 set t_Co=256
-
 set splitbelow splitright
 " show existing tab with 4 spaces width
 set tabstop=4 softtabstop=4
@@ -19,23 +17,13 @@ set shiftwidth=4
 set expandtab
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:indentLine_setColors = 0
-
 let g:airline_theme='simple'
-
-let g:minimap_highlight='Comment'
-
 set smartindent
-
 set nowrap
-
 set smartcase
-
 set noswapfile
-
 set incsearch
-
 set noshowmode
-
 function! ToggleNetrw()
         let i = bufnr("$")
         let wasOpen = 0
@@ -50,46 +38,33 @@ function! ToggleNetrw()
         silent Lexplore
     endif
 endfunction
-
 map <F3> :call ToggleNetrw() <CR>
-
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_winsize = 18    " width in percent
 let g:netrw_browse_split=4  " open in prior window
 let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
-
 autocmd FileType netrw set nolist
-
 map <leader>- :split<CR>
-
 map <leader>\ :vsplit<CR>
-
 map <leader>t :tabnew<CR>
-
 map <leader>f :Goyo \| set linebreak<CR>
-
 map <leader>s :setlocal spell! spelllang=en_us<CR>
-
 " Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
 au BufNewFile,BufRead *.erl,*.es,*.hrl,*.xrl,*.config setf erlang
-
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
 let g:syntastic_lua_checkers = ["luacheck"]
 let g:syntastic_lua_luacheck_args = "--no-unused-args"
 let g:syntastic_erlang_checkers=['syntaxerl']
-
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
 packloadall
