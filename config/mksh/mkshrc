@@ -49,7 +49,7 @@ case "$-" in *i*)
    
     alias o='cd ~/work/ophelia/src/'
     alias b='cd ~/work/bw/src/'
-    alias z='cd ~/work/zerg/src/'
+    alias l='cd ~/work/luna/src/'
     alias c='clear'
     alias ls='ls --color'
     alias t='tmux attach -t shell || tmux new -s shell'
