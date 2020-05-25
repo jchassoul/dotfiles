@@ -49,9 +49,10 @@ install-vim:
 	ln -s `pwd`/config/vim/vimrc ~/.vimrc
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	git clone https://github.com/ajh17/VimCompletesMe.git ~/.vim/pack/vendor/start/VimCompletesMe
-	git clone https://github.com/tpope/vim-sensible.git ~/.vim/pack/tpope/start/vim-sensible
 	git clone https://github.com/tpope/vim-eunuch.git ~/.vim/pack/tpope/start/vim-eunuch
 	git clone https://github.com/tpope/vim-fugitive.git ~/.vim/pack/tpope/start/vim-fugitive
+	git clone https://github.com/tpope/vim-sensible.git ~/.vim/pack/tpope/start/vim-sensible
+	git clone https://github.com/tpope/vim-surround.git ~/.vim/pack/tpope/start/vim-surround
 	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim	
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
