@@ -1,4 +1,4 @@
-install: install-termite install-i3 install-tmux\
+install: install-termite install-bspwm install-i3 install-tmux\
 	install-desktop install-mksh install-vim install-xr\
 	install-vifm install-fonts install-mimeinfo
 
@@ -12,6 +12,14 @@ install-termite:
 	mkdir -p ~/.config/termite
 	rm -f ~/.config/termite/config
 	ln -s `pwd`/config/termite/config ~/.config/termite/config
+
+install-bspwm:
+	mkdir -p ~/.config/bspwm
+	mkdir -p ~/.config/sxhkd
+	rm -f ~/.config/bspwm/bspwmrc
+	rm -f ~/.config/sxhkd/sxhkdrc
+	ln -s `pwd`/config/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
+	ln -s `pwd`/config/bspwm/sxhkdrc ~/.config/sxhkd/sxhkdrc
 
 install-i3:
 	mkdir -p ~/.config/i3
