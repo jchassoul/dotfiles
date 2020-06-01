@@ -1,8 +1,13 @@
 #! /bin/mksh
 
 sxhkd &
-nitrogen --restore &
+feh --bg-scale ~/.cache/wal/wal/ &
+wal -R --vte &
+nm-applet &
+xrdb ~/.Xresources&
+compton -f &
 
+#nitrogen --restore &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
