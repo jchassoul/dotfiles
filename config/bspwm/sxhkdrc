@@ -6,6 +6,10 @@
 super + Return
     termite	
 
+alt + Return
+    termite	
+
+
 # program launcher
 super + @space
 	dmenu_run
