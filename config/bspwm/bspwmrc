@@ -6,12 +6,12 @@ compton -f &
 feh --bg-scale ~/.cache/wal/wal/ &
 wal -R --vte &
 nm-applet &
-xrdb ~/.Xresourcesi &
+xrdb ~/.Xresources &
 dunst &
 xmodmap -e "clear lock" &
 xmodmap -e "keysym Caps_Lock = Escape" &
 
-bspc monitor -d 1 2 3 4 5 6 7 8 9 0 
+bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2
 bspc config window_gap          12
