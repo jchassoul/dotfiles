@@ -4,8 +4,12 @@ export GOPATH=$HOME/go
 export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH
 export MANPATH=$MANPATH:/usr/local/share/man
 export ERL_AFLAGS="+pc unicode -kernel shell_history enabled"
+export WINEARCH=win32
 export WINEDEBUG=-all
-
+export PANEL_FIFO=/tmp/panel-fifo
+export PANEL_HEIGHT=24
+export PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+export PANEL_WM_NAME=bspwm_panel
 export TERM=xterm-color
 
 PS1='#'                   # Root
