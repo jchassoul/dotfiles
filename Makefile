@@ -1,6 +1,6 @@
-install: install-termite install-bspwm install-i3 install-tmux\
+install: install-termite install-bspwm install-tmux\
 	install-desktop install-mksh install-vim install-xr\
-	install-vifm install-fonts install-mimeinfo
+	install-fonts install-mimeinfo
 
 git: install-git
 
@@ -20,19 +20,6 @@ install-bspwm:
 	rm -f ~/.config/sxhkd/sxhkdrc
 	ln -s `pwd`/config/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 	ln -s `pwd`/config/bspwm/sxhkdrc ~/.config/sxhkd/sxhkdrc
-
-install-i3:
-	mkdir -p ~/.config/i3
-	rm -f ~/.config/i3/config
-	rm -f ~/.config/i3/i3status.conf
-	rm -f ~/.config/i3/lock
-	rm -f ~/.config/i3/lock.png
-	rm -f ~/.config/i3/text.png
-	ln -s `pwd`/config/i3/config ~/.config/i3/config
-	ln -s `pwd`/config/i3/i3status.conf ~/.config/i3/i3status.conf
-	ln -s `pwd`/config/i3/lock ~/.config/i3/lock
-	ln -s `pwd`/config/i3/lock.png ~/.config/i3/lock.png
-	ln -s `pwd`/config/i3/text.png ~/.config/i3/text.png
 
 install-tmux:
 	rm -f ~/.tmux.conf
@@ -74,15 +61,6 @@ install-vim:
 install-xr:
 	rm -f ~/.Xresources
 	ln -s `pwd`/config/Xresources ~/.Xresources
-
-install-vifm:
-	rm -f ~/.config/vifm/vifmrc
-	rm -f ~/.config/vifm/scripts/vifmrun
-	rm -f ~/.config/vifm/scripts/vifmimg
-	mkdir -p ~/.config/vifm/scripts
-	ln -s `pwd`/config/vifm/vifmrc ~/.config/vifm/vifmrc
-	ln -s `pwd`/config/vifm/vifmrun ~/.config/vifm/scripts/vifmrun
-	ln -s `pwd`/config/vifm/vifmimg ~/.config/vifm/scripts/vifmimg
 
 install-fonts:
 	mkdir -p ~/.fonts
