@@ -1,12 +1,13 @@
-#! /bin/mksh
+#! /bin/sh
 
 sxhkd &
+unclutter &
+compton -f &
 feh --bg-scale ~/.cache/wal/wal/ &
 wal -R --vte &
 nm-applet &
-xrdb ~/.Xresources&
+xrdb ~/.Xresourcesi &
 dunst &
-compton -f &
 xmodmap -e "clear lock" &
 xmodmap -e "keysym Caps_Lock = Escape" &
 
@@ -18,3 +19,6 @@ bspc config window_gap          12
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+
+[ -e "$PANEL_FIFO" ] && bspc subscribe report > "$PANEL_FIFO" &
+pgrep -x panel > /dev/null || panel &
