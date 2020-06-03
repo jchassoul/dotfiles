@@ -80,7 +80,6 @@ alt + ctrl + {m,x,y,z}
 # focus/swap
 #
 
-
 alt + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
@@ -111,7 +110,14 @@ alt + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
-# preselect manual tiling
+# polybar toggle
+#
+alt + shift + space
+    {polybar-msg cmd toggle; bspc config top_padding +0 ,\
+         polybar-msg cmd toggle; bspc config top_padding 20 }
+
+#
+# preselect "manual tiling"
 #
 
 # preselect the direction
