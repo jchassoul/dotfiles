@@ -6,12 +6,12 @@ export MANPATH=$MANPATH:/usr/local/share/man
 export ERL_AFLAGS="+pc unicode -kernel shell_history enabled"
 export WINEARCH=win32
 export WINEDEBUG=-all
-export PANEL_FIFO=/tmp/panel-fifo
-export PANEL_HEIGHT=24
-export PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
-export PANEL_WM_NAME=bspwm_panel
 export TERM=xterm-color
-
+export EDITOR=vim
+export HISTFILE=$HOME/.mksh_history
+export HISTSIZE=10000
+export LESSSECURE=1
+  
 PS1='#'                   # Root
 (( USER_ID )) && PS1='$'  # Regular user
 PS1=$'\001\r''${|
@@ -44,13 +44,6 @@ set -o utf8-mode
 
 case "$-" in *i*)
     # interative mode settings
-    HISTFILE=$HOME/.mksh_history
-    HISTSIZE=10000
-    LESSSECURE=1
-    
-    export HISTFILE HISTSIZE LESSSECURE
-    export EDITOR=vim
-  
     alias sc='wine ~/.wine/drive_c/Program\ Files/Battle.net/Battle.net.exe'
     alias o='cd ~/work/ophelia/src/'
     alias b='cd ~/work/bw/src/'
@@ -59,7 +52,6 @@ case "$-" in *i*)
     alias ls='ls --color'
     alias t='tmux attach -t shell || tmux new -s shell'
     alias n='cd ~/work/notebooks && jupyter notebook&'
-    alias vifm='~/.config/vifm/scripts/vifmrun'
     ;;
 esac
 
