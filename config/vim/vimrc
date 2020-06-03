@@ -52,6 +52,7 @@ autocmd FileType netrw set nolist
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
+map <leader>c :ColorToggle<CR>
 map <leader>f :Goyo \| set linebreak<CR>
 map <leader>s :setlocal spell! spelllang=en_us<CR>
 map <leader>v <C-w>t<C-w>H

@@ -19,6 +19,8 @@ install-bspwm:
 	mkdir -p ~/.config/polybar
 	rm -f ~/.config/bspwm/bspwmrc
 	rm -f ~/.config/sxhkd/sxhkdrc
+	rm -f ~/.config/polybar/config
+	rm -f ~/.config/polybar/cmus.sh
 	ln -s `pwd`/config/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 	ln -s `pwd`/config/bspwm/sxhkdrc ~/.config/sxhkd/sxhkdrc
 	ln -s `pwd`/config/bspwm/polybar/config ~/.config/polybar/config
@@ -31,7 +33,7 @@ install-tmux:
 install-desktop:
 	mkdir -p ~/.config/desktop/
 	rm -f ~/.config/desktop/background.jpg
-	ln -s `pwd`/images/background.jpg ~/.config/desktop/background.jpg
+	ln -s `pwd`/images/ophelia.jpg ~/.config/desktop/background.jpg
 	wal -i ~/.config/desktop/background.jpg
 
 install-mksh:
@@ -53,6 +55,8 @@ install-vim:
 	git clone https://github.com/tpope/vim-surround.git ~/.vim/pack/tpope/start/vim-surround
 	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim	
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
+	git clone https://github.com/vimwiki/vimwiki.git ~/.vim/bundle/vimwiki
+	git clone https://github.com/chrisbra/Colorizer ~/.vim/bundle/Colorizer
 	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
 	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
 	git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim-json
