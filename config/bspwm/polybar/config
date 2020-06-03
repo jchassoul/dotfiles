@@ -137,7 +137,7 @@ label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
+label-muted = Sound muted
 
 bar-volume-width = 12
 bar-volume-foreground-0 = #55aa55
