@@ -5,13 +5,15 @@ unclutter &
 compton -f &
 feh --bg-scale ~/.cache/wal/wal/ &
 wal -R --vte &
-nm-applet &
 xrdb ~/.Xresources &
 dunst &
+nm-applet &
 xmodmap -e "clear lock" &
 xmodmap -e "keysym Caps_Lock = Escape" &
 
-bspc monitor -d 1 2 3 4
+polybar topbar &
+
+bspc monitor -d I II III IV V VI
 
 bspc config border_width         2
 bspc config window_gap          12

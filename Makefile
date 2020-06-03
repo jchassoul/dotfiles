@@ -16,10 +16,13 @@ install-termite:
 install-bspwm:
 	mkdir -p ~/.config/bspwm
 	mkdir -p ~/.config/sxhkd
+	mkdir -p ~/.config/polybar
 	rm -f ~/.config/bspwm/bspwmrc
 	rm -f ~/.config/sxhkd/sxhkdrc
 	ln -s `pwd`/config/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 	ln -s `pwd`/config/bspwm/sxhkdrc ~/.config/sxhkd/sxhkdrc
+	ln -s `pwd`/config/bspwm/polybar/config ~/.config/polybar/config
+	ln -s `pwd`/config/bspwm/polybar/cmus.sh ~/.config/polybar/cmus.sh
 
 install-tmux:
 	rm -f ~/.tmux.conf
