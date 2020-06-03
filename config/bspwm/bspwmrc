@@ -13,7 +13,7 @@ xmodmap -e "keysym Caps_Lock = Escape" &
 
 polybar topbar &
 
-bspc monitor -d I II III IV V VI
+bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2
 bspc config window_gap          12
