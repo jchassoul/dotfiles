@@ -132,7 +132,7 @@ format-underline = #0a6cf5
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+label-volume = ♪
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
@@ -161,7 +161,6 @@ type = internal/battery
 battery = BAT0
 adapter = ADP1
 full-at = 98
-
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
