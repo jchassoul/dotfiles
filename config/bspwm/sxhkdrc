@@ -112,6 +112,7 @@ alt + {_,shift + }{1-9,0}
 #
 # polybar toggle
 #
+
 alt + shift + space
     {polybar-msg cmd toggle; bspc config top_padding +0 ,\
          polybar-msg cmd toggle; bspc config top_padding 20 }
