@@ -1,5 +1,4 @@
 export LANG=en_US.utf8
-
 export GOPATH=$HOME/go
 export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH
 export MANPATH=$MANPATH:/usr/local/share/man
@@ -31,6 +30,8 @@ PS1=$'\001\r''${|
     \return $e
 }'"$PS1 "
 
+echo -ne '\033%G'
+
 # enable vi mode
 set -o vi
 
@@ -38,12 +39,10 @@ set -o vi
 set -o monitor
 
 # switch console to utf8 mode
-echo -ne '\033%G'
-
 set -o utf8-mode
 
 case "$-" in *i*)
-    # interative mode settings
+    # Regular user interative mode settings
     alias sc='wine ~/.wine/drive_c/Program\ Files/Battle.net/Battle.net.exe'
     alias o='cd ~/work/ophelia/src/'
     alias b='cd ~/work/bw/src/'
