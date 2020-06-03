@@ -40,10 +40,6 @@ alt + Return
 alt + d 
 	dmenu_run
 
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
-
 #
 # bspwm hotkeys
 #
@@ -73,11 +69,11 @@ alt + g
 #
 
 # set the window state
-super + {t,shift + t,s,f}
-
+alt + {t,shift + t,s,f}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
-super + ctrl + {m,x,y,z}
+alt + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 #
@@ -115,7 +111,7 @@ alt + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
-# preselect
+# preselect manual tiling
 #
 
 # preselect the direction
