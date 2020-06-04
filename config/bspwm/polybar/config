@@ -3,9 +3,9 @@ background = ${xrdb:color0:#222}
 background-alt = #00444
 foreground = ${xrdb:color7:#222}
 foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+primary = #98B740
+secondary = #48a5CF
+alert = #DA547B
 
 [bar/topbar]
 ;monitor = ${env:MONITOR:DVI-D-0}
