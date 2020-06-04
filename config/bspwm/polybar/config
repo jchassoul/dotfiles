@@ -83,7 +83,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-} %percentage_used%%
+label-mounted = %{F#0a81f5}%mountpoint%%{F-} %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -125,7 +125,7 @@ time-alt = ${self.time}
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+;format-underline = #0a6cf5
 
 ;label = %date% %time%
 
@@ -133,14 +133,14 @@ format-underline = #0a6cf5
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = ♪
+label-volume = ♪ 
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = Sound muted
 
-bar-volume-width = 12
+bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
 bar-volume-foreground-2 = #55aa55
@@ -162,6 +162,7 @@ type = internal/battery
 battery = BAT0
 adapter = ADP1
 full-at = 98
+label-battery=B
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
@@ -171,6 +172,10 @@ format-discharging-underline = ${self.format-charging-underline}
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
+
+label-charging = ⚡ %percentage%%
+label-discharging = ⚡ %percentage%%
+
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
