@@ -1,4 +1,4 @@
-[olors]
+[colors]
 background = ${xrdb:color0:#222}
 background-alt = #00444
 foreground = ${xrdb:color7:#222}
@@ -37,7 +37,7 @@ font-2 = siji:pixelsize=12;1
 
 modules-left = bspwm 
 modules-center = xwindow
-modules-right = cmus battery filesystem volume date
+modules-right = cmus volume filesystem battery date
 
 tray-position = right
 tray-padding = 2
