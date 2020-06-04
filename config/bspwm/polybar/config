@@ -1,4 +1,4 @@
-[colors]
+[olors]
 background = ${xrdb:color0:#222}
 background-alt = #00444
 foreground = ${xrdb:color7:#222}
@@ -162,7 +162,6 @@ type = internal/battery
 battery = BAT0
 adapter = ADP1
 full-at = 98
-label-battery=B
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
