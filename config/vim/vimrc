@@ -49,6 +49,7 @@ let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide='\(^\|\s\s\)\zs\.\S\+'
 autocmd FileType netrw set nolist
+let g:goyo_width = 120
 let g:vimwiki_list = [{'path': '~/vault/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 map <leader>- :split<CR>
