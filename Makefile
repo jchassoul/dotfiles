@@ -4,9 +4,15 @@ install: install-termite install-bspwm install-tmux\
 
 git: install-git
 
+email: install-neomutt
+
 install-git:
 	rm -f ~/.gitconfig
 	ln -s `pwd`/config/git/gitconfig ~/.gitconfig
+
+install-neomutt:
+	rm -f ~/.neomuttrc
+	ln -s `pwd`/config/neomutt/neomuttrc ~/.neomuttrc
 
 install-termite:
 	mkdir -p ~/.config/termite
