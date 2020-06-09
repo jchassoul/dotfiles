@@ -34,7 +34,7 @@ set sort_aux=last-date-received
 # Index page format. Default "%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
 set index_format="%4C %Z %{%b %d %R} %-15.15L (%?l?%4l&%4c?) %s"
 
-set sidebar_visible
+#set sidebar_visible
 set sidebar_format="%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
 
