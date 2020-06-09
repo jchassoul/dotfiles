@@ -53,6 +53,7 @@ case "$-" in *i*)
     alias ls='ls --color'
     alias t='tmux attach -t shell || tmux new -s shell'
     alias n='cd ~/work/notebooks && jupyter notebook&'
+    alias m='neomutt'
     ;;
 esac
 
