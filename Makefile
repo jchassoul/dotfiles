@@ -1,6 +1,6 @@
 install: install-termite install-bspwm install-tmux\
 	install-desktop install-mksh install-vim install-xr\
-	install-fonts install-mimeinfo
+	install-xs install-fonts install-mimeinfo
 
 git: install-git
 
@@ -70,6 +70,10 @@ install-vim:
 	git clone https://github.com/junegunn/goyo.vim.git ~/.vim/bundle/goyo
 	git clone https://github.com/severin-lemaignan/vim-minimap.git ~/.vim/bundle/vim-minimap
 	git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine
+
+install-xs:
+	rm -f ~/.xsession
+	ln -s `pwd`/config/Xsession ~/.xsession
 
 install-xr:
 	rm -f ~/.Xresources
