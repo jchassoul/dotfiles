@@ -1,5 +1,8 @@
 #! /bin/sh
 
+xmodmap -e "clear lock" &
+xmodmap -e "keysym Caps_Lock = Escape" &
+
 sxhkd &
 unclutter &
 compton -f &
@@ -8,9 +11,7 @@ wal -R --vte &
 xrdb ~/.Xresources &
 dunst &
 nm-applet &
-xmodmap -e "clear lock" &
-xmodmap -e "keysym Caps_Lock = Escape" &
-
+blueman-applet &
 polybar topbar &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
