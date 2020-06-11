@@ -27,4 +27,3 @@ bspc config gapless_monocle      true
 bspc config ignore_ewmh_fullscreen enter
 
 bspc config focus_follows_pointer true
-
