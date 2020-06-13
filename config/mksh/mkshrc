@@ -11,10 +11,6 @@ export HISTFILE=$HOME/.mksh_history
 export HISTSIZE=10000
 export LESSSECURE=1
 
-export base00=$(xgetres color0)
-export base01=$(xgetres color1)
-export base0F=$(xgetres foreground)
-
 PS1='#'                   # Root
 (( USER_ID )) && PS1='$'  # Regular user
 PS1=$'\001\r''${|
