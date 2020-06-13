@@ -17,7 +17,7 @@ set shiftwidth=4
 set expandtab
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:indentLine_setColors = 0
-let g:airline_theme='monochrome'
+let g:airline_theme='raven'
 let g:minimap_highlight='Comment'
 set smartindent
 set nowrap
