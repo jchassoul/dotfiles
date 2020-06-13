@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 #
 # wm independent hotkeys
 #
@@ -38,7 +39,7 @@ alt + Return
 
 # program launcher
 alt + d 
-	dmenu_run
+    dmenu_run -nb '#040506' -nf '#cceceb' -sb '#474C68' -sf '#cceceb' 
 
 #
 # bspwm hotkeys
