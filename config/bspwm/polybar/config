@@ -146,8 +146,11 @@ bar-volume-foreground-1 = ${colors.primary}
 bar-volume-foreground-2 = ${colors.primary} 
 bar-volume-foreground-3 = ${colors.primary} 
 bar-volume-foreground-4 = ${colors.primary} 
-bar-volume-foreground-5 = ${colors.secondary} 
-bar-volume-foreground-6 = ${colors.alert}
+bar-volume-foreground-5 = ${colors.primary} 
+bar-volume-foreground-6 = ${colors.secondary} 
+bar-volume-foreground-7 = ${colors.secondary} 
+bar-volume-foreground-8 = ${colors.alert} 
+bar-volume-foreground-9 = ${colors.alert}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -163,15 +166,14 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 format-charging = <animation-charging> <label-charging>
-#format-charging-underline = #ffb52a
-format-charging-underline = ${colors.secondary}
+#format-charging-underline = ${colors.secondary}
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${colors.secondary}
+#format-discharging-underline = ${colors.secondary}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${colors.primary}
+#format-full-underline = ${colors.primary}
 
 label-charging = ⚡ %percentage%%
 label-discharging = ⚡ %percentage%%
