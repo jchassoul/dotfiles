@@ -11,6 +11,27 @@ export HISTFILE=$HOME/.mksh_history
 export HISTSIZE=10000
 export LESSSECURE=1
 
+# testing current termite color hack!
+
+export background=$(xgetres *background)
+export foreground=$(xgetres *foreground)
+export color0=$(xgetres *color0)
+export color1=$(xgetres *color1)
+export color2=$(xgetres *color2)
+export color3=$(xgetres *color3)
+export color4=$(xgetres *color4)
+export color5=$(xgetres *color5)
+export color6=$(xgetres *color6)
+export color7=$(xgetres *color7)
+export color8=$(xgetres *color8)
+export color9=$(xgetres *color9)
+export color10=$(xgetres *color10)
+export color11=$(xgetres *color11)
+export color12=$(xgetres *color12)
+export color13=$(xgetres *color13)
+export color14=$(xgetres *color14)
+export color15=$(xgetres *color15)
+
 PS1='#'                   # Root
 (( USER_ID )) && PS1='$'  # Regular user
 PS1=$'\001\r''${|
