@@ -1,7 +1,7 @@
 [colors]
-background = ${xrdb:color0:#222}
+background = ${xrdb:color0}
 background-alt = #00444
-foreground = ${xrdb:color7:#222}
+foreground = ${xrdb:color7}
 foreground-alt = #555
 primary = #98B740
 secondary = #48a5CF
@@ -194,7 +194,7 @@ animation-charging-framerate = 750
 screenchange-reload = true
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini
