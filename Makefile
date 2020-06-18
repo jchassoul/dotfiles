@@ -61,9 +61,10 @@ install-vim:
 	git clone https://github.com/tpope/vim-surround.git ~/.vim/pack/tpope/start/vim-surround
 	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim	
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
+	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
 	git clone https://github.com/vimwiki/vimwiki.git ~/.vim/bundle/vimwiki
 	git clone https://github.com/chrisbra/Colorizer ~/.vim/bundle/Colorizer
-	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
+	git clone https://github.com/dhruvasagar/vim-table-mode.git ~/.vim/bundle/table-mode
 	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
 	git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim-json
 	git clone https://github.com/lfe/vim-lfe.git ~/.vim/bundle/vim-lfe
