@@ -1,3 +1,4 @@
+#!/bin/mksh
 export LANG=en_US.utf8
 export GOPATH=$HOME/go
 export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH
@@ -42,7 +43,6 @@ set -o monitor
 set -o utf8-mode
 
 case "$-" in *i*)
-    # Regular user interative mode settings
     alias sc='wine ~/.wine/drive_c/Program\ Files/Battle.net/Battle.net.exe'
     alias o='cd ~/work/ophelia/src/'
     alias b='cd ~/work/bw/src/'
