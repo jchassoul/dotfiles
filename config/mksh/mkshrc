@@ -43,7 +43,6 @@ set -o monitor
 set -o utf8-mode
 
 case "$-" in *i*)
-    alias sc='wine ~/.wine/drive_c/Program\ Files/Battle.net/Battle.net.exe'
     alias o='cd ~/work/ophelia/src/'
     alias b='cd ~/work/bw/src/'
     alias l='cd ~/work/luna/src/'
