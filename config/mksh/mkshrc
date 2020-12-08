@@ -52,7 +52,7 @@ case "$-" in *i*)
     alias v='vim'
     alias ls='ls --color'
     alias t='tmux attach -t shell || tmux new -s shell'
-    alias n='cd ~/work/notebooks && jupyter notebook&'
+    alias n='cd ~/Documents/notebooks && jupyter notebook&'
     alias m='neomutt'
     alias python='python3'
     alias pip='pip3'
