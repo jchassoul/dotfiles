@@ -30,3 +30,5 @@ bspc config ignore_ewmh_fullscreen enter
 bspc config pointer_modifier mod1
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
+
+bspc rule -a Gnome-calculator state=floating follow=on
