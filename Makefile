@@ -1,6 +1,5 @@
-install: install-termite install-bspwm install-tmux\
-	install-desktop install-mksh install-vim install-xr\
-	install-xs install-fonts install-mimeinfo
+install: install-termite install-bspwm install-tmux install-desktop\
+	install-mksh install-vim install-xr install-xs install-fonts
 
 git: install-git
 
@@ -84,8 +83,3 @@ install-fonts:
 	mkdir -p ~/.fonts
 	rm -f ~/.fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf
 	ln -s `pwd`/fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf ~/.fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf
-
-install-mimeinfo:
-	mkdir -p ~/.local/share/applications
-	rm -f ~/.local/share/applications/mimeinfo.cache
-	ln -s `pwd`/config/mime/mimeinfo.cache ~/.local/share/applications/mimeinfo.cache
