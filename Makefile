@@ -40,6 +40,9 @@ install-desktop:
 	rm -f ~/.config/desktop/background.jpg
 	ln -s `pwd`/images/ophelia.jpg ~/.config/desktop/background.jpg
 	wal -i ~/.config/desktop/background.jpg
+	mkdir -p ~/.local/share/applications
+	rm -f ~/.local/share/applications/mimeinfo.cache
+	ln -s `pwd`/config/mime/mimeinfo.cache ~/.local/share/applications/mimeinfo.cache
 
 install-mksh:
 	rm -f ~/.mkshrc
