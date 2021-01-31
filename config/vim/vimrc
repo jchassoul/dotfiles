@@ -1,7 +1,9 @@
 execute pathogen#infect()
+
 set nocompatible
 syntax on
 filetype plugin indent on
+
 set mouse=a
 set noerrorbells
 set encoding=utf-8
@@ -25,6 +27,7 @@ set smartcase
 set noswapfile
 set incsearch
 set noshowmode
+
 function! ToggleNetrw()
         let i = bufnr("$")
         let wasOpen = 0
@@ -39,30 +42,39 @@ function! ToggleNetrw()
         silent Lexplore
     endif
 endfunction
+
 map <F3> :call ToggleNetrw() <CR>
+
 set switchbuf=usetab,newtab
+
 nnoremap <F8> :sbnext<CR>
+
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_winsize = 18    " width in percent
 let g:netrw_browse_split=4  " open in prior window
 let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide='\(^\|\s\s\)\zs\.\S\+'
+
 autocmd FileType netrw set nolist
-let g:goyo_width = 120
+
 let g:vimwiki_list = [{'path': '~/vault/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
+
+let g:coc_disable_startup_warning = 1
+
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
 map <leader>c :ColorToggle<CR>
-map <leader>f :Goyo \| set linebreak<CR>
 map <leader>s :setlocal spell! spelllang=en_us<CR>
 map <leader>v <C-w>t<C-w>H
 map <leader>h <C-w>t<C-w>K
+
 " Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
 au BufNewFile,BufRead *.erl,*.es,*.hrl,*.xrl,*.config setf erlang
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -74,6 +86,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_lua_checkers = ["luacheck"]
 let g:syntastic_lua_luacheck_args = "--no-unused-args"
 let g:syntastic_erlang_checkers=['syntaxerl']
+
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
 packloadall
