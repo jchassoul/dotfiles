@@ -12,6 +12,23 @@ alt + shift + a
 alt + shift + r 
     pcmanfm trash:///
 
+alt + shift + c
+    thunderbird
+
+alt + shift + d 
+    pcmanfm ~/Downloads 
+
+alt + shift + f 
+    google-chrome
+
+#
+# polybar toggle
+#
+
+alt + shift + space
+    {polybar-msg cmd toggle; bspc config top_padding +0 ,\
+         polybar-msg cmd toggle; bspc config top_padding 20 }
+
 Print
     obs
 
@@ -34,7 +51,7 @@ XF86AudioPrev
     cmus-remote --prev
 
 # terminal emulator
-super + Return
+shift + Return
     termite	
 
 # program launcher
@@ -109,14 +126,6 @@ alt + {o,i}
 # focus or send to the given desktop
 alt + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
-
-#
-# polybar toggle
-#
-
-alt + shift + space
-    {polybar-msg cmd toggle; bspc config top_padding +0 ,\
-         polybar-msg cmd toggle; bspc config top_padding 20 }
 
 #
 # preselect "manual tiling"
