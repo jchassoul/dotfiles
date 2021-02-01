@@ -16,7 +16,8 @@ height = 19
 radius = 0
 fixed-center = false
 
-background = ${colors.background}
+;background = ${colors.background}
+background = #3a3a3a 
 foreground = ${colors.foreground}
 
 line-size = 3
@@ -32,7 +33,7 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=12;1
-font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
+font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 font-2 = siji:pixelsize=12;1
 
 modules-left = bspwm 
@@ -194,7 +195,7 @@ animation-charging-framerate = 750
 screenchange-reload = true
 
 [global/wm]
-margin-top = 0
+margin-top = 0 
 margin-bottom = 0
 
 ; vim:ft=dosini

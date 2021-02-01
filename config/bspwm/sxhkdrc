@@ -56,7 +56,7 @@ shift + Return
 
 # program launcher
 alt + d 
-    dmenu_run -nb '#040506' -nf '#cceceb' -sb '#474C68' -sf '#cceceb' 
+    dmenu_run -nb '#3a3a3a' -nf '#cceceb' -sb '#474C68' -sf '#cceceb' 
 
 #
 # bspwm hotkeys
