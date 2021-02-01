@@ -27,9 +27,6 @@ set t_ut=
 
 colorscheme codedark 
 
-hi Normal guibg=NONE ctermbg=NONE
-
-
 highligh ColorColum ctermbg=0 guibg=lightgrey
 
 let g:indentLine_setColors = 0
