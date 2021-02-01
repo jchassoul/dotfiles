@@ -30,7 +30,7 @@ colorscheme codedark
 highligh ColorColum ctermbg=0 guibg=lightgrey
 
 let g:indentLine_setColors = 0
-let g:airline_theme='codedark'
+let g:airline_theme='monochrome'
 let g:minimap_highlight='Comment'
 
 function! ToggleNetrw()
