@@ -9,7 +9,6 @@ set noerrorbells
 set encoding=utf-8
 set number relativenumber
 set wildmode=longest,list,full
-set t_Co=256
 set splitbelow splitright
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -23,10 +22,18 @@ set incsearch
 set noshowmode
 set colorcolumn=80
 
+set t_Co=256
+set t_ut=
+
+colorscheme codedark 
+
+hi Normal guibg=NONE ctermbg=NONE
+
+
 highligh ColorColum ctermbg=0 guibg=lightgrey
 
 let g:indentLine_setColors = 0
-let g:airline_theme='monochrome'
+let g:airline_theme='codedark'
 let g:minimap_highlight='Comment'
 
 function! ToggleNetrw()
