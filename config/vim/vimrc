@@ -11,22 +11,23 @@ set number relativenumber
 set wildmode=longest,list,full
 set t_Co=256
 set splitbelow splitright
-" show existing tab with 4 spaces width
 set tabstop=4 softtabstop=4
-" when indenting with '>', use 4 spaces width
 set shiftwidth=4
-" On pressing tab, insert 4 spaces
 set expandtab
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:indentLine_setColors = 0
-let g:airline_theme='monochrome'
-let g:minimap_highlight='Comment'
 set smartindent
 set nowrap
 set smartcase
 set noswapfile
 set incsearch
 set noshowmode
+set colorcolumn=80
+
+highligh ColorColum ctermbg=0 guibg=lightgrey
+
+let g:indentLine_setColors = 0
+let g:airline_theme='monochrome'
+let g:minimap_highlight='Comment'
 
 function! ToggleNetrw()
         let i = bufnr("$")
@@ -50,7 +51,7 @@ set switchbuf=usetab,newtab
 nnoremap <F8> :sbnext<CR>
 
 let g:netrw_banner=0        " disable annoying banner
-let g:netrw_winsize = 18    " width in percent
+let g:netrw_winsize = 20    " width in percent
 let g:netrw_browse_split=4  " open in prior window
 let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
