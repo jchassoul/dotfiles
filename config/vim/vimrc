@@ -8,6 +8,9 @@ set mouse=a
 set noerrorbells
 set encoding=utf-8
 set number relativenumber
+set nohlsearch
+set hidden
+set scrolloff=8
 set wildmode=longest,list,full
 set splitbelow splitright
 set tabstop=4 softtabstop=4
@@ -16,20 +19,39 @@ set expandtab
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set smartindent
 set nowrap
+set ignorecase
 set smartcase
 set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+
 set incsearch
 set noshowmode
+
+set completeopt=menuone,noinsert,noselect
+
 set colorcolumn=80
+set signcolumn=yes
+
+set updatetime=50
+set shortmess+=c
+
+set termguicolors
 
 set t_Co=256
 set t_ut=
 
-colorscheme codedark 
+colorscheme codedark
+set background=dark
+
+highligh Normal guibg=NONE ctermbg=NONE
 
 highligh ColorColum ctermbg=0 guibg=lightgrey
 
 let g:indentLine_setColors = 0
+
+let g:airline#extensions#wordcount#enabled = 1
 let g:airline_theme='monochrome'
 let g:minimap_highlight='Comment'
 
