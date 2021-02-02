@@ -1,6 +1,6 @@
 [colors]
 background = ${xrdb:color0}
-background-alt = #00444
+background-alt = #3a3a3a
 foreground = ${xrdb:color7}
 foreground-alt = #555
 primary = #98B740
@@ -16,15 +16,14 @@ height = 19
 radius = 0
 fixed-center = false
 
-;background = ${colors.background}
-background = #3a3a3a 
+background = ${colors.background-alt}
 foreground = ${colors.foreground}
 
 line-size = 3
 line-color = #f00
 
 border-size = 0
-border-color = #00000000
+border-color = #000000
 
 padding-left = 0
 padding-right = 2
@@ -112,34 +111,25 @@ label-empty=
 type = internal/date
 interval = 5
 
-label = %{F#99}%date%%{F-}   %{F#fff}%time%%{F-}
-date = %m/%d/%Y
+label = %{F#99}%date%%{F-} %{F#fff}%time%%{F-} 
+date = 
 date-alt = %A, %B %d, %Y
 time = %I:%M %p
 time-alt = ${self.time}
 
-;date =
-;date-alt = " %Y-%m-%d"
-
-;time = %I:%M %p
-;time-alt = %I:%M %p
-
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-;format-underline = #0a6cf5
-
-;label = %date% %time%
+format-underline = ${colors.secondary} 
 
 [module/volume]
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = ♪ 
+label-volume = ♬ 
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = Sound muted
+label-muted = ■  Muted
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.primary} 
@@ -165,31 +155,19 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/battery
 battery = BAT0
 adapter = ADP1
-full-at = 98
-format-charging = <animation-charging> <label-charging>
-#format-charging-underline = ${colors.secondary}
+full-at = 98 
+format-charging = <label-charging>
+format-charging-underline = ${colors.secondary}
 
-format-discharging = <ramp-capacity> <label-discharging>
-#format-discharging-underline = ${colors.secondary}
+format-discharging = <label-discharging>
+format-discharging-underline = ${colors.primary}
 
-format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-#format-full-underline = ${colors.primary}
+format-full-underline = ${colors.secondary}
 
 label-charging = ⚡ %percentage%%
 label-discharging = ⚡ %percentage%%
 
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
 
 [settings]
 screenchange-reload = true
