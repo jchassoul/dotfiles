@@ -22,9 +22,6 @@ set nowrap
 set ignorecase
 set smartcase
 set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
 
 set incsearch
 set noshowmode
@@ -48,7 +45,6 @@ highligh ColorColum ctermbg=0 guibg=lightgrey
 
 let g:indentLine_setColors = 0
 
-let g:airline#extensions#wordcount#enabled = 1
 let g:airline_theme='monochrome'
 let g:minimap_highlight='Comment'
 
