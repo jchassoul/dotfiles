@@ -43,9 +43,6 @@ set t_Co=256
 set t_ut=
 
 colorscheme codedark
-set background=dark
-
-highligh Normal guibg=NONE ctermbg=NONE
 
 highligh ColorColum ctermbg=0 guibg=lightgrey
 

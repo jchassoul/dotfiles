@@ -155,19 +155,15 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/battery
 battery = BAT0
 adapter = ADP1
-full-at = 98 
+full-at = 101 
 format-charging = <label-charging>
 format-charging-underline = ${colors.secondary}
 
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.primary}
 
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${colors.secondary}
-
 label-charging = ⚡ %percentage%%
 label-discharging = ⚡ %percentage%%
-
 
 [settings]
 screenchange-reload = true
