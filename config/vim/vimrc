@@ -10,26 +10,20 @@ set encoding=utf-8
 set number relativenumber
 set nohlsearch
 set hidden
-set scrolloff=8
 set wildmode=longest,list,full
 set splitbelow splitright
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 set smartindent
 set nowrap
 set ignorecase
 set smartcase
 set noswapfile
 set incsearch
-set noshowmode
-set signcolumn=yes
-set updatetime=50
-set shortmess+=c
-
 set switchbuf=usetab,newtab
 
+set noshowmode
 set completeopt=menuone,noinsert,noselect
 
 set termguicolors
@@ -38,7 +32,14 @@ set t_ut=
 colorscheme codedark
 
 set colorcolumn=80
+set signcolumn=yes
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 highligh ColorColum ctermbg=0 guibg=lightgrey
+
+set updatetime=50
+set shortmess+=c
 
 if executable('rg')
     let g:rg_derive_root='true'
@@ -70,7 +71,7 @@ endfunction
 
 map <F3> :call ToggleNetrw() <CR>
 
-let g:netrw_banner=0        " disable annoying banner
+let g:netrw_banner=0        " disable banner
 let g:netrw_winsize = 20    " width in percent
 let g:netrw_browse_split=4  " open in prior window
 let g:netrw_altv=1          " open splits to the right
