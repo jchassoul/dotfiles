@@ -28,7 +28,7 @@ set noshowmode
 
 set completeopt=menuone,noinsert,noselect
 
-set colorcolumn=80
+set colorcolumn=81
 set signcolumn=yes
 
 set updatetime=50
@@ -84,7 +84,14 @@ map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
 map <leader>c :ColorToggle<CR>
 map <leader>q :q<CR>
+map <leader>w :w<CR>
+" Enable and disable auto comment
+map <leader>c :setlocal formatoptions-=cro<CR>>
+map <leader>C :setlocal formatoptions=cro<CR>
+" Spell check
 map <leader>s :setlocal spell! spelllang=en_us<CR>
+" Alias replace all to R
+nnoremap R :%s//gI<Left><Left><Left>
 
 " Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
