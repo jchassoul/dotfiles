@@ -34,6 +34,8 @@ set signcolumn=yes
 set updatetime=50
 set shortmess+=c
 
+set switchbuf=usetab,newtab
+
 set termguicolors
 
 set t_Co=256
@@ -65,10 +67,6 @@ endfunction
 
 map <F3> :call ToggleNetrw() <CR>
 
-set switchbuf=usetab,newtab
-
-nnoremap <F8> :sbnext<CR>
-
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_winsize = 20    " width in percent
 let g:netrw_browse_split=4  " open in prior window
@@ -81,15 +79,12 @@ autocmd FileType netrw set nolist
 let g:vimwiki_list = [{'path': '~/vault/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
-let g:coc_disable_startup_warning = 1
-
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
 map <leader>c :ColorToggle<CR>
+map <leader>q :q<CR>
 map <leader>s :setlocal spell! spelllang=en_us<CR>
-map <leader>v <C-w>t<C-w>H
-map <leader>h <C-w>t<C-w>K
 
 " Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
