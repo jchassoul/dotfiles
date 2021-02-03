@@ -22,29 +22,23 @@ set nowrap
 set ignorecase
 set smartcase
 set noswapfile
-
 set incsearch
 set noshowmode
-
-set completeopt=menuone,noinsert,noselect
-
-set colorcolumn=80
 set signcolumn=yes
-
 set updatetime=50
 set shortmess+=c
 
 set switchbuf=usetab,newtab
 
-set termguicolors
+set completeopt=menuone,noinsert,noselect
 
+set termguicolors
 set t_Co=256
 set t_ut=
-
 colorscheme codedark
 
+set colorcolumn=80
 highligh ColorColum ctermbg=0 guibg=lightgrey
-
 
 if executable('rg')
     let g:rg_derive_root='true'
@@ -52,9 +46,11 @@ endif
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_use_caching = 0
+
 let g:indentLine_setColors = 0
 
 let g:airline_theme='monochrome'
+
 let g:minimap_highlight='Comment'
 
 function! ToggleNetrw()
@@ -92,12 +88,11 @@ map <leader>t :tabnew<CR>
 map <leader>c :ColorToggle<CR>
 map <leader>q :q<CR>
 map <leader>w :w<CR>
-" Enable and disable auto comment
 map <leader>c :setlocal formatoptions-=cro<CR>>
 map <leader>C :setlocal formatoptions=cro<CR>
-" Spell check
 map <leader>s :setlocal spell! spelllang=en_us<CR>
-" Alias replace all to R
+
+nnoremap <leader>/ :Rg<SPACE>
 nnoremap R :%s//gI<Left><Left><Left>
 
 " Erlang
