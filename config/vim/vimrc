@@ -109,6 +109,9 @@ map <leader>s :setlocal spell! spelllang=en_us<CR>
 nnoremap <leader>/ :Rg<SPACE>
 nnoremap R :%s//gI<Left><Left><Left>
 
+let g:ctrlp_map = '<F2>'
+let g:ctrlp_cmd = 'CtrlP'
+
 nnoremap <F4> :CtrlPSmartTabs<CR>
 
 " Erlang

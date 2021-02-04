@@ -59,6 +59,7 @@ install-vim:
 	git clone -b build https://github.com/davisdude/vim-love-docs ~/.vim/pack/plugins/start/vim-love-docs
 	git clone https://github.com/vim-pandoc/vim-pandoc-syntax.git ~/.vim/pack/plugins/start/vim-pandoc-syntax
 	git clone https://github.com/christoomey/vim-tmux-navigator.git ~/.vim/pack/plugins/start/vim-tmux-navigator
+	git clone https://github.com/Raimondi/delimitMate.git  ~/.vim/pack/plugins/start/delimitMate
 	git clone https://github.com/jremmen/vim-ripgrep.git ~/.vim/pack/plugins/start/vim-ripgrep
 	git clone https://github.com/tomasiser/vim-code-dark.git ~/.vim/pack/plugins/start/vim-code-dark
 	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim	
@@ -70,6 +71,7 @@ install-vim:
 	git clone https://github.com/mattn/calendar-vim.git ~/.vim/bundle/calendar-vim
 	git clone https://github.com/chrisbra/Colorizer ~/.vim/bundle/Colorizer
 	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
+	git clone --depth=1 https://github.com/sheerun/vim-polyglot ~/.vim/pack/plugins/start/vim-polyglot
 	git clone https://github.com/lfe/vim-lfe.git ~/.vim/bundle/vim-lfe
 	git clone https://github.com/severin-lemaignan/vim-minimap.git ~/.vim/bundle/vim-minimap
 	git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine
