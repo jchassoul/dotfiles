@@ -95,7 +95,7 @@ let g:vimwiki_global_ext = 0
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
-map <leader>c :ColorToggle<CR>
+map <leader>l :ColorToggle<CR>
 map <leader>q :q<CR>
 map <leader>w :w<CR>
 map <leader>c :setlocal formatoptions-=cro<CR>>
