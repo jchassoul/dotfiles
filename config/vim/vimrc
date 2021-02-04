@@ -83,6 +83,8 @@ autocmd FileType netrw set nolist
 let g:vimwiki_list = [{'path': '~/vault/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
+let g:vimwiki_global_ext = 0
+
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
@@ -111,6 +113,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_lua_checkers = ["luacheck"]
 let g:syntastic_lua_luacheck_args = "--no-unused-args"
 let g:syntastic_erlang_checkers=['syntaxerl']
+
+augroup pandoc_syntax
+    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+    autocmd! FileType vimwiki set syntax=markdown.pandoc
+augroup END
 
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.

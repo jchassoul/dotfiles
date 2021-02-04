@@ -50,16 +50,17 @@ install-vim:
 	rm -f ~/.vimrc
 	ln -s `pwd`/config/vim/vimrc ~/.vimrc
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-	git clone https://github.com/ajh17/VimCompletesMe.git ~/.vim/pack/plugins/start/VimCompletesMe
-	git clone https://github.com/christoomey/vim-tmux-navigator.git ~/.vim/pack/plugins/start/vim-tmux-navigator
-	git clone https://github.com/jremmen/vim-ripgrep.git ~/.vim/pack/plugins/start/vim-ripgrep
-	git clone https://github.com/tomasiser/vim-code-dark.git ~/.vim/pack/plugins/start/vim-code-dark
-	git clone -b build https://github.com/davisdude/vim-love-docs ~/.vim/pack/plugins/start/vim-love-docs
 	git clone https://github.com/vim-utils/vim-man.git ~/.vim/pack/plugins/start/vim-man
 	git clone https://github.com/tpope/vim-eunuch.git ~/.vim/pack/tpope/start/vim-eunuch
 	git clone https://github.com/tpope/vim-fugitive.git ~/.vim/pack/tpope/start/vim-fugitive
 	git clone https://github.com/tpope/vim-sensible.git ~/.vim/pack/tpope/start/vim-sensible
 	git clone https://github.com/tpope/vim-surround.git ~/.vim/pack/tpope/start/vim-surround
+	git clone https://github.com/ajh17/VimCompletesMe.git ~/.vim/pack/plugins/start/VimCompletesMe
+	git clone -b build https://github.com/davisdude/vim-love-docs ~/.vim/pack/plugins/start/vim-love-docs
+	git clone https://github.com/vim-pandoc/vim-pandoc-syntax.git ~/.vim/pack/plugins/start/vim-pandoc-syntax
+	git clone https://github.com/christoomey/vim-tmux-navigator.git ~/.vim/pack/plugins/start/vim-tmux-navigator
+	git clone https://github.com/jremmen/vim-ripgrep.git ~/.vim/pack/plugins/start/vim-ripgrep
+	git clone https://github.com/tomasiser/vim-code-dark.git ~/.vim/pack/plugins/start/vim-code-dark
 	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim	
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
@@ -73,7 +74,6 @@ install-vim:
 	git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine
 	git clone https://github.com/edkolev/erlang-motions.vim ~/.vim/bundle/erlang-motions.vim
 	git clone https://github.com/edkolev/tmuxline.vim ~/.vim/bundle/tmuxline.vim
-	git clone https://github.com/jmcantrell/vim-virtualenv.git ~/.vim/bundle/virtualenv
 
 install-xs:
 	rm -f ~/.xsession
