@@ -8,11 +8,8 @@ secondary = #48a5CF
 alert = #DA547B
 
 [bar/topbar]
-;monitor = ${env:MONITOR:DVI-D-0}
 width = 100%
 height = 19 
-;offset-x = 1%
-;offset-y = 1%
 radius = 0
 fixed-center = false
 
@@ -31,9 +28,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=12;1
-font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
-font-2 = siji:pixelsize=12;1
+font-0 = "Inconsolata:pixelsize=12;2"
 
 modules-left = bspwm 
 modules-center = xwindow
@@ -44,11 +39,6 @@ tray-padding = 2
 enable-ipc = true
 
 wm-restack = bspwm
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
