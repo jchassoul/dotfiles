@@ -61,6 +61,7 @@ install-vim:
 	git clone https://github.com/christoomey/vim-tmux-navigator.git ~/.vim/pack/plugins/start/vim-tmux-navigator
 	git clone https://github.com/Raimondi/delimitMate.git  ~/.vim/pack/plugins/start/delimitMate
 	git clone https://github.com/jremmen/vim-ripgrep.git ~/.vim/pack/plugins/start/vim-ripgrep
+	git clone https://github.com/mbbill/undotree.git ~/.vim/pack/plugins/start/undotree
 	git clone https://github.com/tomasiser/vim-code-dark.git ~/.vim/pack/plugins/start/vim-code-dark
 	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim	
 	git clone https://github.com/tomtom/tlib_vim.git ~/.vim/bundle/tlib_vim

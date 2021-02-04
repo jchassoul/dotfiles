@@ -116,6 +116,8 @@ let g:ctrlp_cmd = 'CtrlP'
 
 nnoremap <F4> :CtrlPSmartTabs<CR>
 
+nnoremap <F5> :UndotreeToggle<CR>
+
 " Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
 au BufNewFile,BufRead *.erl,*.es,*.hrl,*.xrl,*.config setf erlang
