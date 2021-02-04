@@ -45,6 +45,8 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
+let g:ctrlp_extensions = ['smarttabs']
+
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_use_caching = 0
 
@@ -97,6 +99,8 @@ map <leader>s :setlocal spell! spelllang=en_us<CR>
 
 nnoremap <leader>/ :Rg<SPACE>
 nnoremap R :%s//gI<Left><Left><Left>
+
+nnoremap <F4> :CtrlPSmartTabs<CR>
 
 " Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent

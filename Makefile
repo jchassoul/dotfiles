@@ -62,6 +62,7 @@ install-vim:
 	git clone https://github.com/jremmen/vim-ripgrep.git ~/.vim/pack/plugins/start/vim-ripgrep
 	git clone https://github.com/tomasiser/vim-code-dark.git ~/.vim/pack/plugins/start/vim-code-dark
 	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim	
+	git clone https://github.com/DavidEGx/ctrlp-smarttabs.git ~/.vim/bundle/ctrlp-smarttabs	
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
 	git clone https://github.com/vimwiki/vimwiki.git ~/.vim/bundle/vimwiki
