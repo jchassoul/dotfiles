@@ -63,6 +63,10 @@ install-vim:
 	git clone https://github.com/jremmen/vim-ripgrep.git ~/.vim/pack/plugins/start/vim-ripgrep
 	git clone https://github.com/tomasiser/vim-code-dark.git ~/.vim/pack/plugins/start/vim-code-dark
 	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim	
+	git clone https://github.com/tomtom/tlib_vim.git ~/.vim/bundle/tlib_vim
+	git clone https://github.com/MarcWeber/vim-addon-mw-utils.git ~/.vim/bundle/vim-addon-mw-utils
+	git clone https://github.com/garbas/vim-snipmate.git ~/.vim/bundle/vim-snipmate	
+	git clone https://github.com/honza/vim-snippets.git ~/.vim/bundle/vim-snippets
 	git clone https://github.com/ryanoasis/vim-devicons.git ~/.vim/bundle/devicons	
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
@@ -72,6 +76,7 @@ install-vim:
 	git clone https://github.com/chrisbra/Colorizer ~/.vim/bundle/Colorizer
 	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
 	git clone --depth=1 https://github.com/sheerun/vim-polyglot ~/.vim/pack/plugins/start/vim-polyglot
+	git clone --depth=1 https://github.com/ervandew/supertab ~/.vim/pack/plugins/start/supertab
 	git clone https://github.com/lfe/vim-lfe.git ~/.vim/bundle/vim-lfe
 	git clone https://github.com/severin-lemaignan/vim-minimap.git ~/.vim/bundle/vim-minimap
 	git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine

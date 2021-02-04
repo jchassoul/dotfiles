@@ -43,6 +43,8 @@ highligh ColorColum ctermbg=0 guibg=lightgrey
 set updatetime=50
 set shortmess+=c
 
+let g:snipMate = { 'snippet_version': 1 }
+
 if executable('rg')
     let g:rg_derive_root='true'
 endif
