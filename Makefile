@@ -65,9 +65,9 @@ install-vim:
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
 	git clone https://github.com/vimwiki/vimwiki.git ~/.vim/bundle/vimwiki
+	git clone https://github.com/mattn/calendar-vim.git ~/.vim/bundle/calendar-vim
 	git clone https://github.com/chrisbra/Colorizer ~/.vim/bundle/Colorizer
 	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
-	git clone https://github.com/elzr/vim-json.git ~/.vim/bundle/vim-json
 	git clone https://github.com/lfe/vim-lfe.git ~/.vim/bundle/vim-lfe
 	git clone https://github.com/severin-lemaignan/vim-minimap.git ~/.vim/bundle/vim-minimap
 	git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine
