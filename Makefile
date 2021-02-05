@@ -74,6 +74,7 @@ install-vim:
 	git clone https://github.com/vimwiki/vimwiki.git ~/.vim/bundle/vimwiki
 	git clone https://github.com/mattn/calendar-vim.git ~/.vim/bundle/calendar-vim
 	git clone https://github.com/chrisbra/Colorizer ~/.vim/bundle/Colorizer
+	git clone https://github.com/vim-python/python-syntax ~/.vim/bundle/python-syntax
 	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
 	git clone --depth=1 https://github.com/sheerun/vim-polyglot ~/.vim/pack/plugins/start/vim-polyglot
 	git clone --depth=1 https://github.com/ervandew/supertab ~/.vim/pack/plugins/start/supertab
