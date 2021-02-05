@@ -43,7 +43,7 @@ highligh ColorColum ctermbg=0 guibg=lightgrey
 set updatetime=50
 set shortmess+=c
 
-set completeopt=menuone,noinsert,noselect
+set completeopt=longest,menuone
 
 set omnifunc=syntaxcomplete#Complete
 
