@@ -15,6 +15,7 @@ set splitbelow splitright
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
+set autoindent
 set smartindent
 set nowrap
 set ignorecase
@@ -26,7 +27,6 @@ set switchbuf=usetab,newtab
 set guifont=Inconsolata\ Nerd\ Font\ Complete\ Mono\ 11
 
 set noshowmode
-set completeopt=menuone,noinsert,noselect
 
 set termguicolors
 set t_Co=256
@@ -42,6 +42,14 @@ highligh ColorColum ctermbg=0 guibg=lightgrey
 
 set updatetime=50
 set shortmess+=c
+
+set completeopt=menuone,noinsert,noselect
+
+set omnifunc=syntaxcomplete#Complete
+
+set wildmenu
+set lazyredraw
+set showmatch
 
 let g:snipMate = { 'snippet_version': 1 }
 
@@ -64,6 +72,8 @@ let g:airline#extensions#wordcount#filetypes = '\vasciidoc|markdown|markdown.pan
 let g:airline#extensions#wordcount#enabled = 1
 let g:airline_powerline_fonts = 0 
 let g:airline_theme='monochrome'
+
+set laststatus=2
 
 let g:minimap_highlight='Comment'
 
