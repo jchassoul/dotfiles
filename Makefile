@@ -55,7 +55,6 @@ install-vim:
 	git clone https://github.com/tpope/vim-fugitive.git ~/.vim/pack/tpope/start/vim-fugitive
 	git clone https://github.com/tpope/vim-sensible.git ~/.vim/pack/tpope/start/vim-sensible
 	git clone https://github.com/tpope/vim-surround.git ~/.vim/pack/tpope/start/vim-surround
-	git clone https://github.com/ajh17/VimCompletesMe.git ~/.vim/pack/plugins/start/VimCompletesMe
 	git clone -b build https://github.com/davisdude/vim-love-docs ~/.vim/pack/plugins/start/vim-love-docs
 	git clone https://github.com/vim-pandoc/vim-pandoc-syntax.git ~/.vim/pack/plugins/start/vim-pandoc-syntax
 	git clone https://github.com/christoomey/vim-tmux-navigator.git ~/.vim/pack/plugins/start/vim-tmux-navigator
