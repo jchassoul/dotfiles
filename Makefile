@@ -44,44 +44,11 @@ install-mksh:
 
 install-vim:
 	rm -Rf ~/.vim
-	mkdir -p ~/.vim/autoload
-	mkdir -p ~/.vim/bundle
-	mkdir -p ~/.vim/pack/tpope/start
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	mkdir -p ~/.vim/undodir
 	rm -f ~/.vimrc
 	ln -s `pwd`/config/vim/vimrc ~/.vimrc
-	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-	git clone https://github.com/vim-utils/vim-man.git ~/.vim/pack/plugins/start/vim-man
-	git clone https://github.com/tpope/vim-eunuch.git ~/.vim/pack/tpope/start/vim-eunuch
-	git clone https://github.com/tpope/vim-fugitive.git ~/.vim/pack/tpope/start/vim-fugitive
-	git clone https://github.com/tpope/vim-sensible.git ~/.vim/pack/tpope/start/vim-sensible
-	git clone https://github.com/tpope/vim-surround.git ~/.vim/pack/tpope/start/vim-surround
-	git clone -b build https://github.com/davisdude/vim-love-docs ~/.vim/pack/plugins/start/vim-love-docs
-	git clone https://github.com/vim-pandoc/vim-pandoc-syntax.git ~/.vim/pack/plugins/start/vim-pandoc-syntax
-	git clone https://github.com/christoomey/vim-tmux-navigator.git ~/.vim/pack/plugins/start/vim-tmux-navigator
-	git clone https://github.com/Raimondi/delimitMate.git  ~/.vim/pack/plugins/start/delimitMate
-	git clone https://github.com/jremmen/vim-ripgrep.git ~/.vim/pack/plugins/start/vim-ripgrep
-	git clone https://github.com/mbbill/undotree.git ~/.vim/pack/plugins/start/undotree
-	git clone https://github.com/tomasiser/vim-code-dark.git ~/.vim/pack/plugins/start/vim-code-dark
-	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
-	git clone https://github.com/tomtom/tlib_vim.git ~/.vim/bundle/tlib_vim
-	git clone https://github.com/MarcWeber/vim-addon-mw-utils.git ~/.vim/bundle/vim-addon-mw-utils
-	git clone https://github.com/garbas/vim-snipmate.git ~/.vim/bundle/vim-snipmate
-	git clone https://github.com/honza/vim-snippets.git ~/.vim/bundle/vim-snippets
-	git clone https://github.com/ryanoasis/vim-devicons.git ~/.vim/bundle/devicons
-	git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
-	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
-	git clone https://github.com/DavidEGx/ctrlp-smarttabs.git ~/.vim/bundle/ctrlp-smarttabs
-	git clone https://github.com/vimwiki/vimwiki.git ~/.vim/bundle/vimwiki
-	git clone https://github.com/mattn/calendar-vim.git ~/.vim/bundle/calendar-vim
-	git clone https://github.com/chrisbra/Colorizer ~/.vim/bundle/Colorizer
-	git clone https://github.com/vim-python/python-syntax ~/.vim/bundle/python-syntax
-	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
-	git clone --depth=1 https://github.com/sheerun/vim-polyglot ~/.vim/pack/plugins/start/vim-polyglot
-	git clone --depth=1 https://github.com/ervandew/supertab ~/.vim/pack/plugins/start/supertab
-	git clone https://github.com/severin-lemaignan/vim-minimap.git ~/.vim/bundle/vim-minimap
-	git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine
-	git clone https://github.com/edkolev/erlang-motions.vim ~/.vim/bundle/erlang-motions.vim
-	git clone https://github.com/edkolev/tmuxline.vim ~/.vim/bundle/tmuxline.vim
 
 install-xs:
 	rm -f ~/.xsession

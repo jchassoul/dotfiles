@@ -1,10 +1,19 @@
-execute pathogen#infect()
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
 
-set nocompatible
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+" YOLO
 syntax on
 filetype plugin indent on
-
 set mouse=a
+set nocompatible
 set noerrorbells
 set encoding=utf-8
 set number relativenumber
@@ -21,37 +30,99 @@ set nowrap
 set ignorecase
 set smartcase
 set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
 set incsearch
 set switchbuf=usetab,newtab
-
 set guifont=Inconsolata\ Nerd\ Font\ Complete\ Mono\ 11
-
 set noshowmode
-
 set termguicolors
 set t_Co=256
 set t_ut=
-colorscheme codedark
-
 set colorcolumn=80
 set signcolumn=yes
-
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-
 highligh ColorColum ctermbg=0 guibg=lightgrey
-
 set updatetime=50
 set shortmess+=c
-
 set completeopt=longest,menuone
-
 set omnifunc=syntaxcomplete#Complete
-
 set wildmenu
 set lazyredraw
 set showmatch
 
-let g:snipMate = { 'snippet_version': 1 }
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'
+Plug 'vim-python/python-syntax'
+Plug 'vim-utils/vim-man'
+Plug 'davisdude/vim-love-docs'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'jpalardy/vim-slime'
+Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
+" If you don't have nodejs and yarn
+" use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
+" see: https://github.com/iamcco/markdown-preview.nvim/issues/50
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'Raimondi/delimitMate'
+Plug 'jremmen/vim-ripgrep'
+Plug 'mbbill/undotree'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'Shougo/denite.nvim'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'honza/vim-snippets'
+Plug 'xolox/vim-misc', { 'for' : 'lua' }
+Plug 'xolox/vim-lua-ftplugin', { 'for' : 'lua' }
+Plug 'dense-analysis/ale'
+Plug 'luochen1990/rainbow'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'DavidEGx/ctrlp-smarttabs'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vimwiki/vimwiki'
+Plug 'mattn/calendar-vim'
+Plug 'chrisbra/Colorizer'
+Plug 'sheerun/vim-polyglot'
+Plug 'ervandew/supertab'
+Plug 'severin-lemaignan/vim-minimap'
+Plug 'Yggdroot/indentLine'
+Plug 'edkolev/erlang-motions.vim'
+Plug 'edkolev/tmuxline.vim'
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+"colorscheme codedark
+set cursorline
+colorscheme onehalfdark
+
+let g:deoplete#enable_at_startup = 1
+
+let g:lua_check_syntax = 0
+let g:lua_complete_omni = 1
+let g:lua_complete_dynamic = 0
+let g:lua_define_completion_mappings = 0
+
+call deoplete#custom#var('omni', 'functions', {
+      \ 'lua': 'xolox#lua#omnifunc',
+      \ })
+
+call deoplete#custom#var('omni', 'input_patterns', {
+      \ 'lua': '\w+|\w+[.:]\w*',
+      \ })
 
 if executable('rg')
     let g:rg_derive_root='true'
