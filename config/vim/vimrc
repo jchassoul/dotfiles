@@ -82,6 +82,10 @@ set laststatus=2
 
 let g:minimap_highlight='Comment'
 
+let g:slime_target = "tmux"
+
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
+
 function! ToggleNetrw()
         let i = bufnr("$")
         let wasOpen = 0

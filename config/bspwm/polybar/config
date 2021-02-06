@@ -1,6 +1,6 @@
 [colors]
 background = ${xrdb:color0}
-background-alt = #3a3a3a
+background-alt = #1c1c1c
 foreground = ${xrdb:color7}
 foreground-alt = #555
 primary = #98B740
@@ -9,7 +9,7 @@ alert = #DA547B
 
 [bar/topbar]
 width = 100%
-height = 19 
+height = 19
 radius = 0
 fixed-center = false
 
@@ -30,7 +30,7 @@ module-margin-right = 2
 
 font-0 = "Inconsolata:pixelsize=12;3"
 
-modules-left = bspwm 
+modules-left = bspwm
 modules-center = xwindow
 modules-right = cmus volume filesystem battery date
 
@@ -101,36 +101,36 @@ label-empty=
 type = internal/date
 interval = 5
 
-label = %{F#99}%date%%{F-} %{F#fff}%time%%{F-} 
-date = 
+label = %{F#99}%date%%{F-} %{F#fff}%time%%{F-}
+date =
 date-alt = %A, %B %d, %Y
 time = %I:%M %p
 time-alt = ${self.time}
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.secondary} 
+format-underline = ${colors.secondary}
 
 [module/volume]
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = ♬ 
+label-volume = ♬
 label-volume-foreground = ${root.foreground}
 
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = ■  Muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.primary} 
-bar-volume-foreground-1 = ${colors.primary} 
-bar-volume-foreground-2 = ${colors.primary} 
-bar-volume-foreground-3 = ${colors.primary} 
-bar-volume-foreground-4 = ${colors.primary} 
-bar-volume-foreground-5 = ${colors.primary} 
-bar-volume-foreground-6 = ${colors.secondary} 
-bar-volume-foreground-7 = ${colors.secondary} 
-bar-volume-foreground-8 = ${colors.alert} 
+bar-volume-foreground-0 = ${colors.primary}
+bar-volume-foreground-1 = ${colors.primary}
+bar-volume-foreground-2 = ${colors.primary}
+bar-volume-foreground-3 = ${colors.primary}
+bar-volume-foreground-4 = ${colors.primary}
+bar-volume-foreground-5 = ${colors.primary}
+bar-volume-foreground-6 = ${colors.secondary}
+bar-volume-foreground-7 = ${colors.secondary}
+bar-volume-foreground-8 = ${colors.alert}
 bar-volume-foreground-9 = ${colors.alert}
 bar-volume-gradient = false
 bar-volume-indicator = |
@@ -145,7 +145,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/battery
 battery = BAT0
 adapter = ADP1
-full-at = 101 
+full-at = 101
 format-charging = <label-charging>
 format-charging-underline = ${colors.secondary}
 
@@ -159,7 +159,7 @@ label-discharging = ⚡ %percentage%%
 screenchange-reload = true
 
 [global/wm]
-margin-top = 0 
+margin-top = 0
 margin-bottom = 0
 
 ; vim:ft=dosini
