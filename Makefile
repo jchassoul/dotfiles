@@ -62,15 +62,15 @@ install-vim:
 	git clone https://github.com/jremmen/vim-ripgrep.git ~/.vim/pack/plugins/start/vim-ripgrep
 	git clone https://github.com/mbbill/undotree.git ~/.vim/pack/plugins/start/undotree
 	git clone https://github.com/tomasiser/vim-code-dark.git ~/.vim/pack/plugins/start/vim-code-dark
-	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim	
+	git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 	git clone https://github.com/tomtom/tlib_vim.git ~/.vim/bundle/tlib_vim
 	git clone https://github.com/MarcWeber/vim-addon-mw-utils.git ~/.vim/bundle/vim-addon-mw-utils
-	git clone https://github.com/garbas/vim-snipmate.git ~/.vim/bundle/vim-snipmate	
+	git clone https://github.com/garbas/vim-snipmate.git ~/.vim/bundle/vim-snipmate
 	git clone https://github.com/honza/vim-snippets.git ~/.vim/bundle/vim-snippets
-	git clone https://github.com/ryanoasis/vim-devicons.git ~/.vim/bundle/devicons	
+	git clone https://github.com/ryanoasis/vim-devicons.git ~/.vim/bundle/devicons
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 	git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
-	git clone https://github.com/DavidEGx/ctrlp-smarttabs.git ~/.vim/bundle/ctrlp-smarttabs	
+	git clone https://github.com/DavidEGx/ctrlp-smarttabs.git ~/.vim/bundle/ctrlp-smarttabs
 	git clone https://github.com/vimwiki/vimwiki.git ~/.vim/bundle/vimwiki
 	git clone https://github.com/mattn/calendar-vim.git ~/.vim/bundle/calendar-vim
 	git clone https://github.com/chrisbra/Colorizer ~/.vim/bundle/Colorizer

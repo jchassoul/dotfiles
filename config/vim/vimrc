@@ -66,12 +66,13 @@ let g:ctrlp_use_caching = 0
 
 let g:indentLine_setColors = 0
 
+let g:airline_powerline_fonts = 0
+let g:airline#extensions#tmuxline#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#wordcount#filetypes = '\vasciidoc|markdown|markdown.pandoc|vimwiki|rst|tex|text'
 let g:airline#extensions#wordcount#enabled = 1
-let g:airline_powerline_fonts = 0
-let g:airline_theme='monochrome'
+let g:airline_theme='distinguished'
 
 let g:python_highlight_all = 1
 
@@ -116,7 +117,7 @@ map <leader>t :tabnew<CR>
 map <leader>l :ColorToggle<CR>
 map <leader>q :q<CR>
 map <leader>w :w<CR>
-map <leader>c :setlocal formatoptions-=cro<CR>>
+map <leader>c :setlocal formatoptions-=cro<CR>
 map <leader>C :setlocal formatoptions=cro<CR>
 map <leader>s :setlocal spell! spelllang=en_us<CR>
 map <leader>d :setlocal autoindent<CR>>
