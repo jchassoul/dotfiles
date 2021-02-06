@@ -379,6 +379,11 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 
 "nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
+nnoremap <silent> <C-Left> :vertical resize +5<CR>
+nnoremap <silent> <C-Right> :vertical resize -5<CR>
+nnoremap <silent> <C-Up> :resize +5<CR>
+nnoremap <silent> <C-Down> :resize -5<CR>
+
 nnoremap <leader>/ :Rg<SPACE>
 nnoremap R :%s//gI<Left><Left><Left>
 
