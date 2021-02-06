@@ -74,6 +74,8 @@ let g:airline#extensions#wordcount#filetypes = '\vasciidoc|markdown|markdown.pan
 let g:airline#extensions#wordcount#enabled = 1
 let g:airline_theme='distinguished'
 
+let g:tmuxline_preset = 'full'
+
 let g:python_highlight_all = 1
 
 set laststatus=2
