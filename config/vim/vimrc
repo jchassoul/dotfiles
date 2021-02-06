@@ -74,6 +74,7 @@ Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Raimondi/delimitMate'
+Plug 'kovetskiy/sxhkd-vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'mbbill/undotree'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
@@ -107,7 +108,180 @@ call plug#end()
 set cursorline
 colorscheme onehalfdark
 
+
+" statusline
+" ==========
+
+function! LinterStatus() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+
+  return l:counts.total == 0 ? '' : printf(
+        \   '%d⚠ %d⨉',
+        \   all_non_errors,
+        \   all_errors
+        \)
+endfunction
+
+set statusline=
+" filename
+set statusline+=\ %<%{expand('%:~:.')}
+set statusline+=\ "
+" help/modified/readonly
+set statusline+=%(%h%m%r%)
+" alignment group
+set statusline+=%=
+" start error highlight group
+set statusline+=%#StatusLineError#
+" errors from w0rp/ale
+set statusline+=%{LinterStatus()}
+set statusline+=\ "
+" line/total lines
+set statusline+=L%l/%L
+" virtual column
+set statusline+=C%02v
+set statusline+=\ "
+
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+    nnoremap <silent><buffer><expr> <CR>
+                \ denite#do_map('do_action')
+    nnoremap <silent><buffer><expr> d
+                \ denite#do_map('do_action', 'delete')
+    nnoremap <silent><buffer><expr> <c-t>
+                \ denite#do_map('do_action', 'tabopen')
+    nnoremap <silent><buffer><expr> <c-v>
+                \ denite#do_map('do_action', 'vsplit')
+    nnoremap <silent><buffer><expr> <c-x>
+                \ denite#do_map('do_action', 'split')
+    nnoremap <silent><buffer><expr> p
+                \ denite#do_map('do_action', 'preview')
+    nnoremap <silent><buffer><expr> q
+                \ denite#do_map('quit')
+    nnoremap <silent><buffer><expr> i
+                \ denite#do_map('open_filter_buffer')
+    nnoremap <silent><buffer><expr> V
+                \ denite#do_map('toggle_select').'j'
+endfunction
+
+
+autocmd FileType denite-filter call s:denite_filter_my_settings()
+function! s:denite_filter_my_settings() abort
+    imap <silent><buffer> <tab> <Plug>(denite_filter_quit)
+    inoremap <silent><buffer><expr> <CR> denite#do_map('do_action')
+    inoremap <silent><buffer><expr> <c-t>
+                \ denite#do_map('do_action', 'tabopen')
+    inoremap <silent><buffer><expr> <c-v>
+                \ denite#do_map('do_action', 'vsplit')
+    inoremap <silent><buffer><expr> <c-x>
+                \ denite#do_map('do_action', 'split')
+    inoremap <silent><buffer><expr> <esc>
+                \ denite#do_map('quit')
+    inoremap <silent><buffer> <C-j>
+                \ <Esc><C-w>p:call cursor(line('.')+1,0)<CR><C-w>pA
+    inoremap <silent><buffer> <C-k>
+                \ <Esc><C-w>p:call cursor(line('.')-1,0)<CR><C-w>pA
+endfunction
+
+
+" Change matchers.
+call denite#custom#source(
+\ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
+
+call denite#custom#source('tag', 'matchers', ['matcher/substring'])
+
+call denite#custom#source('file/old', 'converters',
+      \ ['converter/relative_word'])
+" Change sorters.
+call denite#custom#source(
+\ 'file/rec', 'sorters', ['sorter/sublime'])
+
+
+    " Ripgrep command on grep source
+if executable('rg')
+    call denite#custom#var('grep', 'command', ['rg'])
+    call denite#custom#var('grep', 'default_opts',
+                \ ['-i', '--vimgrep', '--no-heading'])
+    call denite#custom#var('grep', 'recursive_opts', [])
+    call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+    call denite#custom#var('grep', 'separator', ['--'])
+    call denite#custom#var('grep', 'final_opts', [])
+    " For ripgrep
+    " Note: It is slower than ag
+    call denite#custom#var('file/rec', 'command',
+                \ ['rg', '--files', '--glob', '!.git'])
+endif
+
+" Define alias
+call denite#custom#alias('source', 'file/rec/git', 'file/rec')
+call denite#custom#var('file/rec/git', 'command',
+      \ ['git', 'ls-files', '-co', '--exclude-standard'])
+
+call denite#custom#alias('source', 'file/rec/py', 'file/rec')
+call denite#custom#var('file/rec/py', 'command',['scantree.py'])
+
+" Change ignore_globs
+call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
+      \ [ '.git/', '.ropeproject/', '__pycache__/',
+      \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
+
+let s:denite_options = {
+      \ 'prompt' : '>',
+      \ 'split': 'floating',
+      \ 'start_filter': 1,
+      \ 'auto_resize': 1,
+      \ 'source_names': 'short',
+      \ 'direction': 'botright',
+      \ 'highlight_filter_background': 'CursorLine',
+      \ 'highlight_matched_char': 'Type',
+      \ }
+
+call denite#custom#option('default', s:denite_options)
+
+" ale
+
+let g:ale_sign_error = '⨉'
+let g:ale_sign_warning = '⚠'
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '']
+" cycle through location list
+nmap <silent> <leader>n <Plug>(ale_next_wrap)
+nmap <silent> <leader>p <Plug>(ale_previous_wrap)
+
+let g:ale_linters = {
+      \   'elixir': [],
+      \   'javascript': ['eslint', 'flow', 'flow-language-server'],
+      \   'javascript.jsx': ['eslint', 'flow', 'flow-language-server'],
+      \   'coffeescript': ['jshint'],
+      \}
+
+" https://github.com/w0rp/ale/issues/2560#issuecomment-500166527
+let g:ale_linters_ignore = {
+      \   'javascript': ['flow-language-server'],
+      \   'javascript.jsx': ['flow-language-server'],
+      \}
+
+let g:ale_rust_cargo_use_check = 1
+let g:ale_ruby_rubocop_executable = 'bundle'
+
+nnoremap <silent> K :ALEHover<CR>
+nnoremap <silent> gd :ALEGoToDefinition<CR>
+nnoremap <silent> gvd :ALEGoToDefinitionInVSplit<CR>
+nnoremap <silent> gr :ALEFindReferences<CR>
+
+" deoplete
+
 let g:deoplete#enable_at_startup = 1
+
+call deoplete#custom#option({
+      \   'min_pattern_length': 1,
+      \   'auto_complete_delay': 50,
+      \})
+
+" disable deoplete for denite buffer
+autocmd FileType denite-filter
+      \   call deoplete#custom#buffer_option('auto_complete', v:false)
 
 let g:lua_check_syntax = 0
 let g:lua_complete_omni = 1
