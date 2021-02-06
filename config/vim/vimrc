@@ -1,3 +1,6 @@
+syntax on
+
+set nocompatible
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -9,11 +12,9 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
-" YOLO
-syntax on
 filetype plugin indent on
+
 set mouse=a
-set nocompatible
 set noerrorbells
 set encoding=utf-8
 set number relativenumber
@@ -42,7 +43,6 @@ set t_Co=256
 set t_ut=
 set colorcolumn=80
 set signcolumn=yes
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 highligh ColorColum ctermbg=0 guibg=lightgrey
 set updatetime=50
 set shortmess+=c
@@ -88,24 +88,22 @@ Plug 'xolox/vim-misc', { 'for' : 'lua' }
 Plug 'xolox/vim-lua-ftplugin', { 'for' : 'lua' }
 Plug 'dense-analysis/ale'
 Plug 'luochen1990/rainbow'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'DavidEGx/ctrlp-smarttabs'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
 Plug 'chrisbra/Colorizer'
 Plug 'sheerun/vim-polyglot'
 Plug 'ervandew/supertab'
 Plug 'severin-lemaignan/vim-minimap'
-Plug 'Yggdroot/indentLine'
 Plug 'edkolev/erlang-motions.vim'
-Plug 'edkolev/tmuxline.vim'
+Plug 'Yggdroot/indentLine'
 " List ends here. Plugins become visible to Vim after this call.
+
 call plug#end()
 
-"colorscheme codedark
 set cursorline
 colorscheme onehalfdark
 
@@ -130,11 +128,6 @@ endif
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.*
 
-let g:ctrlp_extensions = ['smarttabs']
-let g:ctrlp_smarttabs_modify_tabline = 0
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_use_caching = 0
-
 let g:indentLine_setColors = 0
 
 let g:airline_powerline_fonts = 0
@@ -151,7 +144,7 @@ let g:python_highlight_all = 1
 
 set laststatus=2
 
-let g:minimap_highlight='Comment'
+"let g:minimap_highlight='Comment'
 
 let g:slime_target = "tmux"
 
@@ -215,28 +208,11 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <leader>/ :Rg<SPACE>
 nnoremap R :%s//gI<Left><Left><Left>
 
-let g:ctrlp_map = '<F2>'
-let g:ctrlp_cmd = 'CtrlP'
-
-nnoremap <F4> :CtrlPSmartTabs<CR>
-
 nnoremap <F5> :UndotreeToggle<CR>
 
 " Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
 au BufNewFile,BufRead *.erl,*.es,*.hrl,*.xrl,*.config setf erlang
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_lua_checkers = ["luacheck"]
-let g:syntastic_lua_luacheck_args = "--no-unused-args"
-let g:syntastic_erlang_checkers=['syntaxerl']
 
 augroup pandoc_syntax
     au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
