@@ -115,6 +115,8 @@ call plug#end()
 set cursorline
 colorscheme onehalfdark
 
+let g:deoplete#enable_at_startup = 1
+
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
     nnoremap <silent><buffer><expr> <CR>
@@ -242,8 +244,6 @@ let g:ale_linters_ignore = {
 
 " deoplete
 
-let g:deoplete#enable_at_startup = 1
-
 call deoplete#custom#option({
       \   'min_pattern_length': 1,
       \   'auto_complete_delay': 50,
@@ -266,6 +266,35 @@ call deoplete#custom#var('omni', 'input_patterns', {
       \ 'lua': '\w+|\w+[.:]\w*',
       \ })
 
+" neosnippet
+
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
+
+" neosnippet key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+" Ripgrep
 if executable('rg')
     let g:rg_derive_root='true'
 endif
