@@ -45,7 +45,7 @@ set colorcolumn=80
 set signcolumn=yes
 highligh ColorColum ctermbg=0 guibg=lightgrey
 set updatetime=50
-set shortmess+=c
+set shortmess=I
 set completeopt=longest,menuone
 set omnifunc=syntaxcomplete#Complete
 set wildmenu
