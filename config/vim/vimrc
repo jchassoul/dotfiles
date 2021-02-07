@@ -56,6 +56,7 @@ set showmatch
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
+
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -102,6 +103,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-erlang/vim-erlang-omnicomplete', { 'for' : 'erlang' }
 Plug 'edkolev/erlang-motions.vim', { 'for' : 'erlang' }
 Plug 'Yggdroot/indentLine'
+
 " List ends here. Plugins become visible to Vim after this call.
 
 call plug#end()
