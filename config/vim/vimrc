@@ -103,6 +103,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-erlang/vim-erlang-omnicomplete', { 'for' : 'erlang' }
 Plug 'edkolev/erlang-motions.vim', { 'for' : 'erlang' }
 Plug 'Yggdroot/indentLine'
+Plug 'preservim/tagbar'
+Plug 'vim-test/vim-test'
+Plug 'skywind3000/asyncrun.vim'
+Plug 'skywind3000/asynctasks.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 
@@ -320,6 +324,10 @@ let g:vimwiki_list = [{'path': '~/vault/vimwiki/',
 
 let g:vimwiki_global_ext = 0
 
+let g:asyncrun_open = 6
+
+let test#strategy = "asyncrun"
+
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
@@ -352,7 +360,21 @@ nnoremap <silent> <C-Down> :resize -5<CR>
 nnoremap <leader>/ :Rg<SPACE>
 nnoremap R :%s//gI<Left><Left><Left>
 
-nnoremap <F5> :UndotreeToggle<CR>
+nnoremap <F4> :UndotreeToggle<CR>
+
+noremap <silent><F5> :AsyncTask file-run<cr>
+
+nmap <F6> :TagbarToggle<CR>
+
+noremap <silent><F9> :AsyncTask file-build<cr>
+
+" Change these Test mappings
+
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
 
 " settings for pyls
 if executable('pyls')
