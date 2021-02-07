@@ -99,6 +99,7 @@ Plug 'chrisbra/Colorizer'
 Plug 'sheerun/vim-polyglot'
 Plug 'ervandew/supertab'
 Plug 'severin-lemaignan/vim-minimap'
+Plug 'vim-erlang/vim-erlang-omnicomplete'
 Plug 'edkolev/erlang-motions.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify'
@@ -158,41 +159,6 @@ let g:startify_lists = [
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
 
-" statusline
-" ==========
-
-function! LinterStatus() abort
-  let l:counts = ale#statusline#Count(bufnr(''))
-
-  let l:all_errors = l:counts.error + l:counts.style_error
-  let l:all_non_errors = l:counts.total - l:all_errors
-
-  return l:counts.total == 0 ? '' : printf(
-        \   '%d⚠ %d⨉',
-        \   all_non_errors,
-        \   all_errors
-        \)
-endfunction
-
-set statusline=
-" filename
-set statusline+=\ %<%{expand('%:~:.')}
-set statusline+=\ "
-" help/modified/readonly
-set statusline+=%(%h%m%r%)
-" alignment group
-set statusline+=%=
-" start error highlight group
-set statusline+=%#StatusLineError#
-" errors from w0rp/ale
-set statusline+=%{LinterStatus()}
-set statusline+=\ "
-" line/total lines
-set statusline+=L%l/%L
-" virtual column
-set statusline+=C%02v
-set statusline+=\ "
-
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
     nnoremap <silent><buffer><expr> <CR>
@@ -215,7 +181,6 @@ function! s:denite_my_settings() abort
                 \ denite#do_map('toggle_select').'j'
 endfunction
 
-
 autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
     imap <silent><buffer> <tab> <Plug>(denite_filter_quit)
@@ -234,7 +199,6 @@ function! s:denite_filter_my_settings() abort
                 \ <Esc><C-w>p:call cursor(line('.')-1,0)<CR><C-w>pA
 endfunction
 
-
 " Change matchers.
 call denite#custom#source(
 \ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
@@ -243,10 +207,10 @@ call denite#custom#source('tag', 'matchers', ['matcher/substring'])
 
 call denite#custom#source('file/old', 'converters',
       \ ['converter/relative_word'])
+
 " Change sorters.
 call denite#custom#source(
 \ 'file/rec', 'sorters', ['sorter/sublime'])
-
 
     " Ripgrep command on grep source
 if executable('rg')
@@ -321,9 +285,6 @@ let g:ale_linters_ignore = {
       \   'javascript.jsx': ['flow-language-server'],
       \}
 
-let g:ale_rust_cargo_use_check = 1
-let g:ale_ruby_rubocop_executable = 'bundle'
-
 nnoremap <silent> K :ALEHover<CR>
 nnoremap <silent> gd :ALEGoToDefinition<CR>
 nnoremap <silent> gvd :ALEGoToDefinitionInVSplit<CR>
@@ -364,6 +325,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.*
 let g:indentLine_setColors = 0
 
 let g:airline_powerline_fonts = 0
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
@@ -377,7 +339,7 @@ let g:python_highlight_all = 1
 
 set laststatus=2
 
-"let g:minimap_highlight='Comment'
+let g:minimap_highlight='Comment'
 
 let g:slime_target = "tmux"
 
