@@ -70,7 +70,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown', 'vimwiki']}
 Plug 'jpalardy/vim-slime'
 Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'Raimondi/delimitMate'
+Plug 'jiangmiao/auto-pairs'
 Plug 'jremmen/vim-ripgrep'
 Plug 'mbbill/undotree'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
@@ -114,6 +114,8 @@ call plug#end()
 
 set cursorline
 colorscheme onehalfdark
+
+let g:AutoPairsMapCR=0
 
 let g:deoplete#enable_at_startup = 1
 
