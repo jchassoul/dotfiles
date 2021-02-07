@@ -16,6 +16,7 @@ filetype plugin indent on
 
 set mouse=a
 set noerrorbells
+set clipboard=unnamedplus
 set encoding=utf-8
 set number relativenumber
 set nohlsearch
@@ -68,7 +69,6 @@ Plug 'vim-utils/vim-man'
 Plug 'davisdude/vim-love-docs', { 'for': 'lua' }
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown', 'vimwiki']}
 Plug 'jpalardy/vim-slime'
-Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jremmen/vim-ripgrep'
@@ -324,6 +324,8 @@ let g:slime_target = "tmux"
 
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
 
+let g:slime_dont_ask_default = 1
+
 function! ToggleNetrw()
         let i = bufnr("$")
         let wasOpen = 0
@@ -362,11 +364,12 @@ let test#strategy = "asyncrun"
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
+map <leader>j :SlimeSend1 ipython --matplotlib<CR>
+nnoremap <Leader>jq :SlimeSend1 exit<CR>
 map <leader>l :ColorToggle<CR>
 map <leader>q :q<CR>
-map <leader>w :w<CR>
-map <leader>c :setlocal formatoptions-=cro<CR>
-map <leader>C :setlocal formatoptions=cro<CR>
+map <leader>m :setlocal formatoptions-=cro<CR>
+map <leader>M :setlocal formatoptions=cro<CR>
 map <leader>s :setlocal spell! spelllang=en_us<CR>
 map <leader>d :setlocal autoindent<CR>>
 map <leader>D :setlocal noautoindent<CR>
@@ -391,11 +394,12 @@ nnoremap <silent> <C-Down> :resize -5<CR>
 nnoremap <leader>/ :Rg<SPACE>
 nnoremap R :%s//gI<Left><Left><Left>
 
-nnoremap <F4> :UndotreeToggle<CR>
 
-noremap <silent><F5> :AsyncTask file-run<cr>
+noremap <silent><F8> :AsyncTask file-run<cr>
 
-nmap <F6> :TagbarToggle<CR>
+nmap <F4> :TagbarToggle<CR>
+
+nnoremap <F8> :UndotreeToggle<CR>
 
 noremap <silent><F9> :AsyncTask file-build<cr>
 
