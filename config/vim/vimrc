@@ -69,10 +69,6 @@ Plug 'davisdude/vim-love-docs', { 'for': 'lua' }
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown', 'vimwiki']}
 Plug 'jpalardy/vim-slime'
 Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
-" If you don't have nodejs and yarn
-" use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
-" see: https://github.com/iamcco/markdown-preview.nvim/issues/50
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Raimondi/delimitMate'
 Plug 'jremmen/vim-ripgrep'
@@ -89,9 +85,13 @@ Plug 'Shougo/denite.nvim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'honza/vim-snippets'
+Plug 'prabirshrestha/async.vim'
+Plug 'thomasfaingnaert/vim-lsp-snippets'
+Plug 'thomasfaingnaert/vim-lsp-neosnippet'
 Plug 'xolox/vim-misc', { 'for' : 'lua' }
 Plug 'xolox/vim-lua-ftplugin', { 'for' : 'lua' }
 Plug 'dense-analysis/ale'
+Plug 'sbdchd/neoformat'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
