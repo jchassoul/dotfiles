@@ -74,13 +74,14 @@ Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Raimondi/delimitMate'
-Plug 'kovetskiy/sxhkd-vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'mbbill/undotree'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'prabirshrestha/vim-lsp'
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'lighttiger2505/deoplete-vim-lsp'
 Plug 'Shougo/denite.nvim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
@@ -88,7 +89,6 @@ Plug 'honza/vim-snippets'
 Plug 'xolox/vim-misc', { 'for' : 'lua' }
 Plug 'xolox/vim-lua-ftplugin', { 'for' : 'lua' }
 Plug 'dense-analysis/ale'
-Plug 'luochen1990/rainbow'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -253,8 +253,8 @@ let s:denite_options = {
 
 call denite#custom#option('default', s:denite_options)
 
-nnoremap <C-p> :<C-u>Denite file/rec -start-filter<CR>
-nnoremap <leader>s :<C-u>Denite buffer<CR>
+nnoremap <F2> :<C-u>Denite file/rec -start-filter<CR>
+nnoremap <leader>w :<C-u>Denite buffer<CR>
 nnoremap <leader>8 :<C-u>DeniteCursorWord grep:.<CR>
 nnoremap <leader>/ :<C-u>Denite -start-filter grep:::!<CR>
 nnoremap <leader><Space>/ :<C-u>DeniteBufferDir -start-filter grep:::!<CR>
@@ -284,11 +284,6 @@ let g:ale_linters_ignore = {
       \   'javascript': ['flow-language-server'],
       \   'javascript.jsx': ['flow-language-server'],
       \}
-
-nnoremap <silent> K :ALEHover<CR>
-nnoremap <silent> gd :ALEGoToDefinition<CR>
-nnoremap <silent> gvd :ALEGoToDefinitionInVSplit<CR>
-nnoremap <silent> gr :ALEFindReferences<CR>
 
 " deoplete
 
@@ -409,6 +404,37 @@ nnoremap <leader>/ :Rg<SPACE>
 nnoremap R :%s//gI<Left><Left><Left>
 
 nnoremap <F5> :UndotreeToggle<CR>
+
+" settings for pyls
+if executable('pyls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'allowlist': ['python'],
+        \ })
+endif
+
+function! s:on_lsp_buffer_enabled() abort
+    " use omnifunc if you are fine with it.
+    " setlocal omnifunc=lsp#complete
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    " some mappings to use, tweak as you wish.
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+endfunction
+
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
 
 " Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
