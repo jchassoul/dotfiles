@@ -132,10 +132,6 @@ call deoplete#custom#var('omni', 'input_patterns', {
       \ 'lua': '\w+|\w+[.:]\w*',
       \ })
 
-"call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
-"call deoplete#custom#option({'camel_case': v:true,})
-
-
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
     nnoremap <silent><buffer><expr> <CR>
