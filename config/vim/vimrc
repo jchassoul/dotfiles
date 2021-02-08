@@ -75,22 +75,19 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'mbbill/undotree'
 Plug 'sonph/onehalf', {'rtp':'vim'}
 Plug 'ackyshake/VimCompletesMe'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'lighttiger2505/deoplete-vim-lsp'
-Plug 'Shougo/denite.nvim'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'prabirshrestha/async.vim'
-Plug 'thomasfaingnaert/vim-lsp-snippets'
-Plug 'thomasfaingnaert/vim-lsp-neosnippet'
 Plug 'xolox/vim-misc', {'for':'lua'}
 Plug 'xolox/vim-lua-ftplugin', {'for':'lua'}
+Plug 'lighttiger2505/deoplete-vim-lsp'
+Plug 'Shougo/denite.nvim'
+Plug 'SirVer/ultisnips'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'thomasfaingnaert/vim-lsp-snippets'
+Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'dense-analysis/ale'
 Plug 'sbdchd/neoformat'
 Plug 'ryanoasis/vim-devicons'
@@ -109,6 +106,7 @@ Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
 Plug 'skywind3000/asyncrun.vim'
 Plug 'skywind3000/asynctasks.vim'
 Plug 'fisadev/vim-isort', {'for':'python'}
+Plug 'mattn/vim-lsp-settings'
 
 " List ends here. Plugins become visible to Vim after this call.
 
@@ -120,6 +118,23 @@ colorscheme onehalfdark
 let g:AutoPairsMapCR=0
 
 let g:deoplete#enable_at_startup = 1
+
+let g:lua_check_syntax = 0
+let g:lua_complete_omni = 1
+let g:lua_complete_dynamic = 0
+let g:lua_define_completion_mappings = 0
+
+call deoplete#custom#var('omni', 'functions', {
+      \ 'lua': 'xolox#lua#omnifunc',
+      \ })
+
+call deoplete#custom#var('omni', 'input_patterns', {
+      \ 'lua': '\w+|\w+[.:]\w*',
+      \ })
+
+"call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
+"call deoplete#custom#option({'camel_case': v:true,})
+
 
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
@@ -246,53 +261,6 @@ let g:ale_linters_ignore = {
       \   'javascript.jsx': ['flow-language-server'],
       \}
 
-" deoplete
-
-call deoplete#custom#option({
-      \   'min_pattern_length': 1,
-      \   'auto_complete_delay': 50,
-      \})
-
-" disable deoplete for denite buffer
-autocmd FileType denite-filter
-      \   call deoplete#custom#buffer_option('auto_complete', v:false)
-
-let g:lua_check_syntax = 0
-let g:lua_complete_omni = 1
-let g:lua_complete_dynamic = 0
-let g:lua_define_completion_mappings = 0
-
-call deoplete#custom#var('omni', 'functions', {
-      \ 'lua': 'xolox#lua#omnifunc',
-      \ })
-
-call deoplete#custom#var('omni', 'input_patterns', {
-      \ 'lua': '\w+|\w+[.:]\w*',
-      \ })
-
-" neosnippet
-
-" Enable snipMate compatibility feature.
-let g:neosnippet#enable_snipmate_compatibility = 1
-
-" Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
-
-" neosnippet key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
 " For conceal markers.
 if has('conceal')
   set conceallevel=2 concealcursor=niv
@@ -413,19 +381,48 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
-" settings for pyls
+" whether to enable diagnostics for vim-lsp (we may want to use ALE for other
+" plugins for that.
+let g:lsp_diagnostics_enabled = 1
+
+" show diagnostic signs
+let g:lsp_signs_enabled = 1
+let g:lsp_signs_error = {'text': '✗'}
+let g:lsp_signs_warning = {'text': '!'}
+let g:lsp_highlights_enabled = 0
+
+" Do not use virtual text, they are far too obtrusive.
+let g:lsp_virtual_text_enabled = 0
+" echo a diagnostic message at cursor position
+let g:lsp_diagnostics_echo_cursor = 0
+" show diagnostic in floating window
+let g:lsp_diagnostics_float_cursor = 1
+" whether to enable highlight a symbol and its references
+let g:lsp_highlight_references_enabled = 1
+let g:lsp_preview_max_width = 80
+
 if executable('pyls')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'allowlist': ['python'],
-        \ })
+  augroup pyls_setup
+    autocmd!
+    autocmd User lsp_setup call lsp#register_server({
+          \ 'name': 'pyls',
+          \ 'cmd': {server_info->['pyls']},
+          \ 'allowlist': ['python'],
+          \ 'workspace_config': {
+          \    'pyls':
+          \        {'configurationSources': ['flake8'],
+          \         'plugins': {'flake8': {'enabled': v:true},
+          \                     'pyflakes': {'enabled': v:false},
+          \                     'pycodestyle': {'enabled': v:false},
+          \                     'jedi_completion': {'fuzzy': v:true},
+          \                    }
+          \        }
+          \ }})
+  augroup END
 endif
 
 function! s:on_lsp_buffer_enabled() abort
-    " use omnifunc if you are fine with it.
-    " setlocal omnifunc=lsp#complete
+    setlocal omnifunc=lsp#complete
     if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
     " some mappings to use, tweak as you wish.
     nmap <buffer> gd <plug>(lsp-definition)
