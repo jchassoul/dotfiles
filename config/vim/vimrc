@@ -67,6 +67,7 @@ Plug 'tpope/vim-repeat'
 Plug 'vim-python/python-syntax', {'for':'python'}
 Plug 'vim-utils/vim-man'
 Plug 'davisdude/vim-love-docs', {'for':'lua'}
+Plug 'vim-pandoc/vim-pandoc',
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
@@ -497,6 +498,7 @@ let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
 
 " Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
