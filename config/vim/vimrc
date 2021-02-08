@@ -96,6 +96,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
+Plug 'itmammoth/maximize.vim'
 Plug 'chrisbra/Colorizer'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-erlang/vim-erlang-omnicomplete', {'for':'erlang'}

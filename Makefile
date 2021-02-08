@@ -49,6 +49,7 @@ install-vim:
 	mkdir -p ~/.vim/undodir
 	rm -f ~/.vimrc
 	ln -s `pwd`/config/vim/vimrc ~/.vimrc
+	ln -s `pwd`/config/vim/plugin ~/.vim/plugin
 
 install-xs:
 	rm -f ~/.xsession
