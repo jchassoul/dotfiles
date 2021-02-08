@@ -122,10 +122,7 @@ let g:lua_complete_omni = 1
 let g:lua_complete_dynamic = 0
 let g:lua_define_completion_mappings = 0
 
-
-"{{ Auto-completion related
-"""""""""""""""""""""""""""" deoplete settings""""""""""""""""""""""""""
-" Wheter to enable deoplete automatically after start nvim
+" deoplete settings
 let g:deoplete#enable_at_startup = 1
 
 " Maximum candidate window width
@@ -138,10 +135,6 @@ call deoplete#custom#option('min_pattern_length', 1)
 call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
 
 " Whether to disable completion for certain syntax
-" call deoplete#custom#source('_', {
-"     \ 'filetype': ['vim'],
-"     \ 'disabled_syntaxes': ['String']
-"     \ })
 call deoplete#custom#source('_', {
   \ 'filetype': ['python'],
   \ 'disabled_syntaxes': ['Comment']
@@ -164,7 +157,7 @@ call deoplete#custom#option('auto_complete_delay', 100)
 " lower case can also match upper case (upper case are hard to type!)
 call deoplete#custom#option({'camel_case': v:true,})
 
-
+" basic lua support
 call deoplete#custom#var('omni', 'functions', {
       \ 'lua': 'xolox#lua#omnifunc',
       \ })
@@ -173,6 +166,7 @@ call deoplete#custom#var('omni', 'input_patterns', {
       \ 'lua': '\w+|\w+[.:]\w*',
       \ })
 
+" denite settings
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
     nnoremap <silent><buffer><expr> <CR>
@@ -276,27 +270,35 @@ nnoremap <leader>d :<C-u>DeniteBufferDir file/rec -start-filter<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
 nnoremap <leader><C-r> :<C-u>Denite register:.<CR>
 
-" ale
+" ale settings
 
+" linters for different filetypes
+let g:ale_linters = {
+  \ 'vim': ['vint'],
+  \ 'c': ['clang']
+\}
+
+" Only run linters in the g:ale_linters dictionary
+let g:ale_linters_explicit = 1
+
+" Linter signs
 let g:ale_sign_error = '⨉'
 let g:ale_sign_warning = '⚠'
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '']
+
 " cycle through location list
 nmap <silent> <leader>n <Plug>(ale_next_wrap)
 nmap <silent> <leader>p <Plug>(ale_previous_wrap)
 
-let g:ale_linters = {
-      \   'elixir': [],
-      \   'javascript': ['eslint', 'flow', 'flow-language-server'],
-      \   'javascript.jsx': ['eslint', 'flow', 'flow-language-server'],
-      \   'coffeescript': ['jshint'],
-      \}
+" neoformat settings
+let g:neoformat_enabled_python = ['black' ]
 
-" https://github.com/w0rp/ale/issues/2560#issuecomment-500166527
-let g:ale_linters_ignore = {
-      \   'javascript': ['flow-language-server'],
-      \   'javascript.jsx': ['flow-language-server'],
-      \}
+let g:neoformat_c_clangformat = {
+  \ 'exe': 'clang-format',
+  \ 'args': ['--style="{IndentWidth: 4}"']
+\}
+
+let g:neoformat_enabled_c = ['clangformat']
 
 " For conceal markers.
 if has('conceal')
@@ -477,6 +479,25 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+
+" UltiSnips settings
+" Trigger configuration. Do not use <tab> if you use YouCompleteMe
+let g:UltiSnipsExpandTrigger='<tab>'
+
+" Do not look for SnipMate snippets
+let g:UltiSnipsEnableSnipMate = 0
+
+" Shortcut to jump forward and backward in tabstop positions
+let g:UltiSnipsJumpForwardTrigger='<c-j>'
+let g:UltiSnipsJumpBackwardTrigger='<c-k>'
+
+" Configuration for custom snippets directory, see
+" https://jdhao.github.io/2019/04/17/neovim_snippet_s1/ for details.
+let g:UltiSnipsSnippetDirectories=['UltiSnips', 'my_snippets']
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " Erlang
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.xrl,*.config setlocal expandtab noautoindent
