@@ -48,7 +48,7 @@ case "$-" in *i*)
     alias c='clear'
     alias a='cd ~/vault'
     alias d='cd ~/dotfiles'
-    alias h='cd ~'
+    alias q='cd ~'
     alias v='vim'
     alias l='ls --color'
     alias p='wine ~/.wine/drive_c/Program\ Files/Battle.net/Battle.net.exe'
