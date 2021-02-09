@@ -140,6 +140,7 @@ map <leader>j :SlimeSend1 ipython --matplotlib<CR>
 nnoremap <Leader>jq :SlimeSend1 exit<CR>
 map <leader>l :ColorToggle<CR>
 map <leader>q :q<CR>
+map <leader>e :qa!<CR>
 map <leader>m :setlocal formatoptions-=cro<CR>
 map <leader>M :setlocal formatoptions=cro<CR>
 map <leader>s :setlocal spell! spelllang=en_us<CR>
