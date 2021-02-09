@@ -46,11 +46,13 @@ case "$-" in *i*)
     alias k='cd ~/work'
     alias e='exit'
     alias c='clear'
+    alias d='cd ~/dotfiles'
     alias v='vim'
     alias l='ls --color'
     alias p='wine ~/.wine/drive_c/Program\ Files/Battle.net/Battle.net.exe'
     alias t='tmux -2 attach -t shell || tmux -2 new -s shell'
     alias n='cd ~/Documents/notebooks && jupyter notebook&'
+    alias gg='git status'
     alias python='python3'
     alias pip='pip3'
     ;;
