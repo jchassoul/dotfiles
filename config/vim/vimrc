@@ -52,7 +52,7 @@ set showmatch
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.*
 set laststatus=2
 set cursorline
-set colorcolumn=80
+set colorcolumn=88
 
 " For conceal markers.
 if has('conceal')
