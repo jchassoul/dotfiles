@@ -161,7 +161,9 @@ noremap <silent><F5> :AsyncTask file-run<cr>
 
 nmap <F6> :TagbarToggle<CR>
 
-noremap <silent><F9> :AsyncTask file-build<cr>
+nmap <F7> :CalendarT<CR>
+
+noremap <silent><F8> :AsyncTask file-build<cr>
 
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
