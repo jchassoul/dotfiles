@@ -37,14 +37,12 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set switchbuf=usetab,newtab
-set guifont=Inconsolata\ Nerd\ Font\ Complete\ Mono\ 11
 set noshowmode
 set termguicolors
 set t_Co=256
 set t_ut=
 set colorcolumn=80
 set signcolumn=yes
-highligh ColorColum ctermbg=0 guibg=lightgrey
 set updatetime=50
 set shortmess=I
 set completeopt=longest,menuone
@@ -52,6 +50,16 @@ set omnifunc=syntaxcomplete#Complete
 set wildmenu
 set lazyredraw
 set showmatch
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.*
+set laststatus=2
+set cursorline
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+highligh ColorColum ctermbg=0 guibg=lightgrey
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
@@ -112,9 +120,9 @@ Plug 'mattn/vim-lsp-settings'
 
 call plug#end()
 
-set cursorline
-
 let g:AutoPairsMapCR=0
+
+let g:indentLine_setColors = 0
 
 nnoremap <F2> :<C-u>Denite file/rec -start-filter<CR>
 nnoremap <leader>w :<C-u>Denite buffer<CR>
@@ -124,19 +132,6 @@ nnoremap <leader><Space>/ :<C-u>DeniteBufferDir -start-filter grep:::!<CR>
 nnoremap <leader>d :<C-u>DeniteBufferDir file/rec -start-filter<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
 nnoremap <leader><C-r> :<C-u>Denite register:.<CR>
-
-" For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.*
-
-let g:indentLine_setColors = 0
-
-let g:python_highlight_all = 1
-
-set laststatus=2
 
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
@@ -173,11 +168,6 @@ nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
-
-augroup pandoc_syntax
-    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
-    autocmd! FileType vimwiki set syntax=markdown.pandoc
-augroup END
 
 autocmd InsertEnter * norm zz
 
