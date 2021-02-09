@@ -135,36 +135,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.*
 
 let g:indentLine_setColors = 0
 
-let g:airline_powerline_fonts = 0
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#tmuxline#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline#extensions#wordcount#filetypes = '\vasciidoc|markdown|markdown.pandoc|vimwiki|rst|tex|text'
-let g:airline#extensions#wordcount#enabled = 1
-
-let g:airline_theme='distinguished'
-
-let g:tmuxline_preset = 'nightly_fox'
-
 let g:python_highlight_all = 1
 
 set laststatus=2
-
-let g:slime_target = "tmux"
-
-let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
-
-let g:slime_dont_ask_default = 1
-
-let g:vimwiki_list = [{'path': '~/vault/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
-
-let g:vimwiki_global_ext = 0
-
-let g:asyncrun_open = 6
-
-let test#strategy = "asyncrun"
 
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
@@ -179,36 +152,22 @@ map <leader>s :setlocal spell! spelllang=en_us<CR>
 map <leader>d :setlocal autoindent<CR>>
 map <leader>D :setlocal noautoindent<CR>
 
-let g:tmux_navigator_no_mappings = 1
-
-" Disable tmux navigator when zooming the Vim pane
-let g:tmux_navigator_disable_when_zoomed = 1
-
-nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
-
-"nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
-
 nnoremap <silent> <C-Left> :vertical resize +5<CR>
 nnoremap <silent> <C-Right> :vertical resize -5<CR>
 nnoremap <silent> <C-Up> :resize +5<CR>
 nnoremap <silent> <C-Down> :resize -5<CR>
 
 nnoremap <leader>/ :Rg<SPACE>
+
 nnoremap R :%s//gI<Left><Left><Left>
 
+nnoremap <F4> :UndotreeToggle<CR>
 
-noremap <silent><F8> :AsyncTask file-run<cr>
+noremap <silent><F5> :AsyncTask file-run<cr>
 
-nmap <F4> :TagbarToggle<CR>
-
-nnoremap <F8> :UndotreeToggle<CR>
+nmap <F6> :TagbarToggle<CR>
 
 noremap <silent><F9> :AsyncTask file-build<cr>
-
-" Change these Test mappings
 
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
