@@ -1,6 +1,3 @@
-syntax on
-
-set nocompatible
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -12,8 +9,11 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
+syntax on
+
 filetype plugin indent on
 
+set nocompatible
 set mouse=a
 set noerrorbells
 set clipboard=unnamedplus
@@ -41,7 +41,6 @@ set noshowmode
 set termguicolors
 set t_Co=256
 set t_ut=
-set colorcolumn=80
 set signcolumn=yes
 set updatetime=50
 set shortmess=I
@@ -53,6 +52,7 @@ set showmatch
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.*
 set laststatus=2
 set cursorline
+set colorcolumn=80
 
 " For conceal markers.
 if has('conceal')
