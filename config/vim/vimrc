@@ -54,12 +54,14 @@ set laststatus=2
 set cursorline
 set colorcolumn=88
 
+colorscheme onehalfdark
+
+highligh ColorColum ctermbg=0 guibg=lightgrey
+
 " For conceal markers.
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
-
-highligh ColorColum ctermbg=0 guibg=lightgrey
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
@@ -111,7 +113,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-erlang/vim-erlang-omnicomplete', {'for':'erlang'}
 Plug 'edkolev/erlang-motions.vim', {'for':'erlang'}
 Plug 'Yggdroot/indentLine'
-Plug 'preservim/tagbar', {'for':['markdown','vimwiki', 'lua', 'python', 'erlang']}
+Plug 'preservim/tagbar', {'for':['lua', 'python', 'erlang']}
 Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
 Plug 'skywind3000/asyncrun.vim'
 Plug 'skywind3000/asynctasks.vim'
