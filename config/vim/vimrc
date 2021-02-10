@@ -54,8 +54,6 @@ set laststatus=2
 set cursorline
 set colorcolumn=88
 
-colorscheme onehalfdark
-
 highligh ColorColum ctermbg=0 guibg=lightgrey
 
 " For conceal markers.
@@ -123,6 +121,8 @@ Plug 'mattn/vim-lsp-settings'
 " List ends here. Plugins become visible to Vim after this call.
 
 call plug#end()
+
+colorscheme onehalfdark
 
 let g:loaded_vimballPlugin = 1
 
