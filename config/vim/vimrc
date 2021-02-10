@@ -130,7 +130,6 @@ let g:AutoPairsMapCR = 0
 
 let g:indentLine_setColors = 0
 
-nnoremap <F2> :<C-u>Denite file/rec -start-filter<CR>
 nnoremap <leader>w :<C-u>Denite buffer<CR>
 nnoremap <leader>8 :<C-u>DeniteCursorWord grep:.<CR>
 nnoremap <leader>/ :<C-u>Denite -start-filter grep:::!<CR>
@@ -161,14 +160,13 @@ nnoremap <silent> <C-Down> :resize -5<CR>
 
 nnoremap R :%s//gI<Left><Left><Left>
 
+nnoremap <F1> :tab h<CR>
+nnoremap <F2> :<C-u>Denite file/rec -start-filter<CR>
+" <F3> : File Tree!
 nnoremap <F4> :UndotreeToggle<CR>
-
 noremap <silent><F5> :AsyncTask file-run<cr>
-
 nmap <F6> :TagbarToggle<CR>
-
 nmap <F7> :CalendarT<CR>
-
 noremap <silent><F8> :AsyncTask file-build<cr>
 
 nmap <silent> t<C-n> :TestNearest<CR>
