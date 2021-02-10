@@ -112,8 +112,8 @@ Plug 'edkolev/erlang-motions.vim', {'for':'erlang'}
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/tagbar', {'for':['lua', 'python', 'erlang']}
 Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
-Plug 'skywind3000/asyncrun.vim'
-Plug 'skywind3000/asynctasks.vim'
+Plug 'skywind3000/asyncrun.vim', {'for':['python','lua','erlang']}
+Plug 'skywind3000/asynctasks.vim', {'for':['python','lua','erlang']}
 Plug 'fisadev/vim-isort', {'for':'python'}
 Plug 'mattn/vim-lsp-settings', {'for':['python','lua','erlang']}
 
