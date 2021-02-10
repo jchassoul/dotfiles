@@ -122,7 +122,13 @@ call plug#end()
 
 colorscheme onehalfdark
 
-let g:loaded_vimballPlugin = 1
+let g:loaded_rrhelper=1
+let g:loaded_gzip=1
+let g:loaded_tohtml=1
+let g:loaded_getscriptPlugin=1
+let g:loaded_vimballPlugin=1
+let g:loaded_zipPlugin=1
+let g:loaded_tarPlugin=1
 
 let g:AutoPairsMapCR = 0
 
