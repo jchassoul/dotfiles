@@ -129,14 +129,7 @@ let g:loaded_vimballPlugin = 1
 let g:AutoPairsMapCR = 0
 
 let g:indentLine_setColors = 0
-" Denite key bindings
-nnoremap <leader>w :<C-u>Denite buffer<CR>
-nnoremap <leader>8 :<C-u>DeniteCursorWord grep:.<CR>
-nnoremap <leader>/ :<C-u>Denite -start-filter grep:::!<CR>
-nnoremap <leader><Space>/ :<C-u>DeniteBufferDir -start-filter grep:::!<CR>
-nnoremap <leader>d :<C-u>DeniteBufferDir file/rec -start-filter<CR>
-nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
-nnoremap <leader><C-r> :<C-u>Denite register:.<CR>
+
 " Custom keys
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
@@ -150,6 +143,14 @@ map <leader>S :setlocal spell! spelllang=en_us<CR>
 map <leader>e :qa!<CR>
 map <leader>c :setlocal formatoptions-=cro<CR>
 map <leader>C :setlocal formatoptions=cro<CR>
+" Denite
+nnoremap <leader>w :<C-u>Denite buffer<CR>
+nnoremap <leader>8 :<C-u>DeniteCursorWord grep:.<CR>
+nnoremap <leader>/ :<C-u>Denite -start-filter grep:::!<CR>
+nnoremap <leader><Space>/ :<C-u>DeniteBufferDir -start-filter grep:::!<CR>
+nnoremap <leader>d :<C-u>DeniteBufferDir file/rec -start-filter<CR>
+nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
+nnoremap <leader><C-r> :<C-u>Denite register:.<CR>
 " Resize
 nnoremap <silent> <C-Left> :vertical resize +5<CR>
 nnoremap <silent> <C-Right> :vertical resize -5<CR>
