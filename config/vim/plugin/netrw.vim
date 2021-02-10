@@ -1,3 +1,6 @@
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+
 function! ToggleNetrw()
         let i = bufnr("$")
         let wasOpen = 0
@@ -13,7 +16,7 @@ function! ToggleNetrw()
     endif
 endfunction
 
-map <F3> :call ToggleNetrw() <CR>
+"map <F3> :call ToggleNetrw() <CR>
 
 let g:netrw_banner=0        " disable banner
 let g:netrw_winsize = 20    " width in percent

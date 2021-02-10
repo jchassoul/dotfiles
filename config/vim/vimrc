@@ -72,6 +72,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
+Plug 'justinmk/vim-dirvish'
+Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'vim-python/python-syntax', {'for':'python'}
 Plug 'vim-utils/vim-man'
 Plug 'davisdude/vim-love-docs', {'for':'lua'}
@@ -96,7 +98,7 @@ Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'thomasfaingnaert/vim-lsp-snippets'
 Plug 'thomasfaingnaert/vim-lsp-ultisnips'
-Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale', {'for':['python','lua','erlang']}
 Plug 'sbdchd/neoformat'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
@@ -120,7 +122,9 @@ Plug 'mattn/vim-lsp-settings'
 
 call plug#end()
 
-let g:AutoPairsMapCR=0
+let g:loaded_vimballPlugin = 1
+
+let g:AutoPairsMapCR = 0
 
 let g:indentLine_setColors = 0
 
@@ -140,10 +144,11 @@ map <leader>j :SlimeSend1 ipython --matplotlib<CR>
 nnoremap <Leader>jq :SlimeSend1 exit<CR>
 map <leader>l :ColorToggle<CR>
 map <leader>q :q<CR>
+map <leader>s :update<CR>
 map <leader>e :qa!<CR>
 map <leader>m :setlocal formatoptions-=cro<CR>
 map <leader>M :setlocal formatoptions=cro<CR>
-map <leader>s :setlocal spell! spelllang=en_us<CR>
+map <leader>w :setlocal spell! spelllang=en_us<CR>
 map <leader>d :setlocal autoindent<CR>>
 map <leader>D :setlocal noautoindent<CR>
 
@@ -152,7 +157,7 @@ nnoremap <silent> <C-Right> :vertical resize -5<CR>
 nnoremap <silent> <C-Up> :resize +5<CR>
 nnoremap <silent> <C-Down> :resize -5<CR>
 
-nnoremap <leader>/ :Rg<SPACE>
+"nnoremap <leader>/ :Rg<SPACE>
 
 nnoremap R :%s//gI<Left><Left><Left>
 
