@@ -68,7 +68,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive', {'for':['markdown','vimwiki', 'lua', 'python', 'erlang']}
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
@@ -77,7 +77,7 @@ Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'vim-python/python-syntax', {'for':'python'}
 Plug 'vim-utils/vim-man'
 Plug 'davisdude/vim-love-docs', {'for':'lua'}
-Plug 'vim-pandoc/vim-pandoc',
+Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','vimwiki']}
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
@@ -99,7 +99,7 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'thomasfaingnaert/vim-lsp-snippets'
 Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 Plug 'dense-analysis/ale', {'for':['python','lua','erlang']}
-Plug 'sbdchd/neoformat'
+Plug 'sbdchd/neoformat', {'for':['python','lua','erlang']}
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -111,7 +111,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-erlang/vim-erlang-omnicomplete', {'for':'erlang'}
 Plug 'edkolev/erlang-motions.vim', {'for':'erlang'}
 Plug 'Yggdroot/indentLine'
-Plug 'preservim/tagbar'
+Plug 'preservim/tagbar', {'for':['markdown','vimwiki', 'lua', 'python', 'erlang']}
 Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
 Plug 'skywind3000/asyncrun.vim'
 Plug 'skywind3000/asynctasks.vim'
