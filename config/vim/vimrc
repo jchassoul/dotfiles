@@ -145,12 +145,10 @@ nnoremap <Leader>jq :SlimeSend1 exit<CR>
 map <leader>l :ColorToggle<CR>
 map <leader>q :q<CR>
 map <leader>s :update<CR>
+map <leader>S :setlocal spell! spelllang=en_us<CR>
 map <leader>e :qa!<CR>
-map <leader>m :setlocal formatoptions-=cro<CR>
-map <leader>M :setlocal formatoptions=cro<CR>
-map <leader>w :setlocal spell! spelllang=en_us<CR>
-map <leader>d :setlocal autoindent<CR>>
-map <leader>D :setlocal noautoindent<CR>
+map <leader>c :setlocal formatoptions-=cro<CR>
+map <leader>C :setlocal formatoptions=cro<CR>
 
 nnoremap <silent> <C-Left> :vertical resize +5<CR>
 nnoremap <silent> <C-Right> :vertical resize -5<CR>
