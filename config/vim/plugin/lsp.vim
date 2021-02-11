@@ -18,15 +18,27 @@ let g:lsp_diagnostics_float_cursor = 1
 let g:lsp_highlight_references_enabled = 1
 let g:lsp_preview_max_width = 80
 
+if executable('erlang-ls')
+  augroup erlang_setup
+    autocmd!
+    autocmd User lsp_setup call lsp#register_server({
+          \ 'name': 'erlang-ls',
+          \ 'cmd': {server_info->['erlang_ls']},
+          \ 'allowlist': ['erlang']
+          \ })
+  augroup END
+endif
 
-augroup lua_setup
+if executable('sumneko-lua-language-server')
+  augroup lua_setup
     autocmd!
     autocmd User lsp_setup call lsp#register_server({
           \ 'name': 'sumneko-lua-language-server',
           \ 'cmd': {server_info->['sumneko-lua-language-server']},
           \ 'allowlist': ['lua']
           \ })
-augroup END
+  augroup END
+endif
 
 if executable('pyls')
   augroup pyls_setup
