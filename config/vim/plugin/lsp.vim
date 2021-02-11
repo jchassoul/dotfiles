@@ -18,6 +18,16 @@ let g:lsp_diagnostics_float_cursor = 1
 let g:lsp_highlight_references_enabled = 1
 let g:lsp_preview_max_width = 80
 
+
+augroup lua_setup
+    autocmd!
+    autocmd User lsp_setup call lsp#register_server({
+          \ 'name': 'sumneko-lua-language-server',
+          \ 'cmd': {server_info->['sumneko-lua-language-server']},
+          \ 'allowlist': ['lua']
+          \ })
+augroup END
+
 if executable('pyls')
   augroup pyls_setup
     autocmd!
