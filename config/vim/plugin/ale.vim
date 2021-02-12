@@ -1,8 +1,9 @@
 " linters for different filetypes
 let g:ale_linters = {
-  \ 'vim': ['vint'],
-  \ 'c': ['clang']
-\}
+      \ 'python': ['flake8', 'pylint'],
+      \ 'lua': ['luacheck'],
+      \ 'erlang': ['erlc']
+      \}
 
 " Only run linters in the g:ale_linters dictionary
 let g:ale_linters_explicit = 1
