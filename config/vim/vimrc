@@ -98,7 +98,7 @@ Plug 'prabirshrestha/vim-lsp', {'for':['python','lua','erlang']}
 Plug 'thomasfaingnaert/vim-lsp-snippets', {'for':['python','lua','erlang']}
 Plug 'thomasfaingnaert/vim-lsp-ultisnips', {'for':['python','lua','erlang']}
 Plug 'dense-analysis/ale', {'for':['python','lua','erlang']}
-Plug 'sbdchd/neoformat', {'for':['python','lua','erlang']}
+Plug 'sbdchd/neoformat'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -183,7 +183,7 @@ noremap ;; ;
 
 autocmd InsertEnter * norm zz
 
-autocmd BufWritePre * %s/\s\+$//e
+"autocmd BufWritePre * %s/\s\+$//e
 
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
