@@ -1,13 +1,13 @@
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
 " Run PlugInstall if there are missing plugins
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \| PlugInstall --sync | source $MYVIMRC
-\| endif
+      \| PlugInstall --sync | source $MYVIMRC
+      \| endif
 
 syntax on
 
@@ -182,8 +182,6 @@ map ; :
 noremap ;; ;
 
 autocmd InsertEnter * norm zz
-
-"autocmd BufWritePre * %s/\s\+$//e
 
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
