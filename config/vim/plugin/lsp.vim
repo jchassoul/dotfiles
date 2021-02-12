@@ -18,30 +18,15 @@ let g:lsp_diagnostics_float_cursor = 1
 let g:lsp_highlight_references_enabled = 1
 let g:lsp_preview_max_width = 80
 
-if executable('erlang-ls')
-  augroup erlang_setup
-    autocmd!
-    autocmd User lsp_setup call lsp#register_server({
-          \ 'name': 'erlang-ls',
-          \ 'cmd': {server_info->['erlang_ls']},
-          \ 'allowlist': ['erlang']
-          \ })
-  augroup END
-endif
+let g:lsp_settings_filetype_lua = ['sumneko-lua-language-server']
+let g:lsp_settings_filetype_erlang = ['erlang-ls']
 
-if executable('sumneko-lua-language-server')
-  augroup lua_setup
-    autocmd!
-    autocmd User lsp_setup call lsp#register_server({
-          \ 'name': 'sumneko-lua-language-server',
-          \ 'cmd': {server_info->['sumneko-lua-language-server']},
-          \ 'allowlist': ['lua']
-          \ })
-  augroup END
-endif
+let g:lsp_settings = {
+\ 'erlang-ls': {'cmd': $HOME . '/.local/share/vim-lsp-settings/servers/erlang-ls/_build/default/bin/erlang_ls --transport stdio '}
+\}
 
 if executable('pyls')
-  augroup pyls_setup
+  augroup python_setup
     autocmd!
     autocmd User lsp_setup call lsp#register_server({
           \ 'name': 'pyls',
@@ -67,7 +52,8 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> gd <plug>(lsp-definition)
     nmap <buffer> gr <plug>(lsp-references)
     nmap <buffer> gi <plug>(lsp-implementation)
-    nmap <buffer> gt <plug>(lsp-type-definition)
+    " since we don't believe in types xD
+    "nmap <buffer> gt <plug>(lsp-type-definition)
     nmap <buffer> <leader>rn <plug>(lsp-rename)
     nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
     nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
