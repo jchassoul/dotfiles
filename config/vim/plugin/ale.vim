@@ -1,9 +1,9 @@
 " linters for different filetypes
 let g:ale_linters = {
-      \ 'python': ['flake8', 'pylint'],
-      \ 'lua': ['luacheck'],
-      \ 'erlang': ['erlc']
-      \}
+                  \ 'python': ['flake8', 'pylint'],
+                  \ 'lua': ['luacheck'],
+                  \ 'erlang': ['syntaxerl']
+                  \}
 
 " Only run linters in the g:ale_linters dictionary
 let g:ale_linters_explicit = 1
