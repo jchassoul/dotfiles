@@ -11,20 +11,20 @@ call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
 
 " Whether to disable completion for certain syntax
 call deoplete#custom#source('_', {
-    \ 'filetype': ['python'],
-    \ 'disabled_syntaxes': ['Comment']
-    \ })
+            \ 'filetype': ['python'],
+            \ 'disabled_syntaxes': ['Comment']
+            \ })
 
 " Ignore certain sources, because they only cause nosie most of the time
 call deoplete#custom#option('ignore_sources', {
-    \ '_': ['around', 'buffer']
-    \ })
+            \ '_': ['around', 'buffer']
+            \ })
 
 " Candidate list item number limit
 call deoplete#custom#option('max_list', 15)
 
 " The number of processes used for the deoplete parallel feature.
-call deoplete#custom#option('num_processes', 2)
+call deoplete#custom#option('num_processes', 4)
 
 " The delay for completion after input, measured in milliseconds.
 call deoplete#custom#option('auto_complete_delay', 100)
@@ -34,9 +34,9 @@ call deoplete#custom#option({'camel_case': v:true,})
 
 " basic lua support
 call deoplete#custom#var('omni', 'functions', {
-    \ 'lua': 'xolox#lua#omnifunc',
-    \ })
+            \ 'lua': 'xolox#lua#omnifunc',
+            \ })
 
 call deoplete#custom#var('omni', 'input_patterns', {
-    \ 'lua': '\w+|\w+[.:]\w*',
-    \ })
+            \ 'lua': '\w+|\w+[.:]\w*',
+            \ })
