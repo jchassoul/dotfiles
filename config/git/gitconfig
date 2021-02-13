@@ -3,7 +3,7 @@
     email = jchassoul@gmail.com
 [color]
     ui = auto
-[github]
-    user = jchassoul
 [push]
     default = simple
+[github]
+    user = jchassoul
