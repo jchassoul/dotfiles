@@ -109,7 +109,6 @@ Plug 'chrisbra/Colorizer'
 Plug 'sheerun/vim-polyglot'
 Plug 'edkolev/erlang-motions.vim', {'for':'erlang'}
 Plug 'Yggdroot/indentLine'
-Plug 'preservim/tagbar', {'for':['lua', 'python', 'erlang']}
 Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
 Plug 'fisadev/vim-isort', {'for':'python'}
 Plug 'mattn/vim-lsp-settings', {'for':['python','lua','erlang']}
@@ -170,7 +169,6 @@ nnoremap <F1> :tab h<CR>
 nnoremap <F2> :<C-u>Denite file/rec -start-filter<CR>
 " <F3> : File Tree!
 nnoremap <F4> :UndotreeToggle<CR>
-nmap <F5> :TagbarToggle<CR>
 nmap <F7> :CalendarT<CR>
 " The Operator
 map ; :
