@@ -128,8 +128,6 @@ let g:loaded_tarPlugin=1
 
 let g:AutoPairsMapCR = 0
 
-let g:indentLine_setColors = 0
-
 " Custom keys
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
