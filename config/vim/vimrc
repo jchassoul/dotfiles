@@ -107,7 +107,6 @@ Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
 Plug 'chrisbra/Colorizer'
 Plug 'sheerun/vim-polyglot'
-Plug 'vim-erlang/vim-erlang-omnicomplete', {'for':'erlang'}
 Plug 'edkolev/erlang-motions.vim', {'for':'erlang'}
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/tagbar', {'for':['lua', 'python', 'erlang']}
