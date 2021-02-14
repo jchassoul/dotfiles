@@ -45,7 +45,7 @@ install-mksh:
 install-vim:
 	rm -Rf ~/.vim
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	mkdir -p ~/.vim/undodir
 	rm -f ~/.vimrc
 	ln -s `pwd`/config/vim/vimrc ~/.vimrc
