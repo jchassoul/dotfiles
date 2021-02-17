@@ -71,6 +71,8 @@ Plug 'tpope/vim-fugitive', {'for':['markdown','vimwiki', 'lua', 'python', 'erlan
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'vim-python/python-syntax', {'for':'python'}
@@ -156,6 +158,8 @@ nnoremap <silent> <C-Up> :resize +5<CR>
 nnoremap <silent> <C-Down> :resize -5<CR>
 " Replace
 nnoremap R :%s//gI<Left><Left><Left>
+" Goyo
+map <leader>gy :Goyo<CR>
 " T Suite
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
