@@ -119,6 +119,8 @@ Plug 'mattn/vim-lsp-settings', {'for':['python','lua','erlang']}
 call plug#end()
 
 colorscheme onehalfdark
+highlight Normal guibg=NONE
+
 
 let g:loaded_rrhelper=1
 let g:loaded_gzip=1
