@@ -8,6 +8,7 @@ export WINEARCH=win32
 export WINEDEBUG=-all
 export TERM=xterm-256color
 export EDITOR=vim
+export MANPAGER="/bin/sh -c \"col -b | vim --noplugin -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 export HISTFILE=$HOME/.mksh_history
 export HISTSIZE=10000
 export LESSSECURE=1
