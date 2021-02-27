@@ -1,3 +1,4 @@
+" Python, Lua and Erlang!
 let g:neoformat_enabled_python = ['black']
 
 let g:neoformat_enabled_lua = ['luaformat']
@@ -18,5 +19,5 @@ let g:neoformat_only_msg_on_error = 1
 
 augroup fmt
   autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
+  autocmd BufWritePre python,lua,erlang undojoin | Neoformat
 augroup END
