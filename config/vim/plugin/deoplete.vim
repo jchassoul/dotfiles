@@ -31,12 +31,3 @@ call deoplete#custom#option('auto_complete_delay', 100)
 
 " lower case can also match upper case (upper case are hard to type!)
 call deoplete#custom#option({'camel_case': v:true,})
-
-" basic lua support
-"call deoplete#custom#var('omni', 'functions', {
-"            \ 'lua': 'xolox#lua#omnifunc',
-"            \ })
-
-"call deoplete#custom#var('omni', 'input_patterns', {
-"            \ 'lua': '\w+|\w+[.:]\w*',
-"            \ })

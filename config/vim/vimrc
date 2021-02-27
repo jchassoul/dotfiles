@@ -73,8 +73,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'easymotion/vim-easymotion'
 Plug 'machakann/vim-highlightedyank'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim', {'for':['markdown','vimwiki']}
+Plug 'junegunn/limelight.vim', {'for':['markdown','vimwiki']}
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'davisdude/vim-love-docs', {'for':'lua'}
@@ -105,7 +105,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
-Plug 'chrisbra/Colorizer'
+"Plug 'chrisbra/Colorizer'
 Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
@@ -118,9 +118,9 @@ call plug#end()
 colorscheme onehalfdark
 "highlight Normal guibg=NONE
 
-let g:loaded_rrhelper=1
-let g:loaded_gzip=1
-let g:loaded_tohtml=1
+let g:loaded_rrhelper=0
+let g:loaded_gzip=0
+let g:loaded_tohtml=0
 let g:loaded_getscriptPlugin=1
 let g:loaded_vimballPlugin=1
 let g:loaded_zipPlugin=1
