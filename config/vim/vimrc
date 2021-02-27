@@ -1,13 +1,13 @@
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
 " Run PlugInstall if there are missing plugins
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-      \| PlugInstall --sync | source $MYVIMRC
-      \| endif
+            \| PlugInstall --sync | source $MYVIMRC
+            \| endif
 
 syntax on
 
@@ -58,7 +58,7 @@ highligh ColorColum ctermbg=0 guibg=lightgrey
 
 " For conceal markers.
 if has('conceal')
-  set conceallevel=2 concealcursor=niv
+    set conceallevel=2 concealcursor=niv
 endif
 
 " Plugins will be downloaded under the specified directory.
@@ -71,12 +71,14 @@ Plug 'tpope/vim-fugitive', {'for':['markdown','vimwiki', 'lua', 'python', 'erlan
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
+Plug 'easymotion/vim-easymotion'
+Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
-Plug 'vim-python/python-syntax', {'for':'python'}
-Plug 'vim-utils/vim-man'
+"Plug 'vim-python/python-syntax', {'for':'python'}
+"Plug 'vim-utils/vim-man'
 Plug 'davisdude/vim-love-docs', {'for':'lua'}
 Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','vimwiki']}
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
@@ -90,8 +92,8 @@ Plug 'ackyshake/VimCompletesMe'
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp', {'for':['python','lua','erlang']}
 Plug 'roxma/vim-hug-neovim-rpc', {'for':['python','lua','erlang']}
-Plug 'xolox/vim-misc', {'for':'lua'}
-Plug 'xolox/vim-lua-ftplugin', {'for':'lua'}
+"Plug 'xolox/vim-misc', {'for':'lua'}
+"Plug 'xolox/vim-lua-ftplugin', {'for':'lua'}
 Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['python','lua','erlang']}
 Plug 'Shougo/denite.nvim'
 Plug 'SirVer/ultisnips', {'for':['python','lua','erlang']}
@@ -109,7 +111,6 @@ Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
 Plug 'chrisbra/Colorizer'
 Plug 'sheerun/vim-polyglot'
-Plug 'edkolev/erlang-motions.vim', {'for':'erlang'}
 Plug 'Yggdroot/indentLine'
 Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
 Plug 'fisadev/vim-isort', {'for':'python'}
@@ -176,6 +177,24 @@ nmap <F7> :CalendarT<CR>
 " The Operator
 map ; :
 noremap ;; ;
+
+" After test move from here
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case-insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 autocmd InsertEnter * norm zz
 
