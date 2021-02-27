@@ -53,9 +53,9 @@ case "$-" in *i*)
     alias v='vim'
     alias l='ls --color'
     alias ls='ls --color'
-    alias p='wine ~/.wine/drive_c/Program\ Files/Battle.net/Battle.net.exe&'
     alias t='tmux -2 attach -t shell || tmux -2 new -s shell'
-    alias n='cd ~/Documents/notebooks && jupyter notebook&'
+    alias j='jupyter-console'
+    alias jn='cd ~/Documents/notebooks && jupyter notebook&'
     alias gg='git status'
     alias python='python3'
     alias pip='pip3'
@@ -64,3 +64,6 @@ esac
 
 # Import colorscheme from 'wal'
 (cat ~/.cache/wal/sequences &)
+
+# activate torch
+. /opt/torch/install/bin/torch-activate
