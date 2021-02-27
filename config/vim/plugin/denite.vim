@@ -1,3 +1,55 @@
+let s:denite_options = {
+      \ 'prompt' : '>',
+      \ 'split': 'floating',
+      \ 'start_filter': 1,
+      \ 'auto_resize': 1,
+      \ 'source_names': 'short',
+      \ 'direction': 'botright',
+      \ 'highlight_filter_background': 'CursorLine',
+      \ 'highlight_matched_char': 'Type',
+      \ }
+
+augroup denite_setup
+  autocmd!
+  autocmd FileType python,lua,erlang call denite#custom#source(
+      \ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
+  
+  autocmd FileType python,lua,erlang call denite#custom#source('tag', 'matchers', ['matcher/substring'])
+
+  autocmd FileType python,lua,erlang call denite#custom#source('file/old', 'converters',
+      \ ['converter/relative_word'])
+
+  autocmd FileType python,lua,erlang call denite#custom#source(
+      \ 'file/rec', 'sorters', ['sorter/sublime'])
+
+  autocmd FileType python,lua,erlang call denite#custom#alias('source', 'file/rec/git', 'file/rec')
+
+  autocmd FileType python,lua,erlang call denite#custom#var('file/rec/git', 'command',
+      \ ['git', 'ls-files', '-co', '--exclude-standard'])
+
+  autocmd FileType python,lua,erlang call denite#custom#alias('source', 'file/rec/py', 'file/rec')
+
+  autocmd FileType python,lua,erlang call denite#custom#var('file/rec/py', 'command',['scantree.py'])
+
+  autocmd FileType python,lua,erlang call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
+      \ [ '.git/', '.ropeproject/', '__pycache__/',
+      \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
+  autocmd FileType python,lua,erlang call denite#custom#option('default', s:denite_options)
+  " Ripgrep command on grep source
+  if executable('rg')
+      let g:rg_derive_root='true'
+      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'command', ['rg'])
+      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'default_opts',
+                \ ['-i', '--vimgrep', '--no-heading'])
+      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'recursive_opts', [])
+      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'separator', ['--'])
+      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'final_opts', [])
+      autocmd FileType python,lua,erlang call denite#custom#var('file/rec', 'command',
+                \ ['rg', '--files', '--glob', '!.git'])
+  endif
+augroup END
+
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
     nnoremap <silent><buffer><expr> <CR>
@@ -38,55 +90,4 @@ function! s:denite_filter_my_settings() abort
                 \ <Esc><C-w>p:call cursor(line('.')-1,0)<CR><C-w>pA
 endfunction
 
-" Change matchers.
-call denite#custom#source(
-\ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
 
-call denite#custom#source('tag', 'matchers', ['matcher/substring'])
-
-call denite#custom#source('file/old', 'converters',
-      \ ['converter/relative_word'])
-
-" Change sorters.
-call denite#custom#source(
-\ 'file/rec', 'sorters', ['sorter/sublime'])
-
-" Ripgrep command on grep source
-if executable('rg')
-    let g:rg_derive_root='true'
-    call denite#custom#var('grep', 'command', ['rg'])
-    call denite#custom#var('grep', 'default_opts',
-                \ ['-i', '--vimgrep', '--no-heading'])
-    call denite#custom#var('grep', 'recursive_opts', [])
-    call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
-    call denite#custom#var('grep', 'separator', ['--'])
-    call denite#custom#var('grep', 'final_opts', [])
-    call denite#custom#var('file/rec', 'command',
-                \ ['rg', '--files', '--glob', '!.git'])
-endif
-
-" Define alias
-call denite#custom#alias('source', 'file/rec/git', 'file/rec')
-call denite#custom#var('file/rec/git', 'command',
-      \ ['git', 'ls-files', '-co', '--exclude-standard'])
-
-call denite#custom#alias('source', 'file/rec/py', 'file/rec')
-call denite#custom#var('file/rec/py', 'command',['scantree.py'])
-
-" Change ignore_globs
-call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
-      \ [ '.git/', '.ropeproject/', '__pycache__/',
-      \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
-
-let s:denite_options = {
-      \ 'prompt' : '>',
-      \ 'split': 'floating',
-      \ 'start_filter': 1,
-      \ 'auto_resize': 1,
-      \ 'source_names': 'short',
-      \ 'direction': 'botright',
-      \ 'highlight_filter_background': 'CursorLine',
-      \ 'highlight_matched_char': 'Type',
-      \ }
-
-call denite#custom#option('default', s:denite_options)

@@ -19,7 +19,7 @@ augroup deoplete_settings
             \ '_': ['around', 'buffer']
             \ })
     " Candidate list item number limit
-    autocmd FileType python,lua,erlang call deoplete#custom#option('max_list', 15)
+    autocmd FileType python,lua,erlang call deoplete#custom#option('max_list', 16)
     " The number of processes used for the deoplete parallel feature.
     autocmd FileType python,lua,erlang call deoplete#custom#option('num_processes', 4)
     " The delay for completion after input, measured in milliseconds.
