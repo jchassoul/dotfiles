@@ -113,7 +113,7 @@ Plug 'Shougo/deoplete.nvim', {'for':['python','lua','erlang']}
 Plug 'roxma/nvim-yarp', {'for':['python','lua','erlang']}
 Plug 'roxma/vim-hug-neovim-rpc', {'for':['python','lua','erlang']}
 Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['python','lua','erlang']}
-Plug 'Shougo/denite.nvim'
+Plug 'Shougo/denite.nvim', {'for':['python','lua','erlang']}
 Plug 'SirVer/ultisnips', {'for':['python','lua','erlang']}
 Plug 'prabirshrestha/async.vim', {'for':['python','lua','erlang']}
 Plug 'prabirshrestha/vim-lsp', {'for':['python','lua','erlang']}
