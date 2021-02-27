@@ -1,6 +1,6 @@
 let g:deoplete#enable_at_startup = 0 
 
-augroup deoplete_settings
+augroup deoplete_setup
     autocmd!
     " Maximum candidate window width
     autocmd FileType python,lua,erlang call deoplete#custom#option('max_menu_width', 80)
