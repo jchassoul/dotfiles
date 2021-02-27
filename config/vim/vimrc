@@ -77,8 +77,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
-"Plug 'vim-python/python-syntax', {'for':'python'}
-"Plug 'vim-utils/vim-man'
 Plug 'davisdude/vim-love-docs', {'for':'lua'}
 Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','vimwiki']}
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
@@ -92,8 +90,6 @@ Plug 'ackyshake/VimCompletesMe'
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp', {'for':['python','lua','erlang']}
 Plug 'roxma/vim-hug-neovim-rpc', {'for':['python','lua','erlang']}
-"Plug 'xolox/vim-misc', {'for':'lua'}
-"Plug 'xolox/vim-lua-ftplugin', {'for':'lua'}
 Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['python','lua','erlang']}
 Plug 'Shougo/denite.nvim'
 Plug 'SirVer/ultisnips', {'for':['python','lua','erlang']}
