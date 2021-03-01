@@ -119,7 +119,7 @@ Plug 'Shougo/deoplete.nvim', {'for':['python','lua','erlang']}
 Plug 'roxma/nvim-yarp', {'for':['python','lua','erlang']}
 Plug 'roxma/vim-hug-neovim-rpc', {'for':['python','lua','erlang']}
 Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['python','lua','erlang']}
-Plug 'Shougo/denite.nvim', {'for':['python','lua','erlang']}
+Plug 'Shougo/denite.nvim'
 Plug 'SirVer/ultisnips', {'for':['python','lua','erlang']}
 Plug 'prabirshrestha/async.vim', {'for':['python','lua','erlang']}
 Plug 'prabirshrestha/vim-lsp', {'for':['python','lua','erlang']}
@@ -201,6 +201,17 @@ packloadall
 " All messages and errors will be ignored.
 silent! helptags ALL
 
+" Condition should identify terminal in question so "
+" that it won't change anything for terminals without this problem "
+if !has("gui_running") && $TERM is "xterm-256color"
+    for [key, code] in [["<F1>", "\eOP"],
+                        \["<F2>", "\eOQ"],
+                        \["<F5>", "\e[15~"],
+                        \]
+        execute "set" key."=".code
+    endfor
+endif
+
 let g:startify_custom_header = [
 \"                                                                                ",
 \"                   ___           _,.---,---._                                   ",
@@ -216,7 +227,7 @@ let g:startify_custom_header = [
 \"       Maxilla,  |      |   |        }:{        | <------ Orbit                 ",
 \"      Nasal and  |      |   l       / | \\       !   |                          ",
 \"       Zygomatic |      .~  (__,.--' .^. '--.,__)  ~.                           ",
-\"        Bones    |      |    ----;' / | \\ `;-<--------- Infraorbital Foramen    ",
+\"        Bones    |      |    ----;' / | \\ `;-<--------- Infraorbital Foramen   ",
 \"                 |__     \\__.       \\/^\\/       .__/                         ",
 \"                    ___   V| \\                 / |V <--- Mastoid Proces        ",
 \"                    |      | |T~\\___!___!___/~T| |                             ",
