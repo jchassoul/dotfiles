@@ -1,8 +1,9 @@
 " Disable built-in plugins
-let g:loaded_python_provider = 0 
-let g:loaded_ruby_provider = 0 
-let g:loaded_node_provider = 0
-let g:loaded_getscript= 0
+let g:loaded_python_provider=0 
+let g:loaded_ruby_provider=0 
+let g:loaded_node_provider=0
+let g:loaded_perl_provider=0
+let g:loaded_getscript=0
 let g:loaded_getscriptPlugin=0
 let g:loaded_gzip=0
 let g:loaded_netrw=0
@@ -127,9 +128,8 @@ Plug 'thomasfaingnaert/vim-lsp-ultisnips', {'for':['python','lua','erlang']}
 Plug 'dense-analysis/ale', {'for':['python','lua','erlang']}
 Plug 'sbdchd/neoformat', {'for':['python','lua','erlang']}
 Plug 'ryanoasis/vim-devicons'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'edkolev/tmuxline.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
 Plug 'chrisbra/Colorizer'
@@ -216,7 +216,7 @@ let g:startify_custom_header = [
 \"       Maxilla,  |      |   |        }:{        | <------ Orbit                 ",
 \"      Nasal and  |      |   l       / | \\       !   |                          ",
 \"       Zygomatic |      .~  (__,.--' .^. '--.,__)  ~.                           ",
-\"        Bones    |      |    ----;' / | \ `;-<--------- Infraorbital Foramen    ",
+\"        Bones    |      |    ----;' / | \\ `;-<--------- Infraorbital Foramen    ",
 \"                 |__     \\__.       \\/^\\/       .__/                         ",
 \"                    ___   V| \\                 / |V <--- Mastoid Proces        ",
 \"                    |      | |T~\\___!___!___/~T| |                             ",

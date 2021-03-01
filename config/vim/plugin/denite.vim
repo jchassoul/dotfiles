@@ -50,6 +50,10 @@ augroup denite_setup
   endif
 augroup END
 
+
+autocmd FileType calendar set rnu!
+
+
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
     nnoremap <silent><buffer><expr> <CR>
