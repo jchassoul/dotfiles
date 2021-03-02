@@ -145,15 +145,6 @@ colorscheme onehalfdark
 
 let g:AutoPairsMapCR = 0
 
-autocmd InsertEnter * norm zz
-
-" Load all plugins now.
-" Plugins need to be added to runtimepath before helptags can be generated.
-packloadall
-" Load all of the helptags now, after plugins have been loaded.
-" All messages and errors will be ignored.
-silent! helptags ALL
-
 " The dark powered spacebeam distribution 
 let g:startify_custom_header = [
 \"                                                                                ",
@@ -184,3 +175,12 @@ let g:startify_custom_header = [
 \"        > Thou shalt not make a machine in the likeness of a human mind.        ",
 \"        - The Orange Catholic Bible.                                            ",
 \"                                                                                "]
+
+autocmd InsertEnter * norm zz
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
