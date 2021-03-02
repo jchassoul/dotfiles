@@ -20,7 +20,7 @@ let g:loaded_vimballPlugin=0
 let g:loaded_zip=0
 let g:loaded_zipPlugin=0
 
-" The dark powered beam distribution 
+" Setting this makes vim's py3  startup faster.
 let g:python3_host_prog = '/usr/bin/python3'
 
 " Install vim-plug if not found
@@ -154,6 +154,7 @@ packloadall
 " All messages and errors will be ignored.
 silent! helptags ALL
 
+" The dark powered spacebeam distribution 
 let g:startify_custom_header = [
 \"                                                                                ",
 \"                   ___           _,.---,---._                                   ",
