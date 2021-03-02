@@ -20,8 +20,7 @@ let g:loaded_vimballPlugin=0
 let g:loaded_zip=0
 let g:loaded_zipPlugin=0
 
-"  Setting this makes vim startup faster. 
-"  Useful for working with virtualenvs.
+" The dark powered beam distribution 
 let g:python3_host_prog = '/usr/bin/python3'
 
 " Install vim-plug if not found
@@ -201,8 +200,9 @@ packloadall
 " All messages and errors will be ignored.
 silent! helptags ALL
 
-" Condition should identify terminal in question so "
-" that it won't change anything for terminals without this problem "
+" Condition should identify terminal in question so
+"  TODO missing f keys and test this shit yo! 
+" that it won't change anything for terminals without this problem
 if !has("gui_running") && $TERM is "xterm-256color"
     for [key, code] in [["<F1>", "\eOP"],
                         \["<F2>", "\eOQ"],
