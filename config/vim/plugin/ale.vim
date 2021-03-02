@@ -12,7 +12,3 @@ let g:ale_linters_explicit = 1
 let g:ale_sign_error = '⨉'
 let g:ale_sign_warning = '⚠'
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '']
-
-" cycle through location list
-nmap <silent> <leader>n <Plug>(ale_next_wrap)
-nmap <silent> <leader>p <Plug>(ale_previous_wrap)
