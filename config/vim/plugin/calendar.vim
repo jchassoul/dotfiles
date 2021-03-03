@@ -1,1 +1,1 @@
-autocmd FileType calendar set rnu!
+autocmd FileType calendar setlocal nonumber norelativenumber statusline=%F cc=
