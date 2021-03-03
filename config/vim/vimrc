@@ -113,7 +113,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jremmen/vim-ripgrep'
 Plug 'mbbill/undotree'
-Plug 'sonph/onehalf', {'rtp':'vim'}
+Plug 'jchassoul/onehalf', {'rtp':'vim'}
 Plug 'ackyshake/VimCompletesMe'
 Plug 'Shougo/deoplete.nvim', {'for':['python','lua','erlang']}
 Plug 'roxma/nvim-yarp'
@@ -141,6 +141,13 @@ Plug 'mattn/vim-lsp-settings'
 call plug#end()
 
 colorscheme onehalfdark
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 "highlight Normal guibg=NONE
 
 let g:AutoPairsMapCR = 0
@@ -175,7 +182,6 @@ let g:startify_custom_header = [
 \"        > Thou shalt not make a machine in the likeness of a human mind.        ",
 \"        - The Orange Catholic Bible.                                            ",
 \"                                                                                "]
-
 autocmd InsertEnter * norm zz
 
 " Load all plugins now.
