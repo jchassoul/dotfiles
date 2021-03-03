@@ -51,7 +51,7 @@ nmap <silent> t<C-g> :TestVisit<CR>
 " F keys
 nnoremap <F1> :tab h<CR>
 nnoremap <F2> :UndotreeToggle<CR>
-" <F3> : File Tree!
+nnoremap <F3> :Dirvish<CR>
 nnoremap <F4> :<C-u>Denite file/rec -start-filter<CR>
 nmap <F7> :CalendarT<CR>
 
