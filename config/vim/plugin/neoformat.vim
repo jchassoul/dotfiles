@@ -19,5 +19,5 @@ let g:neoformat_only_msg_on_error = 1
 
 augroup fmt
   autocmd!
-  autocmd BufWritePre python,lua,erlang undojoin | Neoformat
+  autocmd BufWritePre * undojoin | Neoformat
 augroup END

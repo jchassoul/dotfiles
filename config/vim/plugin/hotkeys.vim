@@ -54,13 +54,13 @@ map ; :
 noremap ;; ;
 
 " Condition should identify terminal in question so
-"  TODO missing f3 and f4 keys and test this shit yo! 
+"  TODO missing f3 and f4 keys and test this shit yo!
 " that it won't change anything for terminals without this problem
 if !has("gui_running") && $TERM is "xterm-256color"
     for [key, code] in [["<F1>", "\eOP"],
-                        \["<F2>", "\eOQ"],
-                        \["<F5>", "\e[15~"],
-                        \]
+                \["<F2>", "\eOQ"],
+                \["<F5>", "\e[15~"],
+                \]
         execute "set" key."=".code
     endfor
 endif
