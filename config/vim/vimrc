@@ -69,7 +69,6 @@ set t_ut=
 set signcolumn=yes
 set updatetime=50
 set shortmess=I
-set cmdheight=2
 set completeopt=longest,menuone
 set omnifunc=syntaxcomplete#Complete
 set wildmenu
