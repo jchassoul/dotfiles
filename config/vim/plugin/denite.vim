@@ -10,30 +10,17 @@ let s:denite_options = {
 
 augroup denite_setup
   autocmd!
-
   autocmd FileType * call denite#custom#option('_', 'statusline', v:false)
-
   autocmd FileType * call denite#custom#source(
         \ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
-
-  autocmd FileType python,lua,erlang call denite#custom#source('tag', 'matchers', ['matcher/substring'])
-
+  autocmd FileType * call denite#custom#source('tag', 'matchers', ['matcher/substring'])
   autocmd FileType * call denite#custom#source('file/old', 'converters',
         \ ['converter/relative_word'])
-
   autocmd FileType * call denite#custom#source(
         \ 'file/rec', 'sorters', ['sorter/sublime'])
-
   autocmd FileType * call denite#custom#alias('source', 'file/rec/git', 'file/rec')
-
   autocmd FileType * call denite#custom#var('file/rec/git', 'command',
         \ ['git', 'ls-files', '-co', '--exclude-standard'])
-
-  autocmd FileType * call denite#custom#alias('source', 'file/rec/py', 'file/rec')
-
-  autocmd FileType * call denite#custom#var('file/rec/py', 'command',['scantree.py'])
-
-  " missing ignore options for scantree.py ?
   autocmd FileType * call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
         \ [ '.git/', '.ropeproject/', '__pycache__/',
         \   'venv/', 'work/', 'vault/', 'images/', '*.min.*', 'img/', 'fonts/'])
@@ -58,11 +45,6 @@ autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
   nnoremap <silent><buffer><expr> <CR>
         \ denite#do_map('do_action')
-
-  " TODO: I probably want to remove delete from here
-
-  nnoremap <silent><buffer><expr> d
-        \ denite#do_map('do_action', 'delete')
   nnoremap <silent><buffer><expr> <c-t>
         \ denite#do_map('do_action', 'tabopen')
   nnoremap <silent><buffer><expr> <c-v>

@@ -44,7 +44,7 @@ nmap <silent> t<C-g> :TestVisit<CR>
 " Fun 'camara' keys
 nnoremap <F1> :tab h<CR>
 nnoremap <F3> :Dirvish<CR>
-nnoremap <F4> :<C-u>DeniteProjectDir file/rec -start-filter<CR>
+nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
 nnoremap <F5> :UndotreeToggle<CR>
 nmap <F7> :CalendarT<CR>
 
