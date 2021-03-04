@@ -2,23 +2,12 @@
 nmap <silent> <leader>n <Plug>(ale_next_wrap)
 nmap <silent> <leader>p <Plug>(ale_previous_wrap)
 
-" go to definition, go to reference, project rename
-function! s:on_lsp_buffer_enabled() abort
-  setlocal omnifunc=lsp#complete
-  if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-  " some mappings to use, tweak as you wish.
-  nmap <buffer> gd <plug>(lsp-definition)
-  nmap <buffer> gr <plug>(lsp-references)
-  nmap <buffer> <F2> <plug>(lsp-rename)
-endfunction
-
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
 map <leader>j :SlimeSend1 ipython --matplotlib<CR>
 nnoremap <Leader>jq :SlimeSend1 exit<CR>
 map <leader>l :ColorToggle<CR>
-map <leader>q :q<CR>
 map <leader>s :update<CR>
 map <leader>S :setlocal spell! spelllang=en_us<CR>
 map <leader>e :qa!<CR>
@@ -28,6 +17,7 @@ map <leader>C :setlocal formatoptions=cro<CR>
 " Denite
 nnoremap <leader>w :<C-u>DeniteCursorWord grep:.<CR>
 nnoremap <leader>f :<C-u>Denite -start-filter grep:::!<CR>
+nnoremap <leader>q :<C-u>Denite buffer<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
 
 " Goyo

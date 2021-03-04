@@ -44,6 +44,15 @@ if executable('pyls')
   augroup END
 endif
 
+function! s:on_lsp_buffer_enabled() abort
+  setlocal omnifunc=lsp#complete
+  if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+  " some mappings to use, tweak as you wish.
+  nmap <buffer> gd <plug>(lsp-definition)
+  nmap <buffer> gr <plug>(lsp-references)
+  nmap <buffer> <F2> <plug>(lsp-rename)
+endfunction
+
 augroup lsp_install
   au!
   " call s:on_lsp_buffer_enabled only for languages that has the server registered.
