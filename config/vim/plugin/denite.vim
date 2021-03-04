@@ -90,5 +90,3 @@ function! s:denite_filter_my_settings() abort
     inoremap <silent><buffer> <C-k>
                 \ <Esc><C-w>p:call cursor(line('.')-1,0)<CR><C-w>pA
 endfunction
-
-

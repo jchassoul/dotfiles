@@ -9,7 +9,7 @@ function! s:on_lsp_buffer_enabled() abort
   " some mappings to use, tweak as you wish.
   nmap <buffer> gd <plug>(lsp-definition)
   nmap <buffer> gr <plug>(lsp-references)
-  nmap <buffer> <leader>rn <plug>(lsp-rename)
+  nmap <buffer> <F2> <plug>(lsp-rename)
 endfunction
 
 map <leader>- :split<CR>
@@ -51,9 +51,9 @@ nmap <silent> t<C-g> :TestVisit<CR>
 
 " F keys
 nnoremap <F1> :tab h<CR>
-nnoremap <F2> :UndotreeToggle<CR>
 nnoremap <F3> :Dirvish<CR>
-nnoremap <F4> :<C-u>Denite file/rec -start-filter<CR>
+nnoremap <F4> :<C-u>DeniteProjectDir file/rec -start-filter<CR>
+nnoremap <F5> :UndotreeToggle<CR>
 nmap <F7> :CalendarT<CR>
 
 " The Operator
