@@ -39,6 +39,7 @@ syntax on
 filetype plugin indent on
 
 set nocompatible
+set scrolloff=8
 set mouse=a
 set noerrorbells
 set clipboard=unnamedplus
