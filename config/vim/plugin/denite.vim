@@ -10,6 +10,9 @@ let s:denite_options = {
 
 augroup denite_setup
   autocmd!
+
+  autocmd FileType * call denite#custom#option('_', 'statusline', v:false)
+
   autocmd FileType * call denite#custom#source(
       \ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
   
@@ -71,6 +74,7 @@ endfunction
 
 autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
+	call deoplete#custom#buffer_option('auto_complete', v:false)
     imap <silent><buffer> <tab> <Plug>(denite_filter_quit)
     inoremap <silent><buffer><expr> <CR> denite#do_map('do_action')
     inoremap <silent><buffer><expr> <c-t>
