@@ -1,6 +1,5 @@
 let s:denite_options = {
       \ 'prompt' : '>',
-      \ 'split': 'floating',
       \ 'start_filter': 1,
       \ 'auto_resize': 1,
       \ 'source_names': 'short',
@@ -11,41 +10,39 @@ let s:denite_options = {
 
 augroup denite_setup
   autocmd!
-  autocmd FileType python,lua,erlang call denite#custom#source(
+  autocmd FileType * call denite#custom#source(
       \ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
   
-  autocmd FileType python,lua,erlang call denite#custom#source('tag', 'matchers', ['matcher/substring'])
-
-  autocmd FileType python,lua,erlang call denite#custom#source('file/old', 'converters',
+  autocmd FileType * call denite#custom#source('file/old', 'converters',
       \ ['converter/relative_word'])
 
-  autocmd FileType python,lua,erlang call denite#custom#source(
+  autocmd FileType * call denite#custom#source(
       \ 'file/rec', 'sorters', ['sorter/sublime'])
 
-  autocmd FileType python,lua,erlang call denite#custom#alias('source', 'file/rec/git', 'file/rec')
+  autocmd FileType * call denite#custom#alias('source', 'file/rec/git', 'file/rec')
 
-  autocmd FileType python,lua,erlang call denite#custom#var('file/rec/git', 'command',
+  autocmd FileType * call denite#custom#var('file/rec/git', 'command',
       \ ['git', 'ls-files', '-co', '--exclude-standard'])
 
-  autocmd FileType python,lua,erlang call denite#custom#alias('source', 'file/rec/py', 'file/rec')
+  autocmd FileType * call denite#custom#alias('source', 'file/rec/py', 'file/rec')
 
-  autocmd FileType python,lua,erlang call denite#custom#var('file/rec/py', 'command',['scantree.py'])
+  autocmd FileType * call denite#custom#var('file/rec/py', 'command',['scantree.py'])
 
-  autocmd FileType python,lua,erlang call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
+  autocmd FileType * call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
       \ [ '.git/', '.ropeproject/', '__pycache__/',
       \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
-  autocmd FileType python,lua,erlang call denite#custom#option('default', s:denite_options)
+  autocmd FileType * call denite#custom#option('default', s:denite_options)
   " Ripgrep command on grep source
   if executable('rg')
       let g:rg_derive_root='true'
-      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'command', ['rg'])
-      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'default_opts',
+      autocmd FileType * call denite#custom#var('grep', 'command', ['rg'])
+      autocmd FileType * call denite#custom#var('grep', 'default_opts',
                 \ ['-i', '--vimgrep', '--no-heading'])
-      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'recursive_opts', [])
-      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
-      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'separator', ['--'])
-      autocmd FileType python,lua,erlang call denite#custom#var('grep', 'final_opts', [])
-      autocmd FileType python,lua,erlang call denite#custom#var('file/rec', 'command',
+      autocmd FileType * call denite#custom#var('grep', 'recursive_opts', [])
+      autocmd FileType * call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+      autocmd FileType * call denite#custom#var('grep', 'separator', ['--'])
+      autocmd FileType * call denite#custom#var('grep', 'final_opts', [])
+      autocmd FileType * call denite#custom#var('file/rec', 'command',
                 \ ['rg', '--files', '--glob', '!.git'])
   endif
 augroup END

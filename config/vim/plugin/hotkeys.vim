@@ -24,23 +24,24 @@ map <leader>S :setlocal spell! spelllang=en_us<CR>
 map <leader>e :qa!<CR>
 map <leader>c :setlocal formatoptions-=cro<CR>
 map <leader>C :setlocal formatoptions=cro<CR>
+
 " Denite
-nnoremap <leader>w :<C-u>Denite buffer<CR>
-nnoremap <leader>8 :<C-u>DeniteCursorWord grep:.<CR>
-nnoremap <leader>/ :<C-u>Denite -start-filter grep:::!<CR>
-nnoremap <leader><Space>/ :<C-u>DeniteBufferDir -start-filter grep:::!<CR>
-nnoremap <leader>d :<C-u>DeniteBufferDir file/rec -start-filter<CR>
+nnoremap <leader>w :<C-u>DeniteCursorWord grep:.<CR>
+nnoremap <leader>f :<C-u>Denite -start-filter grep:::!<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
-nnoremap <leader><C-r> :<C-u>Denite register:.<CR>
+
 " Resize
 nnoremap <silent> <C-Left> :vertical resize +5<CR>
 nnoremap <silent> <C-Right> :vertical resize -5<CR>
 nnoremap <silent> <C-Up> :resize +5<CR>
 nnoremap <silent> <C-Down> :resize -5<CR>
+
 " Replace
 nnoremap R :%s//gI<Left><Left><Left>
+
 " Goyo
 map <leader>gy :Goyo<CR>
+
 " T Suite
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
