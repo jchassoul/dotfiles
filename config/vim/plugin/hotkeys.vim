@@ -30,6 +30,9 @@ nnoremap <leader>w :<C-u>DeniteCursorWord grep:.<CR>
 nnoremap <leader>f :<C-u>Denite -start-filter grep:::!<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
 
+" Goyo
+map <leader>gy :Goyo<CR>
+
 " Resize
 nnoremap <silent> <C-Left> :vertical resize +5<CR>
 nnoremap <silent> <C-Right> :vertical resize -5<CR>
@@ -39,17 +42,16 @@ nnoremap <silent> <C-Down> :resize -5<CR>
 " Replace
 nnoremap R :%s//gI<Left><Left><Left>
 
-" Goyo
-map <leader>gy :Goyo<CR>
-
 " T Suite
+" TODO: WTF ARE THIS HOTKEYS? t Control wut?
+
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
-" F keys
+" Fun 'camara' keys
 nnoremap <F1> :tab h<CR>
 nnoremap <F3> :Dirvish<CR>
 nnoremap <F4> :<C-u>DeniteProjectDir file/rec -start-filter<CR>
@@ -57,11 +59,12 @@ nnoremap <F5> :UndotreeToggle<CR>
 nmap <F7> :CalendarT<CR>
 
 " The Operator
+" TODO review the tradeoffs of this again.
 map ; :
 noremap ;; ;
 
 " Condition should identify terminal in question so
-"  TODO missing f keys and test this shit yo! 
+"  TODO missing f3 and f4 keys and test this shit yo! 
 " that it won't change anything for terminals without this problem
 if !has("gui_running") && $TERM is "xterm-256color"
     for [key, code] in [["<F1>", "\eOP"],

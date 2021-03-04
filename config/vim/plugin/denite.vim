@@ -15,6 +15,8 @@ augroup denite_setup
 
   autocmd FileType * call denite#custom#source(
       \ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
+
+  autocmd FileType python,lua,erlang call denite#custom#source('tag', 'matchers', ['matcher/substring'])
   
   autocmd FileType * call denite#custom#source('file/old', 'converters',
       \ ['converter/relative_word'])
@@ -31,9 +33,14 @@ augroup denite_setup
 
   autocmd FileType * call denite#custom#var('file/rec/py', 'command',['scantree.py'])
 
+
+  " missing ignore options for scantree.py ?
+
+
   autocmd FileType * call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
       \ [ '.git/', '.ropeproject/', '__pycache__/',
-      \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
+      \   'venv/', 'work/', 'vault/', 'images/', '*.min.*', 'img/', 'fonts/'])
+  " setup custom default options
   autocmd FileType * call denite#custom#option('default', s:denite_options)
   " Ripgrep command on grep source
   if executable('rg')
@@ -54,6 +61,9 @@ autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
     nnoremap <silent><buffer><expr> <CR>
                 \ denite#do_map('do_action')
+
+    " TODO: I probably want to remove delete from here
+    
     nnoremap <silent><buffer><expr> d
                 \ denite#do_map('do_action', 'delete')
     nnoremap <silent><buffer><expr> <c-t>
