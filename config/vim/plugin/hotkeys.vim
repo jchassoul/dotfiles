@@ -16,7 +16,8 @@ map <leader>C :setlocal formatoptions=cro<CR>
 
 " Denite
 nnoremap <leader>q :<C-u>Denite buffer<CR>
-nnoremap <leader>f :<C-u>DeniteProjectDir grep<CR>
+nnoremap <leader>w :<C-u>DeniteCursorWord grep:.<CR>
+nnoremap <leader>f :<C-u>DeniteProjectDir -start-filter grep:::!<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
 
 " Goyo
