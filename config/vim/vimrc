@@ -113,7 +113,6 @@ Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
-Plug 'jremmen/vim-ripgrep'
 Plug 'mbbill/undotree'
 Plug 'jchassoul/onehalf', {'rtp':'vim'}
 Plug 'ackyshake/VimCompletesMe'

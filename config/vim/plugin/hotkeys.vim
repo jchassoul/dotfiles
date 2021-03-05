@@ -16,6 +16,7 @@ map <leader>C :setlocal formatoptions=cro<CR>
 
 " Denite
 nnoremap <leader>q :<C-u>Denite buffer<CR>
+nnoremap <leader>f :<C-u>DeniteProjectDir grep<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
 
 " Goyo
@@ -44,10 +45,6 @@ nnoremap <F3> :Dirvish<CR>
 nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
 nnoremap <F5> :UndotreeToggle<CR>
 nmap <F7> :CalendarT<CR>
-
-" The Operator
-map ; :
-noremap ;; ;
 
 " Condition should identify terminal in question so
 "  TODO missing f3 and f4 keys and test this shit yo!

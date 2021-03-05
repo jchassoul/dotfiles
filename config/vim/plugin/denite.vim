@@ -74,3 +74,22 @@ function! s:denite_filter_my_settings() abort
   inoremap <silent><buffer> <C-k>
         \ <Esc><C-w>p:call cursor(line('.')-1,0)<CR><C-w>pA
 endfunction
+
+" Change file/rec command.
+call denite#custom#var('file/rec', 'command',
+      \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+
+" Ag command on grep source
+call denite#custom#var('grep', {
+      \ 'command': ['ag'],
+      \ 'default_opts': ['-i', '--vimgrep'],
+      \ 'recursive_opts': [],
+      \ 'pattern_opt': [],
+      \ 'separator': ['--'],
+      \ 'final_opts': [],
+      \ })
+
+call denite#custom#alias('source', 'file/rec/py', 'file/rec')
+call denite#custom#var('file/rec/py', 'command',
+      \ ['scantree.py', '--path', ':directory'])
+
