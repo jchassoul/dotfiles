@@ -10,35 +10,30 @@ let s:denite_options = {
 
 augroup denite_setup
   autocmd!
+
   autocmd FileType * call denite#custom#option('_', 'statusline', v:false)
+
   autocmd FileType * call denite#custom#source(
         \ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
+
   autocmd FileType * call denite#custom#source('tag', 'matchers', ['matcher/substring'])
+
   autocmd FileType * call denite#custom#source('file/old', 'converters',
         \ ['converter/relative_word'])
+
   autocmd FileType * call denite#custom#source(
         \ 'file/rec', 'sorters', ['sorter/sublime'])
+
   autocmd FileType * call denite#custom#alias('source', 'file/rec/git', 'file/rec')
+
   autocmd FileType * call denite#custom#var('file/rec/git', 'command',
         \ ['git', 'ls-files', '-co', '--exclude-standard'])
+
   autocmd FileType * call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
         \ [ '.git/', '.ropeproject/', '__pycache__/',
-        \   'venv/', 'work/', 'vault/', 'images/', '*.min.*', 'img/', 'fonts/'])
+        \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
   " setup custom default options
   autocmd FileType * call denite#custom#option('default', s:denite_options)
-  " Ripgrep command on grep source
-  if executable('rg')
-    let g:rg_derive_root='true'
-    autocmd FileType * call denite#custom#var('grep', 'command', ['rg'])
-    autocmd FileType * call denite#custom#var('grep', 'default_opts',
-          \ ['-i', '--vimgrep', '--no-heading'])
-    autocmd FileType * call denite#custom#var('grep', 'recursive_opts', [])
-    autocmd FileType * call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
-    autocmd FileType * call denite#custom#var('grep', 'separator', ['--'])
-    autocmd FileType * call denite#custom#var('grep', 'final_opts', [])
-    autocmd FileType * call denite#custom#var('file/rec', 'command',
-          \ ['rg', '--files', '--glob', '!.git'])
-  endif
 augroup END
 
 autocmd FileType denite call s:denite_my_settings()

@@ -15,8 +15,6 @@ map <leader>c :setlocal formatoptions-=cro<CR>
 map <leader>C :setlocal formatoptions=cro<CR>
 
 " Denite
-nnoremap <leader>w :<C-u>DeniteCursorWord grep:.<CR>
-nnoremap <leader>f :<C-u>Denite -start-filter grep:::!<CR>
 nnoremap <leader>q :<C-u>Denite buffer<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
 
@@ -41,7 +39,6 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
-" Fun 'camara' keys
 nnoremap <F1> :tab h<CR>
 nnoremap <F3> :Dirvish<CR>
 nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
@@ -49,7 +46,6 @@ nnoremap <F5> :UndotreeToggle<CR>
 nmap <F7> :CalendarT<CR>
 
 " The Operator
-" TODO review the tradeoffs of this again.
 map ; :
 noremap ;; ;
 
