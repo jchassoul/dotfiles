@@ -1,5 +1,5 @@
 let s:denite_options = {
-      \ 'prompt' : '>',
+      \ 'prompt' : 'λ',
       \ 'start_filter': 1,
       \ 'auto_resize': 1,
       \ 'source_names': 'short',
@@ -75,11 +75,9 @@ function! s:denite_filter_my_settings() abort
         \ <Esc><C-w>p:call cursor(line('.')-1,0)<CR><C-w>pA
 endfunction
 
-" Change file/rec command.
 call denite#custom#var('file/rec', 'command',
       \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 
-" Ag command on grep source
 call denite#custom#var('grep', {
       \ 'command': ['ag'],
       \ 'default_opts': ['-i', '--vimgrep'],

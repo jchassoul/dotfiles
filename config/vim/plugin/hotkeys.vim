@@ -1,7 +1,8 @@
-" cycle through location list
+" ALE cycle through location list
 nmap <silent> <leader>n <Plug>(ale_next_wrap)
 nmap <silent> <leader>p <Plug>(ale_previous_wrap)
 
+" Custom
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
@@ -41,6 +42,7 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
+" Fun keys
 nnoremap <F1> :tab h<CR>
 nnoremap <F3> :Dirvish<CR>
 nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
