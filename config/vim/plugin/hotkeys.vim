@@ -33,15 +33,6 @@ nnoremap <silent> <C-Down> :resize -5<CR>
 " Replace
 nnoremap R :%s//gI<Left><Left><Left>
 
-" T Suite
-" TODO: WTF ARE THIS HOTKEYS? t Control wut?
-
-nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> t<C-f> :TestFile<CR>
-nmap <silent> t<C-s> :TestSuite<CR>
-nmap <silent> t<C-l> :TestLast<CR>
-nmap <silent> t<C-g> :TestVisit<CR>
-
 " Fun keys
 nnoremap <F1> :tab h<CR>
 nnoremap <F3> :Dirvish<CR>
@@ -50,8 +41,9 @@ nnoremap <F5> :UndotreeToggle<CR>
 nmap <F7> :CalendarT<CR>
 
 " Condition should identify terminal in question so
-"  TODO missing f3 and f4 keys and test this shit yo!
+
 " that it won't change anything for terminals without this problem
+
 if !has("gui_running") && $TERM is "xterm-256color"
     for [key, code] in [["<F1>", "\eOP"],
                 \["<F2>", "\eOQ"],
@@ -60,3 +52,12 @@ if !has("gui_running") && $TERM is "xterm-256color"
         execute "set" key."=".code
     endfor
 endif
+
+" Test Suite
+" TODO: WTF ARE THIS HOTKEYS? t Control wut?
+
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
