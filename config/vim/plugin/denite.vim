@@ -1,5 +1,5 @@
 let s:denite_options = {
-      \ 'prompt' : 'λ',
+      \ 'prompt' : '>',
       \ 'start_filter': 1,
       \ 'auto_resize': 1,
       \ 'source_names': 'short',
