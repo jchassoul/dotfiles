@@ -8,33 +8,21 @@ let s:denite_options = {
       \ 'highlight_matched_char': 'Type',
       \ }
 
-augroup denite_setup
-  autocmd!
-
-  autocmd FileType * call denite#custom#option('_', 'statusline', v:false)
-
-  autocmd FileType * call denite#custom#source(
-        \ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
-
-  autocmd FileType * call denite#custom#source('tag', 'matchers', ['matcher/substring'])
-
-  autocmd FileType * call denite#custom#source('file/old', 'converters',
-        \ ['converter/relative_word'])
-
-  autocmd FileType * call denite#custom#source(
-        \ 'file/rec', 'sorters', ['sorter/sublime'])
-
-  autocmd FileType * call denite#custom#alias('source', 'file/rec/git', 'file/rec')
-
-  autocmd FileType * call denite#custom#var('file/rec/git', 'command',
-        \ ['git', 'ls-files', '-co', '--exclude-standard'])
-
-  autocmd FileType * call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
-        \ [ '.git/', '.ropeproject/', '__pycache__/',
-        \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
-  " setup custom default options
-  autocmd FileType * call denite#custom#option('default', s:denite_options)
-augroup END
+call denite#custom#option('_', 'statusline', v:false)
+call denite#custom#source(
+      \ 'file_mru', 'matchers', ['matcher/fuzzy', 'matcher/project_files'])
+call denite#custom#source('tag', 'matchers', ['matcher/substring'])
+call denite#custom#source('file/old', 'converters',
+      \ ['converter/relative_word'])
+call denite#custom#source(
+      \ 'file/rec', 'sorters', ['sorter/sublime'])
+call denite#custom#alias('source', 'file/rec/git', 'file/rec')
+call denite#custom#var('file/rec/git', 'command',
+      \ ['git', 'ls-files', '-co', '--exclude-standard'])
+call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
+      \ [ '.git/', '.ropeproject/', '__pycache__/',
+      \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
+call denite#custom#option('default', s:denite_options)
 
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
@@ -90,4 +78,3 @@ call denite#custom#var('grep', {
 call denite#custom#alias('source', 'file/rec/py', 'file/rec')
 call denite#custom#var('file/rec/py', 'command',
       \ ['scantree.py', '--path', ':directory'])
-
