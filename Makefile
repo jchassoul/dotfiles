@@ -27,6 +27,7 @@ install-bspwm:
 
 install-tmux:
 	rm -f ~/.tmux.conf
+	ln -s `pwd`/config/tmux/tmux-colors ~/.tmux-colors
 	ln -s `pwd`/config/tmux/tmux.conf ~/.tmux.conf
 
 install-desktop:
