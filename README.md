@@ -1,5 +1,5 @@
 ## Installation
-In your home directory:
+In my home directory:
 
     git clone https://github.com/jchassoul/dotfiles.git
 
