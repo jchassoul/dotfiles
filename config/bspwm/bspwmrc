@@ -6,13 +6,16 @@ xmodmap -e "keysym Caps_Lock = Escape" &
 sxhkd &
 unclutter &
 compton -f &
-feh --bg-scale ~/.cache/wal/wal/ &
-wal -R --vte &
+
+feh --bg-scale ~/.config/desktop/background.jpg &
+
 xrdb ~/.Xresources &
 dunst &
 nm-applet &
 blueman-applet &
 polybar topbar &
+
+wal -R --vte &
 
 wmname LG3D &
 

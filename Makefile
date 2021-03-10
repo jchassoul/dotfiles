@@ -27,6 +27,7 @@ install-bspwm:
 
 install-tmux:
 	rm -f ~/.tmux.conf
+	rm -f ~/.tmux-colors
 	ln -s `pwd`/config/tmux/tmux-colors ~/.tmux-colors
 	ln -s `pwd`/config/tmux/tmux.conf ~/.tmux.conf
 
@@ -34,7 +35,6 @@ install-desktop:
 	mkdir -p ~/.config/desktop/
 	rm -f ~/.config/desktop/background.jpg
 	ln -s `pwd`/images/ophelia.jpg ~/.config/desktop/background.jpg
-	wal -i ~/.config/desktop/background.jpg
 	mkdir -p ~/.local/share/applications
 	rm -f ~/.local/share/applications/mimeinfo.cache
 	ln -s `pwd`/config/mime/mimeinfo.cache ~/.local/share/applications/mimeinfo.cache
@@ -63,4 +63,5 @@ install-xr:
 install-fonts:
 	mkdir -p ~/.fonts
 	rm -f ~/.fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf
-	ln -s `pwd`/fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf ~/.fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf
+	ln -s `pwd`/fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf \
+		~/.fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf

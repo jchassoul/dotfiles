@@ -3,7 +3,7 @@ export LANG=en_US.utf8
 export GOPATH=$HOME/go
 export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH
 export MANPATH=$MANPATH:/usr/local/share/man
-export MANPAGER="/bin/sh -c \"col -b | vim --noplugin -c 'set ft=man ts=8 nomod nolist nonu noma cc=' -\""
+export MANPAGER="/bin/mksh -c \"col -b | vim --noplugin -c 'set ft=man ts=8 nomod nolist nonu noma cc=' -\""
 export ERL_AFLAGS="+pc unicode -kernel shell_history enabled"
 export WINEARCH=win32
 export WINEDEBUG=-all
