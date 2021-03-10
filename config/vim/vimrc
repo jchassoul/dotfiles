@@ -64,7 +64,11 @@ set undofile
 set incsearch
 set switchbuf=usetab,newtab
 set noshowmode
-set termguicolors
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
 set guifont=Inconsolata\ Nerd\ Font\ 12
 set t_Co=256
 set t_ut=
@@ -80,7 +84,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.*
 set laststatus=2
 set cursorline
 set colorcolumn=88
-" Fix vt100 fkeys
+" vt100 compatible xterm fkeys fix
 set notimeout          " don't timeout on mappings
 set ttimeout           " do timeout on terminal key codes
 set timeoutlen=100     " timeout after 100 msec
