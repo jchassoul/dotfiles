@@ -8,7 +8,7 @@ nmap <silent> tf :TestFile<CR>
 nmap <silent> ts :TestSuite<CR>
 nmap <silent> tl :TestLast<CR>
 
-" Custom
+" Custom keys
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
