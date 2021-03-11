@@ -84,11 +84,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.*
 set laststatus=2
 set cursorline
 set colorcolumn=88
-" vt100 compatible xterm fkeys fix
-set notimeout          " don't timeout on mappings
-set ttimeout           " do timeout on terminal key codes
-set timeoutlen=100     " timeout after 100 msec
-
 
 highligh ColorColum ctermbg=0 guibg=lightgrey
 

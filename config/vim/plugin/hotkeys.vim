@@ -35,23 +35,10 @@ nnoremap R :%s//gI<Left><Left><Left>
 
 " Fun keys
 nnoremap <F1> :tab h<CR>
-nnoremap <F3> :Dirvish<CR>
-nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
+map <F3> :Dirvish<CR>
+map <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
 nnoremap <F5> :UndotreeToggle<CR>
 nmap <F7> :CalendarT<CR>
-
-" Condition should identify terminal in question so
-
-" that it won't change anything for terminals without this problem
-
-if !has("gui_running") && $TERM is "xterm-256color"
-    for [key, code] in [["<F1>", "\eOP"],
-                \["<F2>", "\eOQ"],
-                \["<F5>", "\e[15~"],
-                \]
-        execute "set" key."=".code
-    endfor
-endif
 
 " Test Suite
 " TODO: WTF ARE THIS HOTKEYS? t Control wut?
