@@ -2,7 +2,7 @@
 nmap <silent> <leader>n <Plug>(ale_next_wrap)
 nmap <silent> <leader>p <Plug>(ale_previous_wrap)
 
-" vim-test
+" Tests on different granularities
 nmap <silent> tn :TestNearest<CR>
 nmap <silent> tf :TestFile<CR>
 nmap <silent> ts :TestSuite<CR>
@@ -28,7 +28,7 @@ nnoremap <leader>f :<C-u>DeniteProjectDir -start-filter grep:::!<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
 
 " Goyo
-map <leader>gy :Goyo<CR>
+map gy :Goyo<CR>
 
 " Resize
 nnoremap <silent> <C-Left> :vertical resize +5<CR>
@@ -45,4 +45,3 @@ nnoremap <F3> :Dirvish<CR>
 nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
 nnoremap <F5> :UndotreeToggle<CR>
 nnoremap <F7> :CalendarT<CR>
-
