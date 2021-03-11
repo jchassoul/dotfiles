@@ -35,8 +35,8 @@ nnoremap R :%s//gI<Left><Left><Left>
 
 " Fun keys
 nnoremap <F1> :tab h<CR>
-map <F3> :Dirvish<CR>
-map <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
+nnoremap <F3> :Dirvish<CR>
+nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
 nnoremap <F5> :UndotreeToggle<CR>
 nmap <F7> :CalendarT<CR>
 
