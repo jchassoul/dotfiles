@@ -5,7 +5,7 @@ nmap <silent> <leader>p <Plug>(ale_previous_wrap)
 " Tests on different granularities
 nmap <silent> tn :TestNearest<CR>
 nmap <silent> tf :TestFile<CR>
-nmap <silent> ts :TestSuite<CR>
+nmap <silent> ts :TestSuite -strategy=vimterminal<CR>
 nmap <silent> tl :TestLast<CR>
 
 " Custom keys
