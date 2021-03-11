@@ -2,6 +2,12 @@
 nmap <silent> <leader>n <Plug>(ale_next_wrap)
 nmap <silent> <leader>p <Plug>(ale_previous_wrap)
 
+" vim-test
+nmap <silent> tn :TestNearest<CR>
+nmap <silent> tf :TestFile<CR>
+nmap <silent> ts :TestSuite<CR>
+nmap <silent> tl :TestLast<CR>
+
 " Custom
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
@@ -38,13 +44,5 @@ nnoremap <F1> :tab h<CR>
 nnoremap <F3> :Dirvish<CR>
 nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
 nnoremap <F5> :UndotreeToggle<CR>
-nmap <F7> :CalendarT<CR>
+nnoremap <F7> :CalendarT<CR>
 
-" Test Suite
-" TODO: WTF ARE THIS HOTKEYS? t Control wut?
-
-nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> t<C-f> :TestFile<CR>
-nmap <silent> t<C-s> :TestSuite<CR>
-nmap <silent> t<C-l> :TestLast<CR>
-nmap <silent> t<C-g> :TestVisit<CR>
