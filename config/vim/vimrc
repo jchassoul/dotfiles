@@ -115,8 +115,8 @@ Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'davisdude/vim-love-docs'
 Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','vimwiki']}
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
-Plug 'jpalardy/vim-slime'
 Plug 'preservim/vimux'
+Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
@@ -184,6 +184,10 @@ let g:startify_custom_header = [
             \"        > Thou shalt not make a machine in the likeness of a human mind.        ",
             \"        - The Orange Catholic Bible.                                            ",
             \"                                                                                "]
+
+" disable continuation of comment permanently
+autocmd FileType * set formatoptions-=cro
+
 autocmd InsertEnter * norm zz
 
 " Load all plugins now.

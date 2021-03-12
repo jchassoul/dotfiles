@@ -12,7 +12,7 @@ feh --bg-scale ~/.config/desktop/background.jpg &
 xrdb ~/.Xresources &
 dunst &
 nm-applet &
-blueman-applet &
+#blueman-applet &
 polybar topbar &
 
 wal -R --vte &
@@ -22,7 +22,7 @@ wmname LG3D &
 bspc monitor DP-1 -d I II III IV V
 bspc monitor eDP-1 -d VI VII VIII IX X
 
-bspc config automatic_scheme spiral
+bspc config automatic_scheme alternate 
 bspc config initial_polarity second_child
 
 bspc config border_width         2

@@ -18,8 +18,6 @@ map <leader>l :ColorToggle<CR>
 map <leader>s :update<CR>
 map <leader>S :setlocal spell! spelllang=en_us<CR>
 map <leader>e :qa!<CR>
-map <leader>c :setlocal formatoptions-=cro<CR>
-map <leader>C :setlocal formatoptions=cro<CR>
 
 " Denite
 nnoremap <leader>q :<C-u>Denite buffer<CR>
