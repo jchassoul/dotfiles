@@ -125,7 +125,7 @@ Plug 'ackyshake/VimCompletesMe'
 Plug 'Shougo/deoplete.nvim', {'for':['python','lua','erlang']}
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['python','lua','erlang']}
+Plug 'jchassoul/deoplete-vim-lsp', {'for':['python','lua','erlang']}
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'SirVer/ultisnips'
 Plug 'prabirshrestha/async.vim'
