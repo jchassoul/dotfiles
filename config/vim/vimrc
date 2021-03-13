@@ -20,6 +20,7 @@ let g:loaded_vimballPlugin=0
 let g:loaded_zip=0
 let g:loaded_zipPlugin=0
 
+" Ps pss psss, psssss!
 let g:python3_host_prog = '/usr/bin/python3'
 
 " Install vim-plug if not found
@@ -132,6 +133,7 @@ Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'thomasfaingnaert/vim-lsp-snippets'
 Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+" TODO: Missing symbols
 Plug 'dense-analysis/ale', {'for':['python','lua','erlang']}
 Plug 'sbdchd/neoformat'
 Plug 'ryanoasis/vim-devicons'
@@ -149,6 +151,7 @@ Plug 'mattn/vim-lsp-settings'
 call plug#end()
 
 colorscheme onehalfdark
+
 " Enable transparent background
 "highlight Normal guibg=NONE
 
