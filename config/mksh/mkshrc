@@ -54,7 +54,7 @@ case "$-" in *i*)
     alias l='ls --color'
     alias ls='ls --color'
     alias t='tmux -2 attach -t shell || tmux -2 new -s shell'
-    alias jc='jupyter-console'
+    alias py='jupyter-console'
     alias jn='cd ~/Documents/notebooks && jupyter notebook&'
     alias gg='git status'
     alias python='python3'
