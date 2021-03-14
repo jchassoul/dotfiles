@@ -1,2 +1,1 @@
-let g:asyncrun_open = 6
-let test#strategy = "vimux"
+let test#strategy = "dispatch"
