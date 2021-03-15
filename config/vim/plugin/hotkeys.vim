@@ -42,4 +42,5 @@ nnoremap <F1> :tab h<CR>
 nnoremap <F3> :Dirvish<CR>
 nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
 nnoremap <F5> :UndotreeToggle<CR>
+inoremap <F5> <C-R>=strftime("%c")<CR>
 nnoremap <F7> :CalendarT<CR>
