@@ -1,10 +1,10 @@
-" enable diagnostics (we may want to use ALE for that).
+" (I use ALE for that).
 let g:lsp_diagnostics_enabled = 0
 
 " show diagnostic signs
 let g:lsp_signs_enabled = 1
-let g:lsp_signs_error = {'text': '✗'}
-let g:lsp_signs_warning = {'text': '!'}
+let g:lsp_signs_error = {'text': ''}
+let g:lsp_signs_warning = {'text': ''}
 let g:lsp_highlights_enabled = 0
 
 " Do not use virtual text, they are far too obtrusive.
