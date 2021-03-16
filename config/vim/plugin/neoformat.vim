@@ -6,10 +6,10 @@ let g:neoformat_enabled_lua = ['luaformat']
 let g:neoformat_enabled_erlang = ['erlfmt']
 
 " Enable alignment
-let g:neoformat_basic_format_align = 1
+let g:neoformat_basic_format_align = 0
 
 " Enable tab to spaces conversion
-let g:neoformat_basic_format_retab = 1
+let g:neoformat_basic_format_retab = 0
 
 " Enable trimmming of trailing whitespace
 let g:neoformat_basic_format_trim = 1

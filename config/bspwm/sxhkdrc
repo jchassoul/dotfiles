@@ -1,27 +1,26 @@
 #!/usr/bin/env sh
+
 #
 # wm independent hotkeys
 #
-
 alt + shift + w
     pcmanfm ~
 
 alt + shift + a
     pcmanfm menu://applications/
 
-alt + shift + r 
+alt + shift + r
     pcmanfm trash:///
 
 alt + shift + c
     thunderbird
 
-alt + shift + d 
-    pcmanfm ~/Downloads 
+alt + shift + d
+    pcmanfm ~/Downloads
 
-alt + shift + f 
+alt + shift + f
     google-chrome
 
-#
 # polybar toggle
 alt + shift + space
     {polybar-msg cmd toggle; bspc config top_padding +0 ,\
@@ -50,11 +49,11 @@ XF86AudioPrev
 
 # terminal emulator
 shift + Return
-    termite	
+    termite
 
 # program launcher
-alt + d 
-    dmenu_run -nb '#3a3a3a' -nf '#cceceb' -sb '#474C68' -sf '#cceceb' 
+alt + d
+    dmenu_run -nb '#3a3a3a' -nf '#cceceb' -sb '#474C68' -sf '#cceceb'
 
 #
 # bspwm hotkeys

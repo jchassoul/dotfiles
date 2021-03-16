@@ -117,6 +117,7 @@ Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'davisdude/vim-love-docs'
 Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','vimwiki']}
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
+Plug 'kovetskiy/sxhkd-vim'
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
