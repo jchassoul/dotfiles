@@ -2,7 +2,7 @@
 let g:lsp_diagnostics_enabled = 0
 
 " show diagnostic signs
-let g:lsp_signs_enabled = 1
+let g:lsp_signs_enabled = 0
 let g:lsp_signs_error = {'text': ''}
 let g:lsp_signs_warning = {'text': ''}
 let g:lsp_highlights_enabled = 0
@@ -12,7 +12,7 @@ let g:lsp_virtual_text_enabled = 0
 " echo a diagnostic message at cursor position
 let g:lsp_diagnostics_echo_cursor = 0
 " show diagnostic in floating window
-let g:lsp_diagnostics_float_cursor = 1
+let g:lsp_diagnostics_float_cursor = 0
 " whether to enable highlight a symbol and its references
 let g:lsp_highlight_references_enabled = 1
 let g:lsp_preview_max_width = 80

@@ -117,12 +117,14 @@ Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'davisdude/vim-love-docs'
 Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','vimwiki']}
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
+Plug 'bentglasstube/vim-bspwm'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
 Plug 'jchassoul/onehalf', {'rtp':'vim'}
+Plug 'luochen1990/rainbow'
 Plug 'ackyshake/VimCompletesMe'
 Plug 'Shougo/deoplete.nvim', {'for':['python','lua','erlang']}
 Plug 'roxma/nvim-yarp'
@@ -154,6 +156,8 @@ colorscheme onehalfdark
 
 " Enable transparent background
 "highlight Normal guibg=NONE
+
+let g:rainbow_active = 1
 
 let g:AutoPairsMapCR = 0
 
