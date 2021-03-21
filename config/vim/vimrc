@@ -83,10 +83,10 @@ set lazyredraw
 set showmatch
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.*
 set laststatus=2
-set cursorline
-set colorcolumn=88
+"set cursorline
+"set colorcolumn=88
 
-highligh ColorColum ctermbg=0 guibg=lightgrey
+"highligh ColorColum ctermbg=0 guibg=lightgrey
 
 " For conceal markers.
 if has('conceal')
@@ -117,7 +117,6 @@ Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'davisdude/vim-love-docs'
 Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','vimwiki']}
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
-Plug 'bentglasstube/vim-bspwm'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
@@ -155,7 +154,7 @@ call plug#end()
 colorscheme onehalfdark
 
 " Enable transparent background
-"highlight Normal guibg=NONE
+highlight Normal guibg=NONE
 
 let g:rainbow_active = 1
 
