@@ -125,10 +125,9 @@ alt + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
-# preselect "manual tiling"
+# preselect "manual tiling" direction
 #
 
-# preselect the direction
 alt + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
