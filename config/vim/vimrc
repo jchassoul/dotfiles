@@ -123,18 +123,18 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
 Plug 'jchassoul/onehalf', {'rtp':'vim'}
-Plug 'luochen1990/rainbow'
+Plug 'luochen1990/rainbow', {'for':['python','lua','erlang']}
 Plug 'ackyshake/VimCompletesMe'
 Plug 'Shougo/deoplete.nvim', {'for':['python','lua','erlang']}
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['python','lua','erlang']}
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips', {'for':['python','lua','erlang']}
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'thomasfaingnaert/vim-lsp-snippets'
-Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+Plug 'thomasfaingnaert/vim-lsp-snippets', {'for':['python','lua','erlang']}
+Plug 'thomasfaingnaert/vim-lsp-ultisnips', {'for':['python','lua','erlang']}
 Plug 'dense-analysis/ale', {'for':['python','lua','erlang']}
 Plug 'sbdchd/neoformat'
 Plug 'ryanoasis/vim-devicons'
