@@ -52,12 +52,10 @@ if executable('clangd')
         autocmd User lsp_setup call lsp#register_server({
                     \ 'name': 'clangd',
                     \ 'cmd': {server_info->['clangd']},
-                    \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+                    \ 'whitelist': ['c', 'cpp'],
                     \ })
         autocmd FileType c setlocal omnifunc=lsp#complete
         autocmd FileType cpp setlocal omnifunc=lsp#complete
-        autocmd FileType objc setlocal omnifunc=lsp#complete
-        autocmd FileType objcpp setlocal omnifunc=lsp#complete
     augroup end
 endif
 
