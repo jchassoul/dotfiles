@@ -17,6 +17,8 @@ let g:lsp_diagnostics_float_cursor = 0
 let g:lsp_highlight_references_enabled = 1
 let g:lsp_preview_max_width = 80
 
+let g:lsp_document_code_action_signs_enabled = 0
+
 let g:lsp_settings_filetype_lua = ['sumneko-lua-language-server']
 let g:lsp_settings_filetype_erlang = ['erlang-ls']
 
@@ -42,6 +44,21 @@ if executable('pyls')
           \        }
           \ }})
   augroup END
+endif
+
+if executable('clangd')
+    augroup lsp_clangd
+        autocmd!
+        autocmd User lsp_setup call lsp#register_server({
+                    \ 'name': 'clangd',
+                    \ 'cmd': {server_info->['clangd']},
+                    \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+                    \ })
+        autocmd FileType c setlocal omnifunc=lsp#complete
+        autocmd FileType cpp setlocal omnifunc=lsp#complete
+        autocmd FileType objc setlocal omnifunc=lsp#complete
+        autocmd FileType objcpp setlocal omnifunc=lsp#complete
+    augroup end
 endif
 
 function! s:on_lsp_buffer_enabled() abort
