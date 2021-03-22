@@ -20,7 +20,7 @@ map <leader>S :setlocal spell! spelllang=en_us<CR>
 map <leader>e :qa!<CR>
 
 " Denite
-nnoremap <leader>q :<C-u>Denite buffer<CR>
+nnoremap <leader>qa :<C-u>Denite buffer<CR>
 nnoremap <leader>w :<C-u>DeniteCursorWord grep:.<CR>
 nnoremap <leader>f :<C-u>DeniteProjectDir -start-filter grep:::!<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
@@ -46,4 +46,11 @@ inoremap <F5> <C-R>=strftime("%c")<CR>
 nnoremap <F7> :CalendarT<CR>
 
 " Quickfix
-nnoremap <leader>l :lopen<CR>
+
+vmap <silent> <unique> <c-g> y:vimgrep "<c-r>"" **/**.*<CR>
+
+nnoremap <leader>qe :copen<CR>
+nnoremap <leader>j :cnext<CR>
+nnoremap <leader>k :cprev<CR>
+nnoremap <leader>qw :lopen<CR>
+nnoremap <leader>qq :cclose<CR>
