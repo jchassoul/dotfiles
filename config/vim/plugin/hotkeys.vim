@@ -15,14 +15,14 @@ map <leader>t :tabnew<CR>
 map <leader>j :SlimeSend1 ipython --matplotlib<CR>
 nnoremap <Leader>jq :SlimeSend1 exit<CR>
 map <leader>l :ColorToggle<CR>
-map <leader>s :update<CR>
+map <leader>x :update<CR>
 map <leader>S :setlocal spell! spelllang=en_us<CR>
 map <leader>e :qa!<CR>
 
 " Denite
-nnoremap <leader>qa :<C-u>Denite buffer<CR>
+nnoremap <leader>f :<C-u>Denite buffer<CR>
 nnoremap <leader>w :<C-u>DeniteCursorWord grep:.<CR>
-nnoremap <leader>f :<C-u>DeniteProjectDir -start-filter grep:::!<CR>
+nnoremap <leader>s :<C-u>DeniteProjectDir -start-filter grep:::!<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
 
 " Goyo
