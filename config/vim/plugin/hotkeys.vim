@@ -53,7 +53,6 @@ inoremap <F5> <C-R>=strftime("%c")<CR>
 nnoremap <F7> :CalendarT<CR>
 
 " Quickfix
-
 vmap <silent> <unique> <c-g> y:vimgrep "<c-r>"" **/**.*<CR>
 
 nnoremap <leader>qe :copen<CR>
