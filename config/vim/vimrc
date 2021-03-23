@@ -156,6 +156,8 @@ colorscheme onehalfdark
 " Enable transparent background
 highlight Normal guibg=NONE
 
+let mapleader = "\<Space>"
+
 let g:rainbow_active = 1
 
 let g:AutoPairsMapCR = 0
