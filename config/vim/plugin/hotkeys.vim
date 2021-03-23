@@ -38,9 +38,9 @@ nnoremap <silent> <C-Down> :resize -5<CR>
 nnoremap R :%s//gI<Left><Left><Left>
 
 " Git
-nmap <leader>gs :G<CR>
-nmap <leader>gf :diffget //3<CR>
-nmap <leader>gj :diffget //2<CR>
+nmap gg :G<CR>
+nmap <leader>gj :diffget //3<CR>
+nmap <leader>gf :diffget //2<CR>
 nmap <leader>gc :Git commit<CR>
 nmap <leader>gg :Git push<CR>
 
