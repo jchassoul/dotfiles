@@ -41,6 +41,7 @@ nnoremap R :%s//gI<Left><Left><Left>
 nmap gg :G<CR>
 nmap gj :diffget //3<CR>
 nmap gf :diffget //2<CR>
+nnoremap ga :Git fetch --all<CR>
 nnoremap gl :Git pull<CR>
 nmap gc :Git commit<CR>
 nmap gp :Git push<CR>
