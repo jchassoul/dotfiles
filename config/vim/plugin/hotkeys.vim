@@ -46,14 +46,6 @@ nnoremap gl :Git pull<CR>
 nmap gc :Git commit<CR>
 nmap gp :Git push<CR>
 
-" Fun keys
-nnoremap <F1> :tab h<CR>
-nnoremap <F3> :Dirvish<CR>
-nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
-nnoremap <F5> :UndotreeToggle<CR>
-inoremap <F5> <C-R>=strftime("%c")<CR>
-nnoremap <F7> :CalendarT<CR>
-
 " Quickfix
 vmap <silent> <unique> <c-g> y:vimgrep "<c-r>"" **/**.*<CR>
 
@@ -62,3 +54,11 @@ nnoremap <leader>j :cnext<CR>
 nnoremap <leader>k :cprev<CR>
 nnoremap <leader>qw :lopen<CR>
 nnoremap <leader>qq :cclose<CR>
+
+" Fun keys
+nnoremap <F1> :tab h<CR>
+nnoremap <F3> :Dirvish<CR>
+nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
+nnoremap <F5> :UndotreeToggle<CR>
+inoremap <F5> <C-R>=strftime("%c")<CR>
+nnoremap <F7> :CalendarT<CR>
