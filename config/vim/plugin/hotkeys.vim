@@ -41,8 +41,8 @@ nnoremap R :%s//gI<Left><Left><Left>
 nmap <leader>gs :G<CR>
 nmap <leader>gf :diffget //3<CR>
 nmap <leader>gj :diffget //2<CR>
-nmap <leader>gc :Gcommit<CR>
-nmap <leader>gg :Gpush<CR>
+nmap <leader>gc :Git commit<CR>
+nmap <leader>gg :Git push<CR>
 
 " Fun keys
 nnoremap <F1> :tab h<CR>
