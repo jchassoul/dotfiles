@@ -37,6 +37,13 @@ nnoremap <silent> <C-Down> :resize -5<CR>
 " Replace
 nnoremap R :%s//gI<Left><Left><Left>
 
+" Git
+nmap <leader>gs :G<CR>
+nmap <leader>gf :diffget //3<CR>
+nmap <leader>gj :diffget //2<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gg :Gpush<CR>
+
 " Fun keys
 nnoremap <F1> :tab h<CR>
 nnoremap <F3> :Dirvish<CR>
