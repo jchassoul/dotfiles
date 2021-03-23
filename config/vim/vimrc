@@ -146,6 +146,7 @@ Plug 'chrisbra/Colorizer'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
 Plug 'fisadev/vim-isort', {'for':'python'}
+Plug 'severin-lemaignan/vim-minimap' " cuz why not
 Plug 'mattn/vim-lsp-settings'
 
 " List ends here. Plugins become visible to Vim after this call.
