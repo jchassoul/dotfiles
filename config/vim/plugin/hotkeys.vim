@@ -39,10 +39,10 @@ nnoremap R :%s//gI<Left><Left><Left>
 
 " Git
 nmap gg :G<CR>
-nmap <leader>gj :diffget //3<CR>
-nmap <leader>gf :diffget //2<CR>
-nmap <leader>gc :Git commit<CR>
-nmap <leader>gg :Git push<CR>
+nmap gj :diffget //3<CR>
+nmap gf :diffget //2<CR>
+nmap gc :Git commit<CR>
+nmap gp :Git push<CR>
 
 " Fun keys
 nnoremap <F1> :tab h<CR>
