@@ -61,7 +61,7 @@ nnoremap <leader>k :cprev<CR>
 nnoremap <leader>qw :lopen<CR>
 nnoremap <leader>qq :cclose<CR>
 
-" Fun keys
+" F keys
 nnoremap <F1> :tab h<CR>
 nnoremap <F3> :Dirvish<CR>
 nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
