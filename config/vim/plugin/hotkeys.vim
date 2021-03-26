@@ -55,9 +55,9 @@ nnoremap <leader>k :cprev<CR>
 nnoremap <leader>qw :lopen<CR>
 nnoremap <leader>qq :cclose<CR>
 
-nnoremap <leader>cg : CMakeGenerate<CR>
-nnoremap <leader>cb : CMakeBuild <CR>
-nnoremap <leader>ct : CMakeBuild test<CR>
+nnoremap cg : CMakeGenerate<CR>
+nnoremap cb : CMakeBuild<CR>
+nnoremap ct : CMakeBuild test<CR>
 
 " Fun keys
 nnoremap <F1> :tab h<CR>
