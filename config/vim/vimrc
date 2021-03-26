@@ -166,6 +166,8 @@ let g:rainbow_active = 1
 
 let g:AutoPairsMapCR = 0
 
+let g:cmake_link_compile_commands = 1
+
 " Disable continuation of comment permanently
 autocmd FileType * set formatoptions-=cro
 
