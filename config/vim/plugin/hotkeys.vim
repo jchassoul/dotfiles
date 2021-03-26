@@ -6,9 +6,9 @@ nmap <silent> <leader>p <Plug>(ale_previous_wrap)
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
-map <leader>j :SlimeSend1 ipython --matplotlib<CR>
+map <leader>gj :SlimeSend1 ipython --matplotlib<CR>
 nnoremap <Leader>jq :SlimeSend1 exit<CR>
-map <leader>l :ColorToggle<CR>
+map <leader>tc :ColorToggle<CR>
 map <leader>s :update<CR>
 map <leader>S :setlocal spell! spelllang=en_us<CR>
 map <leader>e :qa!<CR>
