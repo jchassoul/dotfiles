@@ -110,7 +110,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'machakann/vim-sandwich'
 Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/goyo.vim', {'for':['markdown','vimwiki']}
-Plug 'junegunn/limelight.vim', {'for':['markdown','vimwiki']}
 Plug 'Shougo/denite.nvim'
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
@@ -123,19 +122,23 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
 Plug 'jchassoul/onehalf', {'rtp':'vim'}
-Plug 'luochen1990/rainbow', {'for':['python','lua','erlang']}
+Plug 'luochen1990/rainbow', {'for':['c','cpp','python','lua','erlang']}
 Plug 'ackyshake/VimCompletesMe'
-Plug 'Shougo/deoplete.nvim', {'for':['python','lua','erlang']}
+Plug 'Shougo/deoplete.nvim', {'for':['c','cpp','python','lua','erlang']}
+Plug 'Shougo/neoinclude.vim'
+Plug 'Shougo/deoplete-clangx'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['python','lua','erlang']}
+Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['c','cpp','python','lua','erlang']}
+Plug 'cdelledonne/vim-cmake'
+Plug 'nacitar/a.vim'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'SirVer/ultisnips', {'for':['python','lua','erlang']}
+Plug 'SirVer/ultisnips', {'for':['c','cpp','python','lua','erlang']}
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'thomasfaingnaert/vim-lsp-snippets', {'for':['python','lua','erlang']}
-Plug 'thomasfaingnaert/vim-lsp-ultisnips', {'for':['python','lua','erlang']}
-Plug 'dense-analysis/ale', {'for':['python','lua','erlang']}
+Plug 'thomasfaingnaert/vim-lsp-snippets', {'for':['c','cpp','python','lua','erlang']}
+Plug 'thomasfaingnaert/vim-lsp-ultisnips', {'for':['c','cpp','python','lua','erlang']}
+Plug 'dense-analysis/ale', {'for':['c','cpp','python','lua','erlang']}
 Plug 'sbdchd/neoformat'
 Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
@@ -155,7 +158,7 @@ call plug#end()
 colorscheme onehalfdark
 
 " Enable transparent background
-highlight Normal guibg=NONE
+"highlight Normal guibg=NONE
 
 let mapleader = "\<Space>"
 

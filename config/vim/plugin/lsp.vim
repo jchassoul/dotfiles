@@ -23,6 +23,7 @@ let g:lsp_settings_filetype_lua = ['sumneko-lua-language-server']
 let g:lsp_settings_filetype_erlang = ['erlang-ls']
 
 let g:lsp_settings = {
+      \ 'clangd': {'cmd':['clangd-8']},
       \ 'erlang-ls': {'cmd': $HOME . '/.local/share/vim-lsp-settings/servers/erlang-ls/_build/default/bin/erlang_ls --transport stdio '}
       \}
 
@@ -46,16 +47,14 @@ if executable('pyls')
   augroup END
 endif
 
-if executable('clangd')
+if executable('clangd-8')
     augroup lsp_clangd
         autocmd!
         autocmd User lsp_setup call lsp#register_server({
-                    \ 'name': 'clangd',
-                    \ 'cmd': {server_info->['clangd']},
-                    \ 'whitelist': ['c', 'cpp'],
-                    \ })
-        autocmd FileType c setlocal omnifunc=lsp#complete
-        autocmd FileType cpp setlocal omnifunc=lsp#complete
+              \ 'name': 'clangd',
+              \ 'cmd': {server_info->['clangd-8']},
+              \ 'whitelist': ['c', 'cpp'],
+              \ })
     augroup end
 endif
 
