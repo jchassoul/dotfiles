@@ -1,12 +1,6 @@
-" ALE cycle through location list
+" cycle through location list
 nmap <silent> <leader>n <Plug>(ale_next_wrap)
 nmap <silent> <leader>p <Plug>(ale_previous_wrap)
-
-" Tests on different granularities
-nmap <silent> tn :TestNearest<CR>
-nmap <silent> tf :TestFile<CR>
-nmap <silent> ts :TestSuite -strategy=vimterminal<CR>
-nmap <silent> tl :TestLast<CR>
 
 " Custom keys
 map <leader>- :split<CR>
@@ -46,6 +40,18 @@ nnoremap gl :Git pull<CR>
 nmap gc :Git commit<CR>
 nmap gp :Git push<CR>
 
+" CMake
+nnoremap cg : CMakeGenerate<CR>
+nnoremap cb : CMakeBuild<CR>
+
+" Tests on different granularities
+nnoremap ct : CMakeBuild test<CR>
+
+nmap <silent> tn :TestNearest<CR>
+nmap <silent> tf :TestFile<CR>
+nmap <silent> ts :TestSuite -strategy=vimterminal<CR>
+nmap <silent> tl :TestLast<CR>
+
 " Quickfix
 vmap <silent> <unique> <c-g> y:vimgrep "<c-r>"" **/**.*<CR>
 
@@ -54,10 +60,6 @@ nnoremap <leader>j :cnext<CR>
 nnoremap <leader>k :cprev<CR>
 nnoremap <leader>qw :lopen<CR>
 nnoremap <leader>qq :cclose<CR>
-
-nnoremap cg : CMakeGenerate<CR>
-nnoremap cb : CMakeBuild<CR>
-nnoremap ct : CMakeBuild test<CR>
 
 " Fun keys
 nnoremap <F1> :tab h<CR>
