@@ -29,28 +29,28 @@ nnoremap <silent> <C-Up> :resize +5<CR>
 nnoremap <silent> <C-Down> :resize -5<CR>
 
 " Replace
-nnoremap R :%s//gI<Left><Left><Left>
+nnoremap <leader>R :%s//gI<Left><Left><Left>
 
 " Git
-nmap gg :G<CR>
-nmap gj :diffget //3<CR>
-nmap gf :diffget //2<CR>
-nnoremap ga :Git fetch --all<CR>
-nnoremap gl :Git pull<CR>
-nmap gc :Git commit<CR>
-nmap gp :Git push<CR>
+nnoremap <leader>gg :G<CR>
+nnoremap <leader>gj :diffget //3<CR>
+nnoremap <leader>gf :diffget //2<CR>
+nnoremap <leader>ga :Git fetch --all<CR>
+nnoremap <leader>gl :Git pull<CR>
+nnoremap <leader>gc :Git commit<CR>
+nnoremap <leader>gp :Git push<CR>
 
 " CMake
-nnoremap cg : CMakeGenerate<CR>
-nnoremap cb : CMakeBuild<CR>
+nnoremap <leader>cg : CMakeGenerate<CR>
+nnoremap <leader>cb : CMakeBuild<CR>
 
 " Tests on different granularities
-nnoremap ct : CMakeBuild test<CR>
+nnoremap <leader>ct : CMakeBuild test<CR>
 
-nmap <silent> tn :TestNearest<CR>
-nmap <silent> tf :TestFile<CR>
-nmap <silent> ts :TestSuite -strategy=vimterminal<CR>
-nmap <silent> tl :TestLast<CR>
+nnoremap <leader>tn :TestNearest<CR>
+nnoremap <leader>tf :TestFile<CR>
+nnoremap <leader>ts :TestSuite -strategy=vimterminal<CR>
+nnoremap <leader>tl :TestLast<CR>
 
 " Quickfix
 vmap <silent> <unique> <c-g> y:vimgrep "<c-r>"" **/**.*<CR>

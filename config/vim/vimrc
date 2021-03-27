@@ -106,7 +106,6 @@ Plug 'tpope/vim-dispatch'
 Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
 Plug 'farmergreg/vim-lastplace'
-Plug 'easymotion/vim-easymotion'
 Plug 'machakann/vim-sandwich'
 Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/goyo.vim', {'for':['markdown','vimwiki']}
