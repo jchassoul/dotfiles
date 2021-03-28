@@ -130,7 +130,6 @@ Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['c','cpp','python','lua','erlang']}
 Plug 'cdelledonne/vim-cmake'
-Plug 'nacitar/a.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'SirVer/ultisnips', {'for':['c','cpp','python','lua','erlang']}
 Plug 'prabirshrestha/async.vim'
