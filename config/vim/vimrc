@@ -118,7 +118,8 @@ Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
+Plug 'tmsvg/pear-tree'
 Plug 'mbbill/undotree'
 Plug 'jchassoul/onehalf', {'rtp':'vim'}
 Plug 'luochen1990/rainbow', {'for':['c','cpp','python','lua','erlang']}
