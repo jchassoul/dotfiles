@@ -48,7 +48,7 @@ XF86AudioPrev
     cmus-remote --prev
 
 # terminal emulator
-shift + Return
+super + Return
     termite
 
 # program launcher
