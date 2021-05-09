@@ -12,11 +12,6 @@ install-kitty:
 	rm -f ~/.config/kitty/kitty.conf
 	ln -s `pwd`/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
-install-termite:
-	mkdir -p ~/.config/termite
-	rm -f ~/.config/termite/config
-	ln -s `pwd`/config/termite/config ~/.config/termite/config
-
 install-bspwm:
 	mkdir -p ~/.config/bspwm
 	mkdir -p ~/.config/sxhkd
