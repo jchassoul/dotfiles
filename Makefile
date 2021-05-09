@@ -1,4 +1,4 @@
-install: install-termite install-bspwm install-tmux install-desktop\
+install: install-kitty install-bspwm install-tmux install-desktop\
 	install-mksh install-vim install-xr install-xs install-fonts
 
 git: install-git
@@ -6,6 +6,11 @@ git: install-git
 install-git:
 	rm -f ~/.gitconfig
 	ln -s `pwd`/config/git/gitconfig ~/.gitconfig
+
+install-kitty:
+	mkdir -p ~/.config/kitty
+	rm -f ~/.config/kitty/kitty.conf
+	ln -s `pwd`/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 install-termite:
 	mkdir -p ~/.config/termite
