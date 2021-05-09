@@ -19,7 +19,7 @@ alt + shift + d
     pcmanfm ~/Downloads
 
 alt + shift + f
-    google-chrome
+    firefox
 
 # polybar toggle
 #alt + shift + space
@@ -49,7 +49,7 @@ XF86AudioPrev
 
 # terminal emulator
 super + Return
-    termite
+    kitty
 
 # program launcher
 alt + d
