@@ -51,6 +51,7 @@ case "$-" in *i*)
     alias a='cd ~/vault'
     alias d='cd ~/dotfiles'
     alias q='cd ~'
+    alias icat='kitty +kitten icat'
     alias v='vim'
     alias l='ls --color'
     alias ls='ls --color'
