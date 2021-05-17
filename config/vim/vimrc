@@ -105,6 +105,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-dispatch'
 Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
+Plug 'szw/vim-maximizer'
 Plug 'farmergreg/vim-lastplace'
 Plug 'machakann/vim-sandwich'
 Plug 'machakann/vim-highlightedyank'
@@ -165,6 +166,8 @@ let g:rainbow_active = 1
 let g:AutoPairsMapCR = 0
 
 let g:cmake_link_compile_commands = 1
+
+let g:maximizer_default_mapping_key = '<F2>'
 
 " Disable continuation of comment permanently
 autocmd FileType * set formatoptions-=cro
