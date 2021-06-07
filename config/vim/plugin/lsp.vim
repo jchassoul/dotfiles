@@ -64,7 +64,7 @@ function! s:on_lsp_buffer_enabled() abort
   " some mappings to use, tweak as you wish.
   nmap <buffer> gd <plug>(lsp-definition)
   nmap <buffer> gr <plug>(lsp-references)
-  nmap <buffer> <F2> <plug>(lsp-rename)
+  nmap <buffer> <F6> <plug>(lsp-rename)
 endfunction
 
 augroup lsp_install
