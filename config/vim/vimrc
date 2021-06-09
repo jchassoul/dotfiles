@@ -83,10 +83,6 @@ set lazyredraw
 set showmatch
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar.*
 set laststatus=2
-"set cursorline
-"set colorcolumn=88
-
-"highligh ColorColum ctermbg=0 guibg=lightgrey
 
 " For conceal markers.
 if has('conceal')
@@ -141,9 +137,11 @@ Plug 'dense-analysis/ale', {'for':['c','cpp','python','lua','erlang']}
 Plug 'sbdchd/neoformat'
 Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-cursorword'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
+Plug 'tricktux/pomodoro.vim'
 Plug 'chrisbra/Colorizer'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
@@ -169,7 +167,19 @@ let g:cmake_link_compile_commands = 1
 
 let g:maximizer_default_mapping_key = '<F2>'
 
-" Disable continuation of comment permanently
+" Duration of a pomodoro in minutes (default: 25)
+let g:pomodoro_time_work = 25
+
+" Duration of a break in minutes (default: 5)
+let g:pomodoro_time_slack = 5
+
+" Log completed pomodoros, 0 = False, 1 = True (default: 0)
+let g:pomodoro_do_log = 0
+
+" System-wide notifications via zenity
+let g:pomodoro_notification_cmd = 'zenity --notification --text="Pomodoro finished"'
+
+"Disable continuation of comment permanently
 autocmd FileType * set formatoptions-=cro
 
 autocmd InsertEnter * norm zz
