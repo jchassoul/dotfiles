@@ -157,3 +157,5 @@ apt clean
 apt remove yelp -y
 
 apt autoremove -y
+
+chsh --shell /bin/mksh
