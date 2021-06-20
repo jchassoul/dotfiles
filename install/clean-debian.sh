@@ -4,6 +4,9 @@ echo export LC_ALL="en_US.UTF-8"
 echo export LANG="en_US.UTF-8"
 echo export LANGUAGE="en_US.UTF-8"
 
+echo "deb http://ftp.debian.org/debian stretch-backports main" |
+sudo tee /etc/apt/sources.list.d/backports.list
+
 apt update
 
 apt install --install-recommends \
@@ -24,7 +27,7 @@ apt install --install-recommends \
     libreadline-dev\
     libffi-dev\
     uuid-dev\
-    libgpgme11-dev\
+    libgpgme-dev\
     libseccomp-dev\
     pkg-config\
     squashfs-tools\
@@ -98,7 +101,6 @@ apt install --install-recommends \
     tmux\
     runit\
     bspwm\
-    polybar\
     lightdm\
     pcmanfm\
     transmission\
@@ -135,7 +137,6 @@ apt install --install-recommends \
     libntlm0\
     libpangoxft-1.0-0\
     librsvg2-bin\
-    libsass0\
     libxml2-utils\
     mailutils\
     mailutils-common\
@@ -146,6 +147,8 @@ apt install --install-recommends \
     sassc\
     sysstat\
  -y
+
+apt -t buster-backports install polybar -y
 
 apt clean
 
