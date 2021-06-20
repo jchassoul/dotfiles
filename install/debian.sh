@@ -13,12 +13,15 @@ apt update
 # clean the ones that are trash or unecessary
 #
 
+apt -y install --install-recommends vim git apt-transport-https\
+    gnupg2 software-properties-common curl less
+
+apt-add-repository contrib
+
+apt-add-repository non-free
+
 apt install --install-recommends \
-    apt-transport-https\
     debootstrap\
-    gnupg2\
-    software-properties-common\
-    curl\
     libyaml-0-2\
     libyaml-dev\
     libsdl2-ttf-dev\
@@ -40,7 +43,6 @@ apt install --install-recommends \
     tcpdump\
     sngrep\
     libnotify-bin\
-    git\
     g++\
     wget\
     mksh\
@@ -99,9 +101,7 @@ apt install --install-recommends \
     linux-image-amd64\
     live-boot\
     systemd-sysv\
-    curl\
     vim-athena\
-    less\
     tmux\
     runit\
     bspwm\
