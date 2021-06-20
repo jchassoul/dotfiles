@@ -133,6 +133,7 @@ apt install --install-recommends \
     gir1.2-gtk-3.0\
     gir1.2-pango-1.0\
     gtk2-engines-murrine\
+    exuberant-ctags\
     guile-2.0-libs\
     libgdk-pixbuf2.0-dev\
     libgsasl7\
