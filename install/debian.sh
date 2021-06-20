@@ -9,6 +9,10 @@ tee /etc/apt/sources.list.d/backports.list
 
 apt update
 
+#
+# clean the ones that are trash or unecessary
+#
+
 apt install --install-recommends \
     apt-transport-https\
     debootstrap\
