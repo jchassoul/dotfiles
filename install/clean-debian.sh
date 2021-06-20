@@ -4,8 +4,8 @@ echo export LC_ALL="en_US.UTF-8"
 echo export LANG="en_US.UTF-8"
 echo export LANGUAGE="en_US.UTF-8"
 
-echo "deb http://ftp.debian.org/debian stretch-backports main" |
-sudo tee /etc/apt/sources.list.d/backports.list
+echo "deb http://ftp.debian.org/debian buster-backports main" |
+tee /etc/apt/sources.list.d/backports.list
 
 apt update
 
@@ -147,6 +147,8 @@ apt install --install-recommends \
     sassc\
     sysstat\
  -y
+
+apt install linux-headers-$(uname -r) -y
 
 apt -t buster-backports install polybar -y
 
