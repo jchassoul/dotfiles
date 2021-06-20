@@ -42,6 +42,7 @@ install-desktop:
 install-mksh:
 	rm -f ~/.mkshrc
 	ln -s `pwd`/config/mksh/mkshrc ~/.mkshrc
+	chsh --shell /bin/mksh
 
 install-vim:
 	rm -Rf ~/.vim

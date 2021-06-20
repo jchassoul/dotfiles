@@ -145,6 +145,7 @@ apt install --install-recommends \
     parallel\
     python3-pil\
     sassc\
+    suckless-tools\
     sysstat\
  -y
 
