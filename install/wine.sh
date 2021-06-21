@@ -13,11 +13,6 @@ apt -y install --install-recommends libgnutls30:i386 libldap-2.4-2:i386\
 
 # libgaudio from backports!
 
-# missing apt update
-
-# missing apt --fix-broken install
-
-
 wget -nc https://dl.winehq.org/wine-builds/debian/dists/buster/main/binary-i386/winehq-staging_5.13~buster_i386.deb
 wget -nc https://dl.winehq.org/wine-builds/debian/dists/buster/main/binary-i386/wine-staging-i386_5.13~buster_i386.deb
 wget -nc https://dl.winehq.org/wine-builds/debian/dists/buster/main/binary-i386/wine-staging_5.13~buster_i386.deb
@@ -26,16 +21,16 @@ wget -nc https://dl.winehq.org/wine-builds/debian/dists/buster/main/binary-amd64
 wget -nc https://dl.winehq.org/wine-builds/debian/dists/buster/main/binary-amd64/wine-staging-amd64_5.13~buster_amd64.deb
 wget -nc https://dl.winehq.org/wine-builds/debian/dists/buster/main/binary-amd64/wine-staging_5.13~buster_amd64.deb
 
-
-dpkg -i wine-staging_5.13~buster_i386.deb
 dpkg -i wine-staging-i386_5.13~buster_i386.deb
+dpkg -i wine-staging_5.13~buster_i386.deb
 dpkg -i winehq-staging_5.13~buster_i386.deb
-
 
 apt --fix-broken install
 
-dpkg -i wine-staging_5.13~buster_amd64.deb
 dpkg -i wine-staging-amd64_5.13~buster_amd64.deb
+dpkg -i wine-staging_5.13~buster_amd64.deb
 dpkg -i winehq-staging_5.13~buster_amd64.deb
 
 apt --fix-broken install
+
+apt -y install winetricks 
