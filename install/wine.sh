@@ -23,3 +23,6 @@ wget -nc https://dl.winehq.org/wine-builds/debian/dists/buster/main/binary-amd64
 wget -nc https://dl.winehq.org/wine-builds/debian/dists/buster/main/binary-amd64/wine-staging_5.13~buster_amd64.deb
 
 
+dpkg -i wine-staging_5.13~buster_i386.deb
+dpkg -i wine-staging-i386_5.13~buster_i386.deb
+dpkg -i winehq-staging_5.13~buster_i386.deb
