@@ -32,5 +32,3 @@ dpkg -i wine-staging_5.13~buster_amd64.deb
 dpkg -i winehq-staging_5.13~buster_amd64.deb
 
 apt --fix-broken install
-
-apt -y install winetricks 
