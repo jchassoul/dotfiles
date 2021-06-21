@@ -18,4 +18,4 @@ winetricks -q vcrun2012
 
 winetricks -q vcrun2013
 
-winetricks -q dxvk181
+winetricks -q dxvk173
