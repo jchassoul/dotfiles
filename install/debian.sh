@@ -150,6 +150,7 @@ apt install --install-recommends \
     parallel\
     python3-pil\
     sassc\
+    firefox-esr\
     suckless-tools\
     sysstat\
  -y
