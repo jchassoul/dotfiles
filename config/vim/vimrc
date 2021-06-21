@@ -177,7 +177,7 @@ let g:pomodoro_time_slack = 5
 let g:pomodoro_do_log = 0
 
 " System-wide notifications via zenity
-let g:pomodoro_notification_cmd = 'zenity --notification --text="Pomodoro finished"'
+let g:pomodoro_notification_cmd = 'zenity --notification --text="🍅 Pomodoro finished"'
 
 "Disable continuation of comment permanently
 autocmd FileType * set formatoptions-=cro
