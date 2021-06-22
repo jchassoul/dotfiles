@@ -12,7 +12,7 @@ wget -nc https://raw.githubusercontent.com/Winetricks/winetricks/master/src/wine
 
 chmod +x winetricks
 
-WINEARCH=win32 wineboot
+WINEARCH=win64 wineboot
 
 winetricks -q vcrun2012
 
