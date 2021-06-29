@@ -17,9 +17,6 @@ polybar topbar &
 xinput set-button-map 13 1 2 3 0 0 0 0 &
 wal -R --vte &
 
-# do u even sync?
-megasync &
-
 # do u even java?
 #wmname LG3D &
 
