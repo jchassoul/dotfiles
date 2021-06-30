@@ -151,6 +151,7 @@ apt install --install-recommends \
     python3-pil\
     sassc\
     firefox-esr\
+    pamix\
     suckless-tools\
     sysstat\
  -y
