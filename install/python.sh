@@ -1,1 +1,1 @@
-pip3 install riak queries jupyter jupytext pywal pytorch
+pip3 install riak queries jupyter jupyterlab jupytext pywal pytorch
