@@ -128,11 +128,8 @@ Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['c','cpp','python','lua','erlang']}
 Plug 'cdelledonne/vim-cmake'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'SirVer/ultisnips', {'for':['c','cpp','python','lua','erlang']}
 Plug 'prabirshrestha/async.vim'
 Plug 'jchassoul/vim-lsp'
-Plug 'thomasfaingnaert/vim-lsp-snippets', {'for':['c','cpp','python','lua','erlang']}
-Plug 'thomasfaingnaert/vim-lsp-ultisnips', {'for':['c','cpp','python','lua','erlang']}
 Plug 'dense-analysis/ale', {'for':['c','cpp','python','lua','erlang']}
 Plug 'sbdchd/neoformat'
 Plug 'ryanoasis/vim-devicons'
