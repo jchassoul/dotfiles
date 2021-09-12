@@ -114,6 +114,7 @@ Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','vimwiki']}
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'jpalardy/vim-slime'
+Plug 'goerz/jupytext.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
