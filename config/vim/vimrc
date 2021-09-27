@@ -116,6 +116,7 @@ Plug 'baskerville/vim-sxhkdrc'
 Plug 'jpalardy/vim-slime'
 Plug 'goerz/jupytext.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
 Plug 'jchassoul/onehalf', {'rtp':'vim'}
@@ -175,7 +176,7 @@ let g:pomodoro_time_slack = 5
 let g:pomodoro_do_log = 0
 
 " System-wide notifications via zenity
-let g:pomodoro_notification_cmd = 'zenity --notification --text="🍅 Pomodoro finished"'
+let g:pomodoro_notification_cmd = 'zenity --notification --text=" 🍅 🍅 🍅 "'
 
 "Disable continuation of comment permanently
 autocmd FileType * set formatoptions-=cro
