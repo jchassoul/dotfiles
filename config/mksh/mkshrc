@@ -68,4 +68,10 @@ esac
 (cat ~/.cache/wal/sequences &) >/dev/null 2>&1
 
 # Debian 9 activate torch7
-#. /opt/torch/install/bin/torch-activate
+. /opt/torch/install/bin/torch-activate
+
+# Start keychain
+
+/usr/bin/keychain $HOME/.ssh/id_ed25519
+
+source $HOME/.keychain/debian-sh
