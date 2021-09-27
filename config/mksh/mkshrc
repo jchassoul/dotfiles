@@ -71,7 +71,6 @@ esac
 . /opt/torch/install/bin/torch-activate
 
 # Start keychain
-
-/usr/bin/keychain $HOME/.ssh/id_ed25519
+/usr/bin/keychain $HOME/.ssh/id_ed25519 >/dev/null 2>&1
 
 source $HOME/.keychain/debian-sh
