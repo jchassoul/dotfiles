@@ -1,0 +1,24 @@
+auto-reload yes
+download-retries 4
+error-log ~/.newsboat/error.log
+refresh-on-startup yes
+reload-threads 6
+
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+
+# srcery newsboat
+# https://github.com/srcery-colors/srcery-shell
+color info              color15 color235 bold
+color listfocus         color10 color237
+color listfocus_unread  color9  color237
+color listnormal        color7  default
+color listnormal_unread color15 default
+
+# highlights
+highlight article "^(Title):.*$" blue default
+highlight article "https?://[^ ]+" red default
+highlight article "\\[image\\ [0-9]+\\]" green default

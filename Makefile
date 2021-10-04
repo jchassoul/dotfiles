@@ -1,5 +1,6 @@
 install: install-kitty install-bspwm install-tmux install-desktop\
-	install-mksh install-vim install-xr install-xs install-fonts
+	install-mksh install-vim install-xr install-xs install-fonts\
+	install-newsboat install-cmus
 
 git: install-git
 
@@ -66,3 +67,15 @@ install-fonts:
 	rm -f ~/.fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf
 	ln -s `pwd`/fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf \
 		~/.fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf
+
+install-newsboat:
+	mkdir -p ~/.newsboat
+	rm -f ~/.newsboat/config
+	ln -s `pwd`/config/newsboat/config ~/.newsboat/config
+
+install-cmus:
+	mkdir -p ~/.config/cmus/
+	rm -f ~/.config/cmus/rc
+	rm -f ~/.config/cmus/srcery.theme
+	ln -s `pwd`/config/cmus/rc ~/.config/cmus/rc
+	ln -s `pwd`/config/cmus/srcery.theme ~/.config/cmus/srcery.theme
