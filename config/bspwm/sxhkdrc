@@ -19,7 +19,7 @@ alt + shift + d
     pcmanfm ~/Downloads
 
 alt + shift + f
-    firefox-esr
+    google-chrome
 
 # polybar toggle
 #alt + shift + space

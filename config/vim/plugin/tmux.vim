@@ -9,9 +9,3 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 
 "nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
-
-let g:slime_target = "tmux"
-
-let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
-
-let g:slime_dont_ask_default = 1

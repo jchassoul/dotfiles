@@ -1,3 +1,8 @@
+
+
+" review custom keys, there must be something that u are not actually using or needed.
+
+
 " cycle through location list
 nmap <silent> <leader>n <Plug>(ale_next_wrap)
 nmap <silent> <leader>p <Plug>(ale_previous_wrap)
@@ -6,17 +11,14 @@ nmap <silent> <leader>p <Plug>(ale_previous_wrap)
 map <leader>- :split<CR>
 map <leader>\ :vsplit<CR>
 map <leader>t :tabnew<CR>
-map <leader>gj :SlimeSend1 ipython --matplotlib<CR>
-nnoremap <Leader>jq :SlimeSend1 exit<CR>
 map <leader>tc :ColorToggle<CR>
 map <leader>s :update<CR>
 map <leader>S :setlocal spell! spelllang=en_us<CR>
 map <leader>e :qa!<CR>
 
 " Denite
-nnoremap <leader>f :<C-u>Denite buffer<CR>
-nnoremap <leader>w :<C-u>DeniteCursorWord grep:.<CR>
-nnoremap <leader>x :<C-u>DeniteProjectDir -start-filter grep:::!<CR>
+nnoremap <leader>d :<C-u>Denite buffer<CR>
+nnoremap <leader>f :<C-u>DeniteProjectDir -start-filter grep:::!<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
 
 " Goyo
@@ -33,6 +35,7 @@ nnoremap <leader>R :%s//gI<Left><Left><Left>
 
 " Git
 nnoremap <leader>gg :G<CR>
+
 nnoremap <leader>gj :diffget //3<CR>
 nnoremap <leader>gf :diffget //2<CR>
 nnoremap <leader>ga :Git fetch --all<CR>
