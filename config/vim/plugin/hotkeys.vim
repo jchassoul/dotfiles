@@ -1,8 +1,3 @@
-
-
-" review custom keys, there must be something that u are not actually using or needed.
-
-
 " cycle through location list
 nmap <silent> <leader>n <Plug>(ale_next_wrap)
 nmap <silent> <leader>p <Plug>(ale_previous_wrap)
