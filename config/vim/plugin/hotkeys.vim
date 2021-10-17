@@ -16,6 +16,9 @@ nnoremap <leader>d :<C-u>Denite buffer<CR>
 nnoremap <leader>f :<C-u>DeniteProjectDir -start-filter grep:::!<CR>
 nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
 
+" Spelling
+inoremap <silent> <C-w> <C-x><C-k>
+
 " Goyo
 map gy :Goyo<CR>
 
