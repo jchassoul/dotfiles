@@ -125,12 +125,12 @@ Plug 'ackyshake/VimCompletesMe'
 Plug 'Shougo/deoplete.nvim', {'for':['c','cpp','python','lua','erlang']}
 Plug 'Shougo/neoinclude.vim', {'for':['c','cpp']}
 Plug 'Shougo/deoplete-clangx', {'for':['c','cpp']}
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'roxma/nvim-yarp', {'for':['c','cpp','python','lua','erlang']}
+Plug 'roxma/vim-hug-neovim-rpc', {'for':['c','cpp','python','lua','erlang']}
 Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['c','cpp','python','lua','erlang']}
 Plug 'cdelledonne/vim-cmake', {'for':['c','cpp']}
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'prabirshrestha/async.vim'
+Plug 'ludovicchabant/vim-gutentags', {'for':['c','cpp']}
+Plug 'prabirshrestha/async.vim', {'for':['c','cpp','python','lua','erlang']}
 Plug 'dense-analysis/ale', {'for':['c','cpp','python','lua','erlang']}
 Plug 'jchassoul/vim-lsp', {'for':['c','cpp','python','lua','erlang']}
 Plug 'rhysd/vim-lsp-ale', {'for':['c','cpp','python','lua','erlang']}
