@@ -33,5 +33,3 @@ let g:startify_bookmarks = [
                   \ { 'x': '~/work/research/web/spacebeam.org/content/updates' },
                   \ { 'n': '~/Documents/notebooks' },
                   \ ]
-
-
