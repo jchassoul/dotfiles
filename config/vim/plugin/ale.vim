@@ -1,11 +1,14 @@
 " linters for different filetypes
 let g:ale_linters = {
-      \ 'python': ['flake8', 'pylint'],
-      \ 'lua': ['luacheck'],
-      \ 'cpp': ['clang'],
-      \ 'c': ['clang'],
-      \ 'erlang': ['syntaxerl']
+      \ 'python': ['vim-lsp', 'flake8', 'pylint'],
+      \ 'lua': ['vim-lsp', 'luacheck'],
+      \ 'cpp': ['vim-lsp', 'clang'],
+      \ 'c': ['vim-lsp', 'clang'],
+      \ 'erlang': ['vim-lsp', 'syntaxerl']
 \}
+
+" disable ale lsp client
+let g:ale_disable_lsp = 1
 
 " Only run linters in the g:ale_linters dictionary
 let g:ale_linters_explicit = 1
