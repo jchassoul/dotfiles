@@ -27,3 +27,11 @@ let g:startify_custom_header = [
                   \"        > Thou shalt not make a machine in the likeness of a human mind.        ",
                   \"        - The Orange Catholic Bible.                                            ",
                   \"                                                                                "]
+let g:startify_bookmarks = [
+                  \ { 'w': '~/vault/vimwiki/index.md' },
+                  \ { 'd': '~/vault/vimwiki/diary/diary.md' },
+                  \ { 'x': '~/work/research/web/spacebeam.org/content/updates' },
+                  \ { 'n': '~/Documents/notebooks' },
+                  \ ]
+
+
