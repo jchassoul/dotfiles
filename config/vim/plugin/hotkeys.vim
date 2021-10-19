@@ -9,6 +9,7 @@ map <leader>t :tabnew<CR>
 map <leader>tc :ColorToggle<CR>
 map <leader>s :update<CR>
 map <leader>S :setlocal spell! spelllang=en_us<CR>
+map <leader>q :Bdelete<CR>
 map <leader>e :qa!<CR>
 
 " Denite
