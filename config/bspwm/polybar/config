@@ -3,9 +3,9 @@ background = ${xrdb:color0}
 background-alt = #1c1c1c
 foreground = ${xrdb:color7}
 foreground-alt = #555
-primary = #98c379
-secondary = #56b6c2
-alert = #e06c75
+primary = #98B740
+secondary = #48a5CF
+alert = #DA547B
 
 [bar/topbar]
 width = 100%
@@ -17,7 +17,7 @@ background = ${colors.background-alt}
 foreground = ${colors.foreground}
 
 line-size = 3
-line-color = ${colors.alert}
+line-color = #f00
 
 border-size = 0
 border-color = #000000
@@ -58,7 +58,7 @@ scroll-down = cmus-remote --volume -5%
 
 label-font = 3
 format = <label>
-;format-overline = ${colors.alert}
+;format-overline = #ff0000
 ;${colors.foreground-alt}
 label = %output%
 label-maxlen = 50
