@@ -145,6 +145,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
 Plug 'tricktux/pomodoro.vim'
 Plug 'chrisbra/Colorizer'
+Plug 'inkarkat/vim-ingo-library'
+Plug 'inkarkat/vim-mark'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
 Plug 'fisadev/vim-isort', {'for':'python'}
@@ -180,6 +182,30 @@ let g:pomodoro_do_log = 0
 
 " System-wide notifications via zenity
 let g:pomodoro_notification_cmd = 'zenity --notification --text=" 🍅 🍅 🍅 "'
+
+" ?
+let g:mwDefaultHighlightingPalette = 'extended'
+
+let g:mwDefaultHighlightingNum = 6
+
+let g:mwAutoLoadMarks = 1
+
+nmap <Leader>M <Plug>MarkToggle
+
+nmap <Leader>N <Plug>MarkConfirmAllClear
+
+" !
+nmap <Leader>1  <Plug>MarkSearchGroup1Next
+
+nmap <Leader>2  <Plug>MarkSearchGroup2Next
+
+nmap <Leader>3  <Plug>MarkSearchGroup3Next
+
+nmap <Leader>4  <Plug>MarkSearchGroup4Next
+
+nmap <Leader>5  <Plug>MarkSearchGroup5Next
+
+nmap <Leader>6  <Plug>MarkSearchGroup6Next
 
 "Disable continuation of comment permanently
 autocmd FileType * set formatoptions-=cro
