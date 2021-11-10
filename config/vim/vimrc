@@ -206,7 +206,7 @@ nmap <Leader>5  <Plug>MarkSearchGroup5Next
 
 nmap <Leader>6  <Plug>MarkSearchGroup6Next
 
-"Disable continuation of comment permanently
+" Disable continuation of comment permanently
 autocmd FileType * set formatoptions-=cro
 
 autocmd InsertEnter * norm zz
