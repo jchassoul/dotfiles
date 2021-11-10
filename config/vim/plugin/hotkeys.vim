@@ -1,6 +1,6 @@
 " cycle through location list
-" nmap <silent> <leader>n <Plug>(ale_next_wrap)
-nmap <silent> <leader>p <Plug>(ale_previous_wrap)
+nmap <silent> <leader>] <Plug>(ale_next_wrap)
+nmap <silent> <leader>[ <Plug>(ale_previous_wrap)
 
 " Custom keys
 map <leader>- :split<CR>
@@ -15,7 +15,7 @@ map <leader>e :qa!<CR>
 " Denite
 nnoremap <leader>d :<C-u>Denite buffer<CR>
 nnoremap <leader>f :<C-u>DeniteProjectDir -start-filter grep:::!<CR>
-" nnoremap <leader>r :<C-u>Denite -resume -cursor-pos=+1<CR>
+nnoremap <leader><BS> :<C-u>Denite -resume -cursor-pos=+1<CR>
 
 " Spelling
 inoremap <silent> <C-w> <C-x><C-k>
