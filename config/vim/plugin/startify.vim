@@ -30,7 +30,7 @@ let g:startify_custom_header = [
 let g:startify_bookmarks = [
                   \ { 'w': '~/vault/vimwiki/index.md' },
                   \ { 'd': '~/vault/vimwiki/diary/diary.md' },
-                  \ { 'a': '~/work/research/web/torchup.org/content/updates' },
-                  \ { 'c': '~/work/research/web/spacebeam.org/content/updates' },
+                  \ { 'a': '~/work/research/web/spacebeam.org/content/updates' },
+                  \ { 'c': '~/work/research/web/torchup.org/content/updates' },
                   \ { 'n': '~/Documents/notebooks' },
                   \ ]
