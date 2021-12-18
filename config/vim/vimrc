@@ -143,6 +143,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'maximbaz/lightline-ale', {'for':['c','cpp','python','lua','erlang']}
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
+Plug 'liuchengxu/graphviz.vim'
 Plug 'tricktux/pomodoro.vim'
 Plug 'chrisbra/Colorizer'
 Plug 'inkarkat/vim-ingo-library'
