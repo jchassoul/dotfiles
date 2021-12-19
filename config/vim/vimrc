@@ -108,6 +108,7 @@ Plug 'farmergreg/vim-lastplace'
 Plug 'machakann/vim-sandwich'
 Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/goyo.vim', {'for':['markdown','vimwiki']}
+Plug 'junegunn/limelight.vim', {'for':['markdown','vimwiki']}
 Plug 'Shougo/denite.nvim'
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
