@@ -34,13 +34,15 @@ nnoremap <leader>R :%s//gI<Left><Left><Left>
 
 " Git
 nnoremap <leader>gg :G<CR>
-
 nnoremap <leader>gj :diffget //3<CR>
 nnoremap <leader>gf :diffget //2<CR>
 nnoremap <leader>ga :Git fetch --all<CR>
 nnoremap <leader>gl :Git pull<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gp :Git push<CR>
+
+" Graphviz
+map gv :Graphviz!<CR>
 
 " CMake
 nnoremap <leader>cg : CMakeGenerate<CR>
