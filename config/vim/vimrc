@@ -173,6 +173,9 @@ let g:cmake_link_compile_commands = 1
 
 let g:maximizer_default_mapping_key = '<F2>'
 
+" Default output format. Default is 'pdf'.
+let g:graphviz_output_format = 'png'
+
 " Duration of a pomodoro in minutes (default: 25)
 let g:pomodoro_time_work = 25
 
