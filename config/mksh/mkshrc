@@ -68,6 +68,10 @@ esac
 # Import colorscheme from 'wal'
 (cat ~/.cache/wal/sequences &) >/dev/null 2>&1
 
+/usr/bin/xkbset exp =m
+
+/usr/bin/xkbset m
+
 # Debian 9 activate torch7
 . /opt/torch/install/bin/torch-activate
 

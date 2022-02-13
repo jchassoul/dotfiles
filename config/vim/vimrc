@@ -186,7 +186,7 @@ let g:pomodoro_time_slack = 5
 let g:pomodoro_do_log = 0
 
 " System-wide notifications via zenity
-let g:pomodoro_notification_cmd = 'zenity --notification --text=" 🍅 🍅 🍅 "'
+let g:pomodoro_notification_cmd = 'zenity --notification --text=" - 🍅 🍅 🍅 - "'
 
 " Mark colors and groups
 let g:mwDefaultHighlightingPalette = 'extended'
