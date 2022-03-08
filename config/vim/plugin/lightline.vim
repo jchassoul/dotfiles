@@ -30,7 +30,7 @@ let g:lightline = {
                   \ },
                   \ 'tabline': {
                   \   'left': [ ['buffers'] ],
-                  \   'right': [  ]
+                  \   'right': [ ]
                   \ },
                   \ 'component_expand': {
                   \  'buffers': 'lightline#bufferline#buffers',
@@ -56,5 +56,7 @@ set showtabline=2
 let g:lightline#bufferline#unnamed = '[No Name]'
 
 let g:lightline#bufferline#enable_devicons = 1
+
+let g:lightline#bufferline#filter_by_tabpage = 0
 
 autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
