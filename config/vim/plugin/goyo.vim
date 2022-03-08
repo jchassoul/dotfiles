@@ -37,6 +37,7 @@ function! s:goyo_leave()
   endif
   Limelight!
   hi Normal guibg=NONE ctermbg=NONE
+  SignifyToggle
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()

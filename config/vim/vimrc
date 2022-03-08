@@ -109,8 +109,14 @@ Plug 'machakann/vim-sandwich'
 Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/goyo.vim', {'for':['markdown','vimwiki']}
 Plug 'junegunn/limelight.vim', {'for':['markdown','vimwiki']}
+Plug 'junegunn/vim-peekaboo'
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/gv.vim'
+Plug 'junegunn/vim-slash'
+Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'Shougo/denite.nvim'
 Plug 'justinmk/vim-dirvish'
+Plug 'justinmk/vim-gtfo'
 Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'davisdude/vim-love-docs', {'for':'lua'}
 Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','vimwiki']}
@@ -132,6 +138,7 @@ Plug 'roxma/vim-hug-neovim-rpc', {'for':['c','cpp','python','lua','erlang']}
 Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['c','cpp','python','lua','erlang']}
 Plug 'cdelledonne/vim-cmake', {'for':['c','cpp']}
 Plug 'ludovicchabant/vim-gutentags', {'for':['c','cpp','python','lua','erlang']}
+Plug 'preservim/tagbar', {'for':['c','cpp','python','lua','erlang']}
 Plug 'prabirshrestha/async.vim', {'for':['c','cpp','python','lua','erlang']}
 Plug 'dense-analysis/ale', {'for':['c','cpp','python','lua','erlang']}
 Plug 'jchassoul/vim-lsp', {'for':['c','cpp','python','lua','erlang']}
@@ -144,11 +151,8 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'maximbaz/lightline-ale', {'for':['c','cpp','python','lua','erlang']}
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
-Plug 'liuchengxu/graphviz.vim'
 Plug 'tricktux/pomodoro.vim'
 Plug 'chrisbra/Colorizer'
-Plug 'inkarkat/vim-ingo-library'
-Plug 'inkarkat/vim-mark'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
 Plug 'fisadev/vim-isort', {'for':'python'}
@@ -187,29 +191,6 @@ let g:pomodoro_do_log = 0
 
 " System-wide notifications via zenity
 let g:pomodoro_notification_cmd = 'zenity --notification --text=" - 🍅 🍅 🍅 - "'
-
-" Mark colors and groups
-let g:mwDefaultHighlightingPalette = 'extended'
-
-let g:mwDefaultHighlightingNum = 6
-
-let g:mwAutoLoadMarks = 1
-
-nmap <Leader>M <Plug>MarkToggle
-
-nmap <Leader>N <Plug>MarkConfirmAllClear
-
-nmap <Leader>1  <Plug>MarkSearchGroup1Next
-
-nmap <Leader>2  <Plug>MarkSearchGroup2Next
-
-nmap <Leader>3  <Plug>MarkSearchGroup3Next
-
-nmap <Leader>4  <Plug>MarkSearchGroup4Next
-
-nmap <Leader>5  <Plug>MarkSearchGroup5Next
-
-nmap <Leader>6  <Plug>MarkSearchGroup6Next
 
 " Disable continuation of comment permanently
 autocmd FileType * set formatoptions-=cro

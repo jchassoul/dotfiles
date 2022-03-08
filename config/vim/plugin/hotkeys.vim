@@ -41,8 +41,14 @@ nnoremap <leader>gl :Git pull<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gp :Git push<CR>
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 " Graphviz
-map gv :Graphviz!<CR>
+map gv :GV<CR>
 
 " CMake
 nnoremap <leader>cg : CMakeGenerate<CR>
