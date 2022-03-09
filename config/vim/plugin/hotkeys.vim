@@ -9,8 +9,8 @@ map <leader>t :tabnew<CR>
 map <leader>tc :ColorToggle<CR>
 map <leader>s :update<CR>
 map <leader>z :setlocal spell! spelllang=en_us<CR>
-map <leader>q :Bdelete<CR>
-map <leader>e :qa!<CR>
+map <leader>e :Bdelete<CR>
+map <leader>q :qa!<CR>
 
 " Denite
 nnoremap <leader>d :<C-u>Denite buffer<CR>

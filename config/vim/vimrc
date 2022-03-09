@@ -123,6 +123,7 @@ Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','vimwiki']}
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'goerz/jupytext.vim'
+Plug 'wellle/tmux-complete.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dhruvasagar/vim-table-mode', {'for':['markdown','vimwiki']}
 Plug 'jiangmiao/auto-pairs'
@@ -130,7 +131,7 @@ Plug 'mbbill/undotree'
 Plug 'jchassoul/onehalf', {'rtp':'vim'}
 Plug 'luochen1990/rainbow', {'for':['c','cpp','python','lua','erlang']}
 Plug 'ackyshake/VimCompletesMe'
-Plug 'Shougo/deoplete.nvim', {'for':['c','cpp','python','lua','erlang']}
+Plug 'Shougo/deoplete.nvim', {'for':['markdown','vimwiki','c','cpp','python','lua','erlang']}
 Plug 'Shougo/neoinclude.vim', {'for':['c','cpp']}
 Plug 'Shougo/deoplete-clangx', {'for':['c','cpp']}
 Plug 'roxma/nvim-yarp', {'for':['c','cpp','python','lua','erlang']}
@@ -139,7 +140,7 @@ Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['c','cpp','python','lua','erlang
 Plug 'cdelledonne/vim-cmake', {'for':['c','cpp']}
 Plug 'ludovicchabant/vim-gutentags', {'for':['c','cpp','python','lua','erlang']}
 Plug 'preservim/tagbar', {'for':['c','cpp','python','lua','erlang']}
-Plug 'prabirshrestha/async.vim', {'for':['c','cpp','python','lua','erlang']}
+Plug 'prabirshrestha/async.vim', {'for':['markdown','vimwiki','c','cpp','python','lua','erlang']}
 Plug 'dense-analysis/ale', {'for':['c','cpp','python','lua','erlang']}
 Plug 'jchassoul/vim-lsp', {'for':['c','cpp','python','lua','erlang']}
 Plug 'rhysd/vim-lsp-ale', {'for':['c','cpp','python','lua','erlang']}
