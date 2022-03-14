@@ -116,6 +116,7 @@ Plug 'junegunn/vim-slash'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'Shougo/denite.nvim'
 Plug 'justinmk/vim-dirvish'
+Plug 'justinmk/vim-syntax-extra'
 Plug 'justinmk/vim-gtfo'
 Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'davisdude/vim-love-docs', {'for':'lua'}
@@ -193,7 +194,7 @@ let g:pomodoro_time_slack = 5
 let g:pomodoro_do_log = 0
 
 " System-wide notifications via zenity
-let g:pomodoro_notification_cmd = 'zenity --notification --text=" - 🍅 🍅 🍅 - "'
+let g:pomodoro_notification_cmd = 'zenity --notification --text=" - 🙃🚬🌿 - "'
 
 " Disable continuation of comment permanently
 autocmd FileType * set formatoptions-=cro
