@@ -8,6 +8,8 @@ xmodmap -e "clear keycode 28" &
 xmodmap -e "clear keycode 29" &
 xmodmap -e "clear keycode 30" &
 xmodmap -e "keysym Caps_Lock = Pointer_Button2" &
+xmodmap -e "keysym Super_L = Tab" &
+xmodmap -e "keysym Tab = Escape" &
 xmodmap -e "keycode 17 = t T t T" &
 xmodmap -e "keycode 18 = y Y y Y" &
 xmodmap -e "keycode 19 = u U u U" &
@@ -17,6 +19,8 @@ xmodmap -e "keycode 30 = 0 parenright 0 parenright" &
 
 sxhkd &
 unclutter &
+
+polychromatic-tray-applet &
 
 #compton -f &
 
