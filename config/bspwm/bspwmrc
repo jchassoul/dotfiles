@@ -31,11 +31,15 @@ dunst &
 nm-applet &
 blueman-applet &
 polybar topbar &
-xinput set-button-map 13 1 2 3 0 0 0 0 &
-wal -R --vte &
 
-# do u even java?
-#wmname LG3D &
+# abyssus 2014
+xinput set-button-map 13 1 2 3 0 0 0 0 &
+
+# viper mini
+# ?
+
+# is this still needed?
+wal -R --vte &
 
 bspc monitor DP-1 -d I II III IV V
 bspc monitor eDP-1 -d VI VII VIII IX X
@@ -43,8 +47,8 @@ bspc monitor eDP-1 -d VI VII VIII IX X
 bspc config automatic_scheme alternate 
 bspc config initial_polarity second_child
 
-bspc config border_width         2
-bspc config window_gap           8 
+bspc config border_width         0 
+bspc config window_gap           4
 bspc config split_ratio          0.64
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
