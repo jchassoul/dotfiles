@@ -8,8 +8,8 @@ xmodmap -e "clear keycode 28" &
 xmodmap -e "clear keycode 29" &
 xmodmap -e "clear keycode 30" &
 xmodmap -e "keysym Caps_Lock = Pointer_Button2" &
-xmodmap -e "keysym Super_L = Tab" &
-xmodmap -e "keysym Tab = Escape" &
+#xmodmap -e "keysym Super_L = Tab" &
+#xmodmap -e "keysym Tab = Escape" &
 xmodmap -e "keycode 17 = t T t T" &
 xmodmap -e "keycode 18 = y Y y Y" &
 xmodmap -e "keycode 19 = u U u U" &
@@ -22,7 +22,7 @@ unclutter &
 
 polychromatic-tray-applet &
 
-#compton -f &
+picom -f &
 
 feh --bg-scale ~/.config/desktop/background.jpg &
 
@@ -33,13 +33,13 @@ blueman-applet &
 polybar topbar &
 
 # abyssus 2014
-xinput set-button-map 13 1 2 3 0 0 0 0 &
+#xinput set-button-map 13 1 2 3 0 0 0 0 &
 
 # viper mini
 # ?
 
 # is this still needed?
-wal -R --vte &
+# wal -R --vte &
 
 bspc monitor DP-1 -d I II III IV V
 bspc monitor eDP-1 -d VI VII VIII IX X
@@ -48,7 +48,7 @@ bspc config automatic_scheme alternate
 bspc config initial_polarity second_child
 
 bspc config border_width         0 
-bspc config window_gap           4
+bspc config window_gap           10
 bspc config split_ratio          0.64
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true

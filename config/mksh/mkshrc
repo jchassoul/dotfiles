@@ -72,6 +72,10 @@ esac
 
 /usr/bin/xkbset m
 
+# 
+stty stop undef
+stty start undef
+
 # Debian 9 activate torch7
 . /opt/torch/install/bin/torch-activate
 

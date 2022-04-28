@@ -58,10 +58,10 @@ if executable('clangd-8')
     augroup end
 endif
 
+" some mappings to use, tweak as you wish.
 function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
   if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-  " some mappings to use, tweak as you wish.
   nmap <buffer> gd <plug>(lsp-definition)
   nmap <buffer> gr <plug>(lsp-references)
   nmap <buffer> <F6> <plug>(lsp-rename)
