@@ -4,16 +4,12 @@ echo export LC_ALL="en_US.UTF-8"
 echo export LANG="en_US.UTF-8"
 echo export LANGUAGE="en_US.UTF-8"
 
-echo "deb http://ftp.debian.org/debian buster-backports main" |
+echo "deb http://ftp.debian.org/debian bullseye-backports main" |
 tee /etc/apt/sources.list.d/backports.list
 
 apt update
 
-#
-# clean the ones that are trash or unecessary
-#
-
-apt -y install --install-recommends vim git apt-transport-https\
+apt -y install --install-recommends git apt-transport-https\
     gnupg2 software-properties-common curl less
 
 apt-add-repository contrib
@@ -58,11 +54,7 @@ apt install --install-recommends \
     hfsprogs\
     dosfstools\
     pv\
-    network-manager-gnome\
-    network-manager-openvpn-gnome\
-    network-manager-pptp-gnome\
-    network-manager-vpnc-gnome\
-    compton\
+    picom\
     htop\
     urlview\
     mupdf\
@@ -71,10 +63,10 @@ apt install --install-recommends \
     feh\
     cmus\
     pavucontrol\
-    vlc\
+    mpv\
     jfsutils\
     ntfs-3g\
-    fuse\
+    fuse3\
     gvfs\
     gvfs-fuse\
     fusesmb\
@@ -96,16 +88,15 @@ apt install --install-recommends \
     python3-dev\
     python3-pip\
     lxappearance\
-    python-wxgtk3.0\
     python3-venv\
     linux-image-amd64\
     live-boot\
-    systemd-sysv\
     vim-athena\
     tmux\
     runit\
+    runit-init\
     bspwm\
-    lightdm\
+    sddm\
     pcmanfm\
     transmission\
     jq\
@@ -115,7 +106,7 @@ apt install --install-recommends \
     odbcinst\
     unixodbc\
     unixodbc-dev\
-    sudo\
+    doas\
     make\
     cmake\
     libncurses5-dev\
@@ -134,11 +125,9 @@ apt install --install-recommends \
     gir1.2-pango-1.0\
     gtk2-engines-murrine\
     exuberant-ctags\
-    guile-2.0-libs\
     libgdk-pixbuf2.0-dev\
     libgsasl7\
     libkyotocabinet16v5\
-    libmailutils5\
     libntlm0\
     libpangoxft-1.0-0\
     librsvg2-bin\
@@ -158,7 +147,7 @@ apt install --install-recommends \
 
 apt install linux-headers-$(uname -r) -y
 
-apt -t buster-backports install polybar -y
+apt -t bullseye-backports install polybar -y
 
 apt clean
 
