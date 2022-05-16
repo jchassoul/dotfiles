@@ -38,6 +38,7 @@ apt install --install-recommends \
     libsctp1\
     tcpdump\
     sngrep\
+    xkbset\
     libnotify-bin\
     g++\
     wget\
@@ -69,7 +70,6 @@ apt install --install-recommends \
     fuse3\
     gvfs\
     gvfs-fuse\
-    fusesmb\
     libnss-mdns\
     gvfs-bin\
     gvfs-backends\
@@ -93,8 +93,6 @@ apt install --install-recommends \
     live-boot\
     vim-athena\
     tmux\
-    runit\
-    runit-init\
     bspwm\
     sddm\
     pcmanfm\
