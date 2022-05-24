@@ -94,8 +94,9 @@ apt install --install-recommends \
     vim-athena\
     tmux\
     bspwm\
-    sddm\
+    lightdm\
     pcmanfm\
+    unclutter\
     transmission\
     jq\
     screenkey\
@@ -121,7 +122,7 @@ apt install --install-recommends \
     gir1.2-gdkpixbuf-2.0\
     gir1.2-gtk-3.0\
     gir1.2-pango-1.0\
-    gtk2-engines-murrine\
+    #gtk2-engines-murrine\
     exuberant-ctags\
     libgdk-pixbuf2.0-dev\
     libgsasl7\
@@ -132,7 +133,7 @@ apt install --install-recommends \
     libxml2-utils\
     mailutils\
     mailutils-common\
-    murrine-themes\
+    #murrine-themes\
     optipng\
     parallel\
     python3-pil\
@@ -152,5 +153,3 @@ apt clean
 apt remove yelp -y
 
 apt autoremove -y
-
-chsh --shell /bin/mksh

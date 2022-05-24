@@ -25,6 +25,8 @@ install-bspwm:
 	ln -s `pwd`/config/bspwm/sxhkdrc ~/.config/sxhkd/sxhkdrc
 	ln -s `pwd`/config/bspwm/polybar/config ~/.config/polybar/config
 	ln -s `pwd`/config/bspwm/polybar/cmus.sh ~/.config/polybar/cmus.sh
+	ln -s `pwd`/config/bspwm/polybar/dev.sh ~/.config/polybar/dev.sh
+	ln -s `pwd`/config/bspwm/polybar/rts.sh ~/.config/polybar/rts.sh
 
 install-tmux:
 	rm -f ~/.tmux.conf

@@ -1,45 +1,25 @@
-#! /bin/mksh
+#!/bin/mksh
 
-xmodmap -e "clear lock" &
-xmodmap -e "clear keycode 17" &
-xmodmap -e "clear keycode 18" &
-xmodmap -e "clear keycode 19" &
-xmodmap -e "clear keycode 28" &
-xmodmap -e "clear keycode 29" &
-xmodmap -e "clear keycode 30" &
-xmodmap -e "keysym Caps_Lock = Pointer_Button2" &
-#xmodmap -e "keysym Super_L = Tab" &
-#xmodmap -e "keysym Tab = Escape" &
-xmodmap -e "keycode 17 = t T t T" &
-xmodmap -e "keycode 18 = y Y y Y" &
-xmodmap -e "keycode 19 = u U u U" &
-xmodmap -e "keycode 28 = 8 asterisk 8 asterisk" &
-xmodmap -e "keycode 29 = 9 parenleft 9 parenleft" &
-xmodmap -e "keycode 30 = 0 parenright 0 parenright" &
+xmodmap -e "clear lock" &>/dev/null
+xmodmap -e "keysym Caps_Lock = Escape" &>/dev/null
 
 sxhkd &
 unclutter &
-
-polychromatic-tray-applet &
-
 picom -f &
 
 feh --bg-scale ~/.config/desktop/background.jpg &
 
 xrdb ~/.Xresources &
+
 dunst &
-nm-applet &
-blueman-applet &
+
 polybar topbar &
 
-# abyssus 2014
-#xinput set-button-map 13 1 2 3 0 0 0 0 &
+polychromatic-tray-applet &
 
-# viper mini
-# ?
+connman-ui-gtk &
 
-# is this still needed?
-# wal -R --vte &
+# humans
 
 bspc monitor DP-1 -d I II III IV V
 bspc monitor eDP-1 -d VI VII VIII IX X
@@ -64,3 +44,4 @@ bspc config pointer_action2 resize_side
 
 bspc rule -a Gnome-calculator state=floating follow=on
 bspc rule -a Pcmanfm state=floating follow=on
+bspc rule -a Pavucontrol state=floating follow=on

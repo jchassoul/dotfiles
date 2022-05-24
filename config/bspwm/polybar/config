@@ -35,8 +35,8 @@ cursor-scroll = ns-resize
 
 [module/demo]
 type = custom/ipc
-hook-0 = echo dev
-hook-1 = echo rts
+hook-0 = ~/.config/polybar/dev.sh
+hook-1 = ~/.config/polybar/rts.sh
 hook-2 = whoami
 initial = 3
 click-left = polybar-msg -p %pid% hook demo 1

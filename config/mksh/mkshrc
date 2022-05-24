@@ -76,10 +76,7 @@ esac
 stty stop undef
 stty start undef
 
-# Debian 9 activate torch7
-. /opt/torch/install/bin/torch-activate
-
 # Start keychain
-/usr/bin/keychain $HOME/.ssh/id_ed25519 >/dev/null 2>&1
+#/usr/bin/keychain $HOME/.ssh/id_ed25519 >/dev/null 2>&1
 
-source $HOME/.keychain/debian-sh
+#source $HOME/.keychain/debian-sh
