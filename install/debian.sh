@@ -135,6 +135,7 @@ apt install --install-recommends \
     mailutils-common\
     #murrine-themes\
     optipng\
+    keychain\
     parallel\
     python3-pil\
     sassc\

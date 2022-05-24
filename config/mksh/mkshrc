@@ -77,6 +77,5 @@ stty stop undef
 stty start undef
 
 # Start keychain
-#/usr/bin/keychain $HOME/.ssh/id_ed25519 >/dev/null 2>&1
-
-#source $HOME/.keychain/debian-sh
+/usr/bin/keychain $HOME/.ssh/id_rsa >/dev/null 2>&1
+source $HOME/.keychain/debian-sh
