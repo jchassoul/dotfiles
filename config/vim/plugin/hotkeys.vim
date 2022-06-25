@@ -32,6 +32,9 @@ nnoremap <silent> <C-Down> :resize -5<CR>
 " Replace
 nnoremap <leader>R :%s//gI<Left><Left><Left>
 
+" Graphviz
+map gv :Graphviz!<CR>
+
 " Git
 nnoremap <leader>gg :G<CR>
 nnoremap <leader>gj :diffget //3<CR>
@@ -40,15 +43,13 @@ nnoremap <leader>ga :Git fetch --all<CR>
 nnoremap <leader>gl :Git pull<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gp :Git push<CR>
+nnoremap <leader>gv :GV<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-" Graphviz
-map gv :GV<CR>
 
 " CMake
 nnoremap <leader>cg : CMakeGenerate<CR>
