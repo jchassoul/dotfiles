@@ -6,20 +6,14 @@ xmodmap -e "keysym Caps_Lock = Escape" &>/dev/null
 sxhkd &
 unclutter &
 picom -f &
-
 feh --bg-scale ~/.config/desktop/background.jpg &
-
 xrdb ~/.Xresources &
-
 dunst &
-
 polybar topbar &
-
 polychromatic-tray-applet &
-
 connman-ui-gtk &
 
-# humans
+# Terran dominion 
 
 bspc monitor DP-1 -d I II III IV V
 bspc monitor eDP-1 -d VI VII VIII IX X
