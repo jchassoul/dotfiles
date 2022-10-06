@@ -145,6 +145,10 @@ apt install --install-recommends \
     sysstat\
     exa\
     bat\
+    zenity\
+    ibus-hangul\
+    fonts-nanum\
+    xinput\
     dunst\
  -y
 
