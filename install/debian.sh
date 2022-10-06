@@ -18,6 +18,7 @@ apt-add-repository non-free
 
 apt install --install-recommends \
     debootstrap\
+    connman-gtk\
     libyaml-0-2\
     libyaml-dev\
     libsdl2-ttf-dev\
@@ -33,6 +34,7 @@ apt install --install-recommends \
     libgpgme-dev\
     libseccomp-dev\
     pkg-config\
+    papirus-icon-theme\
     squashfs-tools\
     cryptsetup\
     libsctp1\
@@ -122,7 +124,6 @@ apt install --install-recommends \
     gir1.2-gdkpixbuf-2.0\
     gir1.2-gtk-3.0\
     gir1.2-pango-1.0\
-    #gtk2-engines-murrine\
     exuberant-ctags\
     libgdk-pixbuf2.0-dev\
     libgsasl7\
@@ -133,7 +134,6 @@ apt install --install-recommends \
     libxml2-utils\
     mailutils\
     mailutils-common\
-    #murrine-themes\
     optipng\
     keychain\
     parallel\
@@ -143,6 +143,9 @@ apt install --install-recommends \
     pamix\
     suckless-tools\
     sysstat\
+    exa\
+    bat\
+    dunst\
  -y
 
 apt install linux-headers-$(uname -r) -y
@@ -151,6 +154,6 @@ apt -t bullseye-backports install polybar -y
 
 apt clean
 
-apt remove yelp -y
-
 apt autoremove -y
+
+apt remove yelp -y
