@@ -289,7 +289,7 @@ elif [[ "$(uname)" == 'Linux' ]]; then
                       cmake libreadline-dev git \
                       libjpeg-dev libpng-dev ncurses-dev \
                       imagemagick libzmq3-dev gfortran unzip gnuplot \
-                      gnuplot-x11 python3-ipython )
+                      gnuplot-x11 )
 
         sudo apt-get update
         sudo apt-get install -y software-properties-common
@@ -616,13 +616,13 @@ elif [[ "$(uname)" == 'Linux' ]]; then
         #Basic package required for Torch
         declare -a target_pkgs
         target_pkgs=( build-essential gcc g++ curl \
-                      cmake libreadline-dev git-core libqt4-core libqt4-gui \
-                      libqt4-dev libjpeg-dev libpng-dev ncurses-dev \
+                      cmake libreadline-dev git \
+                      libjpeg-dev libpng-dev ncurses-dev \
                       imagemagick libzmq3-dev gfortran unzip gnuplot \
-                      gnuplot-x11 ipython )
+                      gnuplot-x11 )
 
         sudo apt-get update
-        sudo apt-get install -y python-software-properties
+        sudo apt-get install -y software-properties-common 
 
         sudo apt-get update
         sudo apt-get install -y "${target_pkgs[@]}"
@@ -630,13 +630,13 @@ elif [[ "$(uname)" == 'Linux' ]]; then
         #require for iTorch
         #sudo apt-get install nodejs nodejs-legacy #legacy -> http://stackoverflow.com/questions/21168141/can-not-install-packages-using-node-package-manager-in-ubuntu
         sudo apt-get install libssl-dev
-        sudo apt-get install python-zmq
+        sudo apt-get install python3-zmq
 
         #require for common torch plug-ins
         sudo apt-get install sox libsox-dev libsox-fmt-all libgraphicsmagick1-dev
 
         #other requires
-        sudo apt-get install libprotobuf-dev protobuf-compiler libhdf5-8 libhdf5-dev
+        sudo apt-get install libprotobuf-dev protobuf-compiler libhdf5-103 libhdf5-dev
         install_openblas
     fi
 
@@ -649,7 +649,7 @@ fi
 ipython_exists=$(command -v ipython)
 if [[ $ipython_exists ]]; then {
     ipython_version=$(ipython --version|cut -f1 -d'.')
-    if [[ $ipython_version != 2 && $ipython_version != 3 && $ipython_version != 4 ]]; then {
+    if [[ $ipython_version != 2 && $ipython_version != 3 && $ipython_version != 8 ]]; then {
         echo 'WARNING: Your ipython version is too old.  Type "ipython --version" to see this.  Should be at least version 2'
     } fi
 } fi
