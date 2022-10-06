@@ -15,4 +15,6 @@ xmodmap -e "keycode 17 = 8 asterisk 8 asterisk" &>/dev/null
 xmodmap -e "keycode 18 = 9 parenleft 9 parenleft" &>/dev/null
 xmodmap -e "keycode 19 = 0 parenright 0 parenright" &>/dev/null
 
+xinput set-button-map 13 1 2 3 4 5 6 7 &>/dev/null
+
 echo dev

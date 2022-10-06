@@ -19,4 +19,6 @@ xmodmap -e "keycode 28 = 8 asterisk 8 asterisk" &>/dev/null
 xmodmap -e "keycode 29 = 9 parenleft 9 parenleft" &>/dev/null
 xmodmap -e "keycode 30 = 0 parenright 0 parenright" &>/dev/null
 
+xinput set-button-map 13 1 2 3 0 0 0 0 &>/dev/null
+
 echo rts
