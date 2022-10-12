@@ -56,7 +56,7 @@ case "$-" in *i*)
     alias n='newsboat'
     alias l='exa'
     alias ls='exa'
-    alias cat='bat'
+    alias cat='batcat'
     alias t='tmux -2 attach -t shell || tmux -2 new -s shell'
     alias jn='cd ~/Documents/notebooks && jupyter notebook&'
     alias gg='git status'
@@ -78,7 +78,7 @@ stty start undef
 
 # Start keychain
 /usr/bin/keychain $HOME/.ssh/id_rsa >/dev/null 2>&1
-source $HOME/.keychain/debian-sh
+source $HOME/.keychain/den-sh
 
 # old torch7
 . /opt/torch/install/bin/torch-activate
