@@ -23,7 +23,7 @@ function! Pomodoro()
 endfunction
 
 let g:lightline = {
-                  \ 'colorscheme': 'onehalfdark',
+                  \ 'colorscheme': 'apprentice',
                   \ 'active': {
                   \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
                   \   'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings' ], [ 'lineinfo' ], [ 'wordcount', 'percent' ], [ 'pomodoro', 'filetype' ] ]

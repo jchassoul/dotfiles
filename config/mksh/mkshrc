@@ -53,7 +53,6 @@ case "$-" in *i*)
     alias q='cd ~'
     alias icat='kitty +kitten icat'
     alias v='vim'
-    alias n='newsboat'
     alias l='exa'
     alias ls='exa'
     alias cat='batcat'
