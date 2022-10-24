@@ -1,6 +1,6 @@
 install: install-kitty install-bspwm install-tmux install-desktop\
 	install-mksh install-vim install-xr install-xs install-fonts\
-	install-newsboat install-cmus
+	install-geany install-cmus
 
 git: install-git
 
@@ -70,10 +70,9 @@ install-fonts:
 	ln -s `pwd`/fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf \
 		~/.fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf
 
-install-newsboat:
-	mkdir -p ~/.newsboat
-	rm -f ~/.newsboat/config
-	ln -s `pwd`/config/newsboat/config ~/.newsboat/config
+install-geany:
+	rm -f ~/.config/geany
+	ln -s `pwd`/config/geany ~/.config/geany
 
 install-cmus:
 	mkdir -p ~/.config/cmus/
