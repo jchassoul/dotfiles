@@ -81,6 +81,7 @@ apt install --install-recommends \
     xdg-utils\
     lxrandr\
     build-essential\
+    silversearcher-ag\
     gnome-calculator\
     gpicview\
     xarchiver\
