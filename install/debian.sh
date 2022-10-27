@@ -151,6 +151,7 @@ apt install --install-recommends \
     fonts-nanum\
     xinput\
     dunst\
+    thunderbird\
  -y
 
 apt install linux-headers-$(uname -r) -y
