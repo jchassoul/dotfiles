@@ -22,9 +22,9 @@ alt + shift + f
     google-chrome
 
 # polybar toggle
-#alt + shift + space
-#    {polybar-msg cmd toggle; bspc config top_padding +0 ,\
-#         polybar-msg cmd toggle; bspc config top_padding 20 }
+alt + shift + space
+    {polybar-msg cmd toggle; bspc config top_padding +0 ,\
+         polybar-msg cmd toggle; bspc config top_padding 20 }
 
 Print
     obs
