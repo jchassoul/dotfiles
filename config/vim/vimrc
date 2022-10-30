@@ -114,8 +114,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-slash'
 Plug 'Glench/Vim-Jinja2-Syntax'
-"Plug 'azabiong/vim-highlighter'
-"Plug 'puremourning/vimspector'
 Plug 'Shougo/denite.nvim'
 Plug 'justinmk/vim-dirvish'
 Plug 'justinmk/vim-syntax-extra'
@@ -124,7 +122,6 @@ Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'davisdude/vim-love-docs', {'for':'lua'}
 Plug 'vim-pandoc/vim-pandoc', {'for':['markdown','vimwiki']}
 Plug 'vim-pandoc/vim-pandoc-syntax', {'for':['markdown','vimwiki']}
-"Plug 'mzlogin/vim-markdown-toc'
 Plug 'liuchengxu/graphviz.vim'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'goerz/jupytext.vim'

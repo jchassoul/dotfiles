@@ -9,8 +9,8 @@ map <leader>t :tabnew<CR>
 map <leader>tc :ColorToggle<CR>
 map <leader>s :update<CR>
 map <leader>z :setlocal spell! spelllang=en_us<CR>
-map <leader>e :Bdelete<CR>
-map <leader>q :qa!<CR>
+map <leader>x :Bdelete<CR>
+map <leader>e :qa!<CR>
 
 " Denite
 nnoremap <leader>d :<C-u>Denite buffer<CR>
@@ -21,7 +21,7 @@ nnoremap <leader><BS> :<C-u>Denite -resume -cursor-pos=+1<CR>
 inoremap <silent> <C-w> <C-x><C-k>
 
 " Goyo
-map gy :Goyo<CR>
+map <leader>gy :Goyo<CR>
 
 " Resize
 nnoremap <silent> <C-Left> :vertical resize +5<CR>
@@ -30,10 +30,10 @@ nnoremap <silent> <C-Up> :resize +5<CR>
 nnoremap <silent> <C-Down> :resize -5<CR>
 
 " Replace
-nnoremap <leader>R :%s//gI<Left><Left><Left>
+nnoremap <leader>r :%s//gI<Left><Left><Left>
 
 " Graphviz
-map gv :Graphviz!<CR>
+map <leader>vg :Graphviz!<CR>
 
 " Git
 nnoremap <leader>gg :G<CR>
