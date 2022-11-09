@@ -18,15 +18,11 @@ function! LightlineWordCount()
       return &filetype =~# '\v^(markdown|txt|vimwiki)' ? g:word_count . ' words' : ''
 endfunction
 
-function! Pomodoro()
-      return pomo#status_bar()
-endfunction
-
 let g:lightline = {
                   \ 'colorscheme': 'material',
                   \ 'active': {
                   \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-                  \   'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings' ], [ 'lineinfo' ], [ 'wordcount', 'percent' ], [ 'pomodoro', 'filetype' ] ]
+                  \   'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings' ], [ 'lineinfo' ], [ 'wordcount', 'percent' ], [ 'filetype' ] ]
                   \ },
                   \ 'tabline': {
                   \   'left': [ ['buffers'] ],
@@ -41,7 +37,6 @@ let g:lightline = {
                   \ 'component_function': {
                   \   'gitbranch': 'FugitiveHead',
                   \   'wordcount': 'LightlineWordCount',
-                  \   'pomodoro': 'Pomodoro',
                   \ },
                   \ 'component_type': {
                   \   'buffers': 'tabsel',
