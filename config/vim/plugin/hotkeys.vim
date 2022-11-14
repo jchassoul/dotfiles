@@ -66,11 +66,10 @@ nnoremap <leader>tl :TestLast<CR>
 " Quickfix
 vmap <silent> <unique> <c-g> y:vimgrep "<c-r>"" **/**.*<CR>
 
-nnoremap <leader>qe :copen<CR>
+nnoremap <leader>c :copen<CR>
 nnoremap <leader>j :cnext<CR>
 nnoremap <leader>k :cprev<CR>
-nnoremap <leader>qw :lopen<CR>
-nnoremap <leader>qq :cclose<CR>
+nnoremap <leader>cc :cclose<CR>
 
 " F keys
 nnoremap <F1> :tab h<CR>
