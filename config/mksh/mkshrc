@@ -64,17 +64,21 @@ case "$-" in *i*)
     ;;
 esac
 
-# Import colorscheme from 'wal'
-(cat ~/.cache/wal/sequences &) >/dev/null 2>&1
-
-/usr/bin/xkbset exp =m
-
-/usr/bin/xkbset m
-
+xkbset exp =m
+xkbset m
+#
+xmodmap -e "clear lock" &>/dev/null
+xmodmap -e "clear keycode 66" &>/dev/null
+xmodmap -e "keycode 66 = Escape" &>/dev/null
+xmodmap -e "clear keycode 133" &>/dev/null
+xmodmap -e "keycode 133 = Pointer_Button2" &>/dev/null
 # 
+xinput set-button-map 13 1 2 3 0 0 0 0 &>/dev/null
+#
 stty stop undef
 stty start undef
 
+(cat ~/.cache/wal/sequences &) >/dev/null 2>&1
 # Start keychain
 /usr/bin/keychain $HOME/.ssh/id_rsa >/dev/null 2>&1
 source $HOME/.keychain/den-sh

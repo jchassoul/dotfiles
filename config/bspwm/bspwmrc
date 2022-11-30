@@ -1,8 +1,5 @@
 #!/bin/mksh
 
-xmodmap -e "clear lock" &>/dev/null
-xmodmap -e "keysym Caps_Lock = Escape" &>/dev/null
-
 sxhkd &
 unclutter &
 picom -f &
