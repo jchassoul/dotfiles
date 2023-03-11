@@ -132,7 +132,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
 Plug 'jchassoul/onehalf', {'rtp':'vim'}
 Plug 'luochen1990/rainbow', {'for':['c','cpp','python','lua','erlang']}
-Plug 'ackyshake/VimCompletesMe'
+Plug 'ward/VimCompletesMe'
 Plug 'Shougo/deoplete.nvim', {'for':['markdown','vimwiki','c','cpp','python','lua','erlang']}
 Plug 'Shougo/neoinclude.vim', {'for':['c','cpp']}
 Plug 'Shougo/deoplete-clangx', {'for':['c','cpp']}
@@ -160,7 +160,6 @@ Plug 'vim-test/vim-test', {'for':['python','lua','erlang']}
 Plug 'fisadev/vim-isort', {'for':'python'}
 Plug 'severin-lemaignan/vim-minimap'
 Plug 'mattn/vim-lsp-settings', {'for':['c','cpp','python','lua','erlang']}
-
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
