@@ -13,7 +13,6 @@ export DXVK_CONFIG_FILE=$HOME/.dxvk.conf
 export HISTFILE=$HOME/.mksh_history
 export HISTSIZE=10000
 export LESSSECURE=1
-
 PS1='#'                   # Root
 (( USER_ID )) && PS1='$'  # Regular user
 PS1=$'\001\r''${|
@@ -32,18 +31,13 @@ PS1=$'\001\r''${|
     (( e )) && REPLY+=" $e "
     \return $e
 }'"$PS1 "
-
 echo -ne '\033%G'
-
 # enable vi mode
 set -o vi
-
 # job control fully enabled
 set -o monitor
-
 # switch console to utf8 mode
 set -o utf8-mode
-
 case "$-" in *i*)
     alias k='cd ~/work'
     alias e='exit'
@@ -63,25 +57,18 @@ case "$-" in *i*)
     alias pip='pip3'
     ;;
 esac
-
 (xkbset exp =m &)
 (xkbset m &)
-#
 (xmodmap -e "clear lock" &) >/dev/null 2>&1
 (xmodmap -e "clear keycode 66" &) >/dev/null 2>&1
 (xmodmap -e "keycode 66 = Escape" &) >/dev/null 2>&1
 (xmodmap -e "clear keycode 133" &) >/dev/null 2>&1
 (xmodmap -e "keycode 133 = Pointer_Button2" &) >/dev/null
-# 
-#xinput set-button-map 13 1 2 3 0 0 0 0 &>/dev/null
-#
 (stty stop undef &) >/dev/null 2>&1
 (stty start undef &) >/dev/null 2>&1
-
 (cat ~/.cache/wal/sequences &) >/dev/null 2>&1
 # Start keychain
 /usr/bin/keychain $HOME/.ssh/id_rsa >/dev/null 2>&1
 source $HOME/.keychain/den-sh
-
-# old torch7
+# activate old torch7
 . /opt/torch/install/bin/torch-activate
