@@ -76,13 +76,15 @@ label-empty=
 [module/date]
 type = internal/date
 interval = 5
-label = %{F#99}%date%%{F-} %{F#fff}%time%%{F-}
+label = %{F#fff}%date%%{F-} %{F#fff}%time%%{F-}
+label-background = ${colors.background-alt}
 date =
 date-alt = %A, %B %d, %Y
 time = %I:%M %p
 time-alt = ${self.time}
 format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.background}
 format-underline = ${colors.secondary}
 
 [module/volume]
@@ -90,7 +92,7 @@ type = internal/volume
 format-volume = <label-volume> <bar-volume>
 label-volume = ♬
 label-volume-foreground = ${root.foreground}
-format-muted-foreground = ${colors.foreground-alt}
+format-muted-foreground = ${colors.alert}
 label-muted = ■  Muted
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.primary}
@@ -118,12 +120,17 @@ battery = BAT0
 adapter = ADP1
 full-at = 101
 format-charging = <label-charging>
+format-charging-background = ${colors.background-alt}
 format-charging-underline = ${colors.secondary}
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.primary}
+format-full-underline = ${colors.foreground}
 label-charging = ⚡ %percentage%%
 label-discharging = ⚡ %percentage%%
 label-full = ⚡ %percentage%%
+label-charging-background = ${colors.background-alt}
+label-discharging-background = ${colors.background-alt}
+label-full-background = ${colors.background}
 
 [settings]
 screenchange-reload = true
