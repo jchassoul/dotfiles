@@ -6,6 +6,7 @@ foreground-alt = #555
 primary = #98B740
 secondary = #48a5CF
 alert = #DA547B
+active = #c792ea
 
 [bar/topbar]
 width = 100%
@@ -64,7 +65,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.background}
 label-focused-padding = 2
 label-occupied = %index%
 label-occupied-padding = 2
