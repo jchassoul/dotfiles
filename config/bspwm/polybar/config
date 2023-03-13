@@ -48,6 +48,7 @@ label-font = 3
 format = <label>
 label = %output%
 label-maxlen = 50
+label-foreground = ${colors.foreground-alt}
 
 [module/xwindow]
 type = internal/xwindow
@@ -86,7 +87,7 @@ time-alt = ${self.time}
 format-prefix = 
 format-prefix-foreground = ${colors.foreground}
 format-prefix-background = ${colors.background}
-format-underline = ${colors.secondary}
+format-underline = ${colors.background-alt}
 
 [module/volume]
 type = internal/volume
