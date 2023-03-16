@@ -24,9 +24,10 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 font-0 = "Inconsolata:pixelsize=12;3"
+font-1 = "FontAwesome:pixelsize=12;3"
 modules-left = bspwm
 modules-center = xwindow
-modules-right = cmus volume battery date
+modules-right = cmus volume date battery
 tray-position = right
 tray-padding = 2
 enable-ipc = true
@@ -79,7 +80,6 @@ label-empty=
 type = internal/date
 interval = 5
 label = %{F#fff}%date%%{F-} %{F#fff}%time%%{F-}
-label-background = ${colors.background-alt}
 date =
 date-alt = %A, %B %d, %Y
 time = %I:%M %p
@@ -87,15 +87,14 @@ time-alt = ${self.time}
 format-prefix = 
 format-prefix-foreground = ${colors.foreground}
 format-prefix-background = ${colors.background}
-format-underline = ${colors.background-alt}
 
 [module/volume]
 type = internal/volume
-format-volume = <label-volume> <bar-volume>
-label-volume = ♬
+format-volume = <label-volume>
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 format-muted-foreground = ${colors.alert}
-label-muted = ■  Muted
+label-muted =  Muted
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.primary}
 bar-volume-foreground-1 = ${colors.primary}
@@ -115,6 +114,7 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+click-right = pavucontrol
 
 [module/battery]
 type = internal/battery
@@ -126,10 +126,10 @@ format-charging-background = ${colors.background-alt}
 format-charging-underline = ${colors.secondary}
 format-discharging = <label-discharging>
 format-discharging-underline = ${colors.primary}
-format-full-underline = ${colors.foreground-alt}
-label-charging = ⚡ %percentage%%
-label-discharging = ⚡ %percentage%%
-label-full = ⚡ %percentage%%
+format-full-underline = ${colors.background}
+label-charging = %percentage%% 
+label-discharging = %percentage%% 
+label-full = %percentage%% 
 label-charging-background = ${colors.background-alt}
 label-discharging-background = ${colors.background-alt}
 label-full-background = ${colors.background}
