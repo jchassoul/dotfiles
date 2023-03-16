@@ -2,7 +2,7 @@
 
 sxhkd &
 unclutter &
-#picom -f &
+picom -f &
 feh --bg-scale ~/.config/desktop/background.jpg &
 xrdb ~/.Xresources &
 dunst &
