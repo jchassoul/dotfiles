@@ -27,7 +27,7 @@ font-0 = "Inconsolata:pixelsize=12;3"
 font-1 = "FontAwesome:pixelsize=12;3"
 modules-left = bspwm
 modules-center = xwindow
-modules-right = cmus updates pulseaudio-microphone volume popup-calendar battery
+modules-right = cmus pulseaudio-microphone volume popup-calendar battery
 tray-position = right
 tray-padding = 2
 enable-ipc = true
@@ -57,14 +57,6 @@ tail = true
 click-left = ~/.config/polybar/pulseaudio-microphone.sh --toggle &
 format = <label>
 label =  %output%
-
-[module/updates]
-type = custom/script
-interval = 3600
-exec = ~/.config/polybar/updates-apt.sh
-tail = true
-format = <label>
-label =  %output%
 
 [module/xwindow]
 type = internal/xwindow
