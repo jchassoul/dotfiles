@@ -27,7 +27,7 @@ font-0 = "Inconsolata:pixelsize=12;3"
 font-1 = "FontAwesome:pixelsize=12;3"
 modules-left = bspwm
 modules-center = xwindow
-modules-right = cmus volume date battery
+modules-right = cmus updates pulseaudio-microphone volume popup-calendar battery
 tray-position = right
 tray-padding = 2
 enable-ipc = true
@@ -49,6 +49,22 @@ format = <label>
 label =  %output%
 label-maxlen = 50
 label-foreground = ${colors.foreground-alt}
+
+[module/pulseaudio-microphone]
+type = custom/script
+exec = ~/.config/polybar/pulseaudio-microphone.sh
+tail = true
+click-left = ~/.config/polybar/pulseaudio-microphone.sh --toggle &
+format = <label>
+label =  %output%
+
+[module/updates]
+type = custom/script
+interval = 3600
+exec = ~/.config/polybar/updates-apt.sh
+tail = true
+format = <label>
+label =  %output%
 
 [module/xwindow]
 type = internal/xwindow
@@ -87,12 +103,18 @@ format-prefix = 
 format-prefix-foreground = ${colors.foreground}
 format-prefix-background = ${colors.background}
 
+[module/popup-calendar]
+type = custom/script
+exec = ~/.config/polybar/popup-calendar.sh
+interval = 5
+click-left =  ~/.config/polybar/popup-calendar.sh --popup &
+
 [module/volume]
 type = internal/volume
 format-volume = <label-volume>
 label-volume =  %percentage%%
 format-muted-foreground = ${colors.alert}
-label-muted =  Muted
+label-muted =  muted
 click-right = pavucontrol
 
 [module/battery]

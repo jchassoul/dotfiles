@@ -34,3 +34,5 @@ bspc config pointer_action2 resize_side
 bspc rule -a Gnome-calculator state=floating follow=on
 bspc rule -a Pcmanfm state=floating follow=on
 bspc rule -a Pavucontrol state=floating follow=on
+bspc rule -a Yad state=floating
+bspc rule -a yad-calendar state=floating
