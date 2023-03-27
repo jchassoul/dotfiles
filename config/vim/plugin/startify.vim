@@ -24,13 +24,10 @@ let g:startify_custom_header = [
                   \"                    |__         \\.    ^    ./                                  ",
                   \"                                  ^~~~^~~~^                                     ",
                   \"                                                                                ",
-                  \"        > Thou shalt not make a machine in the likeness of a human mind.        ",
-                  \"        - The Orange Catholic Bible.                                            ",
+                  \"        > The limits of my language means the limits of my world.               ",
+                  \"        - The Overmind.                                                         ",
                   \"                                                                                "]
 let g:startify_bookmarks = [
                   \ { 'w': '~/vault/vimwiki/index.md' },
                   \ { 'd': '~/vault/vimwiki/diary/diary.md' },
-                  \ { 'a': '~/work/research/web/spacebeam.org/content/updates' },
-                  \ { 'c': '~/work/research/web/torchup.org/content/updates' },
-                  \ { 'n': '~/Documents/notebooks' },
                   \ ]
