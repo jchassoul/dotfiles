@@ -25,7 +25,7 @@ let g:startify_custom_header = [
                   \"                                  ^~~~^~~~^                                     ",
                   \"                                                                                ",
                   \"        > The limits of my language means the limits of my world.               ",
-                  \"        - The Overmind.                                                         ",
+                  \"        — The Overmind.                                                         ",
                   \"                                                                                "]
 let g:startify_bookmarks = [
                   \ { 'w': '~/vault/vimwiki/index.md' },
