@@ -1,7 +1,7 @@
 #!/bin/mksh
 export LANG=en_US.utf8
 export GOPATH=$HOME/go
-export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH
+export PATH=/usr/local/go/bin:$GOPATH/bin:$HOME/bin:$HOME/.local/bin:/sbin:/snap/bin:/usr/sbin:$PATH
 export MANPATH=$MANPATH:/usr/local/share/man
 export MANPAGER="/bin/mksh -c \"col -b | vim --noplugin -c 'set ft=man ts=8 nomod nolist nonu noma cc=' -\""
 export ERL_AFLAGS="+pc unicode -kernel shell_history enabled"
@@ -51,7 +51,7 @@ case "$-" in *i*)
     alias ls='exa'
     alias cat='batcat'
     alias t='tmux -2 attach -t shell || tmux -2 new -s shell'
-    alias jn='cd ~/Documents/notebooks && jupyter notebook&'
+    alias lab='cd ~/Documents/notebooks && jupyter lab&'
     alias gg='git status'
     alias python='python3'
     alias pip='pip3'

@@ -41,6 +41,8 @@ apt install --install-recommends \
     tcpdump\
     sngrep\
     xkbset\
+    xdotool\
+    yad\
     libnotify-bin\
     g++\
     wget\
