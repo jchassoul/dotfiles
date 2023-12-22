@@ -90,9 +90,18 @@ if has('conceal')
 endif
 
 " Plugins will be downloaded under the specified directory.
+
+
+
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
+if &term =~ "screen"
+    let &t_BE = "\e[?2004h"
+    let &t_BD = "\e[?2004l"
+    exec "set t_PS=\e[200~"
+    exec "set t_PE=\e[201~"
+endif
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
