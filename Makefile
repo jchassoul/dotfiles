@@ -1,6 +1,5 @@
 install: install-kitty install-bspwm install-tmux install-desktop\
-	install-mksh install-vim install-xr install-xs install-fonts\
-	install-geany install-cmus
+	install-vim install-xr install-xs install-fonts install-cmus
 
 git: install-git
 
