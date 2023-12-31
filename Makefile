@@ -20,12 +20,14 @@ install-bspwm:
 	rm -f ~/.config/sxhkd/sxhkdrc
 	rm -f ~/.config/polybar/config
 	rm -f ~/.config/polybar/cmus.sh
+	rm -f ~/.config/polybar/popup-calendar.sh
+	rm -f ~/.config/polybar/pulseaudio-microphone.sh
 	ln -s `pwd`/config/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 	ln -s `pwd`/config/bspwm/sxhkdrc ~/.config/sxhkd/sxhkdrc
 	ln -s `pwd`/config/bspwm/polybar/config ~/.config/polybar/config
 	ln -s `pwd`/config/bspwm/polybar/cmus.sh ~/.config/polybar/cmus.sh
-	ln -s `pwd`/config/bspwm/polybar/dev.sh ~/.config/polybar/dev.sh
-	ln -s `pwd`/config/bspwm/polybar/rts.sh ~/.config/polybar/rts.sh
+	ln -s `pwd`/config/bspwm/polybar/popup-calendar.sh ~/.config/polybar/popup-calendar.sh
+	ln -s `pwd`/config/bspwm/polybar/pulseaudio-microphone.sh ~/.config/polybar/pulseaudio-microphone.sh
 
 install-tmux:
 	rm -f ~/.tmux.conf
@@ -55,6 +57,9 @@ install-vim:
 	rm -f ~/.vimrc
 	ln -s `pwd`/config/vim/vimrc ~/.vimrc
 	ln -s `pwd`/config/vim/plugin ~/.vim/plugin
+
+install-vi:
+	echo $SHELL
 
 install-xs:
 	rm -f ~/.xsession
