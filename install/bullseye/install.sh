@@ -152,6 +152,7 @@ apt install --install-recommends \
     ibus-hangul\
     fonts-nanum\
     xinput\
+    xsel\
     dunst\
     thunderbird\
  -y
