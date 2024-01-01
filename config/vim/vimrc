@@ -137,6 +137,7 @@ Plug 'baskerville/vim-sxhkdrc'
 Plug 'goerz/jupytext.vim'
 Plug 'wellle/tmux-complete.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'dhruvasagar/vim-table-mode', {'for':['markdown','vimwiki']}
 Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
@@ -147,6 +148,8 @@ Plug 'Shougo/deoplete.nvim', {'for':['markdown','vimwiki','c','cpp','python','lu
 Plug 'Shougo/neoinclude.vim', {'for':['c','cpp']}
 Plug 'Shougo/deoplete-clangx', {'for':['c','cpp']}
 Plug 'roxma/nvim-yarp', {'for':['c','cpp','python','lua','erlang']}
+Plug 'roxma/vim-tmux-clipboard'
+Plug 'roxma/vim-paste-easy'
 Plug 'roxma/vim-hug-neovim-rpc', {'for':['c','cpp','python','lua','erlang']}
 Plug 'lighttiger2505/deoplete-vim-lsp', {'for':['c','cpp','python','lua','erlang']}
 Plug 'cdelledonne/vim-cmake', {'for':['c','cpp']}
