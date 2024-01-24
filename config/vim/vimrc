@@ -148,6 +148,7 @@ Plug 'Shougo/deoplete.nvim', {'for':['markdown','vimwiki','c','cpp','python','lu
 Plug 'Shougo/neoinclude.vim', {'for':['c','cpp']}
 Plug 'Shougo/deoplete-clangx', {'for':['c','cpp']}
 Plug 'roxma/nvim-yarp', {'for':['c','cpp','python','lua','erlang']}
+Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'roxma/vim-paste-easy'
 Plug 'roxma/vim-hug-neovim-rpc', {'for':['c','cpp','python','lua','erlang']}
