@@ -27,7 +27,7 @@ font-0 = "Inconsolata:pixelsize=12;3"
 font-1 = "FontAwesome:pixelsize=12;3"
 modules-left = bspwm
 modules-center = xwindow
-modules-right = cmus pulseaudio-microphone volume popup-calendar battery
+modules-right = cmus pulseaudio-microphone volume popup-calendar
 tray-position = right
 tray-padding = 2
 enable-ipc = true
@@ -99,7 +99,7 @@ format-prefix-background = ${colors.background}
 type = custom/script
 exec = ~/.config/polybar/popup-calendar.sh
 interval = 5
-click-left =  ~/.config/polybar/popup-calendar.sh --popup &
+#click-left =  ~/.config/polybar/popup-calendar.sh --popup &
 
 [module/volume]
 type = internal/volume

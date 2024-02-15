@@ -1,17 +1,23 @@
 #!/bin/mksh
 
+xrandr --output HDMI-0 --primary --mode 1920x1080 --rate 164.99 --rotate normal\
+    --output DP-0 --mode 1920x1080 --rate 165.00 --rotate normal --right-of HDMI-0\
+    --output DP-2 --mode 1920x1080 --rate 165.00 --rotate normal --left-of HDMI-0;
+
 sxhkd &
 unclutter &
 picom -f &
 feh --bg-scale ~/.config/desktop/background.jpg &
 xrdb ~/.Xresources &
 dunst &
+nm-applet &
+blueman-applet &
 polybar topbar &
 polychromatic-tray-applet &
-connman-gtk &
 
-bspc monitor DP-1 -d I II III IV V
-bspc monitor eDP-1 -d VI VII VIII IX X
+bspc monitor HDMI-0 -d I II
+bspc monitor DP-0 -d III IV
+bspc monitor DP-2 -d V VI
 
 bspc config automatic_scheme alternate 
 bspc config initial_polarity second_child
@@ -29,7 +35,7 @@ bspc config ignore_ewmh_fullscreen enter
 
 bspc config pointer_modifier mod1
 bspc config pointer_action1 move
-bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_side
 
 bspc rule -a Gnome-calculator state=floating follow=on
 bspc rule -a Pcmanfm state=floating follow=on

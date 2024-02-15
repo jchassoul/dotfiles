@@ -9,6 +9,7 @@ export WINEARCH=win64
 export WINEDEBUG=-all
 export TERM=xterm-256color
 export EDITOR=vim
+# do I still need thi?
 export DXVK_CONFIG_FILE=$HOME/.dxvk.conf
 export HISTFILE=$HOME/.mksh_history
 export HISTSIZE=10000
@@ -49,7 +50,7 @@ case "$-" in *i*)
     alias v='vim'
     alias l='exa'
     alias ls='exa'
-    alias cat='batcat'
+    alias cat='batcat --style plain'
     alias t='tmux -2 attach -t shell || tmux -2 new -s shell'
     alias lab='cd ~/Documents/notebooks && jupyter lab&'
     alias gg='git status'
@@ -67,8 +68,11 @@ esac
 (stty stop undef &) >/dev/null 2>&1
 (stty start undef &) >/dev/null 2>&1
 (cat ~/.cache/wal/sequences &) >/dev/null 2>&1
-# Start keychain
-/usr/bin/keychain $HOME/.ssh/id_rsa >/dev/null 2>&1
-source $HOME/.keychain/den-sh
+
+# review this again, start keychain
+#/usr/bin/keychain $HOME/.ssh/id_rsa >/dev/null 2>&1
+#source $HOME/.keychain/den-sh
+
+# stop with the use podman instead for this old thing.
 # activate old torch7
-. /opt/torch/install/bin/torch-activate
+#. /opt/torch/install/bin/torch-activate
