@@ -12,12 +12,13 @@ xrdb ~/.Xresources &
 dunst &
 nm-applet &
 blueman-applet &
-polybar topbar &
 polychromatic-tray-applet &
+polybar topbar &
+#bash ~/polybar-collection/launch.sh &
 
-bspc monitor HDMI-0 -d I II
-bspc monitor DP-0 -d III IV
-bspc monitor DP-2 -d V VI
+bspc monitor HDMI-0 -d I II III
+bspc monitor DP-0 -d IV V
+bspc monitor DP-2 -d VI VII
 
 bspc config automatic_scheme alternate 
 bspc config initial_polarity second_child

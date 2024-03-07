@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 # add stuff on cal double click
 
 BAR_HEIGHT=22  # polybar height

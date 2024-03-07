@@ -77,7 +77,7 @@ install-fonts:
 		~/.fonts/Inconsolata\ Nerd\ Font\ Complete\ Mono.otf
 
 install-geany:
-	rm -f ~/.config/geany
+	rm -rf ~/.config/geany
 	ln -s `pwd`/config/geany ~/.config/geany
 
 install-cmus:

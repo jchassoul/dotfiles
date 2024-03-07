@@ -18,7 +18,6 @@ apt-add-repository non-free
 
 apt install --install-recommends \
     debootstrap\
-    connman-gtk\
     libyaml-0-2\
     libyaml-dev\
     libsdl2-ttf-dev\
@@ -75,7 +74,6 @@ apt install --install-recommends \
     gvfs\
     gvfs-fuse\
     libnss-mdns\
-    gvfs-bin\
     gvfs-backends\
     dconf-service\
     dconf-cli\
@@ -96,7 +94,6 @@ apt install --install-recommends \
     python3-venv\
     linux-image-amd64\
     live-boot\
-    vim-athena\
     tmux\
     bspwm\
     lightdm\
@@ -129,7 +126,6 @@ apt install --install-recommends \
     gir1.2-pango-1.0\
     exuberant-ctags\
     libgdk-pixbuf2.0-dev\
-    libgsasl7\
     libkyotocabinet16v5\
     libntlm0\
     libpangoxft-1.0-0\
