@@ -25,16 +25,16 @@ install-bspwm:
 	rm -f ~/.config/polybar/pulseaudio-microphone.sh
 	ln -s `pwd`/config/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 	ln -s `pwd`/config/bspwm/sxhkdrc ~/.config/sxhkd/sxhkdrc
-	ln -s `pwd`/config/bspwm/polybar/config.ini ~/.config/polybar/config.ini
-	ln -s `pwd`/config/bspwm/polybar/colors.ini ~/.config/polybar/colors.ini
-	ln -s `pwd`/config/bspwm/polybar/fonts.ini ~/.config/polybar/fonts.ini
-	ln -s `pwd`/config/bspwm/polybar/modules.ini ~/.config/polybar/modules.ini
-	ln -s `pwd`/config/bspwm/polybar/modules ~/.config/polybar/modules
-	ln -s `pwd`/config/bspwm/polybar/include-modules.ini ~/.config/polybar/include-modules.ini
-	ln -s `pwd`/config/bspwm/polybar/scripts/launch.sh ~/.config/polybar/launch.sh
-	ln -s `pwd`/config/bspwm/polybar/scripts/cmus.sh ~/.config/polybar/cmus.sh
-	ln -s `pwd`/config/bspwm/polybar/scripts/popup-calendar.sh ~/.config/polybar/popup-calendar.sh
-	ln -s `pwd`/config/bspwm/polybar/scripts/pulseaudio-microphone.sh ~/.config/polybar/pulseaudio-microphone.sh
+	ln -s `pwd`/config/polybar/config.ini ~/.config/polybar/config.ini
+	ln -s `pwd`/config/polybar/colors.ini ~/.config/polybar/colors.ini
+	ln -s `pwd`/config/polybar/fonts.ini ~/.config/polybar/fonts.ini
+	ln -s `pwd`/config/polybar/modules.ini ~/.config/polybar/modules.ini
+	ln -s `pwd`/config/polybar/modules ~/.config/polybar/modules
+	ln -s `pwd`/config/polybar/include-modules.ini ~/.config/polybar/include-modules.ini
+	ln -s `pwd`/config/polybar/scripts/launch.sh ~/.config/polybar/launch.sh
+	ln -s `pwd`/config/polybar/scripts/cmus.sh ~/.config/polybar/cmus.sh
+	ln -s `pwd`/config/polybar/scripts/popup-calendar.sh ~/.config/polybar/popup-calendar.sh
+	ln -s `pwd`/config/polybar/scripts/pulseaudio-microphone.sh ~/.config/polybar/pulseaudio-microphone.sh
 
 install-tmux:
 	rm -f ~/.tmux.conf
