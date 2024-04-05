@@ -56,8 +56,8 @@ case "$-" in *i*)
     alias pip='pip3'
     ;;
 esac
-(xkbset exp =m &)
-(xkbset m &)
+#(xkbset exp =m &)
+#(xkbset m &)
 #(xmodmap -e "clear lock" &) >/dev/null 2>&1
 #(xmodmap -e "clear keycode 66" &) >/dev/null 2>&1
 #(xmodmap -e "keycode 66 = Escape" &) >/dev/null 2>&1
