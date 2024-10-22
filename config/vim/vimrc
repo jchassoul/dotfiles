@@ -91,8 +91,6 @@ endif
 
 " Plugins will be downloaded under the specified directory.
 
-
-
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
@@ -113,6 +111,7 @@ Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-signify'
 Plug 'sheerun/vim-polyglot'
 Plug 'szw/vim-maximizer'
+Plug 'greeschenko/vim9-ollama'
 Plug 'moll/vim-bbye'
 Plug 'farmergreg/vim-lastplace'
 Plug 'machakann/vim-sandwich'

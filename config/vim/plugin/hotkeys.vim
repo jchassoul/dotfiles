@@ -9,8 +9,16 @@ map <leader>t :tabnew<CR>
 map <leader>tc :ColorToggle<CR>
 map <leader>s :update<CR>
 map <leader>z :setlocal spell! spelllang=en_us<CR>
-map <leader>x :Bdelete<CR>
+map <leader>x :confirm bd!<CR>:close<CR>
+map <leader>q :q<CR>
 map <leader>e :qa!<CR>
+
+" Ollama
+map <leader>aa :OllamaAsk <right>
+map <leader>ar :OllamaRead <right>
+map <leader>af :OllamaFill<CR>
+map <leader>aw :OllamaChange <right>
+map <leader>ac :OllamaChangeCode <right>
 
 " Denite
 nnoremap <leader>d :<C-u>Denite buffer<CR>
@@ -77,7 +85,7 @@ nnoremap <F3> :Dirvish<CR>
 nnoremap <F4> :<C-u>DeniteProjectDir file/rec/git -start-filter<CR>
 nnoremap <F5> :UndotreeToggle<CR>
 inoremap <F5> <C-R>=strftime("%c")<CR>
-" there is no F6?
+" Why there is no F6?
 nnoremap <F7> :CalendarT<CR>
 
 nmap <Leader>1 <Plug>lightline#bufferline#go(1)

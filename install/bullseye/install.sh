@@ -41,6 +41,7 @@ apt install --install-recommends \
     sngrep\
     xkbset\
     xdotool\
+    pass\
     yad\
     libnotify-bin\
     g++\

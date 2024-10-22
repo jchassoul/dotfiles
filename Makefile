@@ -33,6 +33,8 @@ install-bspwm:
 	ln -s `pwd`/config/polybar/include-modules.ini ~/.config/polybar/include-modules.ini
 	ln -s `pwd`/config/polybar/scripts/launch.sh ~/.config/polybar/launch.sh
 	ln -s `pwd`/config/polybar/scripts/cmus.sh ~/.config/polybar/cmus.sh
+	ln -s `pwd`/config/polybar/scripts/bluetooth.sh ~/.config/polybar/bluetooth.sh
+	ln -s `pwd`/config/polybar/scripts/dualshock4.sh ~/.config/polybar/dualshock4.sh
 	ln -s `pwd`/config/polybar/scripts/nvidia.sh ~/.config/polybar/nvidia.sh
 	ln -s `pwd`/config/polybar/scripts/popup-calendar.sh ~/.config/polybar/popup-calendar.sh
 	ln -s `pwd`/config/polybar/scripts/pulseaudio-microphone.sh ~/.config/polybar/pulseaudio-microphone.sh
