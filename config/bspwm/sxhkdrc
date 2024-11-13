@@ -49,7 +49,7 @@ XF86AudioPrev
 
 # terminal emulator
 ctrl + Return
-    kitty
+    wezterm
 
 # program launcher
 alt + d
