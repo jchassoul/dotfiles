@@ -15,10 +15,6 @@ map <leader>e :qa!<CR>
 
 " Ollama
 map <leader>aa :OllamaAsk <right>
-map <leader>ar :OllamaRead <right>
-map <leader>af :OllamaFill<CR>
-map <leader>aw :OllamaChange <right>
-map <leader>ac :OllamaChangeCode <right>
 
 " Denite
 nnoremap <leader>d :<C-u>Denite buffer<CR>

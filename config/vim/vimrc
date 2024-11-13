@@ -38,6 +38,7 @@ syntax on
 
 filetype plugin indent on
 
+set wrap
 set nocompatible
 set scrolloff=8
 set mouse=a
@@ -54,7 +55,6 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
-set nowrap
 set nofoldenable
 set ignorecase
 set smartcase
