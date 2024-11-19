@@ -75,6 +75,7 @@ set t_Co=256
 set t_ut=
 set signcolumn=yes
 set updatetime=100
+set ttyfast
 set shortmess=I
 set completeopt=longest,menuone
 set omnifunc=syntaxcomplete#Complete
