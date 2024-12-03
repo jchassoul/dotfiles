@@ -1,5 +1,5 @@
-install: install-kitty install-bspwm install-tmux install-desktop\
-	install-vim install-xr install-xs install-fonts install-cmus
+install: install-bspwm install-tmux install-desktop\
+	install-vim install-xr install-xs install-fonts install-cmus install-wezterm
 
 git: install-git
 
@@ -94,3 +94,7 @@ install-cmus:
 	rm -f ~/.config/cmus/srcery.theme
 	ln -s `pwd`/config/cmus/rc ~/.config/cmus/rc
 	ln -s `pwd`/config/cmus/srcery.theme ~/.config/cmus/srcery.theme
+
+install-wezterm:
+	rm -f ~/.wezterm.lua
+	ln -s `pwd`/config/wezterm/wezterm.lua ~/.wezterm.lua
