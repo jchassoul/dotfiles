@@ -54,6 +54,7 @@ case "$-" in *i*)
     alias lab='cd ~/Documents/notebooks && jupyter lab&'
     alias gg='git status'
     alias python='python3'
+    alias podman='sudo podman'
     alias pip='pip3'
     ;;
 esac
