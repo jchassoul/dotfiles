@@ -62,13 +62,13 @@ esac
 (xkbset m &)
 (xmodmap -e "clear lock" &) >/dev/null 2>&1
 (xmodmap -e "clear keycode 66" &) >/dev/null 2>&1
-(xmodmap -e "keycode 66 = Escape" &) >/dev/null 2>&1
 (xmodmap -e "clear keycode 133" &) >/dev/null 2>&1
+(xmodmap -e "keycode 66 = Escape" &) >/dev/null 2>&1
 (xmodmap -e "keycode 133 = Pointer_Button2" &) >/dev/null
 (stty stop undef &) >/dev/null 2>&1
 (stty start undef &) >/dev/null 2>&1
 (cat ~/.cache/wal/sequences &) >/dev/null 2>&1
-
+(sudo nvidia-smi -i 0 -pl 220 &) >/dev/null 2>&1
 # review this again, start keychain
 #/usr/bin/keychain $HOME/.ssh/id_rsa >/dev/null 2>&1
 #source $HOME/.keychain/den-sh
